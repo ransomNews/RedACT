@@ -6,6 +6,7 @@ Basato su fonti OSINT verificate ed elaborate dallo staff di ransomNews, con foc
 ## 📁 Contenuti
 
 - `report/` – Report mensili in formato PDF
+- `dataset/` – Dataset mensili
 
 ## 🛠 Tecnologie
 
