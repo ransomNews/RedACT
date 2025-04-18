@@ -1,3 +1,7 @@
+![Last Update](https://img.shields.io/badge/updated-April%202025-blue)
+![Language](https://img.shields.io/badge/lang-Italiano-green)
+![Format](https://img.shields.io/badge/format-PDF%20%7C%20Markdown-lightgrey)
+
 # 📰 RedACT
 
 **Report mensile di ransomNews sugli attacchi ransomware nel mondo, in Italia e nei Paesi NIS2.**  
