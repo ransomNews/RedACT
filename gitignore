@@ -1,0 +1,28 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Backup temporanei
+*.bak
+*.tmp
+*.swp
+*.~*
+
+# File di progetto locali 
+*.pages
+*.key
+*.numbers
+*.docx
+*.xlsx
+
+# PDF provvisori 
+*_draft.pdf
+*_bozza.pdf
+
+# Output o cache
+__pycache__/
+*.log
+
+# Editor config 
+.vscode/
+.idea/
