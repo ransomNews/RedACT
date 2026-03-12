@@ -11,12 +11,11 @@ L’obiettivo del progetto è **fare awareness**, fornendo informazioni verifica
 ## 🎯 Missione
 
 Il progetto si propone di:
-
-- Tracciare **rivendicazioni ransomware pubbliche** provenienti da leak site e fonti OSINT
-- Analizzare **trend, tecniche e tattiche** utilizzate dai gruppi criminali
-- Pubblicare **contenuti divulgativi basati su dati reali**
-- Contribuire alla **consapevolezza della minaccia ransomware** nel settore cybersecurity
-- Offrire un punto di riferimento indipendente per chi studia il fenomeno ransomware
+- tracciare **rivendicazioni ransomware pubbliche** provenienti da leak site e fonti OSINT
+- analizzare **trend, tecniche e tattiche** utilizzate dai gruppi criminali
+- pubblicare **contenuti divulgativi basati su dati reali**
+- contribuire alla **consapevolezza della minaccia ransomware** nel settore cybersecurity
+- offrire un punto di riferimento indipendente per chi studia il fenomeno ransomware
 
 ransomNews non è un servizio commerciale e non svolge attività di incident response.  
 Il progetto è puramente **informativo e di ricerca**.
@@ -26,19 +25,17 @@ Il progetto è puramente **informativo e di ricerca**.
 ## 🔎 Attività del progetto
 
 Il lavoro di ransomNews comprende:
-
-- Monitoraggio continuo di **ransomware leak sites**
-- Raccolta e catalogazione di **rivendicazioni pubbliche**
-- Analisi OSINT su gruppi ransomware
-- Studio di **TTP (Tactics, Techniques and Procedures)**
-- Pubblicazione di **analisi e report**
+- monitoraggio continuo di **ransomware leak sites**
+- raccolta e catalogazione di **rivendicazioni pubbliche**
+- analisi OSINT su gruppi ransomware
+- studio di **TTP (Tactics, Techniques and Procedures)**
+- pubblicazione di **analisi e report**
 
 Il progetto si concentra in particolare su:
-
-- **Reputational extortion**
-- **Data leak operations**
+- **reputational extortion**
+- **data leak operations**
 - **Ransomware-as-a-Service (RaaS) ecosystems**
-- Evoluzione dei **threat actor ransomware**
+- evoluzione dei **threat actor ransomware**
 
 ---
 
@@ -63,7 +60,6 @@ Il progetto è attivo su diverse piattaforme:
 ## 📊 Dataset e analisi
 
 I dati raccolti derivano da attività OSINT e includono:
-
 - rivendicazioni pubbliche dei gruppi ransomware
 - timestamp delle pubblicazioni
 - identificazione del gruppo responsabile
@@ -71,7 +67,6 @@ I dati raccolti derivano da attività OSINT e includono:
 - geolocalizzazione quando disponibile
 
 I dataset possono essere utilizzati per:
-
 - analisi di trend ransomware
 - ricerche accademiche
 - threat intelligence
@@ -84,7 +79,6 @@ I dataset possono essere utilizzati per:
 Le informazioni pubblicate da ransomNews derivano da fonti pubbliche e attività OSINT.
 
 Il progetto:
-
 - **non ha accesso ai sistemi compromessi**
 - **non partecipa a negoziazioni con gruppi ransomware**
 - **non verifica direttamente le intrusioni**
@@ -97,16 +91,14 @@ Una rivendicazione pubblicata da un gruppo ransomware **non costituisce prova de
 
 Il progetto è aperto a contributi dalla community cybersecurity.
 
-Sono benvenuti:
-
+Sono benvenute:
 - segnalazioni di leak site
 - informazioni su nuovi gruppi ransomware
 - correzioni o aggiornamenti ai dati
 - collaborazioni su analisi e report
 
 Per contributi o contatti:
-
-📧 ransomnews@proton.me
+📧 desk@pransomnews.online
 
 ---
 
@@ -123,7 +115,6 @@ Si prega di citare la fonte quando si utilizzano dati o analisi del progetto.
 Il ransomware non è solo un problema tecnico: è un **fenomeno economico, geopolitico e industriale**.
 
 Monitorare queste attività significa capire:
-
 - come evolvono le operazioni criminali
 - quali settori vengono colpiti
 - come cambiano le strategie di estorsione
