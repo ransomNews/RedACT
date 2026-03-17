@@ -13,10 +13,10 @@
   --surface3: #2e3150;
   --border: #363a5e;
   --border2: #404470;
-  --red: #e63946;
-  --red2: #ff4d5a;
-  --red-dim: rgba(230,57,70,0.12);
-  --red-glow: rgba(230,57,70,0.06);
+  --red: #ff0000;
+  --red2: #ff0000;
+  --red-dim: rgba(255,0,0,0.12);
+  --red-glow: rgba(255,0,0,0.06);
   --white: #f0f0f5;
   --text: #dde1f5;
   --text-dim: #9099c8;
@@ -67,7 +67,7 @@ nav {
   font-size: 12px;
   color: var(--red);
   background: var(--red-dim);
-  border: 1px solid rgba(230,57,70,0.25);
+  border: 1px solid rgba(255,0,0,0.25);
   padding: 3px 10px;
   border-radius: 2px;
   letter-spacing: 0.08em;
@@ -499,7 +499,7 @@ td {
   min-width: 72px;
   text-align: center;
 }
-.b-rimossa  { color: #e63946; border-color: rgba(230,57,70,0.3); background: rgba(230,57,70,0.08); }
+.b-rimossa  { color: #ff0000; border-color: rgba(230,57,70,0.3); background: rgba(230,57,70,0.08); }
 .b-nonpub   { color: #6b6b88; border-color: rgba(107,107,136,0.3); background: rgba(107,107,136,0.08); }
 .b-pubnq    { color: #4d9fff; border-color: rgba(77,159,255,0.3); background: rgba(77,159,255,0.08); }
 .b-chiuso   { color: #f0b429; border-color: rgba(240,180,41,0.3); background: rgba(240,180,41,0.08); }
@@ -1514,7 +1514,7 @@ html.light .hm-btn { color: #7a82b0; }
 <!-- TREND MENSILE -->
 <div class="trend-section">
   <div class="trend-header">
-    <div id="trendLegend" style="display:flex;align-items:center;gap:16px;font-size:12px;color:var(--text-muted)"><span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:2px;background:#e07b54;display:inline-block"></span>2025</span><span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:2px;background:#5b9cf6;display:inline-block"></span>2026</span></div>
+    <div id="trendLegend" style="display:flex;align-items:center;gap:16px;font-size:12px;color:var(--text-muted)"><span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:2px;background:#ff0000;display:inline-block"></span>2025</span><span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:2px;background:#5b9cf6;display:inline-block"></span>2026</span></div>
     <div class="trend-title-block">
       <span class="trend-label">TREND MENSILE</span>
       <span class="trend-sub">rivendicazioni per mese · 2025–2026</span>
@@ -1616,7 +1616,7 @@ const GP = {
   lockbit:      ['#f0b429','#2a1d00'],
   ransomhub:    ['#c97aff','#1c0a2e'],
   sarcoma:      ['#ff9966','#2a1000'],
-  dragonforce:  ['#ff4d5a','#2a0508'],
+  dragonforce:  ['#ff0000','#2a0508'],
   fog:          ['#88ccee','#071820'],
   everest:      ['#50e0a0','#052818'],
   incransom:    ['#aabbcc','#141c26'],
@@ -1879,7 +1879,7 @@ function buildTop5() {
   const max = sorted.length ? sorted[0][1] : 1;
 
   const palette = [
-    { fg: '#e63946', bg: 'linear-gradient(90deg, rgba(230,57,70,0.85), rgba(230,57,70,0.25))'  },
+    { fg: '#ff0000', bg: 'linear-gradient(90deg, rgba(255,0,0,0.85), rgba(255,0,0,0.25))'  },
     { fg: '#f0b429', bg: 'linear-gradient(90deg, rgba(240,180,41,0.85), rgba(240,180,41,0.25))' },
     { fg: '#4d9fff', bg: 'linear-gradient(90deg, rgba(77,159,255,0.85), rgba(77,159,255,0.25))' },
     { fg: '#00c896', bg: 'linear-gradient(90deg, rgba(0,200,150,0.85), rgba(0,200,150,0.25))' },
@@ -1916,7 +1916,7 @@ function buildTop5Regioni() {
   const max = sorted.length ? sorted[0][1] : 1;
 
   const palette = [
-    { fg: '#e63946', bg: 'linear-gradient(90deg, rgba(230,57,70,0.85), rgba(230,57,70,0.25))'  },
+    { fg: '#ff0000', bg: 'linear-gradient(90deg, rgba(255,0,0,0.85), rgba(255,0,0,0.25))'  },
     { fg: '#f0b429', bg: 'linear-gradient(90deg, rgba(240,180,41,0.85), rgba(240,180,41,0.25))' },
     { fg: '#4d9fff', bg: 'linear-gradient(90deg, rgba(77,159,255,0.85), rgba(77,159,255,0.25))' },
     { fg: '#00c896', bg: 'linear-gradient(90deg, rgba(0,200,150,0.85), rgba(0,200,150,0.25))' },
@@ -2221,13 +2221,13 @@ function buildTrendChart() {
       const barH26 = maxVal > 0 ? Math.max(2, Math.round((n26 / maxVal) * H)) : 2;
       const pct = n25 > 0 ? Math.round(((n26 - n25) / n25) * 100) : null;
       const pctStr = pct === null ? '—' : (pct > 0 ? `+${pct}%` : `${pct}%`);
-      const pctColor = pct === null ? 'var(--text-muted)' : (pct > 0 ? '#e63946' : '#4caf82');
+      const pctColor = pct === null ? 'var(--text-muted)' : (pct > 0 ? '#ff0000' : '#4caf82');
 
       bars += `<div class="trend-compare-group" style="flex:1;min-width:80px">
         <div class="trend-compare-bars">
           <div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex:1">
-            <span class="trend-val" style="color:#e07b54">${n25}</span>
-            <div class="trend-bar" style="height:${barH25}px;background:linear-gradient(to top, #e07b54, rgba(224,123,84,0.15));border-radius:4px 4px 0 0;width:100%"></div>
+            <span class="trend-val" style="color:#ff0000">${n25}</span>
+            <div class="trend-bar" style="height:${barH25}px;background:linear-gradient(to top, #ff0000, rgba(255,0,0,0.15));border-radius:4px 4px 0 0;width:100%"></div>
             <span class="trend-lbl">${mesi[m]} 25</span>
           </div>
           <div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex:1">
@@ -2241,8 +2241,8 @@ function buildTrendChart() {
     } else {
       // Solo 2025 bar
       bars += `<div class="trend-bar-group" style="flex:1;min-width:48px">
-        <span class="trend-val" style="color:#e07b54">${n25}</span>
-        <div class="trend-bar" style="height:${barH25}px;background:linear-gradient(to top, #e07b54, rgba(224,123,84,0.15));border-radius:4px 4px 0 0;width:100%"></div>
+        <span class="trend-val" style="color:#ff0000">${n25}</span>
+        <div class="trend-bar" style="height:${barH25}px;background:linear-gradient(to top, #ff0000, rgba(255,0,0,0.15));border-radius:4px 4px 0 0;width:100%"></div>
         <span class="trend-lbl">${mesi[m]} 25</span>
       </div>`;
     }
