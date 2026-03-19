@@ -5,6 +5,54 @@ Il formato è ispirato allo standard "Keep a Changelog" e mantiene un tracciamen
 
 ---
 
+## [1.0.3] - 2026-03-18
+
+### Aggiunto
+- implementata suddivisione geografica automatica:
+  - Nord Italia
+  - Centro Italia
+  - Sud Italia
+  - Isole
+  - Sconosciuta
+- calcolo dinamico delle macro-aree basato sulle regioni presenti nei dataset
+- aggiornamento automatico delle percentuali per ogni macro-area
+- aggiunta funzione globale `recomputeDashboard()` per ricalcolo completo dati
+- automatizzazione del footer:
+  - data aggiornata automaticamente
+  - versione gestita tramite variabile centralizzata
+- aggiunta visualizzazione percentuale nei box geografici
+
+### Modificato
+- riorganizzazione layout HERO:
+  - ridotta altezza del contenitore principale
+  - migliorato allineamento tra blocco sinistro e destro
+- ristrutturazione sezione TOP:
+  - separazione in contenitore dedicato
+  - aggiunta terzo box (nuovo contenitore)
+- spostamento legenda impatto (Critico / Alto / Medio / Basso):
+  - da area statistiche a intestazione tabella
+  - integrazione visiva con sistema tab
+- uniformazione completa tipografica UI:
+  - allineati font, colori e pesi tra tab, legenda e intestazioni
+- miglioramento ordinamento dinamico macro-aree (basato sui valori)
+- aggiornamento struttura rendering dashboard:
+  - sincronizzazione tra buildStats, buildTop5, buildGeoDivision e buildTrendChart
+
+### Corretto
+- risolto bug rendering grafico trend mensile (box vuoto)
+- corretta posizione legenda (precedentemente non applicata)
+- rimosso highlight grafico indesiderato su “Nord Italia”
+- eliminati elementi residui:
+  - "IN ATTESA"
+  - "BOX NUOVO"
+- corretta gestione aggregazione regioni (inclusa Valle d’Aosta e varianti)
+- risolti problemi di coerenza tra totale dashboard e macro-aree
+- sistemato allineamento elementi nella sezione HERO
+- corretto comportamento di aggiornamento automatico dopo inserimento nuove rivendicazioni
+
+---
+
+
 ## [1.0.2] - 2026-03-17
 
 ### Aggiunto
