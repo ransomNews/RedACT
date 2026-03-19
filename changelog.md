@@ -5,6 +5,19 @@ Il formato è ispirato allo standard "Keep a Changelog" e mantiene un tracciamen
 
 ---
 
+## [1.0.4] - 2026-03-19
+
+### Aggiunto
+- implementata legenda gruppi dopo riscontro effettivo sul totale 2024
+
+### Modificato
+-
+
+### Corretto
+- allineamento box 
+
+---
+
 ## [1.0.3] - 2026-03-18
 
 ### Aggiunto
