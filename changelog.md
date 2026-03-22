@@ -5,6 +5,19 @@ Il formato è ispirato allo standard "Keep a Changelog" e mantiene un tracciamen
 
 ---
 
+## [1.0.5] - 2026-03-22
+
+### Aggiunto
+- completato inserimento dei dati 2024
+
+### Modificato
+-
+
+### Corretto
+- 
+
+---
+
 ## [1.0.4] - 2026-03-19
 
 ### Aggiunto
