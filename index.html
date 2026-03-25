@@ -2357,9 +2357,9 @@ function groupStyle(g) {
 
 function fmtNote(n) {
   if (!n) return '';
-  if (n.includes('RIMOSSA'))      return '<span class="badge b-rimossa">Rimossa</span>';
-  if (n.includes('NON PUBBLICATI')) return '<span class="badge b-nonpub">Non pub.</span>';
-  if (n.includes('NO QUANTITA'))  return '<span class="badge b-pubnq">No quant.</span>';
+  if (n.includes('RIMOSSA'))      return '<span class="badge b-rimossa">Rimossa dal DLS</span>';
+  if (n.includes('NON PUBBLICATI')) return '<span class="badge b-nonpub">Non pubblicati</span>';
+  if (n.includes('NO QUANTITA'))  return '<span class="badge b-pubnq">Quantità sconosciuta</span>';
   if (n.includes('DLS CHIUSO'))   return '<span class="badge b-chiuso">DLS chiuso</span>';
   if (n.includes('HACKERATO'))    return '<span class="badge b-hacked">DLS hack.</span>';
   return `<span style="font-size: 12px;color:var(--text-muted)">${n}</span>`;
