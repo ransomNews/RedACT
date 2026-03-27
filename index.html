@@ -1931,7 +1931,7 @@ html.light .hm-btn { color: #7a82b0; }
 }
 
 
-/* === FIX: ripristino colore originale numero DATI PUBBLICATI IN GB dalla versione stabile === */
+/* === FIX: ripristino colore originale numero TOTALE DATI GB dalla versione stabile === */
 .hero-right-stats .stat.yellow .stat-val{
   color: var(--yellow) !important;
 }
@@ -2043,6 +2043,15 @@ td:nth-child(7){
   line-height: 1.2 !important;
 }
 
+
+/* TEST: allineamento numero totale GB */
+.stat-total-gb, #statGb {
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+}
+
 </style>
 </head>
 <body>
@@ -2116,7 +2125,7 @@ td:nth-child(7){
           <div class="stat-sub"></div>
         </div>
         <div class="stat yellow">
-          <div class="stat-label">DATI PUBBLICATI IN GB</div>
+          <div class="stat-label">TOTALE DATI GB</div>
           <div class="stat-val" id="statGb">—</div>
           <div class="stat-sub"></div>
         </div>
