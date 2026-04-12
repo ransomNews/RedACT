@@ -2387,7 +2387,7 @@ function fmtNote(n) {
   if (norm.includes('NO QUANTITA') || norm.includes('QUANTITA SCONOSCIUTA')) return '<span class="badge b-pubnq">Quantità sconosciuta</span>';
   if (norm.includes('DLS CHIUSO')) return '<span class="badge b-chiuso">DLS chiuso</span>';
   if (norm.includes('HACKERATO')) return '<span class="badge b-hacked">DLS hack.</span>';
-  if (norm.includes('')) return '<span style="font-size:12px;color:#ffffff;font-weight:700;"></span>';
+  if (norm.includes('STATUS: IN VERIFICA')) return '<span style="font-size:12px;color:#ffffff;font-weight:700;">Status: IN VERIFICA</span>';
 
   return `<span style="font-size: 12px;color:var(--text-muted)">${raw}</span>`;
 }
@@ -2439,6 +2439,7 @@ const OFFICIAL_GROUP_CATALOG = [
   "beast",
   "benzona",
   "blackshrantac",
+  "blackwater",
   "bqtlock",
   "braincipher",
   "bravox",
