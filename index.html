@@ -2433,8 +2433,7 @@ const YEARS = Object.keys(DATASETS).map(Number).sort((a,b) => b-a);
 let all = YEARS.slice().sort((a,b) => a-b).flatMap(y => DATASETS[y]);
 all.forEach((r,i) => { r.SEQ = String(i+1).padStart(5,'0'); });
 
-const OFFICIAL_GROUP_CATALOG = [
-  "abyss",
+const OFFICIAL_GROUP_CATALOG = ["abyss",
   "ailock",
   "akira",
   "anubis",
@@ -2530,8 +2529,7 @@ const OFFICIAL_GROUP_CATALOG = [
   "cry0",
   "shadowbyt3$",
   "audit",
-  "timc"
-];
+  "timc", "prinz eugen"];
 
 let year = 0, sortKey = 'SEQ', sortDir = -1;
 let hmMonth = null, hmGroup = null, hmRegione = null;
@@ -3340,7 +3338,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_96';
+    verEl.textContent = 'DS_STABILE_102';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
