@@ -484,7 +484,7 @@ td {
 .c-dati {
   font-family: var(--mono);
   font-size: 15px;
-  text-align: right;
+  text-align: center;
   white-space: nowrap;
   width: 80px;
 }
@@ -1723,7 +1723,8 @@ html.light .hm-btn { color: #7a82b0; }
   height:100%;
   border-radius:6px;
 }
-.macro-item.nord .macro-fill{ background: linear-gradient(90deg, var(--red), #ff6b6b); }
+.macro-item.nord-ovest .macro-fill{ background: linear-gradient(90deg, #ff0000, #ff4444); }
+.macro-item.nord-est .macro-fill{ background: linear-gradient(90deg, #ff6600, #ff9944); }
 .macro-item.centro .macro-fill{ background: linear-gradient(90deg, var(--yellow), #d7a64c); }
 .macro-item.sud .macro-fill{ background: linear-gradient(90deg, var(--blue), #6faeff); }
 .macro-item.isole .macro-fill{ background: linear-gradient(90deg, #c97aff, #d89cff); }
@@ -2182,7 +2183,7 @@ td:nth-child(7){
       <div class="chart-box">
         <div class="chart-title chart-title-v2">
           <div class="chart-title-sub"></div>
-          <div class="chart-title-label">GEOGRAFICA</div>
+          <div class="chart-title-label">AREE NUTS 1</div>
         </div>
         <div id="geoDivisionBox"></div>
       </div>
@@ -2251,7 +2252,7 @@ td:nth-child(7){
           <th onclick="sort('LINK')">Link</th>
           <th onclick="sort('PROVINCIA')">Provincia</th>
           <th onclick="sort('REGIONE')">Regione</th>
-          <th onclick="sort('DATI')">Dati GB</th>
+          <th onclick="sort('DATI')">Dati Pubblicati GB</th>
           <th onclick="sort('NOTE')">Note</th>
         </tr>
       </thead>
@@ -2892,8 +2893,10 @@ function buildTop5Regioni() {
 buildTop5Regioni();
 
 const MACRO_AREE = {
-  "Nord Italia": [
-    "Valle d'Aosta", "Piemonte", "Liguria", "Lombardia",
+  "Nord Italia (Nord-Ovest)": [
+    "Valle d'Aosta", "Piemonte", "Liguria", "Lombardia"
+  ],
+  "Nord Italia (Nord-Est)": [
     "Trentino Alto Adige", "Trentino-Alto Adige",
     "Veneto", "Friuli Venezia Giulia", "Emilia Romagna", "Emilia-Romagna"
   ],
@@ -2918,7 +2921,8 @@ function buildGeoDivision() {
   });
 
   const counts = {
-    "Nord Italia": 0,
+    "Nord Italia (Nord-Ovest)": 0,
+    "Nord Italia (Nord-Est)": 0,
     "Centro Italia": 0,
     "Sud Italia": 0,
     "Isole": 0,
@@ -2938,11 +2942,12 @@ function buildGeoDivision() {
 
   const total = all.length || 1;
   const order = [
-    ["Nord Italia", "#ff0000", "linear-gradient(90deg, rgba(255,0,0,0.85), rgba(255,0,0,0.25))"],
-    ["Centro Italia", "#f0b429", "linear-gradient(90deg, rgba(240,180,41,0.85), rgba(240,180,41,0.25))"],
-    ["Sud Italia", "#4d9fff", "linear-gradient(90deg, rgba(77,159,255,0.85), rgba(77,159,255,0.25))"],
-    ["Isole", "#00c896", "linear-gradient(90deg, rgba(0,200,150,0.85), rgba(0,200,150,0.25))"],
-    ["Sconosciuta", "#c97aff", "linear-gradient(90deg, rgba(201,122,255,0.85), rgba(201,122,255,0.25))"]
+    ["Nord Italia (Nord-Ovest)", "#ff0000", "linear-gradient(90deg, rgba(255,0,0,0.85), rgba(255,0,0,0.25))"],
+    ["Nord Italia (Nord-Est)",   "#ff6600", "linear-gradient(90deg, rgba(255,102,0,0.85), rgba(255,102,0,0.25))"],
+    ["Centro Italia",            "#f0b429", "linear-gradient(90deg, rgba(240,180,41,0.85), rgba(240,180,41,0.25))"],
+    ["Sud Italia",               "#4d9fff", "linear-gradient(90deg, rgba(77,159,255,0.85), rgba(77,159,255,0.25))"],
+    ["Isole",                    "#00c896", "linear-gradient(90deg, rgba(0,200,150,0.85), rgba(0,200,150,0.25))"],
+    ["Sconosciuta",              "#c97aff", "linear-gradient(90deg, rgba(201,122,255,0.85), rgba(201,122,255,0.25))"]
   ];
 
   const max = Math.max(...order.map(([label]) => counts[label] || 0), 1);
@@ -3400,7 +3405,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_107';
+    verEl.textContent = 'DS_STABILE_108';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
