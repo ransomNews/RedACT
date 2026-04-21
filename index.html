@@ -3047,7 +3047,12 @@ function buildTop5GB() {
   const html = sorted.map(([g, gb], i) => {
     const widthPct = Math.max(8, Math.round((gb / max) * 100));
     const { fg, bg } = palette[i];
-    const label = gb.toLocaleString('it-IT', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' GB';
+    const fmtGB = n => {
+  const [int, dec] = n.toFixed(2).split('.');
+  const intFmt = int.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  return intFmt + ',' + dec + ' GB';
+};
+const label = fmtGB(gb);
     return `<div class="topv2-item">
       <div class="topv2-head">
         <div class="topv2-name" title="${g}" style="color:${fg}">${g}</div>
