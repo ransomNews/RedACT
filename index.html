@@ -956,7 +956,7 @@ html.light .hm-btn { color: #7a82b0; }
   color: var(--text-muted);
   letter-spacing: 0.04em;
 }
-#top5chart, #top5regioni {
+#top5chart, #top5regioni, #top5gbchart {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1510,7 +1510,7 @@ html.light .hm-btn { color: #7a82b0; }
 }
 .top-grid{
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(4,minmax(0,1fr));
   gap:20px;
   align-items:stretch;
 }
@@ -1840,19 +1840,20 @@ html.light .hm-btn { color: #7a82b0; }
 
 /* === TEST RIFINITURE BOX GEOGRAFICA === */
 #geoDivisionBox .geo-bottom-legend{
-  width: fit-content !important;
+  width: 100% !important;
   max-width: 100% !important;
   margin: 14px auto 0 !important;
-  padding: 10px 16px !important;
+  padding: 8px 10px !important;
   border: 1px solid rgba(64,68,112,0.85) !important;
   border-radius: 8px !important;
   background: rgba(255,255,255,0.015) !important;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.03) !important;
-  gap: 16px !important;
+  gap: 8px !important;
+  flex-wrap: nowrap !important;
 }
 
 #geoDivisionBox .geo-legend-item{
-  gap: 8px !important;
+  gap: 4px !important;
 }
 
 #geoDivisionBox .geo-legend-dot{
@@ -1864,7 +1865,7 @@ html.light .hm-btn { color: #7a82b0; }
 
 #geoDivisionBox .geo-legend-pct{
   font-family: var(--mono) !important;
-  font-size: 11px !important;
+  font-size: 10px !important;
   font-weight: 700 !important;
   letter-spacing: 0.03em !important;
   color: var(--text-dim) !important;
@@ -2186,6 +2187,13 @@ td:nth-child(7){
           <div class="chart-title-label">AREE NUTS 1</div>
         </div>
         <div id="geoDivisionBox"></div>
+      </div>
+      <div class="chart-box">
+        <div class="chart-title chart-title-v2">
+          <div class="chart-title-sub"></div>
+          <div class="chart-title-label">TOP 5 DATI PUBBLICATI</div>
+        </div>
+        <div id="top5gbchart"></div>
       </div>
   </div>
 </div>
@@ -2852,11 +2860,11 @@ function buildTop5() {
     </div>`;
   }).join('');
 
-  const legendHtml = `<div class="geo-bottom-legend" style="margin:14px auto 0;width:fit-content;max-width:100%;padding:10px 16px;border:1px solid rgba(64,68,112,0.85);border-radius:8px;background:rgba(255,255,255,0.015);box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">` +
+  const legendHtml = `<div class="geo-bottom-legend" style="margin:14px auto 0;width:100%;padding:8px 10px;border:1px solid rgba(64,68,112,0.85);border-radius:8px;background:rgba(255,255,255,0.015);box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:nowrap;">` +
     sorted.map(([g, n], i) => {
       const pct = ((n / total) * 100).toFixed(1);
       const { fg } = palette[i];
-      return `<span style="display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-family:var(--mono);font-size:11px;color:var(--text-dim);">
+      return `<span style="display:inline-flex;align-items:center;gap:4px;white-space:nowrap;font-family:var(--mono);font-size:10px;color:var(--text-dim);">
         <span style="width:11px;height:11px;border-radius:2px;background:${fg};display:inline-block;flex:0 0 11px;"></span>
         <span style="font-weight:700;letter-spacing:0.03em;">${pct}%</span>
       </span>`;
@@ -2900,11 +2908,11 @@ function buildTop5Regioni() {
     </div>`;
   }).join('');
 
-  const legendHtml = `<div class="geo-bottom-legend" style="margin:14px auto 0;width:fit-content;max-width:100%;padding:10px 16px;border:1px solid rgba(64,68,112,0.85);border-radius:8px;background:rgba(255,255,255,0.015);box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">` +
+  const legendHtml = `<div class="geo-bottom-legend" style="margin:14px auto 0;width:100%;padding:8px 10px;border:1px solid rgba(64,68,112,0.85);border-radius:8px;background:rgba(255,255,255,0.015);box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:nowrap;">` +
     sorted.map(([reg, n], i) => {
       const pct = ((n / total) * 100).toFixed(1);
       const { fg } = palette[i];
-      return `<span style="display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-family:var(--mono);font-size:11px;color:var(--text-dim);">
+      return `<span style="display:inline-flex;align-items:center;gap:4px;white-space:nowrap;font-family:var(--mono);font-size:10px;color:var(--text-dim);">
         <span style="width:11px;height:11px;border-radius:2px;background:${fg};display:inline-block;flex:0 0 11px;"></span>
         <span style="font-weight:700;letter-spacing:0.03em;">${pct}%</span>
       </span>`;
@@ -3008,12 +3016,63 @@ function recomputeDashboard() {
   buildStats();
   buildTop5();
   buildTop5Regioni();
+  buildTop5GB();
   buildGeoDivision();
   buildHeatmap();
   buildTrendChart();
 }
 
 window.recomputeDashboard = recomputeDashboard;
+
+// ── Top 5 gruppi per dati pubblicati GB ───────────────────
+function buildTop5GB() {
+  const counts = {};
+  all.forEach(r => {
+    const g = String(r.GRUPPO || '').toLowerCase().trim();
+    const gb = parseFloat(r.DATI) || 0;
+    if (g && gb > 0) counts[g] = (counts[g] || 0) + gb;
+  });
+  const sorted = Object.entries(counts).sort((a,b) => b[1]-a[1]).slice(0,5);
+  const max = sorted.length ? sorted[0][1] : 1;
+  const totalGb = all.reduce((s,r) => s + (parseFloat(r.DATI)||0), 0) || 1;
+
+  const palette = [
+    { fg: '#ff0000', bg: 'linear-gradient(90deg, rgba(255,0,0,0.85), rgba(255,0,0,0.25))'  },
+    { fg: '#f0b429', bg: 'linear-gradient(90deg, rgba(240,180,41,0.85), rgba(240,180,41,0.25))' },
+    { fg: '#4d9fff', bg: 'linear-gradient(90deg, rgba(77,159,255,0.85), rgba(77,159,255,0.25))' },
+    { fg: '#00c896', bg: 'linear-gradient(90deg, rgba(0,200,150,0.85), rgba(0,200,150,0.25))' },
+    { fg: '#c97aff', bg: 'linear-gradient(90deg, rgba(201,122,255,0.85), rgba(201,122,255,0.25))' },
+  ];
+
+  const html = sorted.map(([g, gb], i) => {
+    const widthPct = Math.max(8, Math.round((gb / max) * 100));
+    const { fg, bg } = palette[i];
+    const label = gb.toLocaleString('it-IT', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' GB';
+    return `<div class="topv2-item">
+      <div class="topv2-head">
+        <div class="topv2-name" title="${g}" style="color:${fg}">${g}</div>
+        <div class="topv2-count" style="color:${fg}">${label}</div>
+      </div>
+      <div class="topv2-track">
+        <div class="topv2-fill" style="width:${widthPct}%; background:${bg}; border-left:3px solid ${fg}"></div>
+      </div>
+    </div>`;
+  }).join('');
+
+  const legendHtml = `<div class="geo-bottom-legend" style="margin:14px auto 0;width:100%;padding:8px 10px;border:1px solid rgba(64,68,112,0.85);border-radius:8px;background:rgba(255,255,255,0.015);box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:nowrap;">` +
+    sorted.map(([g, gb], i) => {
+      const pct = ((gb / totalGb) * 100).toFixed(1);
+      const { fg } = palette[i];
+      return `<span style="display:inline-flex;align-items:center;gap:4px;white-space:nowrap;font-family:var(--mono);font-size:10px;color:var(--text-dim);">
+        <span style="width:11px;height:11px;border-radius:2px;background:${fg};display:inline-block;flex:0 0 11px;"></span>
+        <span style="font-weight:700;letter-spacing:0.03em;">${pct}%</span>
+      </span>`;
+    }).join('') + `</div>`;
+
+  document.getElementById('top5gbchart').innerHTML =
+    `<div style="display:flex;flex-direction:column;gap:10px;">${html}</div>` + legendHtml;
+}
+buildTop5GB();
 
 
 function getDatiClass(val) {
@@ -3427,7 +3486,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_113';
+    verEl.textContent = 'DS_STABILE_114';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
