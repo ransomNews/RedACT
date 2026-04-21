@@ -1843,17 +1843,18 @@ html.light .hm-btn { color: #7a82b0; }
   width: 100% !important;
   max-width: 100% !important;
   margin: 14px auto 0 !important;
-  padding: 8px 10px !important;
-  border: 1px solid rgba(64,68,112,0.85) !important;
-  border-radius: 8px !important;
-  background: rgba(255,255,255,0.015) !important;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.03) !important;
-  gap: 8px !important;
+  padding: 4px 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  gap: 10px !important;
   flex-wrap: nowrap !important;
+  justify-content: center !important;
 }
 
 #geoDivisionBox .geo-legend-item{
-  gap: 4px !important;
+  gap: 5px !important;
 }
 
 #geoDivisionBox .geo-legend-dot{
@@ -1865,7 +1866,7 @@ html.light .hm-btn { color: #7a82b0; }
 
 #geoDivisionBox .geo-legend-pct{
   font-family: var(--mono) !important;
-  font-size: 10px !important;
+  font-size: 11px !important;
   font-weight: 700 !important;
   letter-spacing: 0.03em !important;
   color: var(--text-dim) !important;
@@ -2860,7 +2861,7 @@ function buildTop5() {
     </div>`;
   }).join('');
 
-  const legendHtml = `<div class="geo-bottom-legend" style="margin:14px auto 0;width:100%;padding:8px 10px;border:1px solid rgba(64,68,112,0.85);border-radius:8px;background:rgba(255,255,255,0.015);box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:nowrap;">` +
+  const legendHtml = `<div class="geo-bottom-legend" style="margin:14px auto 0;width:100%;padding:4px 0;border:none;background:transparent;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:nowrap;">` +
     sorted.map(([g, n], i) => {
       const pct = ((n / total) * 100).toFixed(1);
       const { fg } = palette[i];
@@ -2908,7 +2909,7 @@ function buildTop5Regioni() {
     </div>`;
   }).join('');
 
-  const legendHtml = `<div class="geo-bottom-legend" style="margin:14px auto 0;width:100%;padding:8px 10px;border:1px solid rgba(64,68,112,0.85);border-radius:8px;background:rgba(255,255,255,0.015);box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:nowrap;">` +
+  const legendHtml = `<div class="geo-bottom-legend" style="margin:14px auto 0;width:100%;padding:4px 0;border:none;background:transparent;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:nowrap;">` +
     sorted.map(([reg, n], i) => {
       const pct = ((n / total) * 100).toFixed(1);
       const { fg } = palette[i];
@@ -2923,15 +2924,15 @@ function buildTop5Regioni() {
 buildTop5Regioni();
 
 const MACRO_AREE = {
-  "Nord Italia (Nord-Ovest)": [
+  "Nord-Ovest": [
     "Valle d'Aosta", "Piemonte", "Liguria", "Lombardia"
   ],
-  "Nord Italia (Nord-Est)": [
+  "Nord-Est": [
     "Trentino Alto Adige", "Trentino-Alto Adige",
     "Veneto", "Friuli Venezia Giulia", "Emilia Romagna", "Emilia-Romagna"
   ],
-  "Centro Italia": ["Toscana", "Umbria", "Marche", "Lazio"],
-  "Sud Italia": ["Abruzzo", "Molise", "Campania", "Puglia", "Basilicata", "Calabria"],
+  "Centro": ["Toscana", "Umbria", "Marche", "Lazio"],
+  "Sud": ["Abruzzo", "Molise", "Campania", "Puglia", "Basilicata", "Calabria"],
   "Isole": ["Sicilia", "Sardegna"]
 };
 
@@ -2951,10 +2952,10 @@ function buildGeoDivision() {
   });
 
   const counts = {
-    "Nord Italia (Nord-Ovest)": 0,
-    "Nord Italia (Nord-Est)": 0,
-    "Centro Italia": 0,
-    "Sud Italia": 0,
+    "Nord-Ovest": 0,
+    "Nord-Est": 0,
+    "Centro": 0,
+    "Sud": 0,
     "Isole": 0,
     "Sconosciuta": 0
   };
@@ -2972,10 +2973,10 @@ function buildGeoDivision() {
 
   const total = all.length || 1;
   const order = [
-    ["Nord Italia (Nord-Ovest)", "#ff0000", "linear-gradient(90deg, rgba(255,0,0,0.85), rgba(255,0,0,0.25))"],
-    ["Nord Italia (Nord-Est)",   "#ff6600", "linear-gradient(90deg, rgba(255,102,0,0.85), rgba(255,102,0,0.25))"],
-    ["Centro Italia",            "#f0b429", "linear-gradient(90deg, rgba(240,180,41,0.85), rgba(240,180,41,0.25))"],
-    ["Sud Italia",               "#4d9fff", "linear-gradient(90deg, rgba(77,159,255,0.85), rgba(77,159,255,0.25))"],
+    ["Nord-Ovest", "#ff0000", "linear-gradient(90deg, rgba(255,0,0,0.85), rgba(255,0,0,0.25))"],
+    ["Nord-Est",   "#ff6600", "linear-gradient(90deg, rgba(255,102,0,0.85), rgba(255,102,0,0.25))"],
+    ["Centro",            "#f0b429", "linear-gradient(90deg, rgba(240,180,41,0.85), rgba(240,180,41,0.25))"],
+    ["Sud",               "#4d9fff", "linear-gradient(90deg, rgba(77,159,255,0.85), rgba(77,159,255,0.25))"],
     ["Isole",                    "#00c896", "linear-gradient(90deg, rgba(0,200,150,0.85), rgba(0,200,150,0.25))"],
     ["Sconosciuta",              "#c97aff", "linear-gradient(90deg, rgba(201,122,255,0.85), rgba(201,122,255,0.25))"]
   ];
@@ -2997,9 +2998,10 @@ function buildGeoDivision() {
     </div>`;
   }).join('');
 
-  const legendHtml = `<div class="geo-bottom-legend">` + order.map(([label, fg]) => {
+  const totalSenzaSconosciuta = total - (counts['Sconosciuta'] || 0);
+  const legendHtml = `<div class="geo-bottom-legend">` + order.filter(([label]) => label !== 'Sconosciuta').map(([label, fg]) => {
     const n = counts[label] || 0;
-    const pct = (n / total) * 100;
+    const pct = (n / totalSenzaSconosciuta) * 100;
     return `<span class="geo-legend-item"><span class="geo-legend-dot" style="background:${fg}"></span><span class="geo-legend-pct">${pct.toFixed(1)}%</span></span>`;
   }).join('') + `</div>`;
 
@@ -3064,7 +3066,7 @@ const label = fmtGB(gb);
     </div>`;
   }).join('');
 
-  const legendHtml = `<div class="geo-bottom-legend" style="margin:14px auto 0;width:100%;padding:8px 10px;border:1px solid rgba(64,68,112,0.85);border-radius:8px;background:rgba(255,255,255,0.015);box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:nowrap;">` +
+  const legendHtml = `<div class="geo-bottom-legend" style="margin:14px auto 0;width:100%;padding:4px 0;border:none;background:transparent;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:nowrap;">` +
     sorted.map(([g, gb], i) => {
       const pct = ((gb / totalGb) * 100).toFixed(1);
       const { fg } = palette[i];
