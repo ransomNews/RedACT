@@ -527,16 +527,20 @@ td {
 .c-dati {
   font-family: var(--mono);
   font-size: 15px;
-  text-align: center;
+  text-align: right;
   white-space: nowrap;
   width: 80px;
+}
+thead .c-dati {
+  text-align: center;
 }
 .dati-large { color: var(--red2); font-weight: 700; }
 .dati-mid { color: #f08c2e; font-weight: 700; }
 .dati-low { color: #ffffff; }
 .dati-zero { color: var(--text-dim); }
 .dati-empty { color: var(--text-dim); }
-.c-note { max-width: 150px; }
+.c-note { max-width: 150px; text-align: left; }
+thead .c-note { text-align: center; }
 
 /* Note badges */
 .badge {
@@ -3511,8 +3515,11 @@ function buildStats() {
   const gb24 = gb(2024), gb25 = gb(2025), gb26 = gb(2026);
   const gbTot = gb24 + gb25 + gb26;
 
-  const fmt = n => n.toLocaleString('it-IT', {minimumFractionDigits:2, maximumFractionDigits:2});
-  const fmtInt = n => n.toLocaleString('it-IT');
+  const fmt = n => {
+    const [int, dec] = n.toFixed(2).split('.');
+    return int.replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ',' + dec;
+  };
+  const fmtInt = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
   document.getElementById('statTot').textContent = fmtInt(tot);
   document.title = 'ransomNews · ' + fmtInt(tot) + ' Rivendicazioni Italia';
@@ -3664,7 +3671,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_115';
+    verEl.textContent = 'DS_STABILE_116';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
