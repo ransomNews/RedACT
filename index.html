@@ -349,6 +349,49 @@ select:focus { border-color: var(--red); }
 }
 .count-info strong { color: var(--text-dim); }
 
+/* Filtro date */
+.date-sep {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+input[type=date] {
+  background: var(--surface3);
+  border: 1px solid var(--border2);
+  border-radius: 3px;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 13px;
+  outline: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  width: 130px;
+}
+input[type=date]:focus { border-color: var(--red); }
+html.light input[type=date] {
+  background: #f4f4fa;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+/* Bottone esporta CSV */
+.btn-export {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--green);
+  background: rgba(0,200,150,0.1);
+  border: 1px solid rgba(0,200,150,0.35);
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.btn-export:hover { background: rgba(0,200,150,0.2); }
+
 /* ── YEAR TABS ────────────────────────────── */
 .tabs {
   background: var(--surface);
@@ -2226,9 +2269,13 @@ td:nth-child(7){
     <input type="text" id="searchInput" placeholder="Cerca vittima, gruppo, regione…">
   </div>
   <select id="regioneFilter"><option value="">Tutte le regioni</option></select>
-    <select id="gruppoFilter">  <option value="">Tutti i gruppi</option></select>
+  <select id="gruppoFilter">  <option value="">Tutti i gruppi</option></select>
+  <input type="date" id="dateFrom" title="Data inizio" onchange="onDateChange()">
+  <span class="date-sep">→</span>
+  <input type="date" id="dateTo" title="Data fine" onchange="onDateChange()">
   <button id="toolbarResetBtn" onclick="resetToolbar()" style="display:none;font-size:13px;color:var(--blue);background:rgba(77,159,255,0.1);border:1px solid rgba(77,159,255,0.35);border-radius:6px;padding:8px 14px;cursor:pointer;letter-spacing:0.04em;white-space:nowrap;" title="Azzera ricerca e filtri tabella" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">✕ reset ricerca</button>
   <button id="hmResetBtn" onclick="resetHmFilter()" style="display:none;font-family:var(--mono);font-size: 13px;color:var(--red);background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.35);border-radius:3px;padding:8px 12px;cursor:pointer;letter-spacing:0.04em;" onmouseover="this.style.background='rgba(230,57,70,0.2)'" onmouseout="this.style.background='rgba(230,57,70,0.1)'" title="Rimuovi filtro heatmap e torna alla vista completa">✕ reset heatmap</button>
+  <button class="btn-export" onclick="exportCSV()" title="Esporta i dati filtrati in CSV">↓ Esporta CSV</button>
   <div class="count-info">Visualizzate <strong id="countNum">—</strong> righe</div>
 </div>
 
@@ -2603,6 +2650,20 @@ const OFFICIAL_GROUP_CATALOG = [
 let year = 0, sortKey = 'SEQ', sortDir = -1;
 let hmMonth = null, hmGroup = null, hmRegione = null;
 
+// Converte data dd/mm/yyyy in oggetto Date per confronti
+function parseRecordDate(str) {
+  if (!str) return null;
+  const p = str.split('/');
+  if (p.length < 3) return null;
+  return new Date(parseInt(p[2]), parseInt(p[1])-1, parseInt(p[0]));
+}
+// Converte input[type=date] yyyy-mm-dd in Date
+function parseInputDate(str) {
+  if (!str) return null;
+  const p = str.split('-');
+  return new Date(parseInt(p[0]), parseInt(p[1])-1, parseInt(p[2]));
+}
+
 function normalizeGroupName(value) {
   return String(value || '').trim().toLowerCase();
 }
@@ -2656,6 +2717,10 @@ function render() {
   const q  = document.getElementById('searchInput').value.toLowerCase();
   const re = document.getElementById('regioneFilter').value;
   const gr = document.getElementById('gruppoFilter').value;
+  const dfEl = document.getElementById('dateFrom');
+  const dtEl = document.getElementById('dateTo');
+  const dateFrom = dfEl ? parseInputDate(dfEl.value) : null;
+  const dateTo   = dtEl ? parseInputDate(dtEl.value) : null;
 
   filteredRows = base().filter(r => {
     if (re && r.REGIONE !== re) return false;
@@ -2670,6 +2735,14 @@ function render() {
       if (!r.DATA) return false;
       const p = r.DATA.split('/');
       if (parseInt(p[1], 10) !== hmMonth) return false;
+    }
+
+    // Filtro intervallo date
+    if (dateFrom || dateTo) {
+      const rd = parseRecordDate(r.DATA);
+      if (!rd) return false;
+      if (dateFrom && rd < dateFrom) return false;
+      if (dateTo   && rd > dateTo)   return false;
     }
 
     if (q) {
@@ -2713,6 +2786,7 @@ function renderTablePager(totalPages) {
 
 function goTablePage(p) {
   currentPage = p;
+  updateURL();
   render();
   updateToolbarTotalGroups();
   const tableEl = document.getElementById('mainTable');
@@ -2785,24 +2859,25 @@ function sort(k) {
   render();
 }
 
-function switchTab(y) {
+function switchTab(y, noURL) {
   year = y;
   currentPage = 1;
   document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
   const activeTab = document.getElementById(y===0 ? 'tabAll' : 'tab'+y);
   if (activeTab) activeTab.classList.add('active');
+  if (!noURL) updateURL();
   render();
 }
 
 document.getElementById('searchInput').addEventListener('input', checkToolbarReset);
-document.getElementById('searchInput').addEventListener('input', () => { currentPage = 1; render(); });
+document.getElementById('searchInput').addEventListener('input', () => { currentPage = 1; updateURL(); render(); });
 document.getElementById('regioneFilter').addEventListener('change', checkToolbarReset);
-document.getElementById('regioneFilter').addEventListener('change', () => { currentPage = 1; render(); });
+document.getElementById('regioneFilter').addEventListener('change', () => { currentPage = 1; updateURL(); render(); });
 document.getElementById('gruppoFilter').addEventListener('change', checkToolbarReset);
-document.getElementById('gruppoFilter').addEventListener('change', () => { currentPage = 1; render(); });
+document.getElementById('gruppoFilter').addEventListener('change', () => { currentPage = 1; updateURL(); render(); });
 
 populate();
-render();
+initFromURL();
 updateToolbarTotalGroups();
 const fv = document.getElementById('footerVersion'); if (fv) fv.textContent = VERSION_LABEL;
 buildStats();
@@ -3405,16 +3480,29 @@ function resetToolbar() {
   document.getElementById('searchInput').value = '';
   document.getElementById('regioneFilter').value = '';
   document.getElementById('gruppoFilter').value = '';
+  document.getElementById('dateFrom').value = '';
+  document.getElementById('dateTo').value = '';
   document.getElementById('toolbarResetBtn').style.display = 'none';
+  currentPage = 1;
+  updateURL();
   render();
 }
 
 function checkToolbarReset() {
-  const q = document.getElementById('searchInput').value;
+  const q  = document.getElementById('searchInput').value;
   const re = document.getElementById('regioneFilter').value;
   const gr = document.getElementById('gruppoFilter').value;
+  const df = document.getElementById('dateFrom').value;
+  const dt = document.getElementById('dateTo').value;
   const btn = document.getElementById('toolbarResetBtn');
-  if (btn) btn.style.display = (q || re || gr) ? '' : 'none';
+  if (btn) btn.style.display = (q || re || gr || df || dt) ? '' : 'none';
+}
+
+function onDateChange() {
+  currentPage = 1;
+  checkToolbarReset();
+  updateURL();
+  render();
 }
 
 function buildStats() {
@@ -3457,6 +3545,89 @@ function resetHmFilter() {
 
 
 document.addEventListener('DOMContentLoaded', () => { try { renderGroupCatalogWarning(); } catch(e){} });
+
+// ── URL sync (punti 3 e 4) ──────────────────────────────
+function updateURL() {
+  const params = new URLSearchParams();
+  const q  = document.getElementById('searchInput').value;
+  const re = document.getElementById('regioneFilter').value;
+  const gr = document.getElementById('gruppoFilter').value;
+  const df = document.getElementById('dateFrom').value;
+  const dt = document.getElementById('dateTo').value;
+  if (year)        params.set('anno', year);
+  if (q)           params.set('q', q);
+  if (re)          params.set('regione', re);
+  if (gr)          params.set('gruppo', gr);
+  if (df)          params.set('dal', df);
+  if (dt)          params.set('al', dt);
+  if (currentPage > 1) params.set('pag', currentPage);
+  const qs = params.toString();
+  const newUrl = qs ? (location.pathname + '?' + qs) : location.pathname;
+  history.pushState({ anno: year, q, re, gr, df, dt, pag: currentPage }, '', newUrl);
+}
+
+function initFromURL() {
+  const params = new URLSearchParams(location.search);
+  const anno = parseInt(params.get('anno') || '0');
+  const q    = params.get('q')       || '';
+  const re   = params.get('regione') || '';
+  const gr   = params.get('gruppo')  || '';
+  const df   = params.get('dal')     || '';
+  const dt   = params.get('al')      || '';
+  const pag  = parseInt(params.get('pag') || '1');
+
+  if (anno) { year = anno; switchTab(anno, true); }
+  if (q)  document.getElementById('searchInput').value = q;
+  if (re) document.getElementById('regioneFilter').value = re;
+  if (gr) document.getElementById('gruppoFilter').value = gr;
+  if (df) document.getElementById('dateFrom').value = df;
+  if (dt) document.getElementById('dateTo').value = dt;
+  if (pag > 1) currentPage = pag;
+  checkToolbarReset();
+  render();
+}
+
+window.addEventListener('popstate', e => {
+  const s = e.state || {};
+  year = s.anno || 0;
+  currentPage = s.pag || 1;
+  document.getElementById('searchInput').value = s.q  || '';
+  document.getElementById('regioneFilter').value = s.re || '';
+  document.getElementById('gruppoFilter').value  = s.gr || '';
+  document.getElementById('dateFrom').value = s.df || '';
+  document.getElementById('dateTo').value   = s.dt || '';
+  // Aggiorna tab attivo
+  ['tabAll','tab2024','tab2025','tab2026'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove('active');
+  });
+  const activeId = year ? 'tab'+year : 'tabAll';
+  const activeEl = document.getElementById(activeId);
+  if (activeEl) activeEl.classList.add('active');
+  checkToolbarReset();
+  render();
+});
+
+// ── Esporta CSV (punto 1) ───────────────────────────────
+function exportCSV() {
+  const headers = ['ID','Data','Vittima','Gruppo','Link','Provincia','Regione','Dati GB','Note'];
+  const rows = filteredRows.map(r => [
+    r.ID, r.DATA, r.VITTIMA, r.GRUPPO, r.LINK, r.PROVINCIA, r.REGIONE, r.DATI, r.NOTE
+  ].map(v => {
+    const s = String(v ?? '').replace(/"/g, '""');
+    return s.includes(',') || s.includes('"') || s.includes('\n') ? `"${s}"` : s;
+  }).join(','));
+  const csv = [headers.join(','), ...rows].join('\n');
+  const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url;
+  a.download = 'ransomnews_export.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
 </script>
 
 <footer class="site-footer">
@@ -3493,7 +3664,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_114';
+    verEl.textContent = 'DS_STABILE_115';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
