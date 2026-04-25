@@ -37,6 +37,130 @@ body {
   min-height: 100vh;
 }
 
+
+/* ── HERO REDESIGN v2 ────────────────────────────────── */
+
+/* KPI strip — 4 box grandi */
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.kpi-card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-top: 2px solid rgba(255,255,255,0.12);
+}
+.kpi-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+.kpi-val {
+  font-family: var(--mono);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--white);
+}
+.kpi-active .kpi-val { color: #00c896; }
+.kpi-active { border-top-color: #00c896; }
+.kpi-gruppi .kpi-val { color: #ffffff; }
+.kpi-gruppi { border-top-color: #ffffff; }
+.kpi-red .kpi-val    { color: var(--red); }
+.kpi-red             { border-top-color: var(--red); }
+.kpi-yellow .kpi-val { color: #f0b429; }
+.kpi-yellow          { border-top-color: #f0b429; }
+
+/* Year strip — 7 box uniformi */
+.year-strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.ytile {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 6px 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border-top: 2px solid transparent;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+.ytile-year {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+.ytile-count {
+  font-family: var(--mono);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+.ytile-gb {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #f0b429;
+  white-space: nowrap;
+  margin-top: 3px;
+}
+.year-note {
+  grid-column: 4 / span 4;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-style: italic;
+}
+
+/* Colori per anno */
+.ytile-old          { opacity: 0.7; }
+
+.ytile-2020 .ytile-count { color: #ff8c69; }
+.ytile-2020 { border-top-color: #ff8c69; }
+
+.ytile-2021 .ytile-count { color: #ffd166; }
+.ytile-2021 { border-top-color: #ffd166; }
+
+.ytile-2022 .ytile-count { color: #a8dadc; }
+.ytile-2022 { border-top-color: #a8dadc; }
+
+.ytile-2023 .ytile-count { color: #ff9f43; }
+.ytile-2023 { border-top-color: #ff9f43; }
+
+.ytile-2024         { border-top-color: #c97aff; }
+.ytile-2024 .ytile-count { color: #c97aff; }
+
+.ytile-2025         { border-top-color: var(--blue); }
+.ytile-2025 .ytile-count { color: var(--blue); }
+
+.ytile-2026         { border-top-color: var(--green); }
+.ytile-2026 .ytile-count { color: var(--green); }
+
 /* ── NAVBAR ──────────────────────────────── */
 nav {
   position: sticky;
@@ -2223,44 +2347,64 @@ td:nth-child(7){
       </div><!-- /hero-text -->
     </div>
     <div class="hero-right hero-right-stats">
-      <div class="stats-row">
-        <div class="stat total-groups-stat">
-          <div class="stat-label">GRUPPI</div>
-          <div class="stat-val" id="toolbarTotalGroupsValue">0</div>
-          <div class="stat-sub"></div>
+
+      <!-- FASCIA 1: KPI globali -->
+      <div class="kpi-strip">
+        <div class="kpi-card kpi-gruppi">
+          <div class="kpi-label">GRUPPI A CATALOGO</div>
+          <div class="kpi-val" id="toolbarTotalGroupsValue">0</div>
         </div>
-        <div class="stat red">
-          <div class="stat-label">RIVENDICAZIONI</div>
-          <div class="stat-val" id="statTot">—</div>
-          <div class="stat-sub"></div>
+        <div class="kpi-card kpi-active">
+          <div class="kpi-label">GRUPPI ATTIVI 2026</div>
+          <div class="kpi-val" id="statActiveGroups">—</div>
         </div>
-        <div class="stat yellow">
-          <div class="stat-label">TOTALE DATI GB</div>
-          <div class="stat-val" id="statGb">—</div>
-          <div class="stat-sub"></div>
+        <div class="kpi-card kpi-red">
+          <div class="kpi-label">RIVENDICAZIONI TOTALI</div>
+          <div class="kpi-val" id="statTot">—</div>
         </div>
-        <div class="stat purple">
-          <div class="stat-label">ANNO 2024</div>
-          <div class="stat-val" id="stat2024">—</div>
-          <div class="stat-sub" id="stat2024gb"></div>
-        </div>
-        <div class="stat blue">
-          <div class="stat-label">ANNO 2025</div>
-          <div class="stat-val" id="stat2025">—</div>
-          <div class="stat-sub" id="stat2025gb"></div>
-        </div>
-        <div class="stat green">
-          <div class="stat-label">ANNO 2026</div>
-          <div class="stat-val" id="stat2026">—</div>
-          <div class="stat-sub" id="stat2026gb"></div>
+        <div class="kpi-card kpi-yellow">
+          <div class="kpi-label">DATI PUBBLICATI GB</div>
+          <div class="kpi-val" id="statGb">—</div>
         </div>
       </div>
 
-      <div class="year-pills">
-        <div class="year-pill"><strong>2024</strong> <span id="pill2024">—</span></div>
-        <div class="year-pill"><strong>2025</strong> <span id="pill2025">—</span></div>
-        <div class="year-pill"><strong>2026</strong> <span id="pill2026">—</span></div>
+      <!-- FASCIA 2: anni — ordine inverso, 2026 a sinistra -->
+      <div class="year-strip">
+        <div class="ytile ytile-2026">
+          <div class="ytile-year">2026</div>
+          <div class="ytile-count" id="stat2026">—</div>
+          <div class="ytile-gb" id="stat2026gb">—</div>
+        </div>
+        <div class="ytile ytile-2025">
+          <div class="ytile-year">2025</div>
+          <div class="ytile-count" id="stat2025">—</div>
+          <div class="ytile-gb" id="stat2025gb">—</div>
+        </div>
+        <div class="ytile ytile-2024">
+          <div class="ytile-year">2024</div>
+          <div class="ytile-count" id="stat2024">—</div>
+          <div class="ytile-gb" id="stat2024gb">—</div>
+        </div>
+        <div class="ytile ytile-2023">
+          <div class="ytile-year">2023</div>
+          <div class="ytile-count" id="stat2023">141</div>
+        </div>
+        <div class="ytile ytile-2022">
+          <div class="ytile-year">2022</div>
+          <div class="ytile-count" id="stat2022">92</div>
+        </div>
+        <div class="ytile ytile-2021">
+          <div class="ytile-year">2021</div>
+          <div class="ytile-count" id="stat2021">44</div>
+        </div>
+        <div class="ytile ytile-2020">
+          <div class="ytile-year">2020</div>
+          <div class="ytile-count" id="stat2020">1</div>
+        </div>
+        <div class="year-note">⚠ Rivendicazioni in fase di verifica e prossimo inserimento</div>
       </div>
+
+
 
     </div>
 
@@ -3581,18 +3725,33 @@ function buildStats() {
   };
   const fmtInt = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
-  document.getElementById('statTot').textContent = fmtInt(tot);
-  document.title = 'ransomNews · ' + fmtInt(tot) + ' Rivendicazioni Italia';
+  // Gruppi attivi nell'anno corrente (2026)
+  const activeGroups2026 = new Set(
+    (DATA_2026 || []).map(r => String(r.GRUPPO||'').toLowerCase().trim()).filter(Boolean)
+  ).size;
+
+  const totProvvisori = 278;
+  document.getElementById('statTot').textContent = fmtInt(tot + totProvvisori);
+  document.title = 'ransomNews · ' + fmtInt(tot + totProvvisori) + ' Rivendicazioni Italia';
   document.getElementById('statGb').textContent = fmt(gbTot);
+  document.getElementById('statActiveGroups').textContent = activeGroups2026;
+
+  // Anni reali
   document.getElementById('stat2024').textContent = DATA_2024.length;
-  document.getElementById('stat2024gb').textContent = '';
+  document.getElementById('stat2024gb').textContent = fmt(gb24) + ' GB';
   document.getElementById('stat2025').textContent = DATA_2025.length;
-  document.getElementById('stat2025gb').textContent = '';
+  document.getElementById('stat2025gb').textContent = fmt(gb25) + ' GB';
   document.getElementById('stat2026').textContent = DATA_2026.length;
-  document.getElementById('stat2026gb').textContent = '';
-  document.getElementById('pill2024').innerHTML = DATA_2024.length + ' vittime &nbsp;·&nbsp; ' + fmt(gb24) + ' GB';
-  document.getElementById('pill2025').innerHTML = DATA_2025.length + ' vittime &nbsp;·&nbsp; ' + fmt(gb25) + ' GB';
-  document.getElementById('pill2026').innerHTML = DATA_2026.length + ' vittime &nbsp;·&nbsp; ' + fmt(gb26) + ' GB';
+  document.getElementById('stat2026gb').textContent = fmt(gb26) + ' GB';
+
+  // Anni fittizi (placeholder in attesa dati reali)
+  document.getElementById('stat2020').textContent = '1';
+  document.getElementById('stat2021').textContent = '44';
+  document.getElementById('stat2022').textContent = '92';
+  document.getElementById('stat2023').textContent = '141';
+
+
+
   document.getElementById('tabCntAll').textContent = fmtInt(tot);
   document.getElementById('tabCnt2024').textContent = DATA_2024.length;
   document.getElementById('tabCnt2025').textContent = DATA_2025.length;
@@ -3731,7 +3890,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_118';
+    verEl.textContent = 'DS_STABILE_119';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
