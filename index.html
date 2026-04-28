@@ -2403,21 +2403,21 @@ td:nth-child(7){
         </div>
         <div class="ytile ytile-2023">
           <div class="ytile-year">2023</div>
-          <div class="ytile-count" id="stat2023">141</div>
+          <div class="ytile-count" id="stat2023">0</div>
         </div>
         <div class="ytile ytile-2022">
           <div class="ytile-year">2022</div>
-          <div class="ytile-count" id="stat2022">92</div>
+          <div class="ytile-count" id="stat2022">0</div>
         </div>
         <div class="ytile ytile-2021">
           <div class="ytile-year">2021</div>
-          <div class="ytile-count" id="stat2021">44</div>
+          <div class="ytile-count" id="stat2021">0</div>
         </div>
         <div class="ytile ytile-2020">
           <div class="ytile-year">2020</div>
-          <div class="ytile-count" id="stat2020">1</div>
+          <div class="ytile-count" id="stat2020">0</div>
         </div>
-        <div class="year-note">⚠ Rivendicazioni in fase di verifica e prossimo inserimento</div>
+        <div class="year-note">278 rivendicazioni in fase di verifica e prossimo inserimento</div>
       </div>
       </div>
 
@@ -3748,7 +3748,7 @@ function buildStats() {
     (DATA_2026 || []).map(r => String(r.GRUPPO||'').toLowerCase().trim()).filter(Boolean)
   ).size;
 
-  const totProvvisori = 278;
+  const totProvvisori = 0;
   document.getElementById('statTot').textContent = fmtInt(tot + totProvvisori);
   document.title = 'ransomNews · ' + fmtInt(tot + totProvvisori) + ' Rivendicazioni Italia';
   document.getElementById('statGb').textContent = fmt(gbTot);
@@ -3763,10 +3763,10 @@ function buildStats() {
   document.getElementById('stat2026gb').textContent = fmt(gb26) + ' GB';
 
   // Anni fittizi (placeholder in attesa dati reali)
-  document.getElementById('stat2020').textContent = '1';
-  document.getElementById('stat2021').textContent = '44';
-  document.getElementById('stat2022').textContent = '92';
-  document.getElementById('stat2023').textContent = '141';
+  document.getElementById('stat2020').textContent = '0';
+  document.getElementById('stat2021').textContent = '0';
+  document.getElementById('stat2022').textContent = '0';
+  document.getElementById('stat2023').textContent = '0';
 
 
 
@@ -3908,7 +3908,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_126';
+    verEl.textContent = 'DS_STABILE_127';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
