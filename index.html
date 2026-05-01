@@ -2506,10 +2506,14 @@ td:nth-child(7){
 
 <!-- TABS -->
 <div class="tabs">
-  <div class="tab active" id="tabAll"  onclick="switchTab(0)">Tutti <span class="cnt" id="tabCntAll">402</span></div>
-  <div class="tab" id="tab2026" onclick="switchTab(2026)">2026 <span class="cnt" id="tabCnt2026">86</span></div>
+    <div class="tab active" id="tabAll"  onclick="switchTab(0)">Tutti <span class="cnt" id="tabCntAll">460</span></div>
+  <div class="tab" id="tab2026" onclick="switchTab(2026)">2026 <span class="cnt" id="tabCnt2026">99</span></div>
   <div class="tab" id="tab2025" onclick="switchTab(2025)">2025 <span class="cnt" id="tabCnt2025">172</span></div>
   <div class="tab" id="tab2024" onclick="switchTab(2024)">2024 <span class="cnt" id="tabCnt2024">144</span></div>
+  <div class="tab" id="tab2023" onclick="switchTab(2023)">2023 <span class="cnt" id="tabCnt2023">0</span></div>
+  <div class="tab" id="tab2022" onclick="switchTab(2022)">2022 <span class="cnt" id="tabCnt2022">0</span></div>
+  <div class="tab" id="tab2021" onclick="switchTab(2021)">2021 <span class="cnt" id="tabCnt2021">44</span></div>
+  <div class="tab" id="tab2020" onclick="switchTab(2020)">2020 <span class="cnt" id="tabCnt2020">1</span></div>
   <div class="impact-legend">
         <span class="legend-item" title="Dati esfiltrati > 500 GB"><span class="legend-dot legend-red"></span><span>CRITICO &gt;500 GB</span></span>
         <span class="legend-item" title="Dati esfiltrati tra 100 e 500 GB"><span class="legend-dot legend-orange"></span><span>ALTO 100–500 GB</span></span>
@@ -2670,6 +2674,19 @@ const GP = {
   'stormous': ['#ff5577','#280010'],
   'trigona': ['#ffdd44','#252000'],
   'trisec': ['#44eeff','#061828'],
+
+  "avaddon": "#ff6b35",
+  "azroteam": "#7b68ee",
+  "blackbyte": "#2f8c8c",
+  "blackmatter": "#6a5acd",
+  "conti": "#e74c3c",
+  "lockbit2": "#f39c12",
+  "marketo": "#16a085",
+  "pysa": "#8e44ad",
+  "ragnarlocker": "#c0392b",
+  "ransomexx": "#2980b9",
+  "spook": "#27ae60",
+  "xinglocker": "#d35400",
 };
 
 function groupStyle(g) {
@@ -2736,7 +2753,58 @@ const SITE_VERSION = '2.2';
 const VERSION_LABEL = `Versione ${SITE_VERSION}`;
 
 // ── State ─────────────────────────────────────
-const DATASETS = {2024: DATA_2024, 2025: DATA_2025, 2026: DATA_2026};
+const DATA_2020 = [
+  {P:1, ANNO:1, ID:"00001", DATA:"08/10/2020", VITTIMA:"Campari Group", GRUPPO:"ragnarlocker", LINK:"camparigroup.com", PROVINCIA:"Milano", REGIONE:"Lombardia", DATI:0, NOTE:""}
+];
+const DATA_2021 = [
+  {P:1, ANNO:1, ID:"00001", DATA:"29/04/2021", VITTIMA:"Pezutto Group S.R.L.", GRUPPO:"xinglocker", LINK:"pezzutogroup.it", PROVINCIA:"Lecce", REGIONE:"Puglia", DATI:0, NOTE:""},
+  {P:2, ANNO:2, ID:"00002", DATA:"09/09/2021", VITTIMA:"Turla S.R.L.", GRUPPO:"conti", LINK:"turla.it", PROVINCIA:"Brescia", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:3, ANNO:3, ID:"00003", DATA:"09/09/2021", VITTIMA:"Riwega S.R.L.", GRUPPO:"conti", LINK:"riwega.com", PROVINCIA:"Bolzano", REGIONE:"Trentino Alto Adige", DATI:0, NOTE:""},
+  {P:4, ANNO:4, ID:"00004", DATA:"09/09/2021", VITTIMA:"Ermenegildo Zegna Holding", GRUPPO:"ransomexx", LINK:"zegna.com", PROVINCIA:"Biella", REGIONE:"Piemonte", DATI:0, NOTE:""},
+  {P:5, ANNO:5, ID:"00005", DATA:"09/09/2021", VITTIMA:"Consiglio Nazionale del Notariato", GRUPPO:"ransomexx", LINK:"notariato.it", PROVINCIA:"Roma", REGIONE:"Lazio", DATI:0, NOTE:""},
+  {P:6, ANNO:6, ID:"00006", DATA:"09/09/2021", VITTIMA:"Soluzioni Infrastrutturali Telefoniche ed Elettriche S.P.A.", GRUPPO:"ransomexx", LINK:"sittel.it", PROVINCIA:"Roma", REGIONE:"Lazio", DATI:0, NOTE:""},
+  {P:7, ANNO:7, ID:"00007", DATA:"09/09/2021", VITTIMA:"Pezutto Group S.R.L.", GRUPPO:"azroteam", LINK:"pezzutogroup.it", PROVINCIA:"Lecce", REGIONE:"Puglia", DATI:0, NOTE:""},
+  {P:8, ANNO:8, ID:"00008", DATA:"09/09/2021", VITTIMA:"Bartoli & Arveda Associazione Professionale", GRUPPO:"pysa", LINK:"bartoliearveda.it", PROVINCIA:"Reggio Emilia", REGIONE:"Emilia Romagna", DATI:0, NOTE:""},
+  {P:9, ANNO:9, ID:"00009", DATA:"09/09/2021", VITTIMA:"Implanta S.R.L.", GRUPPO:"pysa", LINK:"", PROVINCIA:"Milano", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:10, ANNO:10, ID:"00010", DATA:"09/09/2021", VITTIMA:"Torello Moving Strategies", GRUPPO:"pysa", LINK:"tntorello.com", PROVINCIA:"Avellino", REGIONE:"Campania", DATI:0, NOTE:""},
+  {P:11, ANNO:11, ID:"00011", DATA:"09/09/2021", VITTIMA:"Tor Vergata Università degli Studi di Roma", GRUPPO:"pysa", LINK:"uniroma2.it", PROVINCIA:"Roma", REGIONE:"Lazio", DATI:0, NOTE:""},
+  {P:12, ANNO:12, ID:"00012", DATA:"09/09/2021", VITTIMA:"Comune di Villafranca d'Asti", GRUPPO:"avaddon", LINK:"comune.villafrancadasti.at.it", PROVINCIA:"Asti", REGIONE:"Piemonte", DATI:0, NOTE:""},
+  {P:13, ANNO:13, ID:"00013", DATA:"09/09/2021", VITTIMA:"Bianchi Vending Bianchi Industry S.P.A.", GRUPPO:"avaddon", LINK:"bianchivending.it", PROVINCIA:"Bergamo", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:14, ANNO:14, ID:"00014", DATA:"10/09/2021", VITTIMA:"Tovo Gomma S.P.A.", GRUPPO:"lockbit2", LINK:"tovogomma.it", PROVINCIA:"Brescia", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:15, ANNO:15, ID:"00015", DATA:"10/09/2021", VITTIMA:"Mecc Alte S.P.A.", GRUPPO:"lockbit2", LINK:"meccalte.com", PROVINCIA:"Vicenza", REGIONE:"Veneto", DATI:0, NOTE:""},
+  {P:16, ANNO:16, ID:"00016", DATA:"17/09/2021", VITTIMA:"Pastificio Riscossa S.P.A.", GRUPPO:"lockbit2", LINK:"riscossa.it", PROVINCIA:"Bari", REGIONE:"Puglia", DATI:0, NOTE:""},
+  {P:17, ANNO:17, ID:"00017", DATA:"20/09/2021", VITTIMA:"Casagrande Group S.P.A.", GRUPPO:"blackmatter", LINK:"casagrandegroup.com", PROVINCIA:"Pordenone", REGIONE:"friuli Venezia Giulia", DATI:0, NOTE:""},
+  {P:18, ANNO:18, ID:"00018", DATA:"25/09/2021", VITTIMA:"Dataspeed S.R.L.", GRUPPO:"lockbit2", LINK:"dataspeed.it", PROVINCIA:"Bologna", REGIONE:"Emilia Romagna", DATI:0, NOTE:""},
+  {P:19, ANNO:19, ID:"00019", DATA:"26/09/2021", VITTIMA:"Unione Reno Galliera", GRUPPO:"ransomexx", LINK:"renogalliera.it", PROVINCIA:"Bologna", REGIONE:"Emilia Romagna", DATI:0, NOTE:""},
+  {P:20, ANNO:20, ID:"00020", DATA:"04/10/2021", VITTIMA:"Bosca S.P.A.", GRUPPO:"blackbyte", LINK:"bosca.it", PROVINCIA:"Asti", REGIONE:"Piemonte", DATI:0, NOTE:""},
+  {P:21, ANNO:21, ID:"00021", DATA:"07/10/2021", VITTIMA:"Isvo S.R.L.", GRUPPO:"lockbit2", LINK:"isvo.it", PROVINCIA:"Venezia", REGIONE:"Veneto", DATI:0, NOTE:""},
+  {P:22, ANNO:22, ID:"00022", DATA:"11/10/2021", VITTIMA:"Ferretti International", GRUPPO:"spook", LINK:"ferrettigroup.com", PROVINCIA:"Forlì-Cesena", REGIONE:"Emilia Romagna", DATI:0, NOTE:""},
+  {P:23, ANNO:23, ID:"00023", DATA:"19/10/2021", VITTIMA:"Generale Prefabbricati S.P.A.", GRUPPO:"blackbyte", LINK:"generaleprefabbricatispa.com", PROVINCIA:"Perugia", REGIONE:"Umbria", DATI:0, NOTE:""},
+  {P:24, ANNO:24, ID:"00024", DATA:"20/10/2021", VITTIMA:"SIAE Società Italiana degli Autori ed Editori", GRUPPO:"everest", LINK:"siae.it", PROVINCIA:"Roma", REGIONE:"Lazio", DATI:0, NOTE:""},
+  {P:25, ANNO:25, ID:"00025", DATA:"22/10/2021", VITTIMA:"Gruppo Selini S.P.A.", GRUPPO:"lockbit2", LINK:"selinigroup.it", PROVINCIA:"Bergamo", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:26, ANNO:26, ID:"00026", DATA:"23/10/2021", VITTIMA:"Artsana S.P.A.", GRUPPO:"conti", LINK:"artsana.com", PROVINCIA:"Como", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:27, ANNO:27, ID:"00027", DATA:"25/10/2021", VITTIMA:"San Carlo S.P.A.", GRUPPO:"conti", LINK:"sancarlo.it", PROVINCIA:"Milano", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:28, ANNO:28, ID:"00028", DATA:"01/11/2021", VITTIMA:"Comune di Gonzaga", GRUPPO:"lockbit2", LINK:"comune.gonzaga.mn.it", PROVINCIA:"Mantova", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:29, ANNO:29, ID:"00029", DATA:"06/11/2021", VITTIMA:"Cilento S.P.A.", GRUPPO:"lockbit2", LINK:"cilentospa.it", PROVINCIA:"Caserta", REGIONE:"Campania", DATI:0, NOTE:""},
+  {P:30, ANNO:30, ID:"00030", DATA:"08/11/2021", VITTIMA:"Metaenergia", GRUPPO:"pysa", LINK:"metaenergia.it", PROVINCIA:"Roma", REGIONE:"Lazio", DATI:0, NOTE:""},
+  {P:31, ANNO:31, ID:"00031", DATA:"16/11/2021", VITTIMA:"Unione dei Comuni Terre di Pianura", GRUPPO:"ransomexx", LINK:"terredipianura.it", PROVINCIA:"Bologna", REGIONE:"Emilia Romagna", DATI:0, NOTE:""},
+  {P:32, ANNO:32, ID:"00032", DATA:"22/11/2021", VITTIMA:"Roter Italy S.R.L.", GRUPPO:"lockbit2", LINK:"roteritaly.com", PROVINCIA:"Ferrara", REGIONE:"Emilia Romagna", DATI:0, NOTE:""},
+  {P:33, ANNO:33, ID:"00033", DATA:"22/11/2021", VITTIMA:"Mecfond S.P.A.", GRUPPO:"lockbit2", LINK:"mecfond.com", PROVINCIA:"Napoli", REGIONE:"Campania", DATI:0, NOTE:""},
+  {P:34, ANNO:34, ID:"00034", DATA:"29/11/2021", VITTIMA:"Dlb Delta Leading Broker S.R.L.", GRUPPO:"lockbit2", LINK:"dlb.it", PROVINCIA:"Milano", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:35, ANNO:35, ID:"00035", DATA:"06/12/2021", VITTIMA:"Clementoni S.P.A.", GRUPPO:"conti", LINK:"clementoni.com", PROVINCIA:"Macerata", REGIONE:"Marche", DATI:0, NOTE:""},
+  {P:36, ANNO:36, ID:"00036", DATA:"07/12/2021", VITTIMA:"Luxottica Group S.P.A.", GRUPPO:"marketo", LINK:"essilorluxottica.com", PROVINCIA:"Milano", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:37, ANNO:37, ID:"00037", DATA:"09/12/2021", VITTIMA:"Città di Torino", GRUPPO:"conti", LINK:"comune.torino.it", PROVINCIA:"Torino", REGIONE:"Piemonte", DATI:0, NOTE:""},
+  {P:38, ANNO:38, ID:"00038", DATA:"13/12/2021", VITTIMA:"Comerio Ercole S.P.A.", GRUPPO:"conti", LINK:"comerioercole.com", PROVINCIA:"Varese", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:39, ANNO:39, ID:"00039", DATA:"15/12/2021", VITTIMA:"Vip's Motel S.R.L.", GRUPPO:"lockbit2", LINK:"vipsmotel.it", PROVINCIA:"Brescia", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:40, ANNO:40, ID:"00040", DATA:"15/12/2021", VITTIMA:"Box Marche S.P.A.", GRUPPO:"lockbit2", LINK:"boxmarche.it", PROVINCIA:"Ancona", REGIONE:"Marche", DATI:0, NOTE:""},
+  {P:41, ANNO:41, ID:"00041", DATA:"21/12/2021", VITTIMA:"Speroni S.P.A.", GRUPPO:"everest", LINK:"speroni.it", PROVINCIA:"Reggio Emilia", REGIONE:"Emilia Romagna", DATI:0, NOTE:""},
+  {P:42, ANNO:42, ID:"00042", DATA:"24/12/2021", VITTIMA:"Sintesi Automotive S.R.L.", GRUPPO:"lockbit2", LINK:"sintesiautomotive.it", PROVINCIA:"Milano", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:43, ANNO:43, ID:"00043", DATA:"24/12/2021", VITTIMA:"Lozza S.P.A.", GRUPPO:"lockbit2", LINK:"lozzaspa.it", PROVINCIA:"Bergamo", REGIONE:"Lombardia", DATI:0, NOTE:""},
+  {P:44, ANNO:44, ID:"00044", DATA:"26/12/2021", VITTIMA:"Iguzzini Group", GRUPPO:"conti", LINK:"iguzzini.com", PROVINCIA:"Macerata", REGIONE:"Marche", DATI:0, NOTE:""}
+];
+const DATA_2022 = [];
+const DATA_2023 = [];
+const DATASETS = {2020: DATA_2020, 2021: DATA_2021, 2022: DATA_2022, 2023: DATA_2023, 2024: DATA_2024, 2025: DATA_2025, 2026: DATA_2026};
 const YEARS = Object.keys(DATASETS).map(Number).sort((a,b) => b-a);
 let all = YEARS.slice().sort((a,b) => a-b).flatMap(y => DATASETS[y]);
 all.forEach((r,i) => { r.SEQ = String(i+1).padStart(5,'0'); });
@@ -2875,6 +2943,19 @@ const OFFICIAL_GROUP_CATALOG = [
   "weyhro",
   "worldleaks",
   "xp95"
+,
+  "avaddon",
+  "azroteam",
+  "blackbyte",
+  "blackmatter",
+  "conti",
+  "lockbit2",
+  "marketo",
+  "pysa",
+  "ragnarlocker",
+  "ransomexx",
+  "spook",
+  "xinglocker"
 ];
 
 let year = 0, sortKey = 'SEQ', sortDir = -1;
@@ -3551,7 +3632,7 @@ function applyHmFilter(label, monthKey) {
 
   // aggiorna tab anno
   year = yr;
-  ['tab2025','tab2026','tabAll'].forEach(id => document.getElementById(id).classList.remove('active'));
+  ['tabAll','tab2020','tab2021','tab2022','tab2023','tab2024','tab2025','tab2026'].forEach(id => document.getElementById(id).classList.remove('active'));
   const tabId = yr === 2025 ? 'tab2025' : yr === 2026 ? 'tab2026' : 'tabAll';
   document.getElementById(tabId).classList.add('active');
 
@@ -3582,7 +3663,7 @@ function applyHmFilterTotal(label) {
   hmRegione = hmMode === 'regione' ? label : null;
 
   year = 0;
-  ['tab2025','tab2026','tabAll'].forEach(id => document.getElementById(id).classList.remove('active'));
+  ['tabAll','tab2020','tab2021','tab2022','tab2023','tab2024','tab2025','tab2026'].forEach(id => document.getElementById(id).classList.remove('active'));
   document.getElementById('tabAll').classList.add('active');
 
   document.getElementById('gruppoFilter').value = hmGroup || '';
@@ -3613,7 +3694,7 @@ function applyHmFilterMonth(monthKey) {
 
   // aggiorna tab anno
   year = yr;
-  ['tab2025','tab2026','tabAll'].forEach(id => document.getElementById(id).classList.remove('active'));
+  ['tabAll','tab2020','tab2021','tab2022','tab2023','tab2024','tab2025','tab2026'].forEach(id => document.getElementById(id).classList.remove('active'));
   document.getElementById(yr === 2025 ? 'tab2025' : yr === 2026 ? 'tab2026' : 'tabAll').classList.add('active');
 
   document.getElementById('gruppoFilter').value = '';
@@ -3767,14 +3848,18 @@ function buildStats() {
   document.getElementById('stat2026gb').textContent = fmt(gb26) + ' GB';
 
   // Anni fittizi (placeholder in attesa dati reali)
-  document.getElementById('stat2020').textContent = '0';
-  document.getElementById('stat2021').textContent = '0';
-  document.getElementById('stat2022').textContent = '0';
-  document.getElementById('stat2023').textContent = '0';
+  document.getElementById('stat2020').textContent = DATA_2020.length;
+  document.getElementById('stat2021').textContent = DATA_2021.length;
+  document.getElementById('stat2022').textContent = DATA_2022.length;
+  document.getElementById('stat2023').textContent = DATA_2023.length;
 
 
 
   document.getElementById('tabCntAll').textContent = fmtInt(tot);
+  document.getElementById('tabCnt2020').textContent = DATA_2020.length;
+  document.getElementById('tabCnt2021').textContent = DATA_2021.length;
+  document.getElementById('tabCnt2022').textContent = DATA_2022.length;
+  document.getElementById('tabCnt2023').textContent = DATA_2023.length;
   document.getElementById('tabCnt2024').textContent = DATA_2024.length;
   document.getElementById('tabCnt2025').textContent = DATA_2025.length;
   document.getElementById('tabCnt2026').textContent = DATA_2026.length;
@@ -3845,7 +3930,7 @@ window.addEventListener('popstate', e => {
   document.getElementById('dateFrom').value = s.df || '';
   document.getElementById('dateTo').value   = s.dt || '';
   // Aggiorna tab attivo
-  ['tabAll','tab2024','tab2025','tab2026'].forEach(id => {
+  ['tabAll','tab2020','tab2021','tab2022','tab2023','tab2024','tab2025','tab2026'].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.classList.remove('active');
   });
@@ -3912,7 +3997,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_139';
+    verEl.textContent = 'DS_STABILE_140';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
