@@ -4152,8 +4152,9 @@ function onDateChange() {
 function buildStats() {
   const gb = y => (DATASETS[y] || []).reduce((s,r) => s + (parseFloat(r.DATI)||0), 0);
   const tot = all.length;
+  const gb20 = gb(2020), gb21 = gb(2021), gb22 = gb(2022), gb23 = gb(2023);
   const gb24 = gb(2024), gb25 = gb(2025), gb26 = gb(2026);
-  const gbTot = gb24 + gb25 + gb26;
+  const gbTot = gb20 + gb21 + gb22 + gb23 + gb24 + gb25 + gb26;
 
   const fmt = n => {
     const [int, dec] = n.toFixed(2).split('.');
@@ -4166,27 +4167,26 @@ function buildStats() {
     (DATA_2026 || []).map(r => String(r.GRUPPO||'').toLowerCase().trim()).filter(Boolean)
   ).size;
 
-  const totProvvisori = 0;
-  document.getElementById('statTot').textContent = fmtInt(tot + totProvvisori);
-  document.title = 'ransomNews · ' + fmtInt(tot + totProvvisori) + ' Rivendicazioni Italia';
+  document.getElementById('statTot').textContent = fmtInt(tot);
+  document.title = 'ransomNews · ' + fmtInt(tot) + ' Rivendicazioni Italia';
   document.getElementById('statGb').textContent = fmt(gbTot);
   document.getElementById('statActiveGroups').textContent = activeGroups2026;
 
-  // Anni reali
+  // Tutti gli anni
+  document.getElementById('stat2020').textContent = DATA_2020.length;
+  document.getElementById('stat2020gb').textContent = fmt(gb20) + ' GB';
+  document.getElementById('stat2021').textContent = DATA_2021.length;
+  document.getElementById('stat2021gb').textContent = fmt(gb21) + ' GB';
+  document.getElementById('stat2022').textContent = DATA_2022.length;
+  document.getElementById('stat2022gb').textContent = fmt(gb22) + ' GB';
+  document.getElementById('stat2023').textContent = DATA_2023.length;
+  document.getElementById('stat2023gb').textContent = fmt(gb23) + ' GB';
   document.getElementById('stat2024').textContent = DATA_2024.length;
   document.getElementById('stat2024gb').textContent = fmt(gb24) + ' GB';
   document.getElementById('stat2025').textContent = DATA_2025.length;
   document.getElementById('stat2025gb').textContent = fmt(gb25) + ' GB';
   document.getElementById('stat2026').textContent = DATA_2026.length;
   document.getElementById('stat2026gb').textContent = fmt(gb26) + ' GB';
-
-  // Anni fittizi (placeholder in attesa dati reali)
-  document.getElementById('stat2020').textContent = DATA_2020.length;
-  document.getElementById('stat2021').textContent = DATA_2021.length;
-  document.getElementById('stat2022').textContent = DATA_2022.length;
-  document.getElementById('stat2023').textContent = DATA_2023.length;
-
-
 
   document.getElementById('tabCntAll').textContent = fmtInt(tot);
   document.getElementById('tabCnt2020').textContent = DATA_2020.length;
@@ -4330,7 +4330,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_153';
+    verEl.textContent = 'DS_STABILE_154';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
