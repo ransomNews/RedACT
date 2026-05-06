@@ -690,6 +690,10 @@ thead .c-dati {
 thead .c-note { text-align: center; }
 
 /* Note badges */
+/* Gruppo filter — active/inactive dots */
+#gruppoFilter option.g-active   { color: #00c896; }
+#gruppoFilter option.g-inactive { color: #e74c3c; }
+
 .badge {
   display: inline-block;
   font-family: var(--mono);
@@ -3348,8 +3352,19 @@ function populate() {
   rSel.innerHTML = '<option value="">Tutte le regioni</option>' +
     [...rSet].sort().map(x=>`<option>${x}</option>`).join('');
 
+  const currentYear = new Date().getFullYear();
+  const activeGroups = new Set(
+    (DATASETS[currentYear] || [])
+      .map(r => normalizeGroupName(r.GRUPPO))
+      .filter(Boolean)
+  );
+
   gSel.innerHTML = '<option value="">Tutti i gruppi</option>' +
-    groupCatalog.map(x=>`<option value="${x}">${x}</option>`).join('');
+    groupCatalog.map(x => {
+      const cls = activeGroups.has(x) ? 'g-active' : 'g-inactive';
+      const dot = activeGroups.has(x) ? '🟢 ' : '🔴 ';
+      return `<option value="${x}" class="${cls}">${dot}${x}</option>`;
+    }).join('');
 
   rSel.value = rv;
   gSel.value = groupCatalog.includes(gv) ? gv : '';
@@ -4332,7 +4347,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_158';
+    verEl.textContent = 'DS_STABILE_159';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
