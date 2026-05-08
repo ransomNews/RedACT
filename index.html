@@ -683,6 +683,7 @@ thead .c-dati {
 }
 .dati-large { color: var(--red2); font-weight: 700; }
 .dati-mid { color: #f08c2e; font-weight: 700; }
+.dati-med { color: var(--yellow); font-weight: 700; }
 .dati-low { color: #ffffff; }
 .dati-zero { color: var(--text-dim); }
 .dati-empty { color: var(--text-dim); }
@@ -2759,8 +2760,9 @@ function fmtDati(v) {
   if (isNaN(n)) return `<span class="dati-zero">${v}</span>`;
   if (n === 0) return '<span class="dati-zero">0</span>';
   const fmt = n.toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  if (n >= 1000) return `<span class="dati-large">${fmt}</span>`;
-  if (n >= 100)  return `<span class="dati-mid">${fmt}</span>`;
+  if (n >= 500) return `<span class="dati-large">${fmt}</span>`;
+  if (n >= 100) return `<span class="dati-mid">${fmt}</span>`;
+  if (n >= 1)   return `<span class="dati-med">${fmt}</span>`;
   return `<span class="dati-low">${fmt}</span>`;
 }
 
@@ -4347,7 +4349,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_162';
+    verEl.textContent = 'DS_STABILE_163';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
