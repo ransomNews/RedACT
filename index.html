@@ -2478,6 +2478,40 @@ td:nth-child(7){
 </div>
 </div>
 
+<!-- STATISTICHE ANNO CORRENTE -->
+<div class="top-section" style="margin-top:0;">
+  <div class="top-grid">
+    <div class="chart-box">
+      <div class="chart-title chart-title-v2">
+        <div class="chart-title-sub"></div>
+        <div class="chart-title-label">TOP 5 GRUPPI </div>
+      </div>
+      <div id="cy-top5gruppi"></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title chart-title-v2">
+        <div class="chart-title-sub"></div>
+        <div class="chart-title-label">TOP 5 REGIONI </div>
+      </div>
+      <div id="cy-top5regioni"></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title chart-title-v2">
+        <div class="chart-title-sub"></div>
+        <div class="chart-title-label">AREE NUTS 1 </div>
+      </div>
+      <div id="cy-geodiv"></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title chart-title-v2">
+        <div class="chart-title-sub"></div>
+        <div class="chart-title-label">TOP 5 DATI PUBBLICATI </div>
+      </div>
+      <div id="cy-top5gb"></div>
+    </div>
+  </div>
+</div>
+
 <!-- TREND MENSILE -->
 <div class="trend-section">
   <div class="trend-header">
@@ -3747,6 +3781,117 @@ function buildGeoDivision() {
 }
 buildGeoDivision();
 
+
+// ── Statistiche Anno Corrente ─────────────────────────────────────────────
+function buildCurrentYear() {
+  const currentYear = new Date().getFullYear();
+  const cyData = DATASETS[currentYear] || [];
+  const label = String(currentYear);
+
+  // Aggiorna label anni
+  // Aggiorna titoli con anno corrente
+  const titleMap = {
+    'cy-top5gruppi':  `TOP 5 GRUPPI ${label}`,
+    'cy-top5regioni': `TOP 5 REGIONI ${label}`,
+    'cy-geodiv':      `AREE NUTS 1 ${label}`,
+    'cy-top5gb':      `TOP 5 DATI PUBBLICATI ${label}`,
+  };
+  Object.entries(titleMap).forEach(([containerId, title]) => {
+    const box = document.getElementById(containerId);
+    if (box) {
+      const titleEl = box.closest('.chart-box')?.querySelector('.chart-title-label');
+      if (titleEl) titleEl.textContent = title;
+    }
+  });
+
+  const palette = [
+    { fg: '#ff0000', bg: 'linear-gradient(90deg, rgba(255,0,0,0.85), rgba(255,0,0,0.25))' },
+    { fg: '#f0b429', bg: 'linear-gradient(90deg, rgba(240,180,41,0.85), rgba(240,180,41,0.25))' },
+    { fg: '#4d9fff', bg: 'linear-gradient(90deg, rgba(77,159,255,0.85), rgba(77,159,255,0.25))' },
+    { fg: '#00c896', bg: 'linear-gradient(90deg, rgba(0,200,150,0.85), rgba(0,200,150,0.25))' },
+    { fg: '#c97aff', bg: 'linear-gradient(90deg, rgba(201,122,255,0.85), rgba(201,122,255,0.25))' },
+  ];
+
+  function makeChart(containerId, items, maxVal, totalVal, isGb) {
+    const html = items.map(([label, n], i) => {
+      const pct = Math.max(8, Math.round((n / maxVal) * 100));
+      const { fg, bg } = palette[i];
+      const fmtN = n => { const [i,d] = n.toFixed(2).split('.'); return i.replace(/\B(?=(\d{3})+(?!\d))/g,'.') + ',' + d; };
+      const displayVal = isGb ? fmtN(n) + ' GB' : n;
+      return `<div class="topv2-item">
+        <div class="topv2-head">
+          <div class="topv2-name" title="${label}" style="color:${fg}">${label}</div>
+          <div class="topv2-count" style="color:${fg}">${displayVal}</div>
+        </div>
+        <div class="topv2-track">
+          <div class="topv2-fill" style="width:${pct}%; background:${bg}; border-left:3px solid ${fg}"></div>
+        </div>
+      </div>`;
+    }).join('');
+
+    const legend = `<div class="geo-bottom-legend" style="margin:14px auto 0;width:100%;padding:4px 0;border:none;background:transparent;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:nowrap;">` +
+      items.map(([, n], i) => {
+        const pct = ((n / totalVal) * 100).toFixed(1);
+        const { fg } = palette[i];
+        return `<span style="display:inline-flex;align-items:center;gap:4px;white-space:nowrap;font-family:var(--mono);font-size:10px;color:var(--text-dim);">
+          <span style="width:11px;height:11px;border-radius:2px;background:${fg};display:inline-block;flex:0 0 11px;"></span>
+          <span style="font-weight:700;letter-spacing:0.03em;">${pct}%</span>
+        </span>`;
+      }).join('') + `</div>`;
+
+    const el = document.getElementById(containerId);
+    if (el) el.innerHTML = `<div style="display:flex;flex-direction:column;gap:10px;">${html}</div>` + legend;
+  }
+
+  // Top 5 Gruppi anno corrente
+  const gCounts = {};
+  cyData.forEach(r => {
+    const g = String(r.GRUPPO||'').toLowerCase().trim();
+    if (g) gCounts[g] = (gCounts[g]||0) + 1;
+  });
+  const gSorted = Object.entries(gCounts).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  const gMax = gSorted.length ? gSorted[0][1] : 1;
+  const gTot = cyData.length || 1;
+  makeChart('cy-top5gruppi', gSorted, gMax, gTot, false);
+
+  // Top 5 Regioni anno corrente
+  const rCounts = {};
+  cyData.forEach(r => {
+    const reg = (r.REGIONE||'').trim();
+    if (reg && reg !== 'Sconosciuta') rCounts[reg] = (rCounts[reg]||0) + 1;
+  });
+  const rSorted = Object.entries(rCounts).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  const rMax = rSorted.length ? rSorted[0][1] : 1;
+  const rTot = cyData.length || 1;
+  makeChart('cy-top5regioni', rSorted, rMax, rTot, false);
+
+  // Aree NUTS 1 anno corrente
+  const mCounts = {};
+  cyData.forEach(r => {
+    const reg = (r.REGIONE||'').trim();
+    if (!reg || reg === 'Sconosciuta') return;
+    let macro = 'Sconosciuta';
+    Object.entries(MACRO_AREE).forEach(([m, regs]) => { if (regs.includes(reg)) macro = m; });
+    if (macro !== 'Sconosciuta') mCounts[macro] = (mCounts[macro]||0) + 1;
+  });
+  const mAll = Object.entries(mCounts).sort((a,b)=>b[1]-a[1]);
+  const mMax = mAll.length ? mAll[0][1] : 1;
+  const mTot = cyData.filter(r => r.REGIONE && r.REGIONE !== 'Sconosciuta').length || 1;
+  makeChart('cy-geodiv', mAll.slice(0,5), mMax, mTot, false);
+
+  // Top 5 Dati Pubblicati anno corrente
+  const gbCounts = {};
+  cyData.forEach(r => {
+    const g = String(r.GRUPPO||'').toLowerCase().trim();
+    const gb = parseFloat(r.DATI)||0;
+    if (g && gb > 0) gbCounts[g] = (gbCounts[g]||0) + gb;
+  });
+  const gbSorted = Object.entries(gbCounts).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  const gbMax = gbSorted.length ? gbSorted[0][1] : 1;
+  const gbTot = cyData.reduce((s,r)=>s+(parseFloat(r.DATI)||0),0) || 1;
+  makeChart('cy-top5gb', gbSorted, gbMax, gbTot, true);
+}
+
 function recomputeDashboard() {
   all = YEARS.slice().sort((a,b) => a-b).flatMap(y => DATASETS[y]);
   all.forEach((r,i) => { r.SEQ = String(i+1).padStart(5,'0'); });
@@ -3758,6 +3903,7 @@ function recomputeDashboard() {
   buildTop5Regioni();
   buildTop5GB();
   buildGeoDivision();
+  buildCurrentYear();
   buildHeatmap();
   buildTrendChart();
 }
@@ -3818,6 +3964,7 @@ const label = fmtGB(gb);
     `<div style="display:flex;flex-direction:column;gap:10px;">${html}</div>` + legendHtml;
 }
 buildTop5GB();
+buildCurrentYear();
 
 
 function getDatiClass(val) {
@@ -4349,7 +4496,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_163';
+    verEl.textContent = 'DS_STABILE_165';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
