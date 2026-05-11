@@ -1,0 +1,19 @@
+{
+  "source": "ransomnews.online",
+  "generated": "2026-05-11T00:47:03.931502+00:00",
+  "anno": 2020,
+  "total": 1,
+  "records": [
+    {
+      "id": "00001",
+      "data": "08/10/2020",
+      "vittima": "Campari Group",
+      "gruppo": "ragnarlocker",
+      "link": "camparigroup.com",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "source": "ransomnews.online",
+  "generated": "2026-05-11T00:47:03.931502+00:00",
+  "totali": {
+    "rivendicazioni": 751,
+    "gruppi_a_catalogo": 167,
+    "dati_gb": 65484.18
+  },
+  "per_anno": {
+    "2020": {
+      "rivendicazioni": 1,
+      "dati_gb": 0.0,
+      "gruppi_attivi": 1
+    },
+    "2021": {
+      "rivendicazioni": 44,
+      "dati_gb": 0.0,
+      "gruppi_attivi": 12
+    },
+    "2022": {
+      "rivendicazioni": 97,
+      "dati_gb": 0.0,
+      "gruppi_attivi": 21
+    },
+    "2023": {
+      "rivendicazioni": 183,
+      "dati_gb": 0.0,
+      "gruppi_attivi": 34
+    },
+    "2024": {
+      "rivendicazioni": 144,
+      "dati_gb": 31141.35,
+      "gruppi_attivi": 40
+    },
+    "2025": {
+      "rivendicazioni": 172,
+      "dati_gb": 25740.97,
+      "gruppi_attivi": 51
+    },
+    "2026": {
+      "rivendicazioni": 110,
+      "dati_gb": 8601.86,
+      "gruppi_attivi": 27
+    }
+  },
+  "top5_gruppi_per_rivendicazioni": [
+    {
+      "gruppo": "lockbit3",
+      "rivendicazioni": 61
+    },
+    {
+      "gruppo": "qilin",
+      "rivendicazioni": 57
+    },
+    {
+      "gruppo": "lockbit2",
+      "rivendicazioni": 48
+    },
+    {
+      "gruppo": "malas",
+      "rivendicazioni": 44
+    },
+    {
+      "gruppo": "akira",
+      "rivendicazioni": 39
+    }
+  ],
+  "top5_gruppi_per_gb": [
+    {
+      "gruppo": "blackbasta",
+      "dati_gb": 10737.0
+    },
+    {
+      "gruppo": "ransomhub",
+      "dati_gb": 5348.56
+    },
+    {
+      "gruppo": "hunters",
+      "dati_gb": 5294.7
+    },
+    {
+      "gruppo": "payoutsking",
+      "dati_gb": 4114.0
+    },
+    {
+      "gruppo": "qilin",
+      "dati_gb": 3319.9
+    }
+  ],
+  "top5_regioni": [
+    {
+      "regione": "Lombardia",
+      "rivendicazioni": 224
+    },
+    {
+      "regione": "Emilia Romagna",
+      "rivendicazioni": 93
+    },
+    {
+      "regione": "Lazio",
+      "rivendicazioni": 82
+    },
+    {
+      "regione": "Veneto",
+      "rivendicazioni": 78
+    },
+    {
+      "regione": "Piemonte",
+      "rivendicazioni": 61
+    }
+  ]
+}
