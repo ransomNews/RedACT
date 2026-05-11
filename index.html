@@ -211,6 +211,15 @@ nav {
   display: none;
 }
 .nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-api-btn {
+  display: flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.45); text-decoration: none;
+  background: transparent; border: 1px solid transparent; border-radius: 8px; padding: 6px 10px;
+  transition: color 0.18s, background 0.18s, border-color 0.18s;
+}
+.nav-api-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.nav-api-btn:hover { color: #00c896; background: rgba(0,200,150,0.1); border-color: rgba(0,200,150,0.25); }
 .nav-link {
   font-family: var(--mono);
   font-size: 13px;
@@ -1292,6 +1301,10 @@ html.light .hm-btn { color: #7a82b0; }
     height: 18px;
     flex-shrink: 0;
   }
+  .nav-social a.nav-home svg {
+    width: 22px;
+    height: 22px;
+  }
   .nav-social-sep {
     width: 1px;
     height: 20px;
@@ -2328,6 +2341,10 @@ td:nth-child(7){
       </a>
     </div>
   <div class="nav-right">
+    <a href="api.html" target="_blank" rel="noopener" title="API — Documentazione endpoint" class="nav-api-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <span>API</span>
+    </a>
     <div class="theme-switch" id="themeSwitch" title="Cambia tema" onclick="toggleTheme()">
       <div class="theme-track"></div>
       <div class="theme-thumb"></div>
@@ -2545,6 +2562,7 @@ td:nth-child(7){
   <button id="toolbarResetBtn" onclick="resetToolbar()" style="display:none;font-size:13px;color:var(--blue);background:rgba(77,159,255,0.1);border:1px solid rgba(77,159,255,0.35);border-radius:6px;padding:8px 14px;cursor:pointer;letter-spacing:0.04em;white-space:nowrap;" title="Azzera ricerca e filtri tabella" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">✕ reset ricerca</button>
   <button id="hmResetBtn" onclick="resetHmFilter()" style="display:none;font-family:var(--mono);font-size: 13px;color:var(--red);background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.35);border-radius:3px;padding:8px 12px;cursor:pointer;letter-spacing:0.04em;" onmouseover="this.style.background='rgba(230,57,70,0.2)'" onmouseout="this.style.background='rgba(230,57,70,0.1)'" title="Rimuovi filtro heatmap e torna alla vista completa">✕ reset heatmap</button>
   <button class="btn-export" onclick="exportCSV()" title="Esporta i dati filtrati in CSV">↓ Esporta CSV</button>
+  <button class="btn-export" onclick="exportJSON()" title="Esporta i dati filtrati in JSON" style="color:var(--blue);background:rgba(77,159,255,0.1);border-color:rgba(77,159,255,0.35);" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">↓ Esporta JSON</button>
   <div class="count-info">Visualizzate <strong id="countNum">—</strong> righe</div>
 </div>
 
@@ -4460,6 +4478,21 @@ function exportCSV() {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
+
+function exportJSON() {
+  const data = filteredRows.map(r => ({
+    id: r.ID, data: r.DATA, vittima: r.VITTIMA, gruppo: r.GRUPPO,
+    link: r.LINK, provincia: r.PROVINCIA, regione: r.REGIONE,
+    dati_gb: parseFloat(r.DATI) || 0, note: r.NOTE
+  }));
+  const json = JSON.stringify({ source: 'ransomnews.online', generated: new Date().toISOString(), total: data.length, records: data }, null, 2);
+  const blob = new Blob([json], { type: 'application/json;charset=utf-8;' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url; a.download = 'ransomnews_export.json';
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a); URL.revokeObjectURL(url);
+}
 </script>
 
 <footer class="site-footer">
@@ -4496,7 +4529,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_167';
+    verEl.textContent = 'DS_STABILE_168';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
