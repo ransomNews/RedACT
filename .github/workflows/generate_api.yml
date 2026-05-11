@@ -1,1 +1,131 @@
 
+name: Genera API JSON
+
+on:
+  push:
+    paths:
+      - 'index.html'
+
+jobs:
+  genera:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Genera JSON
+        run: |
+          python3 << 'PYEOF'
+          import re, json, os
+          from datetime import datetime, timezone
+          from collections import defaultdict
+
+          with open('index.html', 'r', encoding='utf-8') as f:
+              html = f.read()
+
+          def extract_dataset(html, year):
+              m = re.search(rf'const DATA_{year} = ([\s\S]*?);$', html, re.MULTILINE)
+              if not m:
+                  return []
+              raw = m.group(1)
+              raw = re.sub(r'([{,]\s*)([A-Za-z_][A-Za-z0-9_]*)(\s*:)', r'\1"\2"\3', raw)
+              raw = raw.replace("\\'", "'")
+              try:
+                  return json.loads(raw)
+              except Exception as e:
+                  print(f"Errore anno {year}: {e}")
+                  return []
+
+          all_records = []
+          for year in [2020, 2021, 2022, 2023, 2024, 2025, 2026]:
+              recs = extract_dataset(html, year)
+              for r in recs:
+                  r['_YEAR'] = year
+              all_records.extend(recs)
+              print(f"  {year}: {len(recs)} record")
+
+          m = re.search(r'const OFFICIAL_GROUP_CATALOG = \[(.*?)\];', html, re.DOTALL)
+          groups = sorted(set(g.lower().strip() for g in re.findall(r'"([^"]+)"', m.group(1))))
+          generated = datetime.now(timezone.utc).isoformat()
+
+          os.makedirs('api/v1/anno', exist_ok=True)
+
+          def parse_gb(val):
+              try: return float(val)
+              except: return 0.0
+
+          # rivendicazioni.json
+          records_out = [{"id":r.get("ID",""),"data":r.get("DATA",""),"anno":r["_YEAR"],
+              "vittima":r.get("VITTIMA",""),"gruppo":r.get("GRUPPO",""),"link":r.get("LINK",""),
+              "provincia":r.get("PROVINCIA",""),"regione":r.get("REGIONE",""),
+              "dati_gb":parse_gb(r.get("DATI",0)),"note":r.get("NOTE","")} for r in all_records]
+          with open('api/v1/rivendicazioni.json','w',encoding='utf-8') as f:
+              json.dump({"source":"ransomnews.online","generated":generated,
+                         "total":len(records_out),"records":records_out}, f, ensure_ascii=False, indent=2)
+          print(f"rivendicazioni.json → {len(records_out)} record")
+
+          # gruppi.json
+          gcounts = defaultdict(int); ggb = defaultdict(float); gyears = defaultdict(set)
+          for r in all_records:
+              g = r.get("GRUPPO","").lower().strip()
+              gcounts[g] += 1; ggb[g] += parse_gb(r.get("DATI",0)); gyears[g].add(r["_YEAR"])
+          groups_out = [{"nome":g,"rivendicazioni":gcounts.get(g,0),
+                         "dati_gb":round(ggb.get(g,0.0),2),"anni_attivi":sorted(gyears.get(g,[]))}
+                        for g in groups]
+          with open('api/v1/gruppi.json','w',encoding='utf-8') as f:
+              json.dump({"source":"ransomnews.online","generated":generated,
+                         "total":len(groups_out),"gruppi":groups_out}, f, ensure_ascii=False, indent=2)
+          print(f"gruppi.json → {len(groups_out)} gruppi")
+
+          # stats.json
+          by_year = defaultdict(list)
+          for r in all_records: by_year[r["_YEAR"]].append(r)
+          anni_stats = {str(y):{"rivendicazioni":len(recs),
+              "dati_gb":round(sum(parse_gb(r.get("DATI",0)) for r in recs),2),
+              "gruppi_attivi":len(set(r.get("GRUPPO","").lower() for r in recs))}
+              for y,recs in sorted(by_year.items())}
+          by_reg = defaultdict(int)
+          for r in all_records: by_reg[r.get("REGIONE","Sconosciuta")] += 1
+          gcounts_items = sorted(gcounts.items(), key=lambda x: -x[1])
+          ggb_items = sorted(ggb.items(), key=lambda x: -x[1])
+          stats = {"source":"ransomnews.online","generated":generated,
+              "totali":{"rivendicazioni":len(all_records),"gruppi_a_catalogo":len(groups),
+                        "dati_gb":round(sum(parse_gb(r.get("DATI",0)) for r in all_records),2)},
+              "per_anno":anni_stats,
+              "top5_gruppi_per_rivendicazioni":[{"gruppo":g,"rivendicazioni":c} for g,c in gcounts_items[:5]],
+              "top5_gruppi_per_gb":[{"gruppo":g,"dati_gb":round(v,2)} for g,v in ggb_items[:5]],
+              "top5_regioni":[{"regione":r,"rivendicazioni":c}
+                  for r,c in sorted(by_reg.items(),key=lambda x:-x[1])[:5]]}
+          with open('api/v1/stats.json','w',encoding='utf-8') as f:
+              json.dump(stats, f, ensure_ascii=False, indent=2)
+          print("stats.json → ok")
+
+          # anno/YYYY.json
+          for y, recs in sorted(by_year.items()):
+              recs_out = [{"id":r.get("ID",""),"data":r.get("DATA",""),"vittima":r.get("VITTIMA",""),
+                  "gruppo":r.get("GRUPPO",""),"link":r.get("LINK",""),"provincia":r.get("PROVINCIA",""),
+                  "regione":r.get("REGIONE",""),"dati_gb":parse_gb(r.get("DATI",0)),"note":r.get("NOTE","")}
+                  for r in recs]
+              with open(f'api/v1/anno/{y}.json','w',encoding='utf-8') as f:
+                  json.dump({"source":"ransomnews.online","generated":generated,
+                             "anno":y,"total":len(recs_out),"records":recs_out}, f, ensure_ascii=False, indent=2)
+              print(f"anno/{y}.json → {len(recs_out)} record")
+
+          print("Done ✓")
+          PYEOF
+
+      - name: Commit JSON aggiornati
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add api/v1/
+          git diff --cached --quiet || git commit -m "Auto: aggiorna API JSON [skip ci]"
+          git push
