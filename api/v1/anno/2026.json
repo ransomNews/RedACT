@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-05-12T06:32:50.940153+00:00",
+  "generated": "2026-05-17T07:59:38.797413+00:00",
   "anno": 2026,
   "total": 110,
   "records": [
@@ -958,7 +958,7 @@
       "link": "csaspa.com",
       "provincia": "Milano",
       "regione": "Lombardia",
-      "dati_gb": 0.0,
+      "dati_gb": 10.0,
       "note": ""
     },
     {
@@ -1052,13 +1052,13 @@
     {
       "id": "00412",
       "data": "27/04/2026",
-      "vittima": "Leone Film Group S.P.A. (Lotus Production S.R.L.)",
+      "vittima": "Leone Film Group S.P.A.",
       "gruppo": "qilin",
       "link": "leonefilmgroup.com",
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "TARGET IN VERIFICA"
+      "note": "Quantità sconosciuta"
     },
     {
       "id": "00413",
