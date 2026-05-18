@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-05-18T15:40:02.143704+00:00",
+  "generated": "2026-05-18T15:56:47.372846+00:00",
   "total": 168,
   "gruppi": [
     {
@@ -1222,7 +1222,7 @@
     {
       "nome": "titan",
       "rivendicazioni": 1,
-      "dati_gb": 0.0,
+      "dati_gb": 29.8,
       "anni_attivi": [
         2026
       ]
