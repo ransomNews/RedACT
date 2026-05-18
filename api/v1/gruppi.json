@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-05-17T15:43:39.800568+00:00",
-  "total": 167,
+  "generated": "2026-05-18T15:40:02.143704+00:00",
+  "total": 168,
   "gruppi": [
     {
       "nome": "8base",
@@ -1218,6 +1218,14 @@
       "rivendicazioni": 0,
       "dati_gb": 0.0,
       "anni_attivi": []
+    },
+    {
+      "nome": "titan",
+      "rivendicazioni": 1,
+      "dati_gb": 0.0,
+      "anni_attivi": [
+        2026
+      ]
     },
     {
       "nome": "tridentlocker",

@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-05-17T15:43:39.800568+00:00",
-  "total": 752,
+  "generated": "2026-05-18T15:40:02.143704+00:00",
+  "total": 753,
   "records": [
     {
       "id": "00001",
@@ -9024,6 +9024,18 @@
       "link": "psbsementi.it",
       "provincia": "Bologna",
       "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00428",
+      "data": "18/05/2026",
+      "anno": 2026,
+      "vittima": "ABP Autoricambi S.R.L.",
+      "gruppo": "titan",
+      "link": "abpautoricambi.it",
+      "provincia": "Napoli",
+      "regione": "Campania",
       "dati_gb": 0.0,
       "note": ""
     }
