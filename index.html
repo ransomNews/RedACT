@@ -648,7 +648,7 @@ td {
   font-weight: 600;
   color: var(--white);
   font-size: 16px;
-  max-width: 230px;
+  max-width: 320px;
 }
 .c-gruppo { width: 120px; }
 .gruppo-tag {
@@ -685,7 +685,7 @@ td {
   font-size: 15px;
   text-align: right;
   white-space: nowrap;
-  width: 80px;
+  width: 50px;
 }
 thead .c-dati {
   text-align: center;
@@ -2603,7 +2603,7 @@ td:nth-child(7){
           <th onclick="sort('LINK')">Link</th>
           <th onclick="sort('PROVINCIA')">Provincia</th>
           <th onclick="sort('REGIONE')">Regione</th>
-          <th onclick="sort('DATI')">Dati Pubblicati GB</th>
+          <th onclick="sort('DATI')">Dati GB</th>
           <th onclick="sort('NOTE')">Note</th>
         </tr>
       </thead>
@@ -4535,7 +4535,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_175';
+    verEl.textContent = 'DS_STABILE_176';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
