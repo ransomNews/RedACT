@@ -648,7 +648,11 @@ td {
   font-weight: 600;
   color: var(--white);
   font-size: 16px;
-  max-width: 320px;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
 }
 .c-gruppo { width: 120px; }
 .gruppo-tag {
@@ -665,8 +669,7 @@ td {
   background: rgba(255,255,255,0.04);
   white-space: nowrap;
 }
-.c-link { max-width: 160px; }
-.c-link a {
+.c-link { max-width: 160px; }.c-link a {
   font-family: var(--mono);
   font-size: 14px;
   color: var(--blue);
@@ -696,8 +699,79 @@ thead .c-dati {
 .dati-low { color: #ffffff; }
 .dati-zero { color: var(--text-dim); }
 .dati-empty { color: var(--text-dim); }
-.c-note { max-width: 150px; text-align: left; }
-thead .c-note { text-align: center; }
+/* Icona nota inline nella vittima */
+/* Icona nota + tooltip hover */
+.note-wrap {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-left: 8px;
+  vertical-align: middle;
+  line-height: 1;
+}
+.note-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(77,159,255,0.5);
+  background: rgba(77,159,255,0.1);
+  color: #4d9fff;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: var(--mono);
+  cursor: default;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: background 0.15s, border-color 0.15s;
+}
+.note-wrap:hover .note-icon {
+  background: rgba(77,159,255,0.22);
+  border-color: rgba(77,159,255,0.8);
+  color: #7db8ff;
+}
+/* Tooltip */
+.note-tooltip {
+  display: none;
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9000;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 7px 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.55);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.note-tooltip .badge {
+  white-space: nowrap !important;
+  word-break: normal !important;
+  max-width: none !important;
+}
+.note-tooltip::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-right-color: var(--border2);
+}
+.note-tooltip::after {
+  content: '';
+  position: absolute;
+  right: calc(100% - 1px);
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-right-color: var(--surface2);
+}
+.note-wrap:hover .note-tooltip { display: block; }
 
 /* Note badges */
 /* Gruppo filter — active/inactive dots */
@@ -2604,7 +2678,6 @@ td:nth-child(7){
           <th onclick="sort('PROVINCIA')">Provincia</th>
           <th onclick="sort('REGIONE')">Regione</th>
           <th onclick="sort('DATI')">Dati GB</th>
-          <th onclick="sort('NOTE')">Note</th>
         </tr>
       </thead>
       <tbody id="tableBody"></tbody>
@@ -2794,22 +2867,25 @@ function fmtNote(n) {
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
     .toUpperCase()
-    .replace(/[’']/g, '')
+    .replace(/[‘’]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
 
-  if (norm.includes('RIMOSSA')) return '<span class="badge b-rimossa">Rimossa dal DLS</span>';
-  if (norm.includes('NON PUBBLICATI')) return '<span class="badge b-nonpub">Non pubblicati</span>';
-  if (norm.includes('NO QUANTITA') || norm.includes('QUANTITA SCONOSCIUTA')) return '<span class="badge b-pubnq">Quantità sconosciuta</span>';
-  if (norm.includes('DLS CHIUSO')) return '<span class="badge b-chiuso">DLS chiuso</span>';
-  if (norm.includes('COMPRESI IN CLIENT SOLUTION S.R.L.') || norm.includes('CON CLIENT SOLUTION S.R.L.')) return '<span class="badge b-compresi">Con Client Solution S.R.L.</span>';
-  if (norm.includes('TARGET IN VERIFICA')) return '<span class="badge b-verifica">Target in verifica</span>';
-  if (norm.includes('HACKERATO')) return '<span class="badge b-hacked">DLS hack.</span>';
-  if (norm.includes('STATUS: IN VERIFICA')) return '<span style="font-size:12px;color:#ffffff;font-weight:700;">Status: IN VERIFICA</span>';
+  // Note da non mostrare (niente icona)
+  if (norm.includes('NON PUBBLICATI')) return '';
+  if (norm.includes('NO QUANTITA') || norm.includes('QUANTITA SCONOSCIUTA')) return '';
+  if (norm.includes('DLS CHIUSO')) return '';
+  if (norm.includes('TARGET IN VERIFICA')) return '';
+  if (norm.includes('HACKERATO')) return '';
+  if (norm.includes('STATUS: IN VERIFICA')) return '';
 
+  // Badge dedicati
+  if (norm.includes('RIMOSSA')) return '<span class="badge b-rimossa">Rimossa dal DLS</span>';
+  if (norm.includes('COMPRESI IN CLIENT SOLUTION S.R.L.') || norm.includes('CON CLIENT SOLUTION S.R.L.')) return '<span class="badge b-compresi">Con Client Solution S.R.L.</span>';
+
+  // Tutto il resto → badge generico bianco grassetto
   return `<span class="badge b-generic">${raw}</span>`;
 }
-
 function fmtDati(v) {
   if (v === '' || v == null) return '<span class="dati-empty">—</span>';
   const n = parseFloat(v);
@@ -2826,16 +2902,19 @@ function row(r) {
   const link = r.LINK
     ? `<a href="https://${r.LINK.trim()}" target="_blank" rel="noopener">${r.LINK.trim()}</a>`
     : '<span style="color:var(--text-muted)">—</span>';
+  const _noteBadge = r.NOTE ? fmtNote(r.NOTE) : '';
+  const noteIcon = _noteBadge
+    ? `<span class="note-wrap"><span class="note-icon">i</span><span class="note-tooltip">${_noteBadge}</span></span>`
+    : '';
   return `<tr>
     <td class="c-seq">${r.SEQ}</td>
     <td class="c-date">${r.DATA}</td>
-    <td class="c-vittima">${r.VITTIMA || ''}</td>
+    <td class="c-vittima">${r.VITTIMA || ''}${noteIcon}</td>
     <td class="c-gruppo"><span class="gruppo-tag" style="${groupStyle(String(r.GRUPPO).toLowerCase())}">${String(r.GRUPPO).toLowerCase() || '—'}</span></td>
     <td class="c-link">${link}</td>
     <td class="c-prov">${r.PROVINCIA || '—'}</td>
     <td class="c-reg">${r.REGIONE || '—'}</td>
     <td class="c-dati">${(r.DATI ? fmtDati(r.DATI) : "0")}</td>
-    <td class="c-note">${fmtNote(r.NOTE)}</td>
   </tr>`;
 }
 
@@ -4535,10 +4614,13 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_177';
+    verEl.textContent = 'DS_STABILE_178';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
+
+// ── Note tooltip: nessun JS necessario, gestito via CSS ──
 </script>
+
 </html>
 <!-- EOF -->
