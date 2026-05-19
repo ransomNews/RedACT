@@ -1986,21 +1986,25 @@ html.light .hm-btn { color: #7a82b0; }
 
 /* === OTTIMIZZAZIONI === */
 
-/* === legenda spostata nei tab === */
+/* === legenda su riga dedicata, allineata a destra === */
 .tabs{
-  align-items:center !important;
-  gap: 6px !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 0 !important;
 }
 .tabs .impact-legend{
-  margin-left:auto !important;
-  margin-top:0 !important;
-  margin-bottom:0 !important;
-  gap:14px !important;
-  flex-wrap:nowrap !important;
-  padding-right: 8px;
+  flex: 0 0 100% !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin: 0 !important;
+  padding: 8px 12px 10px !important;
+  border-top: 1px solid var(--border) !important;
 }
 .tabs .impact-legend .legend-item{
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 
@@ -4531,7 +4535,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_174';
+    verEl.textContent = 'DS_STABILE_175';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
