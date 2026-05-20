@@ -3933,7 +3933,7 @@ function renderCards() {
   pel.innerHTML = tp<=1?'':buildPagerHTML(currentPageCards,tp,'goCardsPage');
 }
 
-function goCardsPage(p) { currentPageCards=p; render(); document.getElementById('cardsView').scrollIntoView({behavior:'smooth', block:'start'}); }
+function goCardsPage(p) { currentPageCards=p; render(); const el=document.getElementById('cardsView'); if(el){ const top=el.getBoundingClientRect().top+window.scrollY-130; window.scrollTo({top,behavior:'smooth'}); } }
 
 const PAGE_SIZE = 25;
 let currentPage = 1;
@@ -5058,7 +5058,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_193';
+    verEl.textContent = 'DS_STABILE_194';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
