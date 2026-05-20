@@ -2417,7 +2417,7 @@ td:nth-child(7){
 .cards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
 @media (max-width:1100px) { .cards-grid { grid-template-columns: repeat(2,1fr); } }
 @media (max-width:600px)  { .cards-grid { grid-template-columns: 1fr; } }
-.rcard { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; justify-content:space-between; gap:10px; transition:border-color .15s,background .15s; }
+.rcard { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; justify-content:flex-start; gap:10px; transition:border-color .15s,background .15s; }
 .rcard:hover { border-color:var(--border2); background:var(--surface2); }
 .rcard-top { display:flex; align-items:center; gap:8px; overflow:hidden; }
 .rcard-id { font-family:var(--mono); font-size:13px; font-weight:700; color:#4d9fff; flex-shrink:0; }
@@ -3697,7 +3697,7 @@ function renderCards() {
   pel.innerHTML = tp<=1?'':buildPagerHTML(currentPageCards,tp,'goCardsPage');
 }
 
-function goCardsPage(p) { currentPageCards=p; render(); document.getElementById('cardsView').scrollIntoView({behavior:'smooth', block:'start'}); }
+function goCardsPage(p) { currentPageCards=p; render(); const el=document.getElementById('cardsView'); if(el){ const top=el.getBoundingClientRect().top+window.scrollY-130; window.scrollTo({top,behavior:'smooth'}); } }
 
 const PAGE_SIZE = 25;
 let currentPage = 1;
@@ -4822,7 +4822,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_189';
+    verEl.textContent = 'DS_STABILE_191';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
