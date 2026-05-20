@@ -1006,7 +1006,9 @@ html.light .footer-logo img {
   #cy-top5gruppi, #cy-top5regioni, #cy-geodiv, #cy-top5gb,
   .chart-box,
   #hmFilterBadge,
-  .date-range-wrap {
+  .date-range-wrap,
+  .count-info,
+  .nav-right {
     display: none !important;
   }
 }
@@ -4859,7 +4861,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_184';
+    verEl.textContent = 'DS_STABILE_185';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
