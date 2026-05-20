@@ -2405,6 +2405,84 @@ td:nth-child(7){
   text-align:center !important;
 }
 
+
+/* ── Vista Card ─────────────────────── */
+#cardsView { display: none; padding: 20px 32px 20px; }
+.cards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+@media (max-width:1100px) { .cards-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width:600px)  { .cards-grid { grid-template-columns: 1fr; } }
+.rcard { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; justify-content:space-between; gap:10px; transition:border-color .15s,background .15s; }
+.rcard:hover { border-color:var(--border2); background:var(--surface2); }
+.rcard-top { display:flex; align-items:center; gap:8px; overflow:hidden; }
+.rcard-id { font-family:var(--mono); font-size:13px; font-weight:700; color:#4d9fff; flex-shrink:0; }
+.rcard-date { font-family:var(--mono); font-size:11px; background:var(--surface2); color:var(--text-dim); padding:2px 7px; border-radius:4px; border:1px solid var(--border); flex-shrink:0; }
+.rcard-new { font-family:var(--mono); font-size:10px; font-weight:700; background:var(--red); color:#fff; padding:2px 7px; border-radius:4px; flex-shrink:0; }
+.rcard-gruppo { margin-left:auto; font-family:var(--mono); font-size:12px; font-weight:700; padding:3px 10px 3px 8px; border-left:3px solid; background:rgba(255,255,255,.05); border-radius:0 4px 4px 0; flex-shrink:0; white-space:nowrap; }
+.rcard-name { font-size:15px; font-weight:600; color:var(--white); line-height:1.35; margin-bottom:4px; }
+.rcard-link { color:#4d9fff; text-decoration:none; font-size:11px; font-family:var(--mono); opacity:.75; }
+.rcard-link:hover { opacity:1; text-decoration:underline; }
+.rcard-div { border:none; border-top:1px solid var(--border); }
+.rcard-bottom { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.rcard-loc { display:flex; flex-direction:column; gap:4px; flex:1; min-width:0; }
+.rcard-row { font-size:11px; color:var(--text-muted); font-family:var(--mono); }
+.rcard-row .v { color:var(--text-dim); font-size:12px; }
+.rcard-sym { opacity:.65; margin-right:2px; }
+.rcard-note { font-size:11px; color:#4d9fff; font-family:var(--mono); }
+.rcard-dati { display:flex; flex-direction:column; align-items:flex-end; gap:2px; flex-shrink:0; }
+.rcard-dati .dl { font-size:10px; color:var(--text-muted); font-family:var(--mono); white-space:nowrap; }
+.rcard-dati .dv { font-family:var(--mono); font-size:15px; font-weight:700; }
+.view-toggle { display:flex; gap:4px; }
+.vbtn { font-family:var(--mono); font-size:12px; background:var(--surface2); border:1px solid var(--border2); border-radius:6px; color:var(--text-muted); padding:5px 10px; cursor:pointer; transition:all .15s; }
+.vbtn.active { background:rgba(77,159,255,.15); border-color:#4d9fff; color:#4d9fff; }
+.vbtn:hover { color:var(--white); }
+
+
+/* ── Toolbar mobile ottimizzata ─────────── */
+@media (max-width: 600px) {
+  .toolbar {
+    margin: 0 12px 16px;
+    padding: 10px 12px;
+    gap: 7px;
+  }
+  /* Date picker: mettiamo i due campi su una riga */
+  .toolbar .date-range-wrap {
+    display: flex;
+    gap: 6px;
+    flex: 0 0 100%;
+    order: 1;
+  }
+  /* Esporta CSV e JSON: piccoli e compatti */
+  #exportCsvBtn, #exportJsonBtn {
+    font-size: 11px !important;
+    padding: 6px 9px !important;
+    order: 2;
+  }
+  /* Search: riga intera */
+  .search-wrap {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    order: 3;
+  }
+  /* Dropdown gruppo e regione: metà larghezza ciascuno */
+  #gruppoFilter, #regioneFilter {
+    flex: 1 !important;
+    min-width: 0 !important;
+    font-size: 12px !important;
+    padding: 6px 8px !important;
+    order: 4;
+  }
+  /* Reset button */
+  #toolbarResetBtn {
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+    order: 5;
+  }
+  /* Cards: padding ridotto */
+  #cardsView {
+    padding: 12px 12px 20px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2653,13 +2731,15 @@ td:nth-child(7){
   </div>
   <select id="regioneFilter"><option value="">Tutte le regioni</option></select>
   <select id="gruppoFilter">  <option value="">Tutti i gruppi</option></select>
-  <input type="date" id="dateFrom" title="Data inizio" onchange="onDateChange()">
-  <span class="date-sep">→</span>
-  <input type="date" id="dateTo" title="Data fine" onchange="onDateChange()">
+  <span class="date-range-wrap"><input type="date" id="dateFrom" title="Data inizio" onchange="onDateChange()"><span class="date-sep">→</span><input type="date" id="dateTo" title="Data fine" onchange="onDateChange()"></span>
   <button id="toolbarResetBtn" onclick="resetToolbar()" style="display:none;font-size:13px;color:var(--blue);background:rgba(77,159,255,0.1);border:1px solid rgba(77,159,255,0.35);border-radius:6px;padding:8px 14px;cursor:pointer;letter-spacing:0.04em;white-space:nowrap;" title="Azzera ricerca e filtri tabella" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">✕ reset ricerca</button>
+  <div class="view-toggle" style="margin-left:auto;display:none">
+    <button class="vbtn" id="btnVT" onclick="setView('table')" title="Vista tabella">≡ Lista</button>
+    <button class="vbtn active" id="btnVC" onclick="setView('cards')" title="Vista card">⊞ Card</button>
+  </div>
   <button id="hmResetBtn" onclick="resetHmFilter()" style="display:none;font-family:var(--mono);font-size: 13px;color:var(--red);background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.35);border-radius:3px;padding:8px 12px;cursor:pointer;letter-spacing:0.04em;" onmouseover="this.style.background='rgba(230,57,70,0.2)'" onmouseout="this.style.background='rgba(230,57,70,0.1)'" title="Rimuovi filtro heatmap e torna alla vista completa">✕ reset heatmap</button>
-  <button class="btn-export" onclick="exportCSV()" title="Esporta i dati filtrati in CSV">↓ Esporta CSV</button>
-  <button class="btn-export" onclick="exportJSON()" title="Esporta i dati filtrati in JSON" style="color:var(--blue);background:rgba(77,159,255,0.1);border-color:rgba(77,159,255,0.35);" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">↓ Esporta JSON</button>
+  <button class="btn-export" id="exportCsvBtn" onclick="exportCSV()" title="Esporta i dati filtrati in CSV">↓ Esporta CSV</button>
+  <button class="btn-export" id="exportJsonBtn" onclick="exportJSON()" title="Esporta i dati filtrati in JSON" style="color:var(--blue);background:rgba(77,159,255,0.1);border-color:rgba(77,159,255,0.35);" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">↓ Esporta JSON</button>
   <div class="count-info">Visualizzate <strong id="countNum">—</strong> righe</div>
 </div>
 
@@ -2705,6 +2785,10 @@ td:nth-child(7){
   </div>
 </div>
 <div id="tablePager"></div>
+<div id="cardsView">
+  <div class="cards-grid" id="cardsGrid"></div>
+  <div id="cardsPager" style="padding:20px 0 48px;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;"></div>
+</div>
 
 <!-- HEATMAP SECTION -->
 <div class="heatmap-section">
@@ -3457,6 +3541,7 @@ const OFFICIAL_GROUP_CATALOG = [
 
 let year = 0, sortKey = 'SEQ', sortDir = -1;
 let hmMonth = null, hmGroup = null, hmRegione = null;
+let hmSortAlpha = false;
 
 // Converte data dd/mm/yyyy in oggetto Date per confronti
 function parseRecordDate(str) {
@@ -3528,6 +3613,82 @@ function populate() {
   gSel.value = groupCatalog.includes(gv) ? gv : '';
 }
 
+const NUTS1_MAP = {"Valle d\'Aosta":"Nord-Ovest","Piemonte":"Nord-Ovest","Liguria":"Nord-Ovest","Lombardia":"Nord-Ovest","Trentino Alto Adige":"Nord-Est","Veneto":"Nord-Est","Friuli Venezia Giulia":"Nord-Est","Emilia Romagna":"Nord-Est","Toscana":"Centro","Umbria":"Centro","Marche":"Centro","Lazio":"Centro","Abruzzo":"Sud","Molise":"Sud","Campania":"Sud","Puglia":"Sud","Basilicata":"Sud","Calabria":"Sud","Sicilia":"Isole","Sardegna":"Isole"};
+let currentView = 'cards';
+let latestDate = null; // data più recente, calcolata al primo render
+
+function parseRecDate(s) {
+  if (!s) return null;
+  const p = s.split('/');
+  return p.length===3 ? new Date(p[2]+'-'+p[1]+'-'+p[0]) : null;
+}
+let currentPageCards = 1;
+const PAGE_SIZE_CARDS = 12;
+
+function setView(v) {
+  currentView = v;
+  document.getElementById('btnVT').classList.toggle('active', v==='table');
+  document.getElementById('btnVC').classList.toggle('active', v==='cards');
+  render();
+}
+
+function isNewRec(dateStr) {
+  if (!latestDate || !dateStr) return false;
+  const d = parseRecDate(dateStr);
+  return d && d.getTime() === latestDate.getTime();
+}
+
+function fmtDC(v) {
+  const n = parseFloat(v);
+  if (!v||isNaN(n)||n===0) return '<span class="rcard-dati"><span class="dl">Dati pubblicati:</span><span class="dv dati-zero">GB 0</span></span>';
+  const pts = n.toFixed(2).split('.');
+  pts[0] = pts[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+  const fmt = 'GB '+pts[0]+','+pts[1];
+  const cls = n>=500?'dati-large':n>=100?'dati-mid':n>=1?'dati-med':'dati-low';
+  return '<span class="rcard-dati"><span class="dl">Dati pubblicati:</span><span class="dv '+cls+'">'+fmt+'</span></span>';
+}
+
+function fmtNC(n) {
+  if (!n||!n.trim()) return '';
+  const u = n.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  if (u.includes('NON PUBBLICATI')||u.includes('QUANTITA SCONOSCIUTA')||u.includes('DLS CHIUSO')||u.includes('TARGET IN VERIFICA')||u.includes('HACKERATO')||u.includes('STATUS: IN VERIFICA')) return '';
+  return n;
+}
+
+function cardRow(r) {
+  const note = fmtNC(r.NOTE);
+  const nuts = NUTS1_MAP[r.REGIONE]||'—';
+  const nb = isNewRec(r.DATA)?'<span class="rcard-new">NEW</span>':'';
+  const gs = groupStyle(String(r.GRUPPO).toLowerCase());
+  return '<div class="rcard">'
+    +'<div class="rcard-top"><span class="rcard-id">#'+r.SEQ+'</span><span class="rcard-date">'+r.DATA+'</span>'+nb+'<span class="rcard-gruppo" style="'+gs+'">'+String(r.GRUPPO).toLowerCase()+'</span></div>'
+    +'<div><div class="rcard-name">'+(r.VITTIMA||'')+'</div>'+(r.LINK?'<a class="rcard-link" href="https://'+r.LINK.trim()+'" target="_blank" rel="noopener">'+r.LINK.trim()+'</a>':'')+'</div>'
+    +'<hr class="rcard-div">'
+    +'<div class="rcard-bottom"><div class="rcard-loc">'
+    +'<span class="rcard-row"><span class="rcard-sym">◎</span><span style="color:var(--text-muted)"> Provincia:</span> <span class="v">'+(r.PROVINCIA||'—')+'</span></span>'
+    +'<span class="rcard-row"><span class="rcard-sym">◈</span><span style="color:var(--text-muted)"> Regione:</span> <span class="v">'+(r.REGIONE||'—')+'</span></span>'
+    +'<span class="rcard-row"><span class="rcard-sym">⬡</span><span style="color:var(--text-muted)"> Area NUTS 1:</span> <span class="v">'+nuts+'</span></span>'
+    +(note?'<span class="rcard-note">◦ Nota: '+note+'</span>':'')
+    +'</div>'+fmtDC(r.DATI)+'</div></div>';
+}
+
+function renderCards() {
+  // Calcola data più recente globale per badge NEW
+  if (!latestDate) {
+    const allDates = base().map(r => parseRecDate(r.DATA)).filter(Boolean);
+    latestDate = allDates.reduce((a,b) => a>b?a:b, new Date(0));
+  }
+  const total = filteredRows.length;
+  const tp = Math.max(1, Math.ceil(total/PAGE_SIZE_CARDS));
+  if (currentPageCards>tp) currentPageCards=tp;
+  const s = (currentPageCards-1)*PAGE_SIZE_CARDS;
+  document.getElementById('cardsGrid').innerHTML = filteredRows.slice(s,s+PAGE_SIZE_CARDS).map(cardRow).join('');
+  const pel = document.getElementById('cardsPager');
+  pel.innerHTML = tp<=1?'':buildPagerHTML(currentPageCards,tp,'goCardsPage');
+}
+
+function goCardsPage(p) { currentPageCards=p; render(); document.getElementById('cardsView').scrollIntoView({behavior:'smooth', block:'start'}); }
+
 const PAGE_SIZE = 25;
 let currentPage = 1;
 let filteredRows = [];
@@ -3586,14 +3747,24 @@ function render() {
   const start = (currentPage - 1) * PAGE_SIZE;
   const pageRows = filteredRows.slice(start, start + PAGE_SIZE);
 
-  document.getElementById('tableBody').innerHTML = pageRows.map(row).join('');
   document.getElementById('countNum').textContent = total;
-
   const empty = total === 0;
   document.getElementById('noResults').style.display = empty ? '' : 'none';
-  document.getElementById('mainTable').style.display = empty ? 'none' : '';
 
-  renderTablePager(totalPages);
+  if (currentView === 'table') {
+    document.getElementById('tableBody').innerHTML = pageRows.map(row).join('');
+    document.getElementById('mainTable').style.display = empty ? 'none' : '';
+    document.querySelector('.table-wrapper').style.display = '';
+    document.getElementById('tablePager').style.display = '';
+    document.getElementById('cardsView').style.display = 'none';
+    renderTablePager(totalPages);
+  } else {
+    document.getElementById('mainTable').style.display = 'none';
+    document.querySelector('.table-wrapper').style.display = 'none';
+    document.getElementById('tablePager').style.display = 'none';
+    document.getElementById('cardsView').style.display = 'block';
+    renderCards();
+  }
 }
 
 function renderTablePager(totalPages) {
@@ -4136,10 +4307,12 @@ function buildHeatmap() {
     counts[label][monthKey] = (counts[label][monthKey] || 0) + 1;
   });
 
-  // Sort rows by total desc
+  // Sort rows by total desc o alfabetico
   const rows = Object.entries(counts)
     .map(([label, mc]) => ({ label, mc, total: Object.values(mc).reduce((a,b)=>a+b,0) }))
-    .sort((a,b) => b.total - a.total);
+    .sort((a,b) => hmSortAlpha
+      ? a.label.localeCompare(b.label, 'it')
+      : b.total - a.total);
 
   // Pagination
   const totalHmPages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
@@ -4153,7 +4326,9 @@ function buildHeatmap() {
 
   // Build head
   const headRow = `<tr>
-    <th class="hm-row-label">${hmMode === 'gruppo' ? 'Gruppo' : 'Regione'}</th>
+    <th class="hm-row-label" style="cursor:pointer;user-select:none;" onclick="if(hmMode==='gruppo'){hmSortAlpha=!hmSortAlpha;buildHeatmap();}" title="${hmMode==='gruppo'?'Clicca per ordinare':''}">
+      ${hmMode === 'gruppo' ? 'Gruppo ' + (hmSortAlpha ? '↑ A-Z' : '↓ N') : 'Regione'}
+    </th>
     <th style="border-right:1px solid var(--border)">Tot.</th>
     ${sortedMonths.map((mk, i) => `<th>${monthLabels[i]}</th>`).join('')}
   </tr>`;
@@ -4270,9 +4445,11 @@ function applyHmFilter(label, monthKey) {
 
   render();
   setTimeout(() => {
-    const tableEl = document.getElementById('mainTable');
-    if (tableEl) {
-      const top = tableEl.getBoundingClientRect().top + window.scrollY - 130;
+    const target = currentView === 'cards'
+      ? document.getElementById('cardsView')
+      : document.getElementById('mainTable');
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 130;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   }, 50);
@@ -4298,9 +4475,11 @@ function applyHmFilterTotal(label) {
   currentPage = 1;
   render();
   setTimeout(() => {
-    const tableEl = document.getElementById('mainTable');
-    if (tableEl) {
-      const top = tableEl.getBoundingClientRect().top + window.scrollY - 130;
+    const target = currentView === 'cards'
+      ? document.getElementById('cardsView')
+      : document.getElementById('mainTable');
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 130;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   }, 50);
@@ -4633,7 +4812,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_180';
+    verEl.textContent = 'DS_STABILE_181';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
