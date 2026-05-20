@@ -996,56 +996,13 @@ html.light .footer-logo img {
 }
 
 @media (max-width: 768px) {
-  nav, .hero, .toolbar, .tabs, .table-wrapper, footer { text-align: center; font-size: 0.95rem;  padding-left: 16px; padding-right: 16px; }
+  nav, .hero, .toolbar, .tabs, .table-wrapper, footer { padding-left: 16px; padding-right: 16px; }
 
-  /* ── MOBILE: nascondi sezioni pesanti, mostra solo rivendicazioni ── */
-  .hero,
-  .trend-section,
-  .heatmap-section,
+  /* MOBILE: nascondi sezioni, mostra solo rivendicazioni */
+  .hero, .trend-section, .heatmap-section, .chart-box,
+  #hmFilterBadge, .date-range-wrap, .count-info, .nav-right,
   #top5chart, #top5regioni, #top5gbchart, #geoDivisionBox,
-  #cy-top5gruppi, #cy-top5regioni, #cy-geodiv, #cy-top5gb,
-  .chart-box,
-  #hmFilterBadge,
-  .date-range-wrap,
-  .count-info,
-  .nav-right {
-    display: none !important;
-  }
-}
-
-/* ── Pulsante "Torna su" ────────────────── */
-#btn-back-to-top {
-  position: fixed;
-  bottom: 28px;
-  right: 24px;
-  z-index: 9999;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--red, #e5291e);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.2s ease;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-}
-#btn-back-to-top.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-#btn-back-to-top:hover {
-  transform: translateY(-3px);
-  background: #c0201a;
-}
-#btn-back-to-top svg {
-  width: 20px;
-  height: 20px;
-  fill: #fff;
+  #cy-top5gruppi, #cy-top5regioni, #cy-geodiv, #cy-top5gb { display: none !important; }
 }
 
 /* ── Hero two-column ─────────────────────── */
@@ -2532,6 +2489,11 @@ td:nth-child(7){
   }
 }
 
+/* Pulsante Torna su */
+#btn-back-to-top { position:fixed; bottom:72px; right:24px; z-index:9999; width:44px; height:44px; border-radius:50%; background:var(--red,#e5291e); color:#fff; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.25s,transform 0.2s; box-shadow:0 4px 16px rgba(0,0,0,0.35); }
+#btn-back-to-top.visible { opacity:1; pointer-events:auto; }
+#btn-back-to-top:hover { transform:translateY(-3px); }
+#btn-back-to-top svg { width:20px; height:20px; fill:#fff; }
 </style>
 </head>
 <body>
@@ -4861,34 +4823,23 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_185';
+    verEl.textContent = 'DS_STABILE_186';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
 
 // ── Note tooltip: nessun JS necessario, gestito via CSS ──
-
-// ── Pulsante "Torna su" ──────────────────────────────────
-(function () {
-  var btn = document.getElementById('btn-back-to-top');
-  if (!btn) return;
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 320) {
-      btn.classList.add('visible');
-    } else {
-      btn.classList.remove('visible');
-    }
-  }, { passive: true });
-  btn.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-})();
 </script>
 
-<!-- Pulsante Torna su -->
-<button id="btn-back-to-top" title="Torna su" aria-label="Torna su">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
-</button>
-
+<script>
+(function(){
+  var btn=document.createElement("button");
+  btn.id="btn-back-to-top"; btn.title="Torna su";
+  btn.innerHTML='<svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>';
+  document.body.appendChild(btn);
+  window.addEventListener("scroll",function(){ btn.classList.toggle("visible",window.scrollY>320); },{passive:true});
+  btn.addEventListener("click",function(){ window.scrollTo({top:0,behavior:"smooth"}); });
+})();
+</script>
 </html>
 <!-- EOF -->
