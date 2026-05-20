@@ -2493,6 +2493,266 @@ td:nth-child(7){
 #btn-back-to-top.visible { opacity:1; pointer-events:auto; }
 #btn-back-to-top:hover { transform:translateY(-3px); }
 #btn-back-to-top svg { width:20px; height:20px; fill:#fff; }
+
+/* ── chart-box-v2: stile card rivendicazioni ─────────────────── */
+.chart-box-v2 {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color .15s, background .15s;
+}
+.chart-box-v2:hover {
+  border-color: var(--border2);
+  background: var(--surface2);
+}
+.chart-box-v2 .cbv2-title {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.chart-box-v2 .cbv2-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.chart-box-v2 .cbv2-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.chart-box-v2 .cbv2-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.chart-box-v2 .cbv2-name {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+.chart-box-v2 .cbv2-count {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.chart-box-v2 .cbv2-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.chart-box-v2 .cbv2-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+.chart-box-v2 .cbv2-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+.chart-box-v2 .cbv2-leg-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+.chart-box-v2 .cbv2-leg-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── chart-box-v2: override topv2 interni ───────────────────── */
+.chart-box-v2 .topv2-item {
+  margin-bottom: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+}
+.chart-box-v2 .topv2-head {
+  display: flex !important;
+  align-items: baseline !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  margin-bottom: 0 !important;
+}
+.chart-box-v2 .topv2-name {
+  font-family: var(--mono) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  flex: 1 !important;
+}
+.chart-box-v2 .topv2-count {
+  font-family: var(--mono) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  flex-shrink: 0 !important;
+  text-shadow: none !important;
+}
+.chart-box-v2 .topv2-track {
+  width: 100% !important;
+  height: 6px !important;
+  background: rgba(255,255,255,0.06) !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+}
+.chart-box-v2 .topv2-fill {
+  height: 100% !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+.chart-box-v2 .impact-legend {
+  padding-top: 8px !important;
+  border-top: 1px solid var(--border) !important;
+  margin-top: auto !important;
+  gap: 8px 14px !important;
+}
+.chart-box-v2 .impact-legend .leg-item {
+  font-size: 10px !important;
+}
+
+/* ── KPI v2 + Year strip v2: stile card rivendicazioni ─────── */
+.kpi-wrap-v2, .year-wrap-v2 {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  background: transparent;
+}
+.kpi-wrap-v2 { margin-bottom: 12px; }
+.year-wrap-v2 { margin-bottom: 0; margin-top: auto; }
+
+.kpi-strip-v2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.kpi-card-v2 {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 12px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: border-color .15s, background .15s;
+}
+.kpi-card-v2:hover {
+  border-color: var(--border2);
+  background: var(--surface2);
+}
+.kpi-label-v2 {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.10em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+.kpi-val-v2 {
+  font-family: var(--mono);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--white);
+}
+.kpi-card-v2.kpi-active-v2 .kpi-val-v2 { color: #00c896; }
+
+.kpi-card-v2.kpi-gruppi-v2 .kpi-val-v2 { color: #ffffff; }
+
+.kpi-card-v2.kpi-red-v2 .kpi-val-v2 { color: var(--red); }
+
+.kpi-card-v2.kpi-yellow-v2 .kpi-val-v2 { color: #f0b429; }
+
+
+/* Year strip v2 */
+.year-strip-v2 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+.ytile-v2 {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 4px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.15s, opacity 0.2s;
+}
+.ytile-v2:hover {
+  border-color: var(--border2);
+  background: var(--surface2);
+}
+.ytile-year-v2 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+.ytile-count-v2 {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+.ytile-gb-v2 {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #f0b429;
+  white-space: nowrap;
+}
+.ytile-v2.ytile-old-v2 { opacity: 0.65; }
+.ytile-v2.ytile-2020-v2 .ytile-count-v2 { color: #ff8c69; }
+
+.ytile-v2.ytile-2021-v2 .ytile-count-v2 { color: #ffd166; }
+
+.ytile-v2.ytile-2022-v2 .ytile-count-v2 { color: #a8dadc; }
+
+.ytile-v2.ytile-2023-v2 .ytile-count-v2 { color: #ff9f43; }
+
+.ytile-v2.ytile-2024-v2 .ytile-count-v2 { color: #c97aff; }
+
+.ytile-v2.ytile-2025-v2 .ytile-count-v2 { color: var(--blue); }
+
+.ytile-v2.ytile-2026-v2 .ytile-count-v2 { color: var(--green); }
+
+
+/* ── Hero: KPI+anni allineati in basso ── */
+.hero-right-stats { justify-content: flex-end !important; height: 100% !important; }
+.kpi-wrap-v2 { margin-top: auto !important; margin-bottom: 0 !important; }
 </style>
 </head>
 <body>
@@ -2569,67 +2829,67 @@ td:nth-child(7){
     </div>
     <div class="hero-right hero-right-stats">
 
+      <div style="display:flex;flex-direction:column;justify-content:flex-end;gap:12px;width:100%;height:100%;">
       <!-- FASCIA 1: KPI globali -->
-      <div class="kpi-wrap">
-      <div class="kpi-strip">
-        <div class="kpi-card kpi-gruppi">
-          <div class="kpi-label">GRUPPI A CATALOGO</div>
-          <div class="kpi-val" id="toolbarTotalGroupsValue">0</div>
+      <div class="kpi-wrap-v2">
+      <div class="kpi-strip-v2">
+        <div class="kpi-card-v2 kpi-gruppi-v2">
+          <div class="kpi-label-v2">GRUPPI A CATALOGO</div>
+          <div class="kpi-val-v2" id="toolbarTotalGroupsValue">0</div>
         </div>
-        <div class="kpi-card kpi-active">
-          <div class="kpi-label">GRUPPI ATTIVI 2026</div>
-          <div class="kpi-val" id="statActiveGroups">—</div>
+        <div class="kpi-card-v2 kpi-active-v2">
+          <div class="kpi-label-v2">GRUPPI ATTIVI 2026</div>
+          <div class="kpi-val-v2" id="statActiveGroups">—</div>
         </div>
-        <div class="kpi-card kpi-red">
-          <div class="kpi-label">RIVENDICAZIONI TOTALI</div>
-          <div class="kpi-val" id="statTot">—</div>
+        <div class="kpi-card-v2 kpi-red-v2">
+          <div class="kpi-label-v2">RIVENDICAZIONI TOTALI</div>
+          <div class="kpi-val-v2" id="statTot">—</div>
         </div>
-        <div class="kpi-card kpi-yellow">
-          <div class="kpi-label">DATI PUBBLICATI GB</div>
-          <div class="kpi-val" id="statGb">—</div>
+        <div class="kpi-card-v2 kpi-yellow-v2">
+          <div class="kpi-label-v2">DATI PUBBLICATI GB</div>
+          <div class="kpi-val-v2" id="statGb">—</div>
         </div>
       </div>
       </div>
 
       <!-- FASCIA 2: anni — ordine inverso, 2026 a sinistra -->
-      <div class="year-wrap">
-      <div class="year-strip">
-        <div class="ytile ytile-2026">
-          <div class="ytile-year">2026</div>
-          <div class="ytile-count" id="stat2026">—</div>
-          <div class="ytile-gb" id="stat2026gb">—</div>
+      <div class="year-wrap-v2">
+      <div class="year-strip-v2">
+        <div class="ytile-v2 ytile-2026-v2">
+          <div class="ytile-year-v2">2026</div>
+          <div class="ytile-count-v2" id="stat2026">—</div>
+          <div class="ytile-gb-v2" id="stat2026gb">—</div>
         </div>
-        <div class="ytile ytile-2025">
-          <div class="ytile-year">2025</div>
-          <div class="ytile-count" id="stat2025">—</div>
-          <div class="ytile-gb" id="stat2025gb">—</div>
+        <div class="ytile-v2 ytile-2025-v2">
+          <div class="ytile-year-v2">2025</div>
+          <div class="ytile-count-v2" id="stat2025">—</div>
+          <div class="ytile-gb-v2" id="stat2025gb">—</div>
         </div>
-        <div class="ytile ytile-2024">
-          <div class="ytile-year">2024</div>
-          <div class="ytile-count" id="stat2024">—</div>
-          <div class="ytile-gb" id="stat2024gb">—</div>
+        <div class="ytile-v2 ytile-2024-v2">
+          <div class="ytile-year-v2">2024</div>
+          <div class="ytile-count-v2" id="stat2024">—</div>
+          <div class="ytile-gb-v2" id="stat2024gb">—</div>
         </div>
-        <div class="ytile ytile-2023">
-          <div class="ytile-year">2023</div>
-          <div class="ytile-count" id="stat2023">0</div>
-          <div class="ytile-gb" id="stat2023gb">0,00 GB</div>
+        <div class="ytile-v2 ytile-2023-v2 ytile-old-v2">
+          <div class="ytile-year-v2">2023</div>
+          <div class="ytile-count-v2" id="stat2023">0</div>
+          <div class="ytile-gb-v2" id="stat2023gb">0,00 GB</div>
         </div>
-        <div class="ytile ytile-2022">
-          <div class="ytile-year">2022</div>
-          <div class="ytile-count" id="stat2022">0</div>
-          <div class="ytile-gb" id="stat2022gb">0,00 GB</div>
+        <div class="ytile-v2 ytile-2022-v2 ytile-old-v2">
+          <div class="ytile-year-v2">2022</div>
+          <div class="ytile-count-v2" id="stat2022">0</div>
+          <div class="ytile-gb-v2" id="stat2022gb">0,00 GB</div>
         </div>
-        <div class="ytile ytile-2021">
-          <div class="ytile-year">2021</div>
-          <div class="ytile-count" id="stat2021">0</div>
-          <div class="ytile-gb" id="stat2021gb">0,00 GB</div>
+        <div class="ytile-v2 ytile-2021-v2 ytile-old-v2">
+          <div class="ytile-year-v2">2021</div>
+          <div class="ytile-count-v2" id="stat2021">0</div>
+          <div class="ytile-gb-v2" id="stat2021gb">0,00 GB</div>
         </div>
-        <div class="ytile ytile-2020">
-          <div class="ytile-year">2020</div>
-          <div class="ytile-count" id="stat2020">0</div>
-          <div class="ytile-gb" id="stat2020gb">0,00 GB</div>
+        <div class="ytile-v2 ytile-2020-v2 ytile-old-v2">
+          <div class="ytile-year-v2">2020</div>
+          <div class="ytile-count-v2" id="stat2020">0</div>
+          <div class="ytile-gb-v2" id="stat2020gb">0,00 GB</div>
         </div>
-        
       </div>
       </div>
 
@@ -2648,33 +2908,21 @@ td:nth-child(7){
 <!-- TOP SECTION TEST -->
 <div class="top-section">
   <div class="top-grid">
-      <div class="chart-box">
-        <div class="chart-title chart-title-v2">
-          <div class="chart-title-sub"></div>
-          <div class="chart-title-label">TOP 5 GRUPPI</div>
-        </div>
-        <div id="top5chart"></div>
+      <div class="chart-box-v2">
+        <div class="cbv2-title">TOP 5 GRUPPI</div>
+        <div class="cbv2-body" id="top5chart"></div>
       </div>
-      <div class="chart-box">
-        <div class="chart-title chart-title-v2">
-          <div class="chart-title-sub"></div>
-          <div class="chart-title-label">TOP 5 REGIONI</div>
-        </div>
-        <div id="top5regioni"></div>
+      <div class="chart-box-v2">
+        <div class="cbv2-title">TOP 5 REGIONI</div>
+        <div class="cbv2-body" id="top5regioni"></div>
       </div>
-      <div class="chart-box">
-        <div class="chart-title chart-title-v2">
-          <div class="chart-title-sub"></div>
-          <div class="chart-title-label">AREE NUTS 1</div>
-        </div>
-        <div id="geoDivisionBox"></div>
+      <div class="chart-box-v2">
+        <div class="cbv2-title">AREE NUTS 1</div>
+        <div class="cbv2-body" id="geoDivisionBox"></div>
       </div>
-      <div class="chart-box">
-        <div class="chart-title chart-title-v2">
-          <div class="chart-title-sub"></div>
-          <div class="chart-title-label">TOP 5 DATI PUBBLICATI</div>
-        </div>
-        <div id="top5gbchart"></div>
+      <div class="chart-box-v2">
+        <div class="cbv2-title">TOP 5 DATI PUBBLICATI</div>
+        <div class="cbv2-body" id="top5gbchart"></div>
       </div>
   </div>
 </div>
@@ -2683,33 +2931,21 @@ td:nth-child(7){
 <!-- STATISTICHE ANNO CORRENTE -->
 <div class="top-section" style="margin-top:0;">
   <div class="top-grid">
-    <div class="chart-box">
-      <div class="chart-title chart-title-v2">
-        <div class="chart-title-sub"></div>
-        <div class="chart-title-label">TOP 5 GRUPPI </div>
-      </div>
-      <div id="cy-top5gruppi"></div>
+    <div class="chart-box-v2">
+      <div class="cbv2-title">TOP 5 GRUPPI </div>
+      <div class="cbv2-body" id="cy-top5gruppi"></div>
     </div>
-    <div class="chart-box">
-      <div class="chart-title chart-title-v2">
-        <div class="chart-title-sub"></div>
-        <div class="chart-title-label">TOP 5 REGIONI </div>
-      </div>
-      <div id="cy-top5regioni"></div>
+    <div class="chart-box-v2">
+      <div class="cbv2-title">TOP 5 REGIONI </div>
+      <div class="cbv2-body" id="cy-top5regioni"></div>
     </div>
-    <div class="chart-box">
-      <div class="chart-title chart-title-v2">
-        <div class="chart-title-sub"></div>
-        <div class="chart-title-label">AREE NUTS 1 </div>
-      </div>
-      <div id="cy-geodiv"></div>
+    <div class="chart-box-v2">
+      <div class="cbv2-title">AREE NUTS 1 </div>
+      <div class="cbv2-body" id="cy-geodiv"></div>
     </div>
-    <div class="chart-box">
-      <div class="chart-title chart-title-v2">
-        <div class="chart-title-sub"></div>
-        <div class="chart-title-label">TOP 5 DATI PUBBLICATI </div>
-      </div>
-      <div id="cy-top5gb"></div>
+    <div class="chart-box-v2">
+      <div class="cbv2-title">TOP 5 DATI PUBBLICATI </div>
+      <div class="cbv2-body" id="cy-top5gb"></div>
     </div>
   </div>
 </div>
@@ -3697,7 +3933,7 @@ function renderCards() {
   pel.innerHTML = tp<=1?'':buildPagerHTML(currentPageCards,tp,'goCardsPage');
 }
 
-function goCardsPage(p) { currentPageCards=p; render(); const el=document.getElementById('cardsView'); if(el){ const top=el.getBoundingClientRect().top+window.scrollY-130; window.scrollTo({top,behavior:'smooth'}); } }
+function goCardsPage(p) { currentPageCards=p; render(); document.getElementById('cardsView').scrollIntoView({behavior:'smooth', block:'start'}); }
 
 const PAGE_SIZE = 25;
 let currentPage = 1;
@@ -4102,7 +4338,7 @@ function buildCurrentYear() {
   Object.entries(titleMap).forEach(([containerId, title]) => {
     const box = document.getElementById(containerId);
     if (box) {
-      const titleEl = box.closest('.chart-box')?.querySelector('.chart-title-label');
+      const titleEl = box.closest('.chart-box')?.querySelector('.chart-title-label') || box.closest('.chart-box-v2')?.querySelector('.cbv2-title');
       if (titleEl) titleEl.textContent = title;
     }
   });
@@ -4822,7 +5058,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_191';
+    verEl.textContent = 'DS_STABILE_193';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
