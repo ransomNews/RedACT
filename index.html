@@ -997,6 +997,12 @@ html.light .footer-logo img {
 
 @media (max-width: 768px) {
   nav, .hero, .toolbar, .tabs, .table-wrapper, footer { text-align: center; font-size: 0.95rem;  padding-left: 16px; padding-right: 16px; }
+
+  /* MOBILE: nascondi sezioni, mostra solo rivendicazioni */
+  .hero, .trend-section, .heatmap-section, .chart-box,
+  #hmFilterBadge, .date-range-wrap, .count-info, .nav-right,
+  #top5chart, #top5regioni, #top5gbchart, #geoDivisionBox,
+  #cy-top5gruppi, #cy-top5regioni, #cy-geodiv, #cy-top5gb { display: none !important; }
 }
 
 /* ── Hero two-column ─────────────────────── */
@@ -2483,6 +2489,10 @@ td:nth-child(7){
   }
 }
 
+#btn-back-to-top { position:fixed; bottom:72px; right:24px; z-index:9999; width:44px; height:44px; border-radius:50%; background:var(--red,#e5291e); color:#fff; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.25s,transform 0.2s; box-shadow:0 4px 16px rgba(0,0,0,0.35); }
+#btn-back-to-top.visible { opacity:1; pointer-events:auto; }
+#btn-back-to-top:hover { transform:translateY(-3px); }
+#btn-back-to-top svg { width:20px; height:20px; fill:#fff; }
 </style>
 </head>
 <body>
@@ -4812,7 +4822,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_183';
+    verEl.textContent = 'DS_STABILE_189';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
@@ -4820,5 +4830,16 @@ document.addEventListener('DOMContentLoaded', updateFooterMeta);
 // ── Note tooltip: nessun JS necessario, gestito via CSS ──
 </script>
 
+
+<script>
+(function(){
+  var btn=document.createElement("button");
+  btn.id="btn-back-to-top"; btn.title="Torna su";
+  btn.innerHTML='<svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>';
+  document.body.appendChild(btn);
+  window.addEventListener("scroll",function(){ btn.classList.toggle("visible",window.scrollY>320); },{passive:true});
+  btn.addEventListener("click",function(){ window.scrollTo({top:0,behavior:"smooth"}); });
+})();
+</script>
 </html>
 <!-- EOF -->
