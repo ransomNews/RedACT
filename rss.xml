@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ransomNews · Rivendicazioni Italia</title>
+    <link>https://ransomnews.github.io/RedACT/</link>
+    <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
+    <language>it</language>
+    <copyright>ransomNews · ransomnews.online</copyright>
+    <lastBuildDate>Thu, 21 May 2026 07:35:21 +0000</lastBuildDate>
+    <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://ransomnews.github.io/RedACT/logo.png</url>
+      <title>ransomNews</title>
+      <link>https://ransomnews.github.io/RedACT/</link>
+    </image>
+    <item>
+      <title>ABP Autoricambi S.R.L.</title>
+      <link>https://abpautoricambi.it</link>
+      <description>Gruppo ransomware: titan | Provincia: Napoli | Regione: Campania | Dati pubblicati: GB 29,80</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00428</guid>
+      <category>titan</category>
+    </item>
+    <item>
+      <title>Società Produttori Sementi S.P.A.</title>
+      <link>https://psbsementi.it</link>
+      <description>Gruppo ransomware: m3rx | Provincia: Bologna | Regione: Emilia Romagna | Dati pubblicati: 0 GB</description>
+      <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00427</guid>
+      <category>m3rx</category>
+    </item>
+    <item>
+      <title>Datamatic S.P.A.</title>
+      <link>https://datamatic.it</link>
+      <description>Gruppo ransomware: thegentlemen | Provincia: Milano | Regione: Lombardia | Dati pubblicati: 0 GB</description>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00421</guid>
+      <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>IPE Technologies S.R.L.</title>
+      <link>https://ipesrl.com</link>
+      <description>Gruppo ransomware: thegentlemen | Provincia: Verona | Regione: Veneto | Dati pubblicati: 0 GB</description>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00422</guid>
+      <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>Inox Market Service S.P.A.</title>
+      <link>https://inoxmarketservice.com</link>
+      <description>Gruppo ransomware: qilin | Provincia: Padova | Regione: Veneto | Dati pubblicati: 0 GB</description>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00423</guid>
+      <category>qilin</category>
+    </item>
+    <item>
+      <title>Complastex S.P.A.</title>
+      <link>https://complastex.it</link>
+      <description>Gruppo ransomware: qilin | Provincia: Lucca | Regione: Toscana | Dati pubblicati: 0 GB</description>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00424</guid>
+      <category>qilin</category>
+    </item>
+    <item>
+      <title>Soavegel S.R.L.</title>
+      <link>https://soavegel.it</link>
+      <description>Gruppo ransomware: safepay | Provincia: Brindisi | Regione: Puglia | Dati pubblicati: GB 92,74</description>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00425</guid>
+      <category>safepay</category>
+    </item>
+    <item>
+      <title>Studio Ubertazzi Servizi Legali</title>
+      <link>https://studioubertazzi.it</link>
+      <description>Gruppo ransomware: safepay | Provincia: Milano | Regione: Lombardia | Dati pubblicati: GB 21,76</description>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00426</guid>
+      <category>safepay</category>
+    </item>
+    <item>
+      <title>Studio Marchi &amp; Partners</title>
+      <link>https://studiomarchipartners.it</link>
+      <description>Gruppo ransomware: everest | Provincia: Prato | Regione: Toscana | Dati pubblicati: GB 121,74</description>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00416</guid>
+      <category>everest</category>
+    </item>
+    <item>
+      <title>Zona Ovest di Torino S.R.L.</title>
+      <link>https://zonaovest.to.it</link>
+      <description>Gruppo ransomware: safepay | Provincia: Torino | Regione: Piemonte | Dati pubblicati: GB 38,44</description>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00417</guid>
+      <category>safepay</category>
+    </item>
+    <item>
+      <title>Media Consulting S.R.L.</title>
+      <link>https://mconweb.it</link>
+      <description>Gruppo ransomware: thegentlemen | Provincia: Forlì-Cesena | Regione: Emilia Romagna | Dati pubblicati: 0 GB</description>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00418</guid>
+      <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>Digiplex S.R.L.</title>
+      <link>https://digiplex.it</link>
+      <description>Gruppo ransomware: thegentlemen | Provincia: Napoli | Regione: Campania | Dati pubblicati: 0 GB | Nota: Sul DLS: Mediaplex</description>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00419</guid>
+      <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>SIT S.P.A.</title>
+      <link>https://sitcorporate.it</link>
+      <description>Gruppo ransomware: medusalocker | Provincia: Padova | Regione: Veneto | Dati pubblicati: 0 GB | Nota: Dati pubblicati, no quantità</description>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00420</guid>
+      <category>medusalocker</category>
+    </item>
+    <item>
+      <title>Reschio S.R.L.</title>
+      <link>https://reschio.com</link>
+      <description>Gruppo ransomware: nova | Provincia: Perugia | Regione: Umbria | Dati pubblicati: GB 230,00</description>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00414</guid>
+      <category>nova</category>
+    </item>
+    <item>
+      <title>Abazia S.P.A.</title>
+      <link>https://abazia.com</link>
+      <description>Gruppo ransomware: qilin | Provincia: Alessandria | Regione: Piemonte | Dati pubblicati: 0 GB | Nota: Dati pubblicati, no quantità</description>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00415</guid>
+      <category>qilin</category>
+    </item>
+    <item>
+      <title>Selex Gruppo Commerciale S.P.A.</title>
+      <link>https://selexgc.it</link>
+      <description>Gruppo ransomware: incransom | Provincia: Milano | Regione: Lombardia | Dati pubblicati: 0 GB</description>
+      <pubDate>Mon, 27 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00411</guid>
+      <category>incransom</category>
+    </item>
+    <item>
+      <title>Leone Film Group S.P.A.</title>
+      <link>https://leonefilmgroup.com</link>
+      <description>Gruppo ransomware: qilin | Provincia: Roma | Regione: Lazio | Dati pubblicati: 0 GB | Nota: Dati pubblicati, no quantità</description>
+      <pubDate>Mon, 27 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00412</guid>
+      <category>qilin</category>
+    </item>
+    <item>
+      <title>Antica Sartoria S.R.L.</title>
+      <link>https://anticasartoriapositano.it</link>
+      <description>Gruppo ransomware: qilin | Provincia: Milano | Regione: Lombardia | Dati pubblicati: 0 GB</description>
+      <pubDate>Mon, 27 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00413</guid>
+      <category>qilin</category>
+    </item>
+    <item>
+      <title>ROTAK S.R.L.</title>
+      <link>https://rotak.it</link>
+      <description>Gruppo ransomware: m3rx | Provincia: Siracusa | Regione: Sicilia | Dati pubblicati: 0 GB</description>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00410</guid>
+      <category>m3rx</category>
+    </item>
+    <item>
+      <title>A.ST.I.M. S.R.L.</title>
+      <link>https://astim.it</link>
+      <description>Gruppo ransomware: coinbasecartel | Provincia: Ravenna | Regione: Emilia Romagna | Dati pubblicati: 0 GB</description>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00409</guid>
+      <category>coinbasecartel</category>
+    </item>
+  </channel>
+</rss>
