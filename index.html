@@ -220,6 +220,15 @@ nav {
 }
 .nav-api-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
 .nav-api-btn:hover { color: #00c896; background: rgba(0,200,150,0.1); border-color: rgba(0,200,150,0.25); }
+.nav-rss-btn {
+  display: flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.45); text-decoration: none;
+  background: transparent; border: 1px solid transparent; border-radius: 8px; padding: 6px 10px;
+  transition: color 0.18s, background 0.18s, border-color 0.18s;
+}
+.nav-rss-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.nav-rss-btn:hover { color: #f0b429; background: rgba(240,180,41,0.1); border-color: rgba(240,180,41,0.25); }
 .nav-link {
   font-family: var(--mono);
   font-size: 13px;
@@ -2940,6 +2949,10 @@ td:nth-child(7){
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
       <span>API</span>
     </a>
+    <a href="rss.xml" target="_blank" rel="noopener" title="Feed RSS — Ultime rivendicazioni" class="nav-rss-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor" stroke="none"/></svg>
+      <span>RSS</span>
+    </a>
     <div class="theme-switch" id="themeSwitch" title="Cambia tema" onclick="toggleTheme()">
       <div class="theme-track"></div>
       <div class="theme-thumb"></div>
@@ -5205,7 +5218,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_199';
+    verEl.textContent = 'DS_STABILE_200';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
@@ -5309,6 +5322,3 @@ document.addEventListener('DOMContentLoaded', updateFooterMeta);
 
 </html>
 <!-- EOF -->
-
-
-  
