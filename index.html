@@ -999,8 +999,8 @@ html.light .footer-logo img {
   nav, .hero, .toolbar, .tabs, .table-wrapper, footer { text-align: center; font-size: 0.95rem;  padding-left: 16px; padding-right: 16px; }
 
   /* MOBILE: nascondi sezioni, mostra solo rivendicazioni */
-  .hero, .trend-section, .heatmap-section, .chart-box,
-  #hmFilterBadge, .date-range-wrap, .count-info, .nav-right,
+  .hero, .trend-section, .heatmap-section, .chart-box, .chart-box-v2,
+  .top-section, .tabs, #hmFilterBadge, .date-range-wrap, .count-info, .nav-right,
   #top5chart, #top5regioni, #top5gbchart, #geoDivisionBox,
   #cy-top5gruppi, #cy-top5regioni, #cy-geodiv, #cy-top5gb { display: none !important; }
 }
@@ -5126,7 +5126,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_197';
+    verEl.textContent = 'DS_STABILE_198';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
