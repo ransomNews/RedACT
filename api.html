@@ -1,398 +1,200 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ransomNews API — Documentazione</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg:#1a1b2e; --surface:#20223a; --surface2:#272a45; --surface3:#2e3150;
-  --border:#363a5e; --border2:#404470;
-  --red:#ff0000; --red-dim:rgba(255,0,0,0.12);
-  --white:#f0f0f5; --text:#dde1f5; --text-dim:#9099c8; --text-muted:#5a6090;
-  --mono:'Poppins',monospace; --sans:'Poppins',sans-serif;
-  --green:#00c896; --blue:#4d9fff; --yellow:#f5c842;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.7;min-height:100vh}
+name: Genera API JSON
 
-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:16px;padding:0 28px;height:52px;background:var(--surface);border-bottom:1px solid var(--border)}
-.nav-logo{font-family:var(--mono);font-size:17px;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:-0.02em;display:flex;align-items:center;gap:0}
-.nav-logo .red{color:var(--red)}
-.nav-sep{width:1px;height:20px;background:var(--border2)}
-.nav-badge{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--green);background:rgba(0,200,150,0.1);border:1px solid rgba(0,200,150,0.25);border-radius:6px;padding:2px 8px;text-transform:uppercase}
-.nav-right{margin-left:auto;display:flex;align-items:center;gap:10px}
-.lang-btn{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:0.06em;padding:4px 10px;border-radius:6px;border:1px solid var(--border2);background:transparent;color:var(--text-dim);cursor:pointer;transition:all 0.18s}
-.lang-btn.active{color:var(--white);background:var(--surface3);border-color:var(--border2)}
-.lang-btn:hover:not(.active){color:var(--green);border-color:rgba(0,200,150,0.3)}
-.nav-home{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;border:1px solid transparent;color:var(--text-dim);text-decoration:none;transition:all 0.18s}
-.nav-home:hover{color:var(--white);background:var(--surface2);border-color:var(--border)}
-.nav-home svg{width:18px;height:18px}
+on:
+  push:
+    paths:
+      - 'index.html'
 
-.page{max-width:900px;margin:0 auto;padding:48px 24px 80px}
+jobs:
+  genera:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
-.hero{margin-bottom:52px;padding:36px 40px;border:1px solid var(--border);border-radius:14px;background:var(--surface);text-align:center}
-.hero-tag{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0.1em;color:var(--green);text-transform:uppercase;margin-bottom:16px}
-.hero h1{font-size:clamp(18px,2.5vw,26px);font-weight:700;line-height:1.2;letter-spacing:-0.02em;color:var(--white);margin-bottom:16px;white-space:nowrap}
-.hero h1 .accent{color:var(--red)}
-.hero-desc{font-size:15px;color:var(--text-dim);max-width:640px;line-height:1.7;margin:0 auto 28px;text-align:center}
-.hero-meta{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
-.meta-item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--text-muted)}
-.meta-dot{width:6px;height:6px;border-radius:50%}
-.meta-dot.green{background:var(--green);box-shadow:0 0 6px var(--green)}
-.meta-dot.blue{background:var(--blue)}
-.meta-dot.yellow{background:var(--yellow)}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:48px}
-.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center}
-.stat-val{font-family:var(--mono);font-size:28px;font-weight:700;line-height:1;margin-bottom:6px}
-.stat-val.green{color:var(--green)}.stat-val.blue{color:var(--blue)}.stat-val.red{color:var(--red)}.stat-val.yellow{color:var(--yellow)}
-.stat-label{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;color:var(--text-muted);text-transform:uppercase}
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
-.base-url-box{background:var(--surface2);border:1px solid var(--border2);border-left:3px solid var(--green);border-radius:10px;padding:18px 22px;margin-bottom:48px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.base-url-label{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--green);text-transform:uppercase;flex-shrink:0}
-.base-url-val{font-family:var(--mono);font-size:14px;color:var(--white);word-break:break-all}
+      - name: Genera JSON e RSS
+        run: |
+          python3 << 'PYEOF'
+          import re, json, os
+          from datetime import datetime, timezone
+          from collections import defaultdict
 
-.section{margin-bottom:52px}
-.section-title{font-size:11px;font-weight:700;letter-spacing:0.12em;color:var(--text-muted);text-transform:uppercase;font-family:var(--mono);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+          with open('index.html', 'r', encoding='utf-8') as f:
+              html = f.read()
 
-.endpoint{background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:20px;overflow:hidden}
-.endpoint-header{display:flex;align-items:center;gap:14px;padding:18px 22px;cursor:pointer;user-select:none;transition:background 0.15s}
-.endpoint-header:hover{background:var(--surface2)}
-.method{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0.06em;padding:3px 9px;border-radius:5px;background:rgba(0,200,150,0.12);color:var(--green);border:1px solid rgba(0,200,150,0.25);flex-shrink:0}
-.endpoint-path{font-family:var(--mono);font-size:14px;color:var(--white);font-weight:500;flex:1}
-.endpoint-desc-txt{font-size:13px;color:var(--text-dim);flex-shrink:0;display:none}
-@media(min-width:600px){.endpoint-desc-txt{display:block}}
-.endpoint-chevron{color:var(--text-muted);transition:transform 0.2s;flex-shrink:0}
-.endpoint.open .endpoint-chevron{transform:rotate(180deg)}
-.endpoint-body{display:none;padding:0 22px 22px;border-top:1px solid var(--border)}
-.endpoint.open .endpoint-body{display:block}
-.endpoint-body p{color:var(--text-dim);font-size:14px;margin:16px 0 14px;line-height:1.6}
+          def extract_dataset(html, year):
+              m = re.search(rf'const DATA_{year} = ([\s\S]*?);$', html, re.MULTILINE)
+              if not m:
+                  return []
+              raw = m.group(1)
+              raw = re.sub(r'([{,]\s*)([A-Za-z_][A-Za-z0-9_]*)(\s*:)', r'\1"\2"\3', raw)
+              raw = raw.replace("\\'", "'")
+              try:
+                  return json.loads(raw)
+              except Exception as e:
+                  print(f"Errore anno {year}: {e}")
+                  return []
 
-.fields-table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0}
-.fields-table th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:0.08em;color:var(--text-muted);text-transform:uppercase;padding:8px 12px;border-bottom:1px solid var(--border)}
-.fields-table td{padding:9px 12px;border-bottom:1px solid rgba(54,58,94,0.5);vertical-align:top}
-.fields-table tr:last-child td{border-bottom:none}
-.field-name{font-family:var(--mono);font-size:12px;color:var(--blue);font-weight:500}
-.field-type{font-family:var(--mono);font-size:11px;color:var(--yellow)}
-.field-desc{color:var(--text-dim);font-size:13px}
+          all_records = []
+          for year in [2020, 2021, 2022, 2023, 2024, 2025, 2026]:
+              recs = extract_dataset(html, year)
+              for r in recs:
+                  r['_YEAR'] = year
+              all_records.extend(recs)
+              print(f"  {year}: {len(recs)} record")
 
-.code-block{background:#0f1020;border:1px solid var(--border);border-radius:8px;padding:16px 18px;margin:14px 0 0;overflow-x:auto}
-.code-block pre{font-family:var(--mono);font-size:12px;line-height:1.7;color:var(--text);white-space:pre}
-.code-label{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;color:var(--text-muted);text-transform:uppercase;margin-bottom:8px;margin-top:14px}
-.j-key{color:#7dd3fc}.j-str{color:#86efac}.j-num{color:#fbbf24}.j-bool{color:#a78bfa}.j-null{color:#9099c8}.j-punc{color:#5a6090}
+          m = re.search(r'const OFFICIAL_GROUP_CATALOG = \[(.*?)\];', html, re.DOTALL)
+          groups = sorted(set(g.lower().strip() for g in re.findall(r'"([^"]+)"', m.group(1))))
+          generated = datetime.now(timezone.utc).isoformat()
 
-.note-box{background:rgba(77,159,255,0.07);border:1px solid rgba(77,159,255,0.2);border-left:3px solid var(--blue);border-radius:8px;padding:14px 18px;font-size:13px;color:var(--text-dim);margin:12px 0 0;line-height:1.6}
-.note-box strong{color:var(--blue)}
-.warn-box{background:rgba(245,200,66,0.07);border:1px solid rgba(245,200,66,0.2);border-left:3px solid var(--yellow);border-radius:8px;padding:14px 18px;font-size:13px;color:var(--text-dim);margin:12px 0 0;line-height:1.6}
-.warn-box strong{color:var(--yellow)}
+          os.makedirs('api/v1/anno', exist_ok=True)
 
-footer{border-top:1px solid var(--border);padding:28px 24px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--text-muted)}
-footer a{color:var(--text-dim);text-decoration:none}
-footer a:hover{color:var(--green)}
-</style>
-</head>
-<body>
+          def parse_gb(val):
+              try: return float(val)
+              except: return 0.0
 
-<nav>
-  <a href="index.html" class="nav-logo">ransom<span class="red">News</span></a>
-  <div class="nav-sep"></div>
-  <span class="nav-badge">API v1</span>
-  <div class="nav-right">
-    <button class="lang-btn active" id="btnIT" onclick="setLang('it')">IT</button>
-    <button class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
-    <div class="nav-sep"></div>
-    <a href="index.html" class="nav-home" title="Dashboard">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
-    </a>
-  </div>
-</nav>
+          # rivendicazioni.json
+          records_out = [{"id":r.get("ID",""),"data":r.get("DATA",""),"anno":r["_YEAR"],
+              "vittima":r.get("VITTIMA",""),"gruppo":r.get("GRUPPO",""),"link":r.get("LINK",""),
+              "provincia":r.get("PROVINCIA",""),"regione":r.get("REGIONE",""),
+              "dati_gb":parse_gb(r.get("DATI",0)),"note":r.get("NOTE","")} for r in all_records]
+          with open('api/v1/rivendicazioni.json','w',encoding='utf-8') as f:
+              json.dump({"source":"ransomnews.online","generated":generated,
+                         "total":len(records_out),"records":records_out}, f, ensure_ascii=False, indent=2)
+          print(f"rivendicazioni.json -> {len(records_out)} record")
 
-<div class="page">
-  <div class="hero">
-    <div class="hero-tag">ransomNews · Public API</div>
-    <h1 id="h1-text"></h1>
-    <p class="hero-desc" id="hero-desc"></p>
-    <div class="hero-meta">
-      <div class="meta-item"><div class="meta-dot green"></div><span id="meta1"></span></div>
-      <div class="meta-item"><div class="meta-dot blue"></div><span id="meta2"></span></div>
-      <div class="meta-item"><div class="meta-dot yellow"></div><span id="meta3"></span></div>
-    </div>
-  </div>
+          # gruppi.json
+          gcounts = defaultdict(int); ggb = defaultdict(float); gyears = defaultdict(set)
+          for r in all_records:
+              g = r.get("GRUPPO","").lower().strip()
+              gcounts[g] += 1; ggb[g] += parse_gb(r.get("DATI",0)); gyears[g].add(r["_YEAR"])
+          groups_out = [{"nome":g,"rivendicazioni":gcounts.get(g,0),
+                         "dati_gb":round(ggb.get(g,0.0),2),"anni_attivi":sorted(gyears.get(g,[]))}
+                        for g in groups]
+          with open('api/v1/gruppi.json','w',encoding='utf-8') as f:
+              json.dump({"source":"ransomnews.online","generated":generated,
+                         "total":len(groups_out),"gruppi":groups_out}, f, ensure_ascii=False, indent=2)
+          print(f"gruppi.json -> {len(groups_out)} gruppi")
 
-  <div class="stats-grid">
-    <div class="stat-card"><div class="stat-val green">751</div><div class="stat-label" id="stat1"></div></div>
-    <div class="stat-card"><div class="stat-val blue">167</div><div class="stat-label" id="stat2"></div></div>
-    <div class="stat-card"><div class="stat-val yellow">65.484</div><div class="stat-label" id="stat3"></div></div>
-    <div class="stat-card"><div class="stat-val red">2020–2026</div><div class="stat-label" id="stat4"></div></div>
-  </div>
+          # stats.json
+          by_year = defaultdict(list)
+          for r in all_records: by_year[r["_YEAR"]].append(r)
+          anni_stats = {str(y):{"rivendicazioni":len(recs),
+              "dati_gb":round(sum(parse_gb(r.get("DATI",0)) for r in recs),2),
+              "gruppi_attivi":len(set(r.get("GRUPPO","").lower() for r in recs))}
+              for y,recs in sorted(by_year.items())}
+          by_reg = defaultdict(int)
+          for r in all_records: by_reg[r.get("REGIONE","Sconosciuta")] += 1
+          gcounts_items = sorted(gcounts.items(), key=lambda x: -x[1])
+          ggb_items = sorted(ggb.items(), key=lambda x: -x[1])
+          stats = {"source":"ransomnews.online","generated":generated,
+              "totali":{"rivendicazioni":len(all_records),"gruppi_a_catalogo":len(groups),
+                        "dati_gb":round(sum(parse_gb(r.get("DATI",0)) for r in all_records),2)},
+              "per_anno":anni_stats,
+              "top5_gruppi_per_rivendicazioni":[{"gruppo":g,"rivendicazioni":c} for g,c in gcounts_items[:5]],
+              "top5_gruppi_per_gb":[{"gruppo":g,"dati_gb":round(v,2)} for g,v in ggb_items[:5]],
+              "top5_regioni":[{"regione":r,"rivendicazioni":c}
+                  for r,c in sorted(by_reg.items(),key=lambda x:-x[1])[:5]]}
+          with open('api/v1/stats.json','w',encoding='utf-8') as f:
+              json.dump(stats, f, ensure_ascii=False, indent=2)
+          print("stats.json -> ok")
 
-  <div class="base-url-box">
-    <span class="base-url-label">Base URL</span>
-    <span class="base-url-val">https://ransomnews.online/api/v1/</span>
-  </div>
+          # anno/YYYY.json
+          for y, recs in sorted(by_year.items()):
+              recs_out = [{"id":r.get("ID",""),"data":r.get("DATA",""),"vittima":r.get("VITTIMA",""),
+                  "gruppo":r.get("GRUPPO",""),"link":r.get("LINK",""),"provincia":r.get("PROVINCIA",""),
+                  "regione":r.get("REGIONE",""),"dati_gb":parse_gb(r.get("DATI",0)),"note":r.get("NOTE","")}
+                  for r in recs]
+              with open(f'api/v1/anno/{y}.json','w',encoding='utf-8') as f:
+                  json.dump({"source":"ransomnews.online","generated":generated,
+                             "anno":y,"total":len(recs_out),"records":recs_out}, f, ensure_ascii=False, indent=2)
+              print(f"anno/{y}.json -> {len(recs_out)} record")
 
-  <div class="section">
-    <div class="section-title" id="section-endpoints"></div>
+          # rss.xml
+          def parse_date_rfc822(d):
+              try:
+                  dt = datetime.strptime(d.strip(), "%d/%m/%Y")
+                  return dt.strftime("%a, %d %b %Y 00:00:00 +0000")
+              except:
+                  return datetime.now(timezone.utc).strftime("%a, %d %b %Y 00:00:00 +0000")
 
-    <div class="endpoint" id="ep1">
-      <div class="endpoint-header" onclick="toggleEp('ep1')">
-        <span class="method">GET</span>
-        <span class="endpoint-path">rivendicazioni.json</span>
-        <span class="endpoint-desc-txt" id="desc1"></span>
-        <svg class="endpoint-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-      <div class="endpoint-body">
-        <p id="ep1-desc"></p>
-        <div class="code-label">URL</div>
-        <div class="code-block"><pre>https://ransomnews.online/api/v1/rivendicazioni.json</pre></div>
-        <div class="code-label" id="fields-label"></div>
-        <table class="fields-table">
-          <thead><tr><th id="th-field"></th><th id="th-type"></th><th id="th-desc"></th></tr></thead>
-          <tbody id="fields-body"></tbody>
-        </table>
-        <div class="code-label" id="example-label-1"></div>
-        <div class="code-block"><pre><span class="j-punc">{</span>
-  <span class="j-key">"source"</span><span class="j-punc">:</span> <span class="j-str">"ransomnews.online"</span><span class="j-punc">,</span>
-  <span class="j-key">"generated"</span><span class="j-punc">:</span> <span class="j-str">"2026-05-11T00:47:03+00:00"</span><span class="j-punc">,</span>
-  <span class="j-key">"total"</span><span class="j-punc">:</span> <span class="j-num">751</span><span class="j-punc">,</span>
-  <span class="j-key">"records"</span><span class="j-punc">: [{</span>
-    <span class="j-key">"id"</span><span class="j-punc">:</span> <span class="j-str">"00001"</span><span class="j-punc">,</span> <span class="j-key">"data"</span><span class="j-punc">:</span> <span class="j-str">"08/10/2020"</span><span class="j-punc">,</span> <span class="j-key">"anno"</span><span class="j-punc">:</span> <span class="j-num">2020</span><span class="j-punc">,</span>
-    <span class="j-key">"vittima"</span><span class="j-punc">:</span> <span class="j-str">"Campari Group"</span><span class="j-punc">,</span> <span class="j-key">"gruppo"</span><span class="j-punc">:</span> <span class="j-str">"ragnarlocker"</span><span class="j-punc">,</span>
-    <span class="j-key">"provincia"</span><span class="j-punc">:</span> <span class="j-str">"Milano"</span><span class="j-punc">,</span> <span class="j-key">"regione"</span><span class="j-punc">:</span> <span class="j-str">"Lombardia"</span><span class="j-punc">,</span>
-    <span class="j-key">"dati_gb"</span><span class="j-punc">:</span> <span class="j-num">0.0</span><span class="j-punc">,</span> <span class="j-key">"note"</span><span class="j-punc">:</span> <span class="j-str">""</span>
-  <span class="j-punc">}]</span>
-<span class="j-punc">}</span></pre></div>
-      </div>
-    </div>
+          def escape_xml(s):
+              return str(s).replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;')
 
-    <div class="endpoint" id="ep2">
-      <div class="endpoint-header" onclick="toggleEp('ep2')">
-        <span class="method">GET</span>
-        <span class="endpoint-path">stats.json</span>
-        <span class="endpoint-desc-txt" id="desc2"></span>
-        <svg class="endpoint-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-      <div class="endpoint-body">
-        <p id="ep2-desc"></p>
-        <div class="code-label">URL</div>
-        <div class="code-block"><pre>https://ransomnews.online/api/v1/stats.json</pre></div>
-        <div class="code-label" id="example-label-2"></div>
-        <div class="code-block"><pre><span class="j-punc">{</span>
-  <span class="j-key">"totali"</span><span class="j-punc">: {</span> <span class="j-key">"rivendicazioni"</span><span class="j-punc">:</span> <span class="j-num">751</span><span class="j-punc">,</span> <span class="j-key">"gruppi_a_catalogo"</span><span class="j-punc">:</span> <span class="j-num">167</span><span class="j-punc">,</span> <span class="j-key">"dati_gb"</span><span class="j-punc">:</span> <span class="j-num">65484.18</span> <span class="j-punc">},</span>
-  <span class="j-key">"per_anno"</span><span class="j-punc">: {</span> <span class="j-key">"2026"</span><span class="j-punc">: {</span> <span class="j-key">"rivendicazioni"</span><span class="j-punc">:</span> <span class="j-num">110</span><span class="j-punc">,</span> <span class="j-key">"dati_gb"</span><span class="j-punc">:</span> <span class="j-num">8601.86</span> <span class="j-punc">}</span> <span class="j-punc">},</span>
-  <span class="j-key">"top5_gruppi_per_rivendicazioni"</span><span class="j-punc">: [{</span> <span class="j-key">"gruppo"</span><span class="j-punc">:</span> <span class="j-str">"lockbit3"</span><span class="j-punc">,</span> <span class="j-key">"rivendicazioni"</span><span class="j-punc">:</span> <span class="j-num">61</span> <span class="j-punc">}]</span>
-<span class="j-punc">}</span></pre></div>
-      </div>
-    </div>
+          def sort_key(r):
+              try:
+                  return datetime.strptime(r.get("DATA","01/01/2000").strip(), "%d/%m/%Y")
+              except:
+                  return datetime.min
 
-    <div class="endpoint" id="ep3">
-      <div class="endpoint-header" onclick="toggleEp('ep3')">
-        <span class="method">GET</span>
-        <span class="endpoint-path">gruppi.json</span>
-        <span class="endpoint-desc-txt" id="desc3"></span>
-        <svg class="endpoint-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-      <div class="endpoint-body">
-        <p id="ep3-desc"></p>
-        <div class="code-label">URL</div>
-        <div class="code-block"><pre>https://ransomnews.online/api/v1/gruppi.json</pre></div>
-        <div class="code-label" id="example-label-3"></div>
-        <div class="code-block"><pre><span class="j-punc">{</span>
-  <span class="j-key">"total"</span><span class="j-punc">:</span> <span class="j-num">167</span><span class="j-punc">,</span>
-  <span class="j-key">"gruppi"</span><span class="j-punc">: [{</span>
-    <span class="j-key">"nome"</span><span class="j-punc">:</span> <span class="j-str">"akira"</span><span class="j-punc">,</span> <span class="j-key">"rivendicazioni"</span><span class="j-punc">:</span> <span class="j-num">48</span><span class="j-punc">,</span>
-    <span class="j-key">"dati_gb"</span><span class="j-punc">:</span> <span class="j-num">312.5</span><span class="j-punc">,</span> <span class="j-key">"anni_attivi"</span><span class="j-punc">: [</span><span class="j-num">2023</span><span class="j-punc">,</span><span class="j-num">2024</span><span class="j-punc">,</span><span class="j-num">2025</span><span class="j-punc">,</span><span class="j-num">2026</span><span class="j-punc">]</span>
-  <span class="j-punc">}]</span>
-<span class="j-punc">}</span></pre></div>
-      </div>
-    </div>
+          sorted_recs = sorted(all_records, key=sort_key, reverse=True)[:20]
+          now_rfc822 = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
+          base_url = "https://ransomnews.github.io/RedACT"
 
-    <div class="endpoint" id="ep4">
-      <div class="endpoint-header" onclick="toggleEp('ep4')">
-        <span class="method">GET</span>
-        <span class="endpoint-path">anno/{anno}.json</span>
-        <span class="endpoint-desc-txt" id="desc4"></span>
-        <svg class="endpoint-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-      <div class="endpoint-body">
-        <p id="ep4-desc"></p>
-        <div class="code-label" id="years-label"></div>
-        <div class="code-block"><pre>https://ransomnews.online/api/v1/anno/2020.json
-https://ransomnews.online/api/v1/anno/2021.json
-https://ransomnews.online/api/v1/anno/2022.json
-https://ransomnews.online/api/v1/anno/2023.json
-https://ransomnews.online/api/v1/anno/2024.json
-https://ransomnews.online/api/v1/anno/2025.json
-https://ransomnews.online/api/v1/anno/2026.json</pre></div>
-      </div>
-    </div>
-  </div>
+          items = []
+          for r in sorted_recs:
+              vittima  = escape_xml(r.get("VITTIMA",""))
+              gruppo   = escape_xml(r.get("GRUPPO","").lower())
+              prov     = escape_xml(r.get("PROVINCIA","--"))
+              reg      = escape_xml(r.get("REGIONE","--"))
+              gb       = parse_gb(r.get("DATI",0))
+              gb_str   = (f"{gb:.2f}".replace(".",",")) if gb > 0 else "0"
+              link     = r.get("LINK","").strip()
+              rec_id   = r.get("ID", r.get("P",""))
+              date_rfc = parse_date_rfc822(r.get("DATA",""))
+              note     = escape_xml(r.get("NOTE",""))
+              desc     = "Gruppo: " + gruppo + " | Provincia: " + prov + " | Regione: " + reg
+              if gb > 0:
+                  desc += " | Dati: GB " + gb_str
+              if note:
+                  desc += " | Nota: " + note
+              item_link = ("https://" + link) if link else base_url
+              guid      = base_url + "/#" + str(rec_id)
+              item  = "    <item>\n"
+              item += "      <title>" + vittima + "</title>\n"
+              item += "      <link>" + escape_xml(item_link) + "</link>\n"
+              item += "      <description>" + escape_xml(desc) + "</description>\n"
+              item += "      <pubDate>" + date_rfc + "</pubDate>\n"
+              item += "      <guid isPermaLink=\"false\">" + escape_xml(guid) + "</guid>\n"
+              item += "      <category>" + gruppo + "</category>\n"
+              item += "    </item>"
+              items.append(item)
 
-  <div class="section">
-    <div class="section-title" id="section-notes"></div>
-    <div class="note-box"><strong id="note1-title"></strong><br><span id="note1-body"></span></div>
-    <div class="note-box"><strong>CORS</strong><br><span id="note2-body"></span></div>
-    <div class="warn-box"><strong id="warn1-title"></strong><br><span id="warn1-body"></span></div>
-    <div class="warn-box"><strong id="warn2-title"></strong><br><span id="warn2-body"></span></div>
-  </div>
+          rss_lines = [
+              '<?xml version="1.0" encoding="UTF-8"?>',
+              '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
+              '  <channel>',
+              '    <title>ransomNews - Rivendicazioni Italia</title>',
+              '    <link>' + base_url + '/</link>',
+              '    <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane.</description>',
+              '    <language>it</language>',
+              '    <copyright>ransomNews - ransomnews.online</copyright>',
+              '    <lastBuildDate>' + now_rfc822 + '</lastBuildDate>',
+              '    <atom:link href="' + base_url + '/rss.xml" rel="self" type="application/rss+xml"/>',
+          ]
+          rss_lines.extend(items)
+          rss_lines.append('  </channel>')
+          rss_lines.append('</rss>')
 
-  <div class="section">
-    <div class="section-title" id="section-examples"></div>
-    <div class="code-label">JavaScript (fetch)</div>
-    <div class="code-block"><pre><span class="j-key">const</span> res = <span class="j-bool">await</span> fetch(<span class="j-str">'https://ransomnews.online/api/v1/stats.json'</span>);
-<span class="j-key">const</span> data = <span class="j-bool">await</span> res.json();
-console.log(data.totali.rivendicazioni); <span class="j-null">// 751</span></pre></div>
-    <div class="code-label">Python (requests)</div>
-    <div class="code-block"><pre><span class="j-bool">import</span> requests
-r = requests.get(<span class="j-str">'https://ransomnews.online/api/v1/rivendicazioni.json'</span>)
-data = r.json()
-<span class="j-bool">print</span>(data[<span class="j-str">'total'</span>])  <span class="j-null"># 751</span></pre></div>
-    <div class="code-label">curl</div>
-    <div class="code-block"><pre>curl https://ransomnews.online/api/v1/stats.json | python3 -m json.tool</pre></div>
-  </div>
-</div>
+          with open('rss.xml', 'w', encoding='utf-8') as f:
+              f.write('\n'.join(rss_lines) + '\n')
+          print(f"rss.xml -> {len(sorted_recs)} items")
 
-<footer><span id="footer-text"></span></footer>
+          print("Done")
+          PYEOF
 
-<script>
-const T = {
-  it: {
-    h1: 'Dati ransomware <span class="accent">italiani</span>, in formato aperto',
-    heroDesc: 'Le API di ransomNews espongono in formato JSON i dati raccolti e verificati manualmente sulle rivendicazioni ransomware contro organizzazioni italiane, a partire dall\'ottobre 2020. Accesso libero, nessuna autenticazione richiesta.',
-    meta1: 'Endpoint attivi', meta2: 'Aggiornamento automatico', meta3: 'Nessuna autenticazione',
-    stat1: 'Rivendicazioni', stat2: 'Gruppi a catalogo', stat3: 'GB pubblicati', stat4: 'Copertura temporale',
-    sectionEndpoints: 'Endpoint disponibili',
-    desc1: 'Tutti i record', desc2: 'Statistiche aggregate', desc3: 'Catalogo gruppi', desc4: 'Dati per anno',
-    ep1Desc: 'Restituisce l\'elenco completo di tutte le rivendicazioni ransomware verificate, dal 2020 ad oggi.',
-    ep2Desc: 'Restituisce statistiche aggregate: totali, dati per anno, top 5 gruppi per rivendicazioni e GB, top 5 regioni.',
-    ep3Desc: 'Restituisce il catalogo completo dei gruppi ransomware monitorati, con statistiche per ciascuno.',
-    ep4Desc: 'Restituisce le rivendicazioni di un singolo anno. Sostituire {anno} con uno degli anni disponibili.',
-    fieldsLabel: 'Campi della risposta',
-    thField: 'Campo', thType: 'Tipo', thDesc: 'Descrizione',
-    fields: [
-      ['id','string','Identificatore univoco progressivo'],
-      ['data','string','Data rivendicazione (dd/mm/yyyy)'],
-      ['anno','integer','Anno della rivendicazione'],
-      ['vittima','string','Nome dell\'organizzazione colpita'],
-      ['gruppo','string','Gruppo ransomware responsabile'],
-      ['link','string','Dominio web della vittima'],
-      ['provincia','string','Provincia italiana'],
-      ['regione','string','Regione italiana'],
-      ['dati_gb','float','GB di dati pubblicati (0 = non pubblicati o non quantificati)'],
-      ['note','string','Note di verifica (es. RIMOSSA DAL DLS, NON PUBBLICATI)']
-    ],
-    exampleLabel: 'Esempio risposta',
-    yearsLabel: 'Anni disponibili',
-    sectionNotes: 'Note sull\'utilizzo',
-    note1Title: 'Aggiornamento automatico',
-    note1Body: 'I file JSON vengono rigenerati automaticamente ad ogni aggiornamento della dashboard tramite GitHub Actions. Il campo generated indica la data e ora dell\'ultima rigenerazione.',
-    note2Body: 'Le API sono servite tramite GitHub Pages e supportano richieste cross-origin (CORS). È possibile interrogarle direttamente da browser o da qualsiasi client HTTP.',
-    warn1Title: 'Dati verificati manualmente',
-    warn1Body: 'Tutti i record sono verificati manualmente. I dati relativi agli anni 2020–2023 non includono i GB pubblicati (dati_gb = 0). Le rivendicazioni con vittima anonimizzata o rimosse dal data leak site sono incluse con le informazioni disponibili.',
-    warn2Title: 'Utilizzo responsabile',
-    warn2Body: 'I dati sono forniti a scopo di ricerca, giornalismo e consapevolezza sulla minaccia ransomware. Si prega di citare ransomNews come fonte in caso di pubblicazione.',
-    sectionExamples: 'Esempio di utilizzo',
-    footer: 'ransomNews API v1 · Dati aggiornati automaticamente · <a href="index.html">← Torna alla dashboard</a>'
-  },
-  en: {
-    h1: 'Italian ransomware data, <span class="accent">open format</span>',
-    heroDesc: 'The ransomNews API exposes in JSON format the manually collected and verified data on ransomware claims against Italian organizations, starting from October 2020. Open access, no authentication required.',
-    meta1: 'Live endpoints', meta2: 'Auto-updated', meta3: 'No authentication',
-    stat1: 'Claims', stat2: 'Groups catalogued', stat3: 'GB published', stat4: 'Time coverage',
-    sectionEndpoints: 'Available endpoints',
-    desc1: 'All records', desc2: 'Aggregate statistics', desc3: 'Groups catalogue', desc4: 'Data by year',
-    ep1Desc: 'Returns the complete list of all verified ransomware claims, from 2020 to date.',
-    ep2Desc: 'Returns aggregate statistics: totals, data by year, top 5 groups by claims and GB, top 5 regions.',
-    ep3Desc: 'Returns the complete catalogue of monitored ransomware groups, with statistics for each.',
-    ep4Desc: 'Returns claims for a single year. Replace {anno} with one of the available years.',
-    fieldsLabel: 'Response fields',
-    thField: 'Field', thType: 'Type', thDesc: 'Description',
-    fields: [
-      ['id','string','Unique progressive identifier'],
-      ['data','string','Claim date (dd/mm/yyyy)'],
-      ['anno','integer','Year of the claim'],
-      ['vittima','string','Name of the targeted organization'],
-      ['gruppo','string','Responsible ransomware group'],
-      ['link','string','Victim\'s web domain'],
-      ['provincia','string','Italian province'],
-      ['regione','string','Italian region'],
-      ['dati_gb','float','GB of published data (0 = not published or unquantified)'],
-      ['note','string','Verification notes (e.g. RIMOSSA DAL DLS, NON PUBBLICATI)']
-    ],
-    exampleLabel: 'Response example',
-    yearsLabel: 'Available years',
-    sectionNotes: 'Usage notes',
-    note1Title: 'Automatic updates',
-    note1Body: 'JSON files are automatically regenerated on every dashboard update via GitHub Actions. The generated field indicates the date and time of the last regeneration.',
-    note2Body: 'The APIs are served via GitHub Pages and support cross-origin requests (CORS). They can be queried directly from a browser or any HTTP client.',
-    warn1Title: 'Manually verified data',
-    warn1Body: 'All records are manually verified. Data for years 2020–2023 does not include published GB (dati_gb = 0). Claims with anonymized victims or removed from the data leak site are included with available information.',
-    warn2Title: 'Responsible use',
-    warn2Body: 'Data is provided for research, journalism, and ransomware threat awareness. Please cite ransomNews as the source when publishing.',
-    sectionExamples: 'Usage example',
-    footer: 'ransomNews API v1 · Automatically updated data · <a href="index.html">← Back to dashboard</a>'
-  }
-};
-
-let currentLang = 'it';
-
-function setLang(lang) {
-  currentLang = lang;
-  const t = T[lang];
-  document.getElementById('h1-text').innerHTML = t.h1;
-  document.getElementById('hero-desc').textContent = t.heroDesc;
-  document.getElementById('meta1').textContent = t.meta1;
-  document.getElementById('meta2').textContent = t.meta2;
-  document.getElementById('meta3').textContent = t.meta3;
-  document.getElementById('stat1').textContent = t.stat1;
-  document.getElementById('stat2').textContent = t.stat2;
-  document.getElementById('stat3').textContent = t.stat3;
-  document.getElementById('stat4').textContent = t.stat4;
-  document.getElementById('section-endpoints').textContent = t.sectionEndpoints;
-  document.getElementById('desc1').textContent = t.desc1;
-  document.getElementById('desc2').textContent = t.desc2;
-  document.getElementById('desc3').textContent = t.desc3;
-  document.getElementById('desc4').textContent = t.desc4;
-  document.getElementById('ep1-desc').textContent = t.ep1Desc;
-  document.getElementById('ep2-desc').textContent = t.ep2Desc;
-  document.getElementById('ep3-desc').textContent = t.ep3Desc;
-  document.getElementById('ep4-desc').textContent = t.ep4Desc;
-  document.getElementById('fields-label').textContent = t.fieldsLabel;
-  document.getElementById('th-field').textContent = t.thField;
-  document.getElementById('th-type').textContent = t.thType;
-  document.getElementById('th-desc').textContent = t.thDesc;
-  const tbody = document.getElementById('fields-body');
-  tbody.innerHTML = t.fields.map(([name,type,desc]) =>
-    `<tr><td class="field-name">${name}</td><td class="field-type">${type}</td><td class="field-desc">${desc}</td></tr>`
-  ).join('');
-  document.getElementById('example-label-1').textContent = t.exampleLabel;
-  document.getElementById('example-label-2').textContent = t.exampleLabel;
-  document.getElementById('example-label-3').textContent = t.exampleLabel;
-  document.getElementById('years-label').textContent = t.yearsLabel;
-  document.getElementById('section-notes').textContent = t.sectionNotes;
-  document.getElementById('note1-title').textContent = t.note1Title;
-  document.getElementById('note1-body').textContent = t.note1Body;
-  document.getElementById('note2-body').textContent = t.note2Body;
-  document.getElementById('warn1-title').textContent = t.warn1Title;
-  document.getElementById('warn1-body').textContent = t.warn1Body;
-  document.getElementById('warn2-title').textContent = t.warn2Title;
-  document.getElementById('warn2-body').textContent = t.warn2Body;
-  document.getElementById('section-examples').textContent = t.sectionExamples;
-  document.getElementById('footer-text').innerHTML = t.footer;
-  document.getElementById('btnIT').classList.toggle('active', lang === 'it');
-  document.getElementById('btnEN').classList.toggle('active', lang === 'en');
-  document.documentElement.lang = lang;
-}
-
-function toggleEp(id) {
-  document.getElementById(id).classList.toggle('open');
-}
-
-// Init
-setLang('it');
-document.getElementById('ep1').classList.add('open');
-</script>
-</body>
-</html>
+      - name: Commit JSON e RSS aggiornati
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add api/v1/ rss.xml
+          git diff --cached --quiet || git commit -m "Auto: aggiorna API JSON e RSS [skip ci]"
+          git push
