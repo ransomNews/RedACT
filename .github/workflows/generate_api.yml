@@ -118,9 +118,8 @@ jobs:
                              "anno":y,"total":len(recs_out),"records":recs_out}, f, ensure_ascii=False, indent=2)
               print(f"anno/{y}.json → {len(recs_out)} record")
 
-          # ── rss.xml ────────────────────────────────────────────────────
+          # rss.xml
           def parse_date_rfc822(d):
-              """Converte dd/mm/yyyy in formato RFC 822 per RSS"""
               try:
                   dt = datetime.strptime(d.strip(), "%d/%m/%Y")
                   return dt.strftime("%a, %d %b %Y 00:00:00 +0000")
@@ -130,7 +129,6 @@ jobs:
           def escape_xml(s):
               return str(s).replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;')
 
-          # Ordina per data decrescente e prendi le ultime 20
           def sort_key(r):
               try:
                   return datetime.strptime(r.get("DATA","01/01/2000").strip(), "%d/%m/%Y")
@@ -138,70 +136,69 @@ jobs:
                   return datetime.min
 
           sorted_recs = sorted(all_records, key=sort_key, reverse=True)[:20]
-
           now_rfc822 = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
           base_url = "https://ransomnews.github.io/RedACT"
 
           items = []
           for r in sorted_recs:
-              vittima = escape_xml(r.get("VITTIMA",""))
-              gruppo  = escape_xml(r.get("GRUPPO","").lower())
-              prov    = escape_xml(r.get("PROVINCIA","—"))
-              reg     = escape_xml(r.get("REGIONE","—"))
-              gb      = parse_gb(r.get("DATI",0))
-              gb_str  = f"{gb:,.2f}".replace(",","X").replace(".",",").replace("X",".") if gb > 0 else "0"
-              link    = r.get("LINK","").strip()
-              rec_id  = r.get("ID", r.get("P",""))
+              vittima  = escape_xml(r.get("VITTIMA",""))
+              gruppo   = escape_xml(r.get("GRUPPO","").lower())
+              prov     = escape_xml(r.get("PROVINCIA","—"))
+              reg      = escape_xml(r.get("REGIONE","—"))
+              gb       = parse_gb(r.get("DATI",0))
+              gb_str   = "{:,.2f}".format(gb).replace(",","X").replace(".",",").replace("X",".") if gb > 0 else "0"
+              link     = r.get("LINK","").strip()
+              rec_id   = r.get("ID", r.get("P",""))
               date_rfc = parse_date_rfc822(r.get("DATA",""))
-              note    = escape_xml(r.get("NOTE",""))
+              note     = escape_xml(r.get("NOTE",""))
 
               desc_parts = [
-                  f"Gruppo ransomware: {gruppo}",
-                  f"Provincia: {prov}",
-                  f"Regione: {reg}",
-                  f"Dati pubblicati: GB {gb_str}" if gb > 0 else "Dati pubblicati: 0 GB",
+                  "Gruppo ransomware: " + gruppo,
+                  "Provincia: " + prov,
+                  "Regione: " + reg,
+                  ("Dati pubblicati: GB " + gb_str) if gb > 0 else "Dati pubblicati: 0 GB",
               ]
               if note:
-                  desc_parts.append(f"Nota: {note}")
+                  desc_parts.append("Nota: " + note)
 
-              item_link = f"https://{link}" if link else base_url
-              guid = f"{base_url}/#{rec_id}"
+              item_link = ("https://" + link) if link else base_url
+              guid      = base_url + "/#" + str(rec_id)
 
-              items.append(f"""    <item>
-      <title>{vittima}</title>
-      <link>{escape_xml(item_link)}</link>
-      <description>{escape_xml(' | '.join(desc_parts))}</description>
-      <pubDate>{date_rfc}</pubDate>
-      <guid isPermaLink="false">{escape_xml(guid)}</guid>
-      <category>{gruppo}</category>
-    </item>""")
+              item_xml = (
+                  "    <item>\n"
+                  "      <title>" + vittima + "</title>\n"
+                  "      <link>" + escape_xml(item_link) + "</link>\n"
+                  "      <description>" + escape_xml(" | ".join(desc_parts)) + "</description>\n"
+                  "      <pubDate>" + date_rfc + "</pubDate>\n"
+                  "      <guid isPermaLink=\"false\">" + escape_xml(guid) + "</guid>\n"
+                  "      <category>" + gruppo + "</category>\n"
+                  "    </item>"
+              )
+              items.append(item_xml)
 
-          rss_content = f"""<?xml version="1.0" encoding="UTF-8"?>
-          <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-            <channel>
-              <title>ransomNews · Rivendicazioni Italia</title>
-              <link>{base_url}/</link>
-              <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
-              <language>it</language>
-              <copyright>ransomNews · ransomnews.online</copyright>
-              <lastBuildDate>{now_rfc822}</lastBuildDate>
-              <atom:link href="{base_url}/rss.xml" rel="self" type="application/rss+xml"/>
-              <image>
-                <url>{base_url}/logo.png</url>
-                <title>ransomNews</title>
-                <link>{base_url}/</link>
-              </image>
-          {chr(10).join(items)}
-            </channel>
-          </rss>"""
-
-          # Rimuovi indentazione extra
-          import textwrap
-          rss_lines = [line.lstrip('  ') if line.startswith('  ') else line for line in rss_content.split('\n')]
-          rss_final = '\n'.join(rss_lines)
+          rss_lines = [
+              '<?xml version="1.0" encoding="UTF-8"?>',
+              '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
+              '  <channel>',
+              '    <title>ransomNews \xb7 Rivendicazioni Italia</title>',
+              '    <link>' + base_url + '/</link>',
+              '    <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento \xe8 verificato manualmente e contestualizzato.</description>',
+              '    <language>it</language>',
+              '    <copyright>ransomNews \xb7 ransomnews.online</copyright>',
+              '    <lastBuildDate>' + now_rfc822 + '</lastBuildDate>',
+              '    <atom:link href="' + base_url + '/rss.xml" rel="self" type="application/rss+xml"/>',
+              '    <image>',
+              '      <url>' + base_url + '/logo.png</url>',
+              '      <title>ransomNews</title>',
+              '      <link>' + base_url + '/</link>',
+              '    </image>',
+          ]
+          rss_lines.extend(items)
+          rss_lines.append('  </channel>')
+          rss_lines.append('</rss>')
 
           with open('rss.xml', 'w', encoding='utf-8') as f:
-              f.write(rss_final)
+              f.write('\n'.join(rss_lines) + '\n')
           print(f"rss.xml → {len(sorted_recs)} items")
 
           print("Done ✓")
