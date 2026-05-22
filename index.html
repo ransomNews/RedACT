@@ -560,9 +560,11 @@ html.light input[type=date] {
 /* ── YEAR TABS ────────────────────────────── */
 .tabs {
   background: var(--surface);
-  border-bottom: 1px solid var(--border);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin: 0 32px 20px;
   display: flex;
-  padding: 0 24px;
+  padding: 0 24px 12px;
 }
 .tab {
   font-family: var(--mono);
@@ -1531,17 +1533,13 @@ html.light .hm-btn { color: #7a82b0; }
     border: 1px solid var(--border);
   }
   .tabs {
-    margin: 20px 32px 0;
-    border-radius: 10px 10px 0 0;
-    border: 1px solid var(--border);
-    border-bottom: none;
+    margin: 20px 32px 20px;
   }
   .table-wrapper {
     padding: 0;
     margin: 0 32px;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
     border: 1px solid var(--border);
-    border-top: none;
     overflow: hidden;
   }
   .heatmap-section {
@@ -5228,7 +5226,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_201';
+    verEl.textContent = 'DS_STABILE_202';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
