@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-05-22T15:39:55.783559+00:00",
-  "total": 753,
+  "generated": "2026-05-22T17:27:13.197026+00:00",
+  "total": 754,
   "records": [
     {
       "id": "00001",
@@ -9037,6 +9037,18 @@
       "provincia": "Napoli",
       "regione": "Campania",
       "dati_gb": 29.8,
+      "note": ""
+    },
+    {
+      "id": "00429",
+      "data": "22/05/2026",
+      "anno": 2026,
+      "vittima": "GITIS S.R.L.",
+      "gruppo": "akira",
+      "link": "gitis.it",
+      "provincia": "Bergamo",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
       "note": ""
     }
   ]
