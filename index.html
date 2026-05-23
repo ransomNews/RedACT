@@ -886,7 +886,6 @@ thead .c-dati {
 #hmPager    { padding: 0 32px; }
 
 /* Spazio tra tabella e heatmap */
-.heatmap-section { margin-top: 48px; }
 
 /* Footer */
 footer { text-align: center; font-size: 0.95rem; 
@@ -1073,9 +1072,6 @@ html.light .footer-logo img {
 }
 
 /* ── HEATMAP ─────────────────────────────── */
-.heatmap-section {
-  padding: 0 48px 40px;
-}
 .heatmap-header {
   display: flex;
   align-items: center;
@@ -3201,7 +3197,8 @@ td:nth-child(7){
 <div id="tablePager"></div>
 <div id="cardsView">
   <div class="cards-grid" id="cardsGrid"></div>
-  <div id="cardsPager" style="padding:20px 32px 48px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;"></div>
+  <div id="cardsPager" style="padding:20px 32px 4px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;"></div>
+</div>
 
 <!-- HEATMAP SECTION -->
 <div class="heatmap-section">
@@ -4195,7 +4192,7 @@ function goTablePage(p) {
   updateToolbarTotalGroups();
   const tableEl = document.getElementById('mainTable');
   if (tableEl) {
-    const top = tableEl.getBoundingClientRect().top + window.scrollY - 130;
+    const top = tableEl.getBoundingClientRect().top + window.scrollY - 175;
     window.scrollTo({ top, behavior: 'smooth' });
   }
 }
@@ -4809,7 +4806,7 @@ function goHmPage(p) {
   buildTrendChart();
   const hmEl = document.getElementById('heatmapTable');
   if (hmEl) {
-    const top = hmEl.getBoundingClientRect().top + window.scrollY - 130;
+    const top = hmEl.getBoundingClientRect().top + window.scrollY - 175;
     window.scrollTo({ top, behavior: 'smooth' });
   }
 }
@@ -4863,7 +4860,7 @@ function applyHmFilter(label, monthKey) {
       ? document.getElementById('cardsView')
       : document.getElementById('mainTable');
     if (target) {
-      const top = target.getBoundingClientRect().top + window.scrollY - 130;
+      const top = target.getBoundingClientRect().top + window.scrollY - 175;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   }, 50);
@@ -4893,7 +4890,7 @@ function applyHmFilterTotal(label) {
       ? document.getElementById('cardsView')
       : document.getElementById('mainTable');
     if (target) {
-      const top = target.getBoundingClientRect().top + window.scrollY - 130;
+      const top = target.getBoundingClientRect().top + window.scrollY - 175;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   }, 50);
@@ -4925,7 +4922,7 @@ function applyHmFilterMonth(monthKey) {
   setTimeout(() => {
     const tableEl = document.getElementById('mainTable');
     if (tableEl) {
-      const top = tableEl.getBoundingClientRect().top + window.scrollY - 130;
+      const top = tableEl.getBoundingClientRect().top + window.scrollY - 175;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   }, 50);
@@ -5226,7 +5223,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_203';
+    verEl.textContent = 'DS_STABILE_206';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
