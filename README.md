@@ -98,7 +98,7 @@ Sono benvenute:
 - collaborazioni su analisi e report
 
 Per contributi o contatti:
-📧 desk@pransomnews.online
+📧 desk@ransomnews.online
 
 ---
 
