@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-05-23T17:24:57.914143+00:00",
+  "generated": "2026-05-26T09:57:01.110129+00:00",
   "anno": 2026,
-  "total": 113,
+  "total": 114,
   "records": [
     {
       "id": "00317",
@@ -1244,6 +1244,17 @@
       "link": "gitis.it",
       "provincia": "Bergamo",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00430",
+      "data": "26/05/2026",
+      "vittima": "Base S.P.A.",
+      "gruppo": "spacebears",
+      "link": "basespa.com",
+      "provincia": "Livorno",
+      "regione": "Toscana",
       "dati_gb": 0.0,
       "note": ""
     }
