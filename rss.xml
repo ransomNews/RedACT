@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Tue, 26 May 2026 09:57:01 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 16:32:31 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Pieralisi MAIP S.P.A.</title>
+      <link>https://pieralisi.com</link>
+      <description>Gruppo ransomware: dragonforce | Provincia: Ancona | Regione: Marche | Dati pubblicati: 0 GB</description>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00431</guid>
+      <category>dragonforce</category>
+    </item>
     <item>
       <title>Base S.P.A.</title>
       <link>https://basespa.com</link>
@@ -163,14 +171,6 @@
       <description>Gruppo ransomware: qilin | Provincia: Roma | Regione: Lazio | Dati pubblicati: 0 GB | Nota: Dati pubblicati, no quantità</description>
       <pubDate>Mon, 27 Apr 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00412</guid>
-      <category>qilin</category>
-    </item>
-    <item>
-      <title>Antica Sartoria S.R.L.</title>
-      <link>https://anticasartoriapositano.it</link>
-      <description>Gruppo ransomware: qilin | Provincia: Milano | Regione: Lombardia | Dati pubblicati: 0 GB</description>
-      <pubDate>Mon, 27 Apr 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00413</guid>
       <category>qilin</category>
     </item>
   </channel>

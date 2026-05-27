@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-05-26T09:57:01.110129+00:00",
+  "generated": "2026-05-27T16:32:31.096046+00:00",
   "anno": 2026,
-  "total": 114,
+  "total": 115,
   "records": [
     {
       "id": "00317",
@@ -1255,6 +1255,17 @@
       "link": "basespa.com",
       "provincia": "Livorno",
       "regione": "Toscana",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00431",
+      "data": "27/05/2026",
+      "vittima": "Pieralisi MAIP S.P.A.",
+      "gruppo": "dragonforce",
+      "link": "pieralisi.com",
+      "provincia": "Ancona",
+      "regione": "Marche",
       "dati_gb": 0.0,
       "note": ""
     }
