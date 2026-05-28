@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-05-27T16:32:31.096046+00:00",
+  "generated": "2026-05-28T03:26:01.988662+00:00",
   "anno": 2026,
-  "total": 115,
+  "total": 116,
   "records": [
     {
       "id": "00317",
@@ -1266,6 +1266,17 @@
       "link": "pieralisi.com",
       "provincia": "Ancona",
       "regione": "Marche",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00432",
+      "data": "28/05/2026",
+      "vittima": "Bencini Giulio Casa Safer",
+      "gruppo": "nova",
+      "link": "casasafer.it",
+      "provincia": "Firenze",
+      "regione": "Toscana",
       "dati_gb": 0.0,
       "note": ""
     }
