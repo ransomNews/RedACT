@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-05-28T03:26:01.988662+00:00",
+  "generated": "2026-05-28T16:56:15.220733+00:00",
   "totali": {
-    "rivendicazioni": 757,
+    "rivendicazioni": 758,
     "gruppi_a_catalogo": 169,
     "dati_gb": 65645.72
   },
@@ -38,7 +38,7 @@
       "gruppi_attivi": 51
     },
     "2026": {
-      "rivendicazioni": 116,
+      "rivendicazioni": 117,
       "dati_gb": 8763.4,
       "gruppi_attivi": 28
     }
@@ -102,7 +102,7 @@
     },
     {
       "regione": "Veneto",
-      "rivendicazioni": 78
+      "rivendicazioni": 79
     },
     {
       "regione": "Piemonte",

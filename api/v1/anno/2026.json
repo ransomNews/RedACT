@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-05-28T03:26:01.988662+00:00",
+  "generated": "2026-05-28T16:56:15.220733+00:00",
   "anno": 2026,
-  "total": 116,
+  "total": 117,
   "records": [
     {
       "id": "00317",
@@ -772,7 +772,7 @@
       "provincia": "Fermo",
       "regione": "Marche",
       "dati_gb": 0.0,
-      "note": ""
+      "note": "Dati pubblicati, no quantità"
     },
     {
       "id": "00387",
@@ -1277,6 +1277,17 @@
       "link": "casasafer.it",
       "provincia": "Firenze",
       "regione": "Toscana",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00433",
+      "data": "28/05/2026",
+      "vittima": "Fonderia Corrà S.P.A.",
+      "gruppo": "thegentlemen",
+      "link": "fonderiacorra.com",
+      "provincia": "Vicenza",
+      "regione": "Veneto",
       "dati_gb": 0.0,
       "note": ""
     }
