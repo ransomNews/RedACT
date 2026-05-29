@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-05-28T16:56:15.220733+00:00",
-  "total": 758,
+  "generated": "2026-05-29T15:50:41.839216+00:00",
+  "total": 759,
   "records": [
     {
       "id": "00001",
@@ -9096,6 +9096,18 @@
       "link": "fonderiacorra.com",
       "provincia": "Vicenza",
       "regione": "Veneto",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00434",
+      "data": "29/05/2026",
+      "anno": 2026,
+      "vittima": "Unoaerre Industries S.P.A.",
+      "gruppo": "sconosciuto",
+      "link": "unoaerrecorporate.it",
+      "provincia": "Arezzo",
+      "regione": "Toscana",
       "dati_gb": 0.0,
       "note": ""
     }

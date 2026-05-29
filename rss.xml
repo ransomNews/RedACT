@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 28 May 2026 16:56:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 15:50:41 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Unoaerre Industries S.P.A.</title>
+      <link>https://unoaerrecorporate.it</link>
+      <description>Gruppo ransomware: sconosciuto | Provincia: Arezzo | Regione: Toscana | Dati pubblicati: 0 GB</description>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00434</guid>
+      <category>sconosciuto</category>
+    </item>
     <item>
       <title>Bencini Giulio Casa Safer</title>
       <link>https://casasafer.it</link>
@@ -164,14 +172,6 @@
       <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00414</guid>
       <category>nova</category>
-    </item>
-    <item>
-      <title>Abazia S.P.A.</title>
-      <link>https://abazia.com</link>
-      <description>Gruppo ransomware: qilin | Provincia: Alessandria | Regione: Piemonte | Dati pubblicati: 0 GB | Nota: Dati pubblicati, no quantità</description>
-      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00415</guid>
-      <category>qilin</category>
     </item>
   </channel>
 </rss>
