@@ -229,6 +229,15 @@ nav {
 }
 .nav-rss-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
 .nav-rss-btn:hover { color: #f0b429; background: rgba(240,180,41,0.1); border-color: rgba(240,180,41,0.25); }
+.nav-press-btn {
+  display: flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.45); text-decoration: none;
+  background: transparent; border: 1px solid transparent; border-radius: 8px; padding: 6px 10px;
+  transition: color 0.18s, background 0.18s, border-color 0.18s;
+}
+.nav-press-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.nav-press-btn:hover { color: #e63946; background: rgba(230,57,70,0.1); border-color: rgba(230,57,70,0.25); }
 .nav-link {
   font-family: var(--mono);
   font-size: 13px;
@@ -2948,6 +2957,10 @@ td:nth-child(7){
       </a>
     </div>
   <div class="nav-right">
+    <a href="press.html" title="RansomNews Press — Attacchi confermati non rivendicati" class="nav-press-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/><path d="M16 2v4H8V2"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+      <span>PRESS</span>
+    </a>
     <a href="api.html" target="_blank" rel="noopener" title="API — Documentazione endpoint" class="nav-api-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
       <span>API</span>
@@ -5223,7 +5236,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_213';
+    verEl.textContent = 'DS_STABILE_214';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
