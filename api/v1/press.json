@@ -1,0 +1,297 @@
+{
+  "source": "ransomnews.online",
+  "generated": "2026-06-01T14:46:01.179825+00:00",
+  "total": 29,
+  "records": [
+    {
+      "id": "#00023",
+      "data": "30/03/2021",
+      "vittima": "Comune di Brescia",
+      "link": "comune.brescia.it",
+      "provincia": "Brescia",
+      "regione": "Lombardia",
+      "fonte": "https://www.comune.brescia.it/news/attacco-informatico-0",
+      "note": "Confermato: SI | Attribuito a: DoppelPaymer"
+    },
+    {
+      "id": "#00024",
+      "data": "01/08/2021",
+      "vittima": "Regione Lazio / LazioCrea",
+      "link": "regione.lazio.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
+      "fonte": "https://www.romatoday.it/attualita/attacco-hacker-lazio-archivio-dati-salvi.html",
+      "note": "Confermato: SI | Attribuito a: RansomEXX"
+    },
+    {
+      "id": "#00025",
+      "data": "12/09/2021",
+      "vittima": "AO San Giovanni Addolorata",
+      "link": "hsangiovanni.roma.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
+      "fonte": "https://www.romatoday.it/cronaca/attacco-hacker-ospedale-san-giovanni.html",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00026",
+      "data": "30/10/2021",
+      "vittima": "ASL Roma 3",
+      "link": "aslroma3.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
+      "fonte": "https://www.romatoday.it/dossier/criminalita/roma-hacker.html",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00027",
+      "data": "23/02/2022",
+      "vittima": "EAV S.r.l. (Ente Autonomo Volturno)",
+      "link": "eavsrl.it",
+      "provincia": "Napoli",
+      "regione": "Campania",
+      "fonte": "https://www.eavsrl.it/web/node/497079",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00028",
+      "data": "19/08/2022",
+      "vittima": "ASL Città di Torino",
+      "link": "aslcittaditorino.it",
+      "provincia": "Torino",
+      "regione": "Piemonte",
+      "fonte": "https://www.aslcittaditorino.it/attacco-informatico-allasl-citta-di-torino/",
+      "note": "Confermato: SI | Attribuito a: HIVE"
+    },
+    {
+      "id": "#00002",
+      "data": "26/06/2023",
+      "vittima": "Runner S.P.A.",
+      "link": "runner.it",
+      "provincia": "Varese",
+      "regione": "Lombardia",
+      "fonte": "https://www.redhotcyber.com/post/lazienda-italiana-runner-it-emette-un-comunicato-riportando-che-ad-essere-colpito-e-stato-il-server-di-collaudo-e-non-quello-di-esercizio/",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00020",
+      "data": "05/07/2023",
+      "vittima": "AO Universitaria Luigi Vanvitelli",
+      "link": "policliniconapoli.it",
+      "provincia": "Napoli",
+      "regione": "Campania",
+      "fonte": "https://www.ansa.it/campania/notizie/2023/07/05/attacco-hacker-a-un-ospedale-di-napoli-chiesto-un-riscatto_7b967a76-723e-4488-a410-c04313dc4e3b.html",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00003",
+      "data": "09/2023",
+      "vittima": "CEI — Comitato Elettrotecnico Italiano",
+      "link": "ceinorme.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "fonte": "https://www.redhotcyber.com/post/attacco-informatico-al-comitato-elettronico-italiano-una-intrusione-abusiva-mette-fuori-uso-i-sistemi/",
+      "note": "Confermato: NO | Attribuito a: —"
+    },
+    {
+      "id": "#00021",
+      "data": "10/09/2023",
+      "vittima": "Zètema Progetto Cultura S.r.l.",
+      "link": "zetema.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
+      "fonte": "https://www.romatoday.it/attualita/hacker-zetema-dati-violati.html",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00022",
+      "data": "18/10/2023",
+      "vittima": "Comune di Rovigo",
+      "link": "comune.rovigo.it",
+      "provincia": "Rovigo",
+      "regione": "Veneto",
+      "fonte": "https://www.ilgazzettino.it/nordest/rovigo/attacco_hacker_comune_problemi_albo_pretorio_danni-7703289.html",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00004",
+      "data": "08/12/2023",
+      "vittima": "WestPole S.P.A.",
+      "link": "westpole.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "fonte": "https://securityaffairs.com/156090/cyber-crime/westpole-ransomware-attack.html",
+      "note": "Confermato: SI | Attribuito a: LockBit 3.0"
+    },
+    {
+      "id": "#00005",
+      "data": "19/05/2024",
+      "vittima": "CUP Marche",
+      "link": "cupmarche.it",
+      "provincia": "Ancona",
+      "regione": "Marche",
+      "fonte": "https://www.ansa.it/marche/notizie/2024/05/21/regione-anomalia-al-cup-marche-per-un-attacco-hacker_14e4c658-26c1-4899-9d00-49750eef94ea.html",
+      "note": "Confermato: NO | Attribuito a: —"
+    },
+    {
+      "id": "#00006",
+      "data": "13/10/2024",
+      "vittima": "Comune di Sorso",
+      "link": "comune.sorso.ss.it",
+      "provincia": "Sassari",
+      "regione": "Sardegna",
+      "fonte": "https://www.unionesarda.it/news-sardegna/sassari-provincia/attacco-hacker-al-comune-di-sorso-sistema-informatico-in-tilt-chiesto-un-riscatto-per-il-ripristino-n4zd4imy",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00007",
+      "data": "18/11/2024",
+      "vittima": "INPS Servizi S.P.A.",
+      "link": "inpsservizi.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
+      "fonte": "https://www.cybersecurity360.it/news/attacco-a-inps-servizi-non-ce-rivendicazione-ma-la-grande-assente-e-la-trasparenza/",
+      "note": "Confermato: SI | Attribuito a: Lynx"
+    },
+    {
+      "id": "#00008",
+      "data": "10/02/2025",
+      "vittima": "Alf Group S.P.A.",
+      "link": "alfgroup.com",
+      "provincia": "Treviso",
+      "regione": "Veneto",
+      "fonte": "https://www.ilgazzettino.it/nordest/treviso/gruppo_alf_hacker_riscatto_cordignano-8665161.html",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00009",
+      "data": "29/03/2025",
+      "vittima": "Gestopark S.R.L.",
+      "link": "gestopark.it",
+      "provincia": "La Spezia",
+      "regione": "Liguria",
+      "fonte": "https://www.cittadellaspezia.com/2025/04/15/attacco-informatico-a-gestopark-comune-di-sarzana-non-ha-riguardato-dati-relativi-a-carte-di-credito-e-targhe-594105/",
+      "note": "Confermato: NO | Attribuito a: —"
+    },
+    {
+      "id": "#00010",
+      "data": "31/03/2025",
+      "vittima": "MOM S.P.A. (Mobilità di Marca)",
+      "link": "mobilitadimarca.it",
+      "provincia": "Treviso",
+      "regione": "Veneto",
+      "fonte": "https://www.tribunatreviso.it/cronaca/mon-hacker-attacco-biglietti-xueo4que",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00011",
+      "data": "15/04/2025",
+      "vittima": "Polizia Locale Roma Capitale",
+      "link": "comune.roma.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
+      "fonte": "https://www.ilmessaggero.it/roma/metropoli/attacco_hacker_vigili_multe_scritte_a_mano_roma_cosa_e_successo_ultime_notizie-8787869.html",
+      "note": "Confermato: NO | Attribuito a: —"
+    },
+    {
+      "id": "#00012",
+      "data": "01/05/2025",
+      "vittima": "Breton S.P.A.",
+      "link": "breton.it",
+      "provincia": "Treviso",
+      "regione": "Veneto",
+      "fonte": "https://www.cybersecitalia.it/attacco-cyber-alla-breton-blocco-dellarea-amministrativa-e-rallentata-la-catena-produttiva/46554/",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00013",
+      "data": "08/05/2025",
+      "vittima": "Università Roma Tre",
+      "link": "uniroma3.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
+      "fonte": "https://www.ilfoglio.it/roma-capoccia/2025/05/22/news/l-universita-roma-tre-e-vittima-di-un-attacco-hacker-da-due-settimane-7748553",
+      "note": "Confermato: SI | Attribuito a: INC Ransom"
+    },
+    {
+      "id": "#00029",
+      "data": "18/06/2025",
+      "vittima": "ASP di Palermo",
+      "link": "asppalermo.org",
+      "provincia": "Palermo",
+      "regione": "Sicilia",
+      "fonte": "https://www.palermotoday.it/cronaca/attacco-hacker-asp-problemi-disagi.html",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00014",
+      "data": "01/02/2026",
+      "vittima": "Gallerie degli Uffizi",
+      "link": "uffizi.it",
+      "provincia": "Firenze",
+      "regione": "Toscana",
+      "fonte": "https://www.ansa.it/sito/notizie/topnews/2026/04/04/attacco-hacker-agli-uffizi-una-ventina-le-macchine-compromesse_8f1aac36-2896-4176-88f7-c2746ab4817a.html",
+      "note": "Confermato: SI | Attribuito a: BabLock/Rorschach"
+    },
+    {
+      "id": "#00015",
+      "data": "02/02/2026",
+      "vittima": "Università La Sapienza",
+      "link": "uniroma1.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
+      "fonte": "https://www.ilfattoquotidiano.it/2026/02/04/attacco-hacker-sapienza-ransomware-darkweb-notizie/8279844/",
+      "note": "Confermato: SI | Attribuito a: Femwar02/BabLock"
+    },
+    {
+      "id": "#00016",
+      "data": "04/02/2026",
+      "vittima": "SST Chioggia",
+      "link": "sstchioggia.it",
+      "provincia": "Venezia",
+      "regione": "Veneto",
+      "fonte": "https://www.chioggiatv.it/2026/02/attacco-informatico-ai-sistemi-di-sst-chioggia-attivate-le-procedure-di-emergenza/",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00017",
+      "data": "09/02/2026",
+      "vittima": "Comune di Nosate",
+      "link": "comune.nosate.mi.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "fonte": "https://www.ilgiorno.it/legnano/cronaca/attacco-hacker-comune-di-nosate-tpm6at40",
+      "note": "Confermato: NO | Attribuito a: —"
+    },
+    {
+      "id": "#00018",
+      "data": "22/02/2026",
+      "vittima": "Biblioteche di Roma",
+      "link": "bibliotechediroma.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
+      "fonte": "https://www.romadailynews.it/politica/roma-gualtieri-fronteggiato-attacco-informatico-a-sistema-biblioteche-0922002",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00019",
+      "data": "25/03/2026",
+      "vittima": "A.O. Papardo",
+      "link": "papardo.it",
+      "provincia": "Messina",
+      "regione": "Sicilia",
+      "fonte": "https://www.tempostretto.it/news/attacco-hacker-al-papardo-blocca-terminali-e-sovracup-salvati-i-dati.html",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00030",
+      "data": "09/05/2026",
+      "vittima": "Unoaerre Industries S.P.A.",
+      "link": "unoaerre.it",
+      "provincia": "Arezzo",
+      "regione": "Toscana",
+      "fonte": "https://www.unoaerrecorporate.it/comunicazione-sulla-violazione-dei-dati-personali/",
+      "note": "Confermato: SI | Attribuito a: —"
+    }
+  ]
+}

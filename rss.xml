@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ransomNews · Rivendicazioni Italia</title>
+    <title>ransomNews · Rivendicazioni e Press Italia</title>
     <link>https://ransomnews.github.io/RedACT/</link>
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Mon, 01 Jun 2026 11:14:02 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 14:46:01 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -16,7 +16,7 @@
     <item>
       <title>Bencini Giulio Casa Safer</title>
       <link>https://casasafer.it</link>
-      <description>Gruppo ransomware: nova | Provincia: Firenze | Regione: Toscana | Dati pubblicati: 0 GB</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: nova | Provincia: Firenze | Regione: Toscana | Dati pubblicati: 0 GB</description>
       <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00432</guid>
       <category>nova</category>
@@ -24,7 +24,7 @@
     <item>
       <title>Fonderia Corrà S.P.A.</title>
       <link>https://fonderiacorra.com</link>
-      <description>Gruppo ransomware: thegentlemen | Provincia: Vicenza | Regione: Veneto | Dati pubblicati: 0 GB</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: thegentlemen | Provincia: Vicenza | Regione: Veneto | Dati pubblicati: 0 GB</description>
       <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00433</guid>
       <category>thegentlemen</category>
@@ -32,7 +32,7 @@
     <item>
       <title>Pieralisi MAIP S.P.A.</title>
       <link>https://pieralisi.com</link>
-      <description>Gruppo ransomware: dragonforce | Provincia: Ancona | Regione: Marche | Dati pubblicati: 0 GB</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: dragonforce | Provincia: Ancona | Regione: Marche | Dati pubblicati: 0 GB</description>
       <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00431</guid>
       <category>dragonforce</category>
@@ -40,7 +40,7 @@
     <item>
       <title>Base S.P.A.</title>
       <link>https://basespa.com</link>
-      <description>Gruppo ransomware: spacebears | Provincia: Livorno | Regione: Toscana | Dati pubblicati: 0 GB</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: spacebears | Provincia: Livorno | Regione: Toscana | Dati pubblicati: 0 GB</description>
       <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00430</guid>
       <category>spacebears</category>
@@ -48,7 +48,7 @@
     <item>
       <title>GITIS S.R.L.</title>
       <link>https://gitis.it</link>
-      <description>Gruppo ransomware: akira | Provincia: Bergamo | Regione: Lombardia | Dati pubblicati: 0 GB</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: akira | Provincia: Bergamo | Regione: Lombardia | Dati pubblicati: 0 GB</description>
       <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00429</guid>
       <category>akira</category>
@@ -56,7 +56,7 @@
     <item>
       <title>ABP Autoricambi S.R.L.</title>
       <link>https://abpautoricambi.it</link>
-      <description>Gruppo ransomware: titan | Provincia: Napoli | Regione: Campania | Dati pubblicati: GB 29,80</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: titan | Provincia: Napoli | Regione: Campania | Dati pubblicati: GB 29,80</description>
       <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00428</guid>
       <category>titan</category>
@@ -64,15 +64,23 @@
     <item>
       <title>Società Produttori Sementi S.P.A.</title>
       <link>https://psbsementi.it</link>
-      <description>Gruppo ransomware: m3rx | Provincia: Bologna | Regione: Emilia Romagna | Dati pubblicati: 0 GB</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: m3rx | Provincia: Bologna | Regione: Emilia Romagna | Dati pubblicati: 0 GB</description>
       <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00427</guid>
       <category>m3rx</category>
     </item>
     <item>
+      <title>Unoaerre Industries S.P.A.</title>
+      <link>https://unoaerre.it</link>
+      <description>Tipo: RansomNews Press | Provincia: Arezzo | Regione: Toscana | Fonte: https://www.unoaerrecorporate.it/comunicazione-sulla-violazione-dei-dati-personali/ | Nota: Confermato: SI | Attribuito a: —</description>
+      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/##00030-press</guid>
+      <category>press</category>
+    </item>
+    <item>
       <title>Datamatic S.P.A.</title>
       <link>https://datamatic.it</link>
-      <description>Gruppo ransomware: thegentlemen | Provincia: Milano | Regione: Lombardia | Dati pubblicati: 0 GB</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: thegentlemen | Provincia: Milano | Regione: Lombardia | Dati pubblicati: 0 GB</description>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00421</guid>
       <category>thegentlemen</category>
@@ -80,7 +88,7 @@
     <item>
       <title>IPE Technologies S.R.L.</title>
       <link>https://ipesrl.com</link>
-      <description>Gruppo ransomware: thegentlemen | Provincia: Verona | Regione: Veneto | Dati pubblicati: 0 GB</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: thegentlemen | Provincia: Verona | Regione: Veneto | Dati pubblicati: 0 GB</description>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00422</guid>
       <category>thegentlemen</category>
@@ -88,7 +96,7 @@
     <item>
       <title>Inox Market Service S.P.A.</title>
       <link>https://inoxmarketservice.com</link>
-      <description>Gruppo ransomware: qilin | Provincia: Padova | Regione: Veneto | Dati pubblicati: 0 GB</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: qilin | Provincia: Padova | Regione: Veneto | Dati pubblicati: 0 GB</description>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00423</guid>
       <category>qilin</category>
@@ -96,7 +104,7 @@
     <item>
       <title>Complastex S.P.A.</title>
       <link>https://complastex.it</link>
-      <description>Gruppo ransomware: qilin | Provincia: Lucca | Regione: Toscana | Dati pubblicati: 0 GB</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: qilin | Provincia: Lucca | Regione: Toscana | Dati pubblicati: 0 GB</description>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00424</guid>
       <category>qilin</category>
@@ -104,7 +112,7 @@
     <item>
       <title>Soavegel S.R.L.</title>
       <link>https://soavegel.it</link>
-      <description>Gruppo ransomware: safepay | Provincia: Brindisi | Regione: Puglia | Dati pubblicati: GB 92,74</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: safepay | Provincia: Brindisi | Regione: Puglia | Dati pubblicati: GB 92,74</description>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00425</guid>
       <category>safepay</category>
@@ -112,7 +120,7 @@
     <item>
       <title>Studio Ubertazzi Servizi Legali</title>
       <link>https://studioubertazzi.it</link>
-      <description>Gruppo ransomware: safepay | Provincia: Milano | Regione: Lombardia | Dati pubblicati: GB 21,76</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: safepay | Provincia: Milano | Regione: Lombardia | Dati pubblicati: GB 21,76</description>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00426</guid>
       <category>safepay</category>
@@ -120,7 +128,7 @@
     <item>
       <title>Studio Marchi &amp; Partners</title>
       <link>https://studiomarchipartners.it</link>
-      <description>Gruppo ransomware: everest | Provincia: Prato | Regione: Toscana | Dati pubblicati: GB 121,74</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: everest | Provincia: Prato | Regione: Toscana | Dati pubblicati: GB 121,74</description>
       <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00416</guid>
       <category>everest</category>
@@ -128,7 +136,7 @@
     <item>
       <title>Zona Ovest di Torino S.R.L.</title>
       <link>https://zonaovest.to.it</link>
-      <description>Gruppo ransomware: safepay | Provincia: Torino | Regione: Piemonte | Dati pubblicati: GB 38,44</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: safepay | Provincia: Torino | Regione: Piemonte | Dati pubblicati: GB 38,44</description>
       <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00417</guid>
       <category>safepay</category>
@@ -136,7 +144,7 @@
     <item>
       <title>Media Consulting S.R.L.</title>
       <link>https://mconweb.it</link>
-      <description>Gruppo ransomware: thegentlemen | Provincia: Forlì-Cesena | Regione: Emilia Romagna | Dati pubblicati: 0 GB</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: thegentlemen | Provincia: Forlì-Cesena | Regione: Emilia Romagna | Dati pubblicati: 0 GB</description>
       <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00418</guid>
       <category>thegentlemen</category>
@@ -144,7 +152,7 @@
     <item>
       <title>Digiplex S.R.L.</title>
       <link>https://digiplex.it</link>
-      <description>Gruppo ransomware: thegentlemen | Provincia: Napoli | Regione: Campania | Dati pubblicati: 0 GB | Nota: Sul DLS: Mediaplex</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: thegentlemen | Provincia: Napoli | Regione: Campania | Dati pubblicati: 0 GB | Nota: Sul DLS: Mediaplex</description>
       <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00419</guid>
       <category>thegentlemen</category>
@@ -152,7 +160,7 @@
     <item>
       <title>SIT S.P.A.</title>
       <link>https://sitcorporate.it</link>
-      <description>Gruppo ransomware: medusalocker | Provincia: Padova | Regione: Veneto | Dati pubblicati: 0 GB | Nota: Dati pubblicati, no quantità</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: medusalocker | Provincia: Padova | Regione: Veneto | Dati pubblicati: 0 GB | Nota: Dati pubblicati, no quantità</description>
       <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00420</guid>
       <category>medusalocker</category>
@@ -160,18 +168,10 @@
     <item>
       <title>Reschio S.R.L.</title>
       <link>https://reschio.com</link>
-      <description>Gruppo ransomware: nova | Provincia: Perugia | Regione: Umbria | Dati pubblicati: GB 230,00</description>
+      <description>Tipo: Rivendicazione DLS | Gruppo ransomware: nova | Provincia: Perugia | Regione: Umbria | Dati pubblicati: GB 230,00</description>
       <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00414</guid>
       <category>nova</category>
-    </item>
-    <item>
-      <title>Abazia S.P.A.</title>
-      <link>https://abazia.com</link>
-      <description>Gruppo ransomware: qilin | Provincia: Alessandria | Regione: Piemonte | Dati pubblicati: 0 GB | Nota: Dati pubblicati, no quantità</description>
-      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00415</guid>
-      <category>qilin</category>
     </item>
   </channel>
 </rss>
