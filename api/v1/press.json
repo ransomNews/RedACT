@@ -1,10 +1,10 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-01T19:31:41.858464+00:00",
+  "generated": "2026-06-01T19:38:52.048704+00:00",
   "total": 29,
   "records": [
     {
-      "id": "#00023",
+      "id": "#00001",
       "data": "30/03/2021",
       "vittima": "Comune di Brescia",
       "link": "comune.brescia.it",
@@ -14,7 +14,7 @@
       "note": "Confermato: SI | Attribuito a: DoppelPaymer"
     },
     {
-      "id": "#00024",
+      "id": "#00002",
       "data": "01/08/2021",
       "vittima": "Regione Lazio / LazioCrea",
       "link": "regione.lazio.it",
@@ -24,7 +24,7 @@
       "note": "Confermato: SI | Attribuito a: RansomEXX"
     },
     {
-      "id": "#00025",
+      "id": "#00003",
       "data": "12/09/2021",
       "vittima": "AO San Giovanni Addolorata",
       "link": "hsangiovanni.roma.it",
@@ -34,7 +34,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00026",
+      "id": "#00004",
       "data": "30/10/2021",
       "vittima": "ASL Roma 3",
       "link": "aslroma3.it",
@@ -44,7 +44,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00027",
+      "id": "#00005",
       "data": "23/02/2022",
       "vittima": "EAV S.r.l. (Ente Autonomo Volturno)",
       "link": "eavsrl.it",
@@ -54,7 +54,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00028",
+      "id": "#00006",
       "data": "19/08/2022",
       "vittima": "ASL Città di Torino",
       "link": "aslcittaditorino.it",
@@ -64,7 +64,7 @@
       "note": "Confermato: SI | Attribuito a: HIVE"
     },
     {
-      "id": "#00002",
+      "id": "#00007",
       "data": "26/06/2023",
       "vittima": "Runner S.P.A.",
       "link": "runner.it",
@@ -74,7 +74,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00020",
+      "id": "#00008",
       "data": "05/07/2023",
       "vittima": "AO Universitaria Luigi Vanvitelli",
       "link": "policliniconapoli.it",
@@ -84,7 +84,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00003",
+      "id": "#00009",
       "data": "09/2023",
       "vittima": "CEI — Comitato Elettrotecnico Italiano",
       "link": "ceinorme.it",
@@ -94,7 +94,7 @@
       "note": "Confermato: NO | Attribuito a: —"
     },
     {
-      "id": "#00021",
+      "id": "#00010",
       "data": "10/09/2023",
       "vittima": "Zètema Progetto Cultura S.r.l.",
       "link": "zetema.it",
@@ -104,7 +104,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00022",
+      "id": "#00011",
       "data": "18/10/2023",
       "vittima": "Comune di Rovigo",
       "link": "comune.rovigo.it",
@@ -114,7 +114,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00004",
+      "id": "#00012",
       "data": "08/12/2023",
       "vittima": "WestPole S.P.A.",
       "link": "westpole.it",
@@ -124,7 +124,7 @@
       "note": "Confermato: SI | Attribuito a: LockBit 3.0"
     },
     {
-      "id": "#00005",
+      "id": "#00013",
       "data": "19/05/2024",
       "vittima": "CUP Marche",
       "link": "cupmarche.it",
@@ -134,7 +134,7 @@
       "note": "Confermato: NO | Attribuito a: —"
     },
     {
-      "id": "#00006",
+      "id": "#00014",
       "data": "13/10/2024",
       "vittima": "Comune di Sorso",
       "link": "comune.sorso.ss.it",
@@ -144,7 +144,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00007",
+      "id": "#00015",
       "data": "18/11/2024",
       "vittima": "INPS Servizi S.P.A.",
       "link": "inpsservizi.it",
@@ -154,7 +154,7 @@
       "note": "Confermato: SI | Attribuito a: Lynx"
     },
     {
-      "id": "#00008",
+      "id": "#00016",
       "data": "10/02/2025",
       "vittima": "Alf Group S.P.A.",
       "link": "alfgroup.com",
@@ -164,7 +164,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00009",
+      "id": "#00017",
       "data": "29/03/2025",
       "vittima": "Gestopark S.R.L.",
       "link": "gestopark.it",
@@ -174,7 +174,7 @@
       "note": "Confermato: NO | Attribuito a: —"
     },
     {
-      "id": "#00010",
+      "id": "#00018",
       "data": "31/03/2025",
       "vittima": "MOM S.P.A. (Mobilità di Marca)",
       "link": "mobilitadimarca.it",
@@ -184,7 +184,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00011",
+      "id": "#00019",
       "data": "15/04/2025",
       "vittima": "Polizia Locale Roma Capitale",
       "link": "comune.roma.it",
@@ -194,7 +194,7 @@
       "note": "Confermato: NO | Attribuito a: —"
     },
     {
-      "id": "#00012",
+      "id": "#00020",
       "data": "01/05/2025",
       "vittima": "Breton S.P.A.",
       "link": "breton.it",
@@ -204,7 +204,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00013",
+      "id": "#00021",
       "data": "08/05/2025",
       "vittima": "Università Roma Tre",
       "link": "uniroma3.it",
@@ -214,7 +214,7 @@
       "note": "Confermato: SI | Attribuito a: INC Ransom"
     },
     {
-      "id": "#00029",
+      "id": "#00022",
       "data": "18/06/2025",
       "vittima": "ASP di Palermo",
       "link": "asppalermo.org",
@@ -224,7 +224,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00014",
+      "id": "#00023",
       "data": "01/02/2026",
       "vittima": "Gallerie degli Uffizi",
       "link": "uffizi.it",
@@ -234,7 +234,7 @@
       "note": "Confermato: SI | Attribuito a: BabLock/Rorschach"
     },
     {
-      "id": "#00015",
+      "id": "#00024",
       "data": "02/02/2026",
       "vittima": "Università La Sapienza",
       "link": "uniroma1.it",
@@ -244,7 +244,7 @@
       "note": "Confermato: SI | Attribuito a: Femwar02/BabLock"
     },
     {
-      "id": "#00016",
+      "id": "#00025",
       "data": "04/02/2026",
       "vittima": "SST Chioggia",
       "link": "sstchioggia.it",
@@ -254,7 +254,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00017",
+      "id": "#00026",
       "data": "09/02/2026",
       "vittima": "Comune di Nosate",
       "link": "comune.nosate.mi.it",
@@ -264,7 +264,7 @@
       "note": "Confermato: NO | Attribuito a: —"
     },
     {
-      "id": "#00018",
+      "id": "#00027",
       "data": "22/02/2026",
       "vittima": "Biblioteche di Roma",
       "link": "bibliotechediroma.it",
@@ -274,7 +274,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00019",
+      "id": "#00028",
       "data": "25/03/2026",
       "vittima": "A.O. Papardo",
       "link": "papardo.it",
@@ -284,7 +284,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00030",
+      "id": "#00029",
       "data": "09/05/2026",
       "vittima": "Unoaerre Industries S.P.A.",
       "link": "unoaerre.it",
