@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Mon, 01 Jun 2026 14:58:01 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 16:40:12 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -74,7 +74,7 @@
       <link>https://unoaerre.it</link>
       <description>Tipo: RansomNews Press | Provincia: Arezzo | Regione: Toscana | Fonte: https://www.unoaerrecorporate.it/comunicazione-sulla-violazione-dei-dati-personali/ | Nota: Confermato: SI | Attribuito a: —</description>
       <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/##00029-press</guid>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/##00030-press</guid>
       <category>press</category>
     </item>
     <item>
