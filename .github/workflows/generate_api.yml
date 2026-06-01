@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'index.html'
+      - 'press.html'
 
 jobs:
   genera:
@@ -118,7 +119,31 @@ jobs:
                              "anno":y,"total":len(recs_out),"records":recs_out}, f, ensure_ascii=False, indent=2)
               print(f"anno/{y}.json → {len(recs_out)} record")
 
-          # rss.xml
+          # ── PRESS ──────────────────────────────────────────────────────────
+          press_records = []
+          if os.path.exists('press.html'):
+              with open('press.html', 'r', encoding='utf-8') as f:
+                  press_html = f.read()
+              mp = re.search(r'var DATA_PRESS = \[(.*?)\];', press_html, re.DOTALL)
+              if mp:
+                  raw_press = mp.group(1)
+                  raw_press = re.sub(r'([{,]\s*)([A-Za-z_][A-Za-z0-9_]*)(\s*:)', r'\1"\2"\3', raw_press)
+                  raw_press = raw_press.replace("\\'", "'")
+                  try:
+                      press_records = json.loads('[' + raw_press + ']') if not raw_press.strip().startswith('[') else json.loads(raw_press)
+                  except Exception as e:
+                      print(f"Errore press.html: {e}")
+
+          press_out = [{"id":r.get("ID",""),"data":r.get("DATA",""),
+              "vittima":r.get("VITTIMA",""),"link":r.get("LINK",""),
+              "provincia":r.get("PROVINCIA",""),"regione":r.get("REGIONE",""),
+              "fonte":r.get("FONTE",""),"note":r.get("NOTE","")} for r in press_records]
+          with open('api/v1/press.json','w',encoding='utf-8') as f:
+              json.dump({"source":"ransomnews.online","generated":generated,
+                         "total":len(press_out),"records":press_out}, f, ensure_ascii=False, indent=2)
+          print(f"press.json → {len(press_out)} record")
+
+          # ── RSS unificato (dashboard + press, ultimi 20 per data) ──────────
           def parse_date_rfc822(d):
               try:
                   dt = datetime.strptime(d.strip(), "%d/%m/%Y")
@@ -135,34 +160,55 @@ jobs:
               except:
                   return datetime.min
 
-          sorted_recs = sorted(all_records, key=sort_key, reverse=True)[:20]
+          # Unifica: dashboard con tipo=rivendicazione, press con tipo=press
+          unified = []
+          for r in all_records:
+              unified.append({**r, "_tipo": "rivendicazione"})
+          for r in press_records:
+              unified.append({**r, "_tipo": "press"})
+
+          sorted_recs = sorted(unified, key=sort_key, reverse=True)[:20]
           now_rfc822 = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
           base_url = "https://ransomnews.github.io/RedACT"
 
           items = []
           for r in sorted_recs:
+              tipo     = r.get("_tipo", "rivendicazione")
               vittima  = escape_xml(r.get("VITTIMA",""))
-              gruppo   = escape_xml(r.get("GRUPPO","").lower())
               prov     = escape_xml(r.get("PROVINCIA","—"))
               reg      = escape_xml(r.get("REGIONE","—"))
-              gb       = parse_gb(r.get("DATI",0))
-              gb_str   = "{:,.2f}".format(gb).replace(",","X").replace(".",",").replace("X",".") if gb > 0 else "0"
               link     = r.get("LINK","").strip()
               rec_id   = r.get("ID", r.get("P",""))
               date_rfc = parse_date_rfc822(r.get("DATA",""))
               note     = escape_xml(r.get("NOTE",""))
 
-              desc_parts = [
-                  "Gruppo ransomware: " + gruppo,
-                  "Provincia: " + prov,
-                  "Regione: " + reg,
-                  ("Dati pubblicati: GB " + gb_str) if gb > 0 else "Dati pubblicati: 0 GB",
-              ]
+              if tipo == "rivendicazione":
+                  gruppo = escape_xml(r.get("GRUPPO","").lower())
+                  gb     = parse_gb(r.get("DATI",0))
+                  gb_str = "{:,.2f}".format(gb).replace(",","X").replace(".",",").replace("X",".") if gb > 0 else "0"
+                  desc_parts = [
+                      "Tipo: Rivendicazione DLS",
+                      "Gruppo ransomware: " + gruppo,
+                      "Provincia: " + prov,
+                      "Regione: " + reg,
+                      ("Dati pubblicati: GB " + gb_str) if gb > 0 else "Dati pubblicati: 0 GB",
+                  ]
+                  category = gruppo
+              else:
+                  fonte  = escape_xml(r.get("FONTE",""))
+                  desc_parts = [
+                      "Tipo: RansomNews Press",
+                      "Provincia: " + prov,
+                      "Regione: " + reg,
+                      "Fonte: " + fonte,
+                  ]
+                  category = "press"
+
               if note:
                   desc_parts.append("Nota: " + note)
 
               item_link = ("https://" + link) if link else base_url
-              guid      = base_url + "/#" + str(rec_id)
+              guid      = base_url + "/#" + str(rec_id) + ("-press" if tipo == "press" else "")
 
               item_xml = (
                   "    <item>\n"
@@ -171,7 +217,7 @@ jobs:
                   "      <description>" + escape_xml(" | ".join(desc_parts)) + "</description>\n"
                   "      <pubDate>" + date_rfc + "</pubDate>\n"
                   "      <guid isPermaLink=\"false\">" + escape_xml(guid) + "</guid>\n"
-                  "      <category>" + gruppo + "</category>\n"
+                  "      <category>" + category + "</category>\n"
                   "    </item>"
               )
               items.append(item_xml)
@@ -180,7 +226,7 @@ jobs:
               '<?xml version="1.0" encoding="UTF-8"?>',
               '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
               '  <channel>',
-              '    <title>ransomNews \xb7 Rivendicazioni Italia</title>',
+              '    <title>ransomNews \xb7 Rivendicazioni e Press Italia</title>',
               '    <link>' + base_url + '/</link>',
               '    <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento \xe8 verificato manualmente e contestualizzato.</description>',
               '    <language>it</language>',
@@ -199,7 +245,7 @@ jobs:
 
           with open('rss.xml', 'w', encoding='utf-8') as f:
               f.write('\n'.join(rss_lines) + '\n')
-          print(f"rss.xml → {len(sorted_recs)} items")
+          print(f"rss.xml → {len(sorted_recs)} items (dashboard + press)")
 
           print("Done ✓")
           PYEOF
