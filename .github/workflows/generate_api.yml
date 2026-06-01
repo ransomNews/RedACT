@@ -70,7 +70,7 @@ jobs:
           with open('api/v1/rivendicazioni.json','w',encoding='utf-8') as f:
               json.dump({"source":"ransomnews.online","generated":generated,
                          "total":len(records_out),"records":records_out}, f, ensure_ascii=False, indent=2)
-          print(f"rivendicazioni.json → {len(records_out)} record")
+          print(f"rivendicazioni.json -> {len(records_out)} record")
 
           # gruppi.json
           gcounts = defaultdict(int); ggb = defaultdict(float); gyears = defaultdict(set)
@@ -83,7 +83,7 @@ jobs:
           with open('api/v1/gruppi.json','w',encoding='utf-8') as f:
               json.dump({"source":"ransomnews.online","generated":generated,
                          "total":len(groups_out),"gruppi":groups_out}, f, ensure_ascii=False, indent=2)
-          print(f"gruppi.json → {len(groups_out)} gruppi")
+          print(f"gruppi.json -> {len(groups_out)} gruppi")
 
           # stats.json
           by_year = defaultdict(list)
@@ -106,7 +106,7 @@ jobs:
                   for r,c in sorted(by_reg.items(),key=lambda x:-x[1])[:5]]}
           with open('api/v1/stats.json','w',encoding='utf-8') as f:
               json.dump(stats, f, ensure_ascii=False, indent=2)
-          print("stats.json → ok")
+          print("stats.json -> ok")
 
           # anno/YYYY.json
           for y, recs in sorted(by_year.items()):
@@ -117,9 +117,9 @@ jobs:
               with open(f'api/v1/anno/{y}.json','w',encoding='utf-8') as f:
                   json.dump({"source":"ransomnews.online","generated":generated,
                              "anno":y,"total":len(recs_out),"records":recs_out}, f, ensure_ascii=False, indent=2)
-              print(f"anno/{y}.json → {len(recs_out)} record")
+              print(f"anno/{y}.json -> {len(recs_out)} record")
 
-          # ── PRESS ──────────────────────────────────────────────────────────
+          # PRESS
           press_records = []
           if os.path.exists('press.html'):
               with open('press.html', 'r', encoding='utf-8') as f:
@@ -141,9 +141,9 @@ jobs:
           with open('api/v1/press.json','w',encoding='utf-8') as f:
               json.dump({"source":"ransomnews.online","generated":generated,
                          "total":len(press_out),"records":press_out}, f, ensure_ascii=False, indent=2)
-          print(f"press.json → {len(press_out)} record")
+          print(f"press.json -> {len(press_out)} record")
 
-          # ── RSS unificato (dashboard + press, ultimi 20 per data) ──────────
+          # RSS unificato
           def parse_date_rfc822(d):
               try:
                   dt = datetime.strptime(d.strip(), "%d/%m/%Y")
@@ -160,7 +160,16 @@ jobs:
               except:
                   return datetime.min
 
-          # Unifica: dashboard con tipo=rivendicazione, press con tipo=press
+          nuts_map = {
+              "Valle d'Aosta":"Nord-Ovest","Piemonte":"Nord-Ovest","Liguria":"Nord-Ovest","Lombardia":"Nord-Ovest",
+              "Trentino-Alto Adige":"Nord-Est","Veneto":"Nord-Est","Friuli-Venezia Giulia":"Nord-Est","Emilia-Romagna":"Nord-Est",
+              "Toscana":"Centro","Umbria":"Centro","Marche":"Centro","Lazio":"Centro",
+              "Abruzzo":"Sud","Molise":"Sud","Campania":"Sud","Puglia":"Sud","Basilicata":"Sud","Calabria":"Sud",
+              "Sicilia":"Isole","Sardegna":"Isole"
+          }
+
+          base_url = "https://ransomnews.github.io/RedACT"
+
           unified = []
           for r in all_records:
               unified.append({**r, "_tipo": "rivendicazione"})
@@ -169,16 +178,15 @@ jobs:
 
           sorted_recs = sorted(unified, key=sort_key, reverse=True)[:20]
           now_rfc822 = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
-          base_url = "https://ransomnews.github.io/RedACT"
 
           items = []
           for r in sorted_recs:
               tipo     = r.get("_tipo", "rivendicazione")
+              rec_id   = r.get("ID", str(r.get("P","")))
               vittima  = escape_xml(r.get("VITTIMA",""))
-              prov     = escape_xml(r.get("PROVINCIA","—"))
-              reg      = escape_xml(r.get("REGIONE","—"))
-              link     = r.get("LINK","").strip()
-              rec_id   = r.get("ID", r.get("P",""))
+              prov     = escape_xml(r.get("PROVINCIA","---"))
+              reg      = escape_xml(r.get("REGIONE","---"))
+              zona     = escape_xml(nuts_map.get(r.get("REGIONE",""), "---"))
               date_rfc = parse_date_rfc822(r.get("DATA",""))
               note     = escape_xml(r.get("NOTE",""))
 
@@ -186,29 +194,33 @@ jobs:
                   gruppo = escape_xml(r.get("GRUPPO","").lower())
                   gb     = parse_gb(r.get("DATI",0))
                   gb_str = "{:,.2f}".format(gb).replace(",","X").replace(".",",").replace("X",".") if gb > 0 else "0"
+                  item_link = base_url + "#rss"
+                  guid      = base_url + "/#" + str(rec_id)
+                  category  = gruppo
                   desc_parts = [
-                      "Tipo: Rivendicazione DLS",
-                      "Gruppo ransomware: " + gruppo,
+                      "ID: " + str(rec_id),
+                      "Gruppo: " + gruppo,
+                      "Data: " + r.get("DATA",""),
                       "Provincia: " + prov,
                       "Regione: " + reg,
-                      ("Dati pubblicati: GB " + gb_str) if gb > 0 else "Dati pubblicati: 0 GB",
+                      "Zona: " + zona,
+                      "Dati pubblicati: GB " + gb_str,
                   ]
-                  category = gruppo
               else:
-                  fonte  = escape_xml(r.get("FONTE",""))
+                  item_link = base_url + "/press.html"
+                  guid      = base_url + "/press.html#" + str(rec_id)
+                  category  = "press"
                   desc_parts = [
+                      "ID: " + str(rec_id),
                       "Tipo: RansomNews Press",
+                      "Data: " + r.get("DATA",""),
                       "Provincia: " + prov,
                       "Regione: " + reg,
-                      "Fonte: " + fonte,
+                      "Zona: " + zona,
                   ]
-                  category = "press"
 
               if note:
                   desc_parts.append("Nota: " + note)
-
-              item_link = ("https://" + link) if link else base_url
-              guid      = base_url + "/#" + str(rec_id) + ("-press" if tipo == "press" else "")
 
               item_xml = (
                   "    <item>\n"
@@ -245,9 +257,9 @@ jobs:
 
           with open('rss.xml', 'w', encoding='utf-8') as f:
               f.write('\n'.join(rss_lines) + '\n')
-          print(f"rss.xml → {len(sorted_recs)} items (dashboard + press)")
+          print(f"rss.xml -> {len(sorted_recs)} items (dashboard + press)")
 
-          print("Done ✓")
+          print("Done")
           PYEOF
 
       - name: Commit JSON, RSS e deploy Pages
