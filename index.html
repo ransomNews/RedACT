@@ -4934,9 +4934,11 @@ function applyHmFilterMonth(monthKey) {
   currentPage = 1;
   render();
   setTimeout(() => {
-    const tableEl = document.getElementById('mainTable');
-    if (tableEl) {
-      const top = tableEl.getBoundingClientRect().top + window.scrollY - 175;
+    const target = currentView === 'cards'
+      ? document.getElementById('cardsView')
+      : document.getElementById('mainTable');
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 175;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   }, 50);
@@ -5237,7 +5239,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_217';
+    verEl.textContent = 'DS_STABILE_218';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
