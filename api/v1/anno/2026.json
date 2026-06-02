@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-01T19:38:52.048704+00:00",
+  "generated": "2026-06-02T04:49:33.902580+00:00",
   "anno": 2026,
-  "total": 117,
+  "total": 120,
   "records": [
     {
       "id": "00317",
@@ -1288,6 +1288,39 @@
       "link": "fonderiacorra.com",
       "provincia": "Vicenza",
       "regione": "Veneto",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00434",
+      "data": "01/06/2026",
+      "vittima": "Soraris S.P.A.",
+      "gruppo": "safepay",
+      "link": "soraris.it",
+      "provincia": "Vicenza",
+      "regione": "Veneto",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00435",
+      "data": "01/06/2026",
+      "vittima": "Tavola S.P.A.",
+      "gruppo": "safepay",
+      "link": "tavolaspa.com",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00436",
+      "data": "01/06/2026",
+      "vittima": "Verzolla S.R.L.",
+      "gruppo": "safepay",
+      "link": "verzolla.com",
+      "provincia": "Monza e della Brianza",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }

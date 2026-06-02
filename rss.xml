@@ -6,13 +6,37 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Mon, 01 Jun 2026 19:38:52 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 04:49:33 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Soraris S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00434 | Gruppo: safepay | Data: 01/06/2026 | Provincia: Vicenza | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00434</guid>
+      <category>safepay</category>
+    </item>
+    <item>
+      <title>Tavola S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00435 | Gruppo: safepay | Data: 01/06/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00435</guid>
+      <category>safepay</category>
+    </item>
+    <item>
+      <title>Verzolla S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00436 | Gruppo: safepay | Data: 01/06/2026 | Provincia: Monza e della Brianza | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00436</guid>
+      <category>safepay</category>
+    </item>
     <item>
       <title>Bencini Giulio Casa Safer</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -148,30 +172,6 @@
       <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00418</guid>
       <category>thegentlemen</category>
-    </item>
-    <item>
-      <title>Digiplex S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00419 | Gruppo: thegentlemen | Data: 05/05/2026 | Provincia: Napoli | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0 | Nota: Sul DLS: Mediaplex</description>
-      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00419</guid>
-      <category>thegentlemen</category>
-    </item>
-    <item>
-      <title>SIT S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00420 | Gruppo: medusalocker | Data: 05/05/2026 | Provincia: Padova | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0 | Nota: Dati pubblicati, no quantità</description>
-      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00420</guid>
-      <category>medusalocker</category>
-    </item>
-    <item>
-      <title>Reschio S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00414 | Gruppo: nova | Data: 30/04/2026 | Provincia: Perugia | Regione: Umbria | Zona: Centro | Dati pubblicati: GB 230,00</description>
-      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00414</guid>
-      <category>nova</category>
     </item>
   </channel>
 </rss>
