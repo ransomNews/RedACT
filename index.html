@@ -88,8 +88,8 @@ body {
 }
 .kpi-active .kpi-val { color: #00c896; }
 .kpi-active { border-top-color: #00c896; }
-.kpi-gruppi .kpi-val { color: #ffffff; }
-.kpi-gruppi { border-top-color: #ffffff; }
+.kpi-gruppi .kpi-val { color: var(--white); }
+.kpi-gruppi { border-top-color: var(--white); }
 .kpi-red .kpi-val    { color: var(--red); }
 .kpi-red             { border-top-color: var(--red); }
 .kpi-yellow .kpi-val { color: #f0b429; }
@@ -999,6 +999,48 @@ html.light footer { text-align: center; font-size: 0.95rem;
   border-top-color: var(--border);
   color: var(--text-muted);
 }
+
+/* ── Light mode: navbar e nav-right ──────── */
+html.light .nav-social a {
+  color: var(--text-muted);
+}
+html.light .nav-social a:hover {
+  color: var(--text);
+  background: var(--surface2);
+  border-color: var(--border);
+}
+html.light .nav-api-btn {
+  color: var(--text-muted);
+}
+html.light .nav-api-btn:hover {
+  color: #00875a;
+  background: rgba(0,135,90,0.1);
+  border-color: rgba(0,135,90,0.25);
+}
+html.light .nav-press-btn {
+  color: var(--text-muted);
+}
+html.light .nav-press-btn:hover,
+html.light .nav-press-btn.active {
+  color: #c47a00;
+}
+html.light .nav-rss-btn {
+  color: var(--text-muted);
+}
+html.light .nav-rss-btn:hover {
+  color: var(--text);
+}
+html.light nav .nav-home-btn {
+  color: var(--text-muted);
+}
+html.light nav .nav-home-btn:hover {
+  color: var(--text);
+}
+
+/* ── Light mode: ytile year colors ──────── */
+html.light .ytile-v2.ytile-2021-v2 .ytile-count-v2 { color: #b08800; }
+html.light .ytile-v2.ytile-2022-v2 .ytile-count-v2 { color: #2a8a8c; }
+html.light .ytile-gb-v2 { color: #b08800; }
 
 html.light .nav-logo img {
   filter: none;
@@ -2698,7 +2740,7 @@ td:nth-child(7){
 }
 .kpi-card-v2.kpi-active-v2 .kpi-val-v2 { color: #00c896; }
 
-.kpi-card-v2.kpi-gruppi-v2 .kpi-val-v2 { color: #ffffff; }
+.kpi-card-v2.kpi-gruppi-v2 .kpi-val-v2 { color: var(--white); }
 
 .kpi-card-v2.kpi-red-v2 .kpi-val-v2 { color: var(--red); }
 
@@ -2746,7 +2788,7 @@ td:nth-child(7){
   color: #f0b429;
   white-space: nowrap;
 }
-.ytile-v2.ytile-old-v2 { opacity: 0.65; }
+.ytile-v2.ytile-old-v2 { opacity: 1; }
 .ytile-v2.ytile-2020-v2 .ytile-count-v2 { color: #ff8c69; }
 
 .ytile-v2.ytile-2021-v2 .ytile-count-v2 { color: #ffd166; }
@@ -5240,7 +5282,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_219';
+    verEl.textContent = 'DS_STABILE_220';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
