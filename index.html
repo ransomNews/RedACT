@@ -2518,11 +2518,9 @@ td:nth-child(7){
     flex: 0 0 100%;
     order: 1;
   }
-  /* Esporta CSV e JSON: piccoli e compatti */
+  /* Esporta CSV e JSON: nascosti su mobile */
   #exportCsvBtn, #exportJsonBtn {
-    font-size: 11px !important;
-    padding: 6px 9px !important;
-    order: 2;
+    display: none !important;
   }
   /* Search: riga intera */
   .search-wrap {
@@ -5297,7 +5295,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_225';
+    verEl.textContent = 'DS_STABILE_226';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
