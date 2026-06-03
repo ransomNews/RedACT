@@ -4169,7 +4169,7 @@ function renderCards() {
   pel.innerHTML = tp<=1?'':buildPagerHTML(currentPageCards,tp,'goCardsPage');
 }
 
-function goCardsPage(p) { currentPageCards=p; render(); const el=document.getElementById('cardsView'); if(el){ const offset = window.innerWidth <= 480 ? 120 : 130; const top=el.getBoundingClientRect().top+window.scrollY-offset; window.scrollTo({top,behavior:'smooth'}); } }
+function goCardsPage(p) { currentPageCards=p; render(); if(window.innerWidth<=480){ window.scrollTo({top:0,behavior:'smooth'}); } else { const el=document.getElementById('cardsView'); if(el){ const top=el.getBoundingClientRect().top+window.scrollY-130; window.scrollTo({top,behavior:'smooth'}); } } }
 
 const PAGE_SIZE = 25;
 let currentPage = 1;
@@ -4261,11 +4261,14 @@ function goTablePage(p) {
   updateURL();
   render();
   updateToolbarTotalGroups();
-  const tableEl = document.getElementById('mainTable');
-  if (tableEl) {
-    const offset = window.innerWidth <= 480 ? 120 : 175;
-    const top = tableEl.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({ top, behavior: 'smooth' });
+  if (window.innerWidth <= 480) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    const tableEl = document.getElementById('mainTable');
+    if (tableEl) {
+      const top = tableEl.getBoundingClientRect().top + window.scrollY - 175;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
   }
 }
 
@@ -5297,7 +5300,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_230';
+    verEl.textContent = 'DS_STABILE_231';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
