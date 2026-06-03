@@ -1460,10 +1460,6 @@ html.light .hm-btn { color: #7a82b0; }
     transition: color .15s;
   }
   .nav-press-mobile svg { width: 18px; height: 18px; }
-  .nav-press-mobile:hover { color: #e8b84b; }
-  @media (max-width: 700px) {
-    .nav-press-mobile { display: flex; align-items: center; }
-  }
   .nav-social svg {
     width: 18px;
     height: 18px;
@@ -2976,6 +2972,14 @@ td:nth-child(7){
   .modal-dati .dv { font-size: 22px; }
   .modal-row { font-size: 14px; }
   .modal-bottom { flex-direction: column; }
+}
+
+/* ── Press mobile icon: desktop hidden, mobile visible ── */
+.nav-press-mobile { display: none !important; color: var(--text-muted); transition: color .15s; }
+.nav-press-mobile svg { width: 18px; height: 18px; }
+.nav-press-mobile:hover { color: #e8b84b; }
+@media only screen and (max-width: 480px) {
+  .nav-press-mobile { display: flex !important; align-items: center; }
 }
 </style>
 </head>
@@ -5293,7 +5297,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_223';
+    verEl.textContent = 'DS_STABILE_225';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
