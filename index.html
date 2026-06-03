@@ -2510,7 +2510,7 @@ td:nth-child(7){
     margin: 0 12px 16px;
     padding: 10px 12px;
     gap: 7px;
-    top: 57px;
+    position: static;
   }
   /* Date picker: mettiamo i due campi su una riga */
   .toolbar .date-range-wrap {
@@ -5296,7 +5296,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_227';
+    verEl.textContent = 'DS_STABILE_228';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
