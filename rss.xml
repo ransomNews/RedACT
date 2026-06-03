@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 03 Jun 2026 04:52:44 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 05:11:15 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
