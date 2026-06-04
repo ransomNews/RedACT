@@ -243,6 +243,12 @@ html.light nav { background:rgba(240,240,245,0.95); border-bottom-color:var(--bo
   .press-year-bar { display: none !important; }
   .press-page { padding-top: 16px; }
 }
+
+/* ── Back to top button ── */
+#btn-back-to-top { position:fixed; bottom:72px; right:24px; z-index:9999; width:44px; height:44px; border-radius:50%; background:var(--red,#e5291e); color:#fff; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.25s,transform 0.2s; box-shadow:0 4px 16px rgba(0,0,0,0.35); }
+#btn-back-to-top.visible { opacity:1; pointer-events:auto; }
+#btn-back-to-top:hover { transform:translateY(-3px); }
+#btn-back-to-top svg { width:20px; height:20px; fill:#fff; }
 </style>
 </head>
 <body>
@@ -520,5 +526,16 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </footer>
 
+
+<script>
+(function(){
+  var btn=document.createElement("button");
+  btn.id="btn-back-to-top"; btn.title="Torna su";
+  btn.innerHTML='<svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>';
+  document.body.appendChild(btn);
+  window.addEventListener("scroll",function(){ btn.classList.toggle("visible",window.scrollY>320); },{passive:true});
+  btn.addEventListener("click",function(){ window.scrollTo({top:0,behavior:"smooth"}); });
+})();
+</script>
 </body>
 </html>
