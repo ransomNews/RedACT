@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-04T11:00:06.677077+00:00",
+  "generated": "2026-06-05T14:08:02.861356+00:00",
   "anno": 2026,
   "total": 120,
   "records": [
@@ -1299,7 +1299,7 @@
       "link": "soraris.it",
       "provincia": "Vicenza",
       "regione": "Veneto",
-      "dati_gb": 0.0,
+      "dati_gb": 408.0,
       "note": ""
     },
     {
@@ -1310,7 +1310,7 @@
       "link": "tavolaspa.com",
       "provincia": "Milano",
       "regione": "Lombardia",
-      "dati_gb": 0.0,
+      "dati_gb": 711.0,
       "note": ""
     },
     {
@@ -1321,7 +1321,7 @@
       "link": "verzolla.com",
       "provincia": "Monza e della Brianza",
       "regione": "Lombardia",
-      "dati_gb": 0.0,
+      "dati_gb": 776.45,
       "note": ""
     }
   ]
