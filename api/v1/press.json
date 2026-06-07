@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-05T14:48:58.578697+00:00",
-  "total": 29,
+  "generated": "2026-06-07T07:25:01.011710+00:00",
+  "total": 30,
   "records": [
     {
       "id": "#00001",
@@ -291,6 +291,16 @@
       "provincia": "Arezzo",
       "regione": "Toscana",
       "fonte": "https://www.unoaerrecorporate.it/comunicazione-sulla-violazione-dei-dati-personali/",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00030",
+      "data": "22/05/2026",
+      "vittima": "Casalp S.p.A.",
+      "link": "casalp.it",
+      "provincia": "Livorno",
+      "regione": "Toscana",
+      "fonte": "https://www.casalp.it/archivio5_notizie_0_129.html",
       "note": "Confermato: SI | Attribuito a: —"
     }
   ]
