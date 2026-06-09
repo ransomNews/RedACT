@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Tue, 09 Jun 2026 12:17:55 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 12:27:09 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -14,7 +14,7 @@
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
     <item>
-      <title>Trevi S.P.A.</title>
+      <title>Trevidea S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
       <description>ID: 00437 | Gruppo: nova | Data: 09/06/2026 | Provincia: Rimini | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
       <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
