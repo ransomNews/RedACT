@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-07T07:56:58.354336+00:00",
+  "generated": "2026-06-09T12:17:55.480697+00:00",
   "totali": {
-    "rivendicazioni": 761,
+    "rivendicazioni": 762,
     "gruppi_a_catalogo": 170,
     "dati_gb": 68569.57
   },
@@ -38,7 +38,7 @@
       "gruppi_attivi": 51
     },
     "2026": {
-      "rivendicazioni": 120,
+      "rivendicazioni": 121,
       "dati_gb": 11687.25,
       "gruppi_attivi": 28
     }
@@ -94,7 +94,7 @@
     },
     {
       "regione": "Emilia Romagna",
-      "rivendicazioni": 94
+      "rivendicazioni": 95
     },
     {
       "regione": "Lazio",

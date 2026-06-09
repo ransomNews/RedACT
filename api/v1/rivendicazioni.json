@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-07T07:56:58.354336+00:00",
-  "total": 761,
+  "generated": "2026-06-09T12:17:55.480697+00:00",
+  "total": 762,
   "records": [
     {
       "id": "00001",
@@ -9133,6 +9133,18 @@
       "provincia": "Monza e della Brianza",
       "regione": "Lombardia",
       "dati_gb": 776.45,
+      "note": ""
+    },
+    {
+      "id": "00437",
+      "data": "09/06/2026",
+      "anno": 2026,
+      "vittima": "Trevi S.P.A.",
+      "gruppo": "nova",
+      "link": "trevi.it",
+      "provincia": "Rimini",
+      "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
       "note": ""
     }
   ]
