@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-09T12:27:09.026672+00:00",
+  "generated": "2026-06-10T13:46:37.492722+00:00",
   "anno": 2026,
-  "total": 121,
+  "total": 122,
   "records": [
     {
       "id": "00317",
@@ -1331,6 +1331,17 @@
       "gruppo": "nova",
       "link": "trevi.it",
       "provincia": "Rimini",
+      "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00438",
+      "data": "10/06/2026",
+      "vittima": "Cattani S.P.A.",
+      "gruppo": "spacebears",
+      "link": "cattani.it",
+      "provincia": "Parma",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
