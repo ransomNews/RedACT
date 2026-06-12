@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-12T14:10:57.257168+00:00",
-  "total": 769,
+  "generated": "2026-06-12T14:56:23.500765+00:00",
+  "total": 771,
   "records": [
     {
       "id": "00001",
@@ -9228,6 +9228,30 @@
       "link": "wibeats.it",
       "provincia": "Torino",
       "regione": "Piemonte",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00445",
+      "data": "12/06/2026",
+      "anno": 2026,
+      "vittima": "F.lli Zaffrani S.R.L.",
+      "gruppo": "deadlock",
+      "link": "zaffrani.it",
+      "provincia": "Macerata",
+      "regione": "Marche",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00446",
+      "data": "12/06/2026",
+      "anno": 2026,
+      "vittima": "Industrie Tecnologiche S.R.L.",
+      "gruppo": "deadlock",
+      "link": "industrietecnologiche.com",
+      "provincia": "Roma",
+      "regione": "Lazio",
       "dati_gb": 0.0,
       "note": ""
     }

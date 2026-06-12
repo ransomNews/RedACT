@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Fri, 12 Jun 2026 14:10:57 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 14:56:23 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -59,6 +59,22 @@
       <description>ID: 00444 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Torino | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00444</guid>
+      <category>deadlock</category>
+    </item>
+    <item>
+      <title>F.lli Zaffrani S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00445 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Macerata | Regione: Marche | Zona: Centro | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00445</guid>
+      <category>deadlock</category>
+    </item>
+    <item>
+      <title>Industrie Tecnologiche S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00446 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00446</guid>
       <category>deadlock</category>
     </item>
     <item>
@@ -156,22 +172,6 @@
       <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00428</guid>
       <category>titan</category>
-    </item>
-    <item>
-      <title>Società Produttori Sementi S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00427 | Gruppo: m3rx | Data: 17/05/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
-      <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00427</guid>
-      <category>m3rx</category>
-    </item>
-    <item>
-      <title>Unoaerre Industries S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT/press.html</link>
-      <description>ID: #00029 | Tipo: RansomNews Press | Data: 09/05/2026 | Provincia: Arezzo | Regione: Toscana | Zona: Centro | Nota: Confermato: SI | Attribuito a: —</description>
-      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/press.html##00029</guid>
-      <category>press</category>
     </item>
   </channel>
 </rss>
