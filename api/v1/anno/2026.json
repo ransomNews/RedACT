@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-12T14:56:23.500765+00:00",
+  "generated": "2026-06-12T15:50:49.676389+00:00",
   "anno": 2026,
-  "total": 130,
+  "total": 131,
   "records": [
     {
       "id": "00317",
@@ -1431,6 +1431,17 @@
       "link": "industrietecnologiche.com",
       "provincia": "Roma",
       "regione": "Lazio",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00447",
+      "data": "12/06/2026",
+      "vittima": "Integra S.R.L. (Gruppo L'Operosa)",
+      "gruppo": "deadlock",
+      "link": "integraerp.it",
+      "provincia": "Bologna",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }
