@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-12T05:45:12.778866+00:00",
-  "total": 170,
+  "generated": "2026-06-12T14:10:57.257168+00:00",
+  "total": 171,
   "gruppi": [
     {
       "nome": "8base",
@@ -383,6 +383,14 @@
       "dati_gb": 0.0,
       "anni_attivi": [
         2025
+      ]
+    },
+    {
+      "nome": "deadlock",
+      "rivendicazioni": 5,
+      "dati_gb": 0.0,
+      "anni_attivi": [
+        2026
       ]
     },
     {

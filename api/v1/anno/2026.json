@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-12T05:45:12.778866+00:00",
+  "generated": "2026-06-12T14:10:57.257168+00:00",
   "anno": 2026,
-  "total": 123,
+  "total": 128,
   "records": [
     {
       "id": "00317",
@@ -1354,6 +1354,61 @@
       "link": "pattono.com",
       "provincia": "Genova",
       "regione": "Liguria",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00440",
+      "data": "12/06/2026",
+      "vittima": "Breda Energia S.P.A.",
+      "gruppo": "deadlock",
+      "link": "bredaenergia.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00441",
+      "data": "12/06/2026",
+      "vittima": "Bridgeport S.P.A.",
+      "gruppo": "deadlock",
+      "link": "bridgeport.it",
+      "provincia": "Bergamo",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00442",
+      "data": "12/06/2026",
+      "vittima": "CAD 93 S.R.L.",
+      "gruppo": "deadlock",
+      "link": "cad93.it",
+      "provincia": "Prato",
+      "regione": "Toscana",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00443",
+      "data": "12/06/2026",
+      "vittima": "Nippon Express Italia S.P.A.",
+      "gruppo": "deadlock",
+      "link": "nipponexpressitalia.com",
+      "provincia": "Firenze",
+      "regione": "Toscana",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00444",
+      "data": "12/06/2026",
+      "vittima": "WiBeats S.R.L.",
+      "gruppo": "deadlock",
+      "link": "wibeats.it",
+      "provincia": "Torino",
+      "regione": "Piemonte",
       "dati_gb": 0.0,
       "note": ""
     }
