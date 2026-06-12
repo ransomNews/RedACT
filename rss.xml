@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Fri, 12 Jun 2026 15:50:49 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 19:21:57 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -54,35 +54,67 @@
       <category>deadlock</category>
     </item>
     <item>
-      <title>WiBeats S.R.L.</title>
+      <title>Nuova Traconf S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00444 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Torino | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <description>ID: 00444 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Cuneo | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0 | Nota: Con Nippon Express Italia S.P.A.</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00444</guid>
       <category>deadlock</category>
     </item>
     <item>
-      <title>F.lli Zaffrani S.R.L.</title>
+      <title>WiBeats S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00445 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Macerata | Regione: Marche | Zona: Centro | Dati pubblicati: GB 0</description>
+      <description>ID: 00445 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Torino | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00445</guid>
       <category>deadlock</category>
     </item>
     <item>
-      <title>Industrie Tecnologiche S.R.L.</title>
+      <title>F.lli Zaffrani S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00446 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
+      <description>ID: 00446 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Macerata | Regione: Marche | Zona: Centro | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00446</guid>
       <category>deadlock</category>
     </item>
     <item>
-      <title>Integra S.R.L. (Gruppo L'Operosa)</title>
+      <title>Industrie Tecnologiche S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00447 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
+      <description>ID: 00447 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00447</guid>
+      <category>deadlock</category>
+    </item>
+    <item>
+      <title>L'Operosa S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00448 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00448</guid>
+      <category>deadlock</category>
+    </item>
+    <item>
+      <title>Integra ERP S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00449 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0 | Nota: Con L'Operosa S.P.A.</description>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00449</guid>
+      <category>deadlock</category>
+    </item>
+    <item>
+      <title>Integra S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00450 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Isernia | Regione: Molise | Zona: Sud | Dati pubblicati: GB 0 | Nota: Con L'Operosa S.P.A.</description>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00450</guid>
+      <category>deadlock</category>
+    </item>
+    <item>
+      <title>C.A.A. Giorgio Nicoli S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00451 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0 | Nota: Con L'Operosa S.P.A.</description>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00451</guid>
       <category>deadlock</category>
     </item>
     <item>
@@ -140,38 +172,6 @@
       <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00433</guid>
       <category>thegentlemen</category>
-    </item>
-    <item>
-      <title>Pieralisi MAIP S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00431 | Gruppo: dragonforce | Data: 27/05/2026 | Provincia: Ancona | Regione: Marche | Zona: Centro | Dati pubblicati: GB 0</description>
-      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00431</guid>
-      <category>dragonforce</category>
-    </item>
-    <item>
-      <title>Base S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00430 | Gruppo: spacebears | Data: 26/05/2026 | Provincia: Livorno | Regione: Toscana | Zona: Centro | Dati pubblicati: GB 0</description>
-      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00430</guid>
-      <category>spacebears</category>
-    </item>
-    <item>
-      <title>GITIS S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00429 | Gruppo: akira | Data: 22/05/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 28,40</description>
-      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00429</guid>
-      <category>akira</category>
-    </item>
-    <item>
-      <title>Casalp S.p.A.</title>
-      <link>https://ransomnews.github.io/RedACT/press.html</link>
-      <description>ID: #00030 | Tipo: RansomNews Press | Data: 22/05/2026 | Provincia: Livorno | Regione: Toscana | Zona: Centro | Nota: Confermato: SI | Attribuito a: —</description>
-      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/press.html##00030</guid>
-      <category>press</category>
     </item>
   </channel>
 </rss>

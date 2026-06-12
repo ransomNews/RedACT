@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-12T15:50:49.676389+00:00",
-  "total": 772,
+  "generated": "2026-06-12T19:21:57.063461+00:00",
+  "total": 776,
   "records": [
     {
       "id": "00001",
@@ -9223,6 +9223,18 @@
       "id": "00444",
       "data": "12/06/2026",
       "anno": 2026,
+      "vittima": "Nuova Traconf S.R.L.",
+      "gruppo": "deadlock",
+      "link": "nuovatraconf.it",
+      "provincia": "Cuneo",
+      "regione": "Piemonte",
+      "dati_gb": 0.0,
+      "note": "Con Nippon Express Italia S.P.A."
+    },
+    {
+      "id": "00445",
+      "data": "12/06/2026",
+      "anno": 2026,
       "vittima": "WiBeats S.R.L.",
       "gruppo": "deadlock",
       "link": "wibeats.it",
@@ -9232,7 +9244,7 @@
       "note": ""
     },
     {
-      "id": "00445",
+      "id": "00446",
       "data": "12/06/2026",
       "anno": 2026,
       "vittima": "F.lli Zaffrani S.R.L.",
@@ -9244,7 +9256,7 @@
       "note": ""
     },
     {
-      "id": "00446",
+      "id": "00447",
       "data": "12/06/2026",
       "anno": 2026,
       "vittima": "Industrie Tecnologiche S.R.L.",
@@ -9256,16 +9268,52 @@
       "note": ""
     },
     {
-      "id": "00447",
+      "id": "00448",
       "data": "12/06/2026",
       "anno": 2026,
-      "vittima": "Integra S.R.L. (Gruppo L'Operosa)",
+      "vittima": "L'Operosa S.P.A.",
+      "gruppo": "deadlock",
+      "link": "operosa.it",
+      "provincia": "Bologna",
+      "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00449",
+      "data": "12/06/2026",
+      "anno": 2026,
+      "vittima": "Integra ERP S.R.L.",
       "gruppo": "deadlock",
       "link": "integraerp.it",
       "provincia": "Bologna",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": ""
+      "note": "Con L'Operosa S.P.A."
+    },
+    {
+      "id": "00450",
+      "data": "12/06/2026",
+      "anno": 2026,
+      "vittima": "Integra S.R.L.",
+      "gruppo": "deadlock",
+      "link": "integrasrl.eu",
+      "provincia": "Isernia",
+      "regione": "Molise",
+      "dati_gb": 0.0,
+      "note": "Con L'Operosa S.P.A."
+    },
+    {
+      "id": "00451",
+      "data": "12/06/2026",
+      "anno": 2026,
+      "vittima": "C.A.A. Giorgio Nicoli S.R.L.",
+      "gruppo": "deadlock",
+      "link": "caa.it",
+      "provincia": "Bologna",
+      "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": "Con L'Operosa S.P.A."
     }
   ]
 }
