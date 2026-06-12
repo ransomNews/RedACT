@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 10 Jun 2026 13:46:37 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 05:45:12 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Pattono S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00439 | Gruppo: nightspire | Data: 12/06/2026 | Provincia: Genova | Regione: Liguria | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00439</guid>
+      <category>nightspire</category>
+    </item>
     <item>
       <title>Cattani S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00425 | Gruppo: safepay | Data: 06/05/2026 | Provincia: Brindisi | Regione: Puglia | Zona: Sud | Dati pubblicati: GB 92,74</description>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00425</guid>
-      <category>safepay</category>
-    </item>
-    <item>
-      <title>Studio Ubertazzi Servizi Legali</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00426 | Gruppo: safepay | Data: 06/05/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 21,76</description>
-      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00426</guid>
       <category>safepay</category>
     </item>
   </channel>

@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-10T13:46:37.492722+00:00",
-  "total": 763,
+  "generated": "2026-06-12T05:45:12.778866+00:00",
+  "total": 764,
   "records": [
     {
       "id": "00001",
@@ -9156,6 +9156,18 @@
       "link": "cattani.it",
       "provincia": "Parma",
       "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00439",
+      "data": "12/06/2026",
+      "anno": 2026,
+      "vittima": "Pattono S.R.L.",
+      "gruppo": "nightspire",
+      "link": "pattono.com",
+      "provincia": "Genova",
+      "regione": "Liguria",
       "dati_gb": 0.0,
       "note": ""
     }
