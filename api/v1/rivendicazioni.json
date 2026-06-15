@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-12T19:21:57.063461+00:00",
-  "total": 776,
+  "generated": "2026-06-15T10:12:53.559632+00:00",
+  "total": 777,
   "records": [
     {
       "id": "00001",
@@ -9314,6 +9314,18 @@
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": "Con L'Operosa S.P.A."
+    },
+    {
+      "id": "00452",
+      "data": "15/06/2026",
+      "anno": 2026,
+      "vittima": "Buratti S.N.C.",
+      "gruppo": "thegentlemen",
+      "link": "buratti.it",
+      "provincia": "Bolzano",
+      "regione": "Trentino Alto Adige",
+      "dati_gb": 0.0,
+      "note": ""
     }
   ]
 }
