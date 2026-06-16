@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-16T05:07:30.471000+00:00",
-  "total": 777,
+  "generated": "2026-06-16T13:03:50.080058+00:00",
+  "total": 778,
   "records": [
     {
       "id": "00001",
@@ -9324,6 +9324,18 @@
       "link": "buratti.it",
       "provincia": "Bolzano",
       "regione": "Trentino Alto Adige",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00453",
+      "data": "16/06/2026",
+      "anno": 2026,
+      "vittima": "Tecfi S.P.A.",
+      "gruppo": "dragonforce",
+      "link": "tecfi.it",
+      "provincia": "Caserta",
+      "regione": "Campania",
       "dati_gb": 0.0,
       "note": ""
     }
