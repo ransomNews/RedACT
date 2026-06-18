@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-16T13:03:50.080058+00:00",
-  "total": 778,
+  "generated": "2026-06-18T04:23:17.466282+00:00",
+  "total": 780,
   "records": [
     {
       "id": "00001",
@@ -9335,6 +9335,30 @@
       "gruppo": "dragonforce",
       "link": "tecfi.it",
       "provincia": "Caserta",
+      "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00454",
+      "data": "18/06/2026",
+      "anno": 2026,
+      "vittima": "SEI NordOvest S.R.L.",
+      "gruppo": "safepay",
+      "link": "seinordovest.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00455",
+      "data": "18/06/2026",
+      "anno": 2026,
+      "vittima": "B.R.S. Cappuccio S.R.L.",
+      "gruppo": "safepay",
+      "link": "brscappuccio.it",
+      "provincia": "Napoli",
       "regione": "Campania",
       "dati_gb": 0.0,
       "note": ""
