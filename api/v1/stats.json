@@ -1,10 +1,10 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-18T04:23:17.466282+00:00",
+  "generated": "2026-06-19T05:59:51.664193+00:00",
   "totali": {
     "rivendicazioni": 780,
     "gruppi_a_catalogo": 171,
-    "dati_gb": 68569.57
+    "dati_gb": 69910.57
   },
   "per_anno": {
     "2020": {
@@ -39,7 +39,7 @@
     },
     "2026": {
       "rivendicazioni": 139,
-      "dati_gb": 11687.25,
+      "dati_gb": 13028.25,
       "gruppi_attivi": 29
     }
   },
@@ -83,8 +83,8 @@
       "dati_gb": 4114.0
     },
     {
-      "gruppo": "qilin",
-      "dati_gb": 3319.9
+      "gruppo": "dragonforce",
+      "dati_gb": 3881.77
     }
   ],
   "top5_regioni": [
