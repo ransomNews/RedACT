@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-20T06:21:16.087686+00:00",
+  "generated": "2026-06-20T11:48:30.398949+00:00",
   "anno": 2026,
-  "total": 139,
+  "total": 140,
   "records": [
     {
       "id": "00317",
@@ -1530,6 +1530,17 @@
       "link": "brscappuccio.it",
       "provincia": "Napoli",
       "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00456",
+      "data": "20/06/2026",
+      "vittima": "Ravagnan S.P.A.",
+      "gruppo": "lockbit5",
+      "link": "ravagnan.com",
+      "provincia": "Padova",
+      "regione": "Veneto",
       "dati_gb": 0.0,
       "note": ""
     }

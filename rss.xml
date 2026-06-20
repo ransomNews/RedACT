@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sat, 20 Jun 2026 06:21:16 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 11:48:30 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Ravagnan S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00456 | Gruppo: lockbit5 | Data: 20/06/2026 | Provincia: Padova | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
+      <pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00456</guid>
+      <category>lockbit5</category>
+    </item>
     <item>
       <title>SEI NordOvest S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -164,14 +172,6 @@
       <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00437</guid>
       <category>nova</category>
-    </item>
-    <item>
-      <title>Soraris S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00434 | Gruppo: safepay | Data: 01/06/2026 | Provincia: Vicenza | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 408,00</description>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00434</guid>
-      <category>safepay</category>
     </item>
   </channel>
 </rss>
