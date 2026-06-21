@@ -4523,9 +4523,12 @@ function buildHeatmap() {
   });
 
   // Sort rows by total desc o alfabetico
+  // Per il settore l'ordine predefinito è alfabetico (codice ATECO A→V);
+  // hmSortAlpha permette comunque il toggle manuale per tutte le modalità che lo supportano.
+  const useAlphaSort = hmMode === 'settore' ? !hmSortAlpha : hmSortAlpha;
   const rows = Object.entries(counts)
     .map(([label, mc]) => ({ label, mc, total: Object.values(mc).reduce((a,b)=>a+b,0) }))
-    .sort((a,b) => hmSortAlpha
+    .sort((a,b) => useAlphaSort
       ? a.label.localeCompare(b.label, 'it')
       : b.total - a.total);
 
@@ -4542,7 +4545,7 @@ function buildHeatmap() {
   // Build head
   const headRow = `<tr>
     <th class="hm-row-label" style="cursor:pointer;user-select:none;" onclick="if(hmMode==='gruppo'||hmMode==='settore'){hmSortAlpha=!hmSortAlpha;buildHeatmap();}" title="${hmMode!=='regione'?'Clicca per ordinare':''}">
-      ${hmMode === 'gruppo' ? 'Gruppo ' + (hmSortAlpha ? '↑ A-Z' : '↓ N') : hmMode === 'settore' ? 'Settore ' + (hmSortAlpha ? '↑ A-Z' : '↓ N') : 'Regione'}
+      ${hmMode === 'gruppo' ? 'Gruppo ' + (hmSortAlpha ? '↑ A-Z' : '↓ N') : hmMode === 'settore' ? 'Settore ' + (useAlphaSort ? '↑ A-Z' : '↓ N') : 'Regione'}
     </th>
     <th style="border-right:1px solid var(--border)">Tot.</th>
     ${sortedMonths.map((mk, i) => `<th>${monthLabels[i]}</th>`).join('')}
@@ -5044,7 +5047,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_265';
+    verEl.textContent = 'DS_STABILE_266';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
