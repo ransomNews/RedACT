@@ -563,6 +563,8 @@ html.light input[type=date] {
   letter-spacing: 0.04em;
   white-space: nowrap;
   transition: background 0.2s;
+  min-width: 64px;
+  text-align: center;
 }
 .btn-export:hover { background: rgba(0,200,150,0.2); }
 
@@ -3225,8 +3227,8 @@ td:nth-child(7){
     <button class="vbtn active" id="btnVC" onclick="setView('cards')" title="Vista card">⊞ Card</button>
   </div>
   <button id="hmResetBtn" onclick="resetHmFilter()" style="display:none;font-family:var(--mono);font-size: 13px;color:var(--red);background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.35);border-radius:3px;padding:8px 12px;cursor:pointer;letter-spacing:0.04em;" onmouseover="this.style.background='rgba(230,57,70,0.2)'" onmouseout="this.style.background='rgba(230,57,70,0.1)'" title="Rimuovi filtro heatmap e torna alla vista completa">✕ reset heatmap</button>
-  <button class="btn-export" id="exportCsvBtn" onclick="exportCSV()" title="Esporta i dati filtrati in CSV">↓ Esporta CSV</button>
-  <button class="btn-export" id="exportJsonBtn" onclick="exportJSON()" title="Esporta i dati filtrati in JSON" style="color:var(--blue);background:rgba(77,159,255,0.1);border-color:rgba(77,159,255,0.35);" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">↓ Esporta JSON</button>
+  <button class="btn-export" id="exportCsvBtn" onclick="exportCSV()" title="Esporta i dati filtrati in CSV">↓ CSV</button>
+  <button class="btn-export" id="exportJsonBtn" onclick="exportJSON()" title="Esporta i dati filtrati in JSON" style="color:var(--blue);background:rgba(77,159,255,0.1);border-color:rgba(77,159,255,0.35);" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">↓ JSON</button>
   <div class="count-info">Visualizzate <strong id="countNum">—</strong> righe</div>
 </div>
 
@@ -5047,7 +5049,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_271';
+    verEl.textContent = 'DS_STABILE_272';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
