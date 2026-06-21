@@ -3288,6 +3288,7 @@ td:nth-child(7){
     <div class="heatmap-toggle">
       <button class="hm-btn active" id="hmBtnGruppo" onclick="switchHeatmap('gruppo')">Per Gruppo</button>
       <button class="hm-btn" id="hmBtnRegione" onclick="switchHeatmap('regione')">Per Regione</button>
+      <button class="hm-btn" id="hmBtnSettore" onclick="switchHeatmap('settore')">Per Settore</button>
     </div>
   </div>
   <div class="heatmap-wrap">
@@ -3702,7 +3703,7 @@ const OFFICIAL_GROUP_CATALOG = [
 ];
 
 let year = 0, sortKey = 'SEQ', sortDir = -1;
-let hmMonth = null, hmGroup = null, hmRegione = null;
+let hmMonth = null, hmGroup = null, hmRegione = null, hmSettore = null;
 let hmSortAlpha = false;
 
 // ── Catalogo ufficiale ATECO 2025 (22 sezioni, A-V) ──────────
@@ -3913,10 +3914,11 @@ function render() {
     if (gr && normalizeGroupName(r.GRUPPO) !== gr) return false;
     if (se && r.SETTORE !== se) return false;
 
-    // I filtri heatmap su gruppo/regione devono valere sempre,
+    // I filtri heatmap su gruppo/regione/settore devono valere sempre,
     // sia cliccando sul totale sia cliccando sul singolo mese.
     if (hmGroup && normalizeGroupName(r.GRUPPO) !== hmGroup) return false;
     if (hmRegione && r.REGIONE !== hmRegione) return false;
+    if (hmSettore && r.SETTORE !== hmSettore) return false;
 
     if (hmMonth !== null) {
       if (!r.DATA) return false;
@@ -4513,6 +4515,8 @@ function buildHeatmap() {
     const monthKey = `${parts[2] || '20??'}-${parts[1]}`;
     const label = hmMode === 'gruppo'
       ? (String(r.GRUPPO).toLowerCase() || 'N/D').trim()
+      : hmMode === 'settore'
+      ? (r.SETTORE || 'N/D').trim()
       : (r.REGIONE || 'N/D').trim();
     if (!counts[label]) counts[label] = {};
     counts[label][monthKey] = (counts[label][monthKey] || 0) + 1;
@@ -4537,8 +4541,8 @@ function buildHeatmap() {
 
   // Build head
   const headRow = `<tr>
-    <th class="hm-row-label" style="cursor:pointer;user-select:none;" onclick="if(hmMode==='gruppo'){hmSortAlpha=!hmSortAlpha;buildHeatmap();}" title="${hmMode==='gruppo'?'Clicca per ordinare':''}">
-      ${hmMode === 'gruppo' ? 'Gruppo ' + (hmSortAlpha ? '↑ A-Z' : '↓ N') : 'Regione'}
+    <th class="hm-row-label" style="cursor:pointer;user-select:none;" onclick="if(hmMode==='gruppo'||hmMode==='settore'){hmSortAlpha=!hmSortAlpha;buildHeatmap();}" title="${hmMode!=='regione'?'Clicca per ordinare':''}">
+      ${hmMode === 'gruppo' ? 'Gruppo ' + (hmSortAlpha ? '↑ A-Z' : '↓ N') : hmMode === 'settore' ? 'Settore ' + (hmSortAlpha ? '↑ A-Z' : '↓ N') : 'Regione'}
     </th>
     <th style="border-right:1px solid var(--border)">Tot.</th>
     ${sortedMonths.map((mk, i) => `<th>${monthLabels[i]}</th>`).join('')}
@@ -4582,8 +4586,9 @@ function buildHeatmap() {
       </div></td>`;
     }).join('');
     const totalPct = rows.length > 0 && rows[0].total > 0 ? Math.round((total / rows[0].total) * 100) : 0;
+    const displayLabel = hmMode === 'settore' ? settoreLabel(label) : label;
     return `<tr>
-      <td class="hm-row-label">${label}</td>
+      <td class="hm-row-label">${displayLabel}</td>
       <td class="hm-total-col" style="border-right:1px solid var(--border)">
         <div class="hm-cell nonzero hm-clickable" style="width:100%;height:40px;" onclick="applyHmFilterTotal('${label}')" title="Vedi tutte le rivendicazioni">
           <span class="hm-num">${total}</span>
@@ -4616,6 +4621,7 @@ function switchHeatmap(mode) {
   hmPage = 1;
   document.getElementById('hmBtnGruppo').classList.toggle('active', mode === 'gruppo');
   document.getElementById('hmBtnRegione').classList.toggle('active', mode === 'regione');
+  document.getElementById('hmBtnSettore').classList.toggle('active', mode === 'settore');
   buildHeatmap();
   buildTrendChart();
 }
@@ -4636,6 +4642,7 @@ function applyHmFilter(label, monthKey) {
   hmMonth = parseInt(m, 10);
   hmGroup = hmMode === 'gruppo' ? label.toLowerCase() : null;
   hmRegione = hmMode === 'regione' ? label : null;
+  hmSettore = hmMode === 'settore' ? label : null;
 
   // aggiorna tab anno
   year = yr;
@@ -4646,11 +4653,13 @@ function applyHmFilter(label, monthKey) {
   // aggiorna select
   document.getElementById('gruppoFilter').value = hmGroup || '';
   document.getElementById('regioneFilter').value = hmRegione || '';
+  document.getElementById('settoreFilter').value = hmSettore || '';
   document.getElementById('searchInput').value = '';
 
   // badge
   const mesi = ['','gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
-  document.getElementById('hmFilterLabel').textContent = label + ' · ' + mesi[hmMonth] + ' ' + y;
+  const badgeLabel = hmMode === 'settore' ? settoreLabel(label) : label;
+  document.getElementById('hmFilterLabel').textContent = badgeLabel + ' · ' + mesi[hmMonth] + ' ' + y;
   document.getElementById('hmFilterBadge').style.display = '';
   document.getElementById('hmResetBtn').style.display = '';
 
@@ -4670,6 +4679,7 @@ function applyHmFilterTotal(label) {
   hmMonth = null;
   hmGroup = hmMode === 'gruppo' ? label.toLowerCase() : null;
   hmRegione = hmMode === 'regione' ? label : null;
+  hmSettore = hmMode === 'settore' ? label : null;
 
   year = 0;
   ['tabAll','tab2020','tab2021','tab2022','tab2023','tab2024','tab2025','tab2026'].forEach(id => document.getElementById(id).classList.remove('active'));
@@ -4677,9 +4687,11 @@ function applyHmFilterTotal(label) {
 
   document.getElementById('gruppoFilter').value = hmGroup || '';
   document.getElementById('regioneFilter').value = hmRegione || '';
+  document.getElementById('settoreFilter').value = hmSettore || '';
   document.getElementById('searchInput').value = '';
 
-  document.getElementById('hmFilterLabel').textContent = label + ' · tutti i mesi';
+  const badgeLabel = hmMode === 'settore' ? settoreLabel(label) : label;
+  document.getElementById('hmFilterLabel').textContent = badgeLabel + ' · tutti i mesi';
   document.getElementById('hmFilterBadge').style.display = '';
   document.getElementById('hmResetBtn').style.display = '';
 
@@ -4702,6 +4714,7 @@ function applyHmFilterMonth(monthKey) {
   hmMonth = parseInt(m, 10);
   hmGroup = null;
   hmRegione = null;
+  hmSettore = null;
 
   // aggiorna tab anno
   year = yr;
@@ -4710,10 +4723,12 @@ function applyHmFilterMonth(monthKey) {
 
   document.getElementById('gruppoFilter').value = '';
   document.getElementById('regioneFilter').value = '';
+  document.getElementById('settoreFilter').value = '';
   document.getElementById('searchInput').value = '';
 
   const mesi = ['','gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
-  document.getElementById('hmFilterLabel').textContent = 'tutti i gruppi · ' + mesi[hmMonth] + ' ' + y;
+  const tuttiLabel = hmMode === 'gruppo' ? 'tutti i gruppi' : hmMode === 'settore' ? 'tutti i settori' : 'tutte le regioni';
+  document.getElementById('hmFilterLabel').textContent = tuttiLabel + ' · ' + mesi[hmMonth] + ' ' + y;
   document.getElementById('hmFilterBadge').style.display = '';
   document.getElementById('hmResetBtn').style.display = '';
 
@@ -4884,10 +4899,12 @@ function resetHmFilter() {
   hmMonth = null;
   hmGroup = null;
   hmRegione = null;
+  hmSettore = null;
   document.getElementById('hmFilterBadge').style.display = 'none';
   document.getElementById('hmResetBtn').style.display = 'none';
   document.getElementById('gruppoFilter').value = '';
   document.getElementById('regioneFilter').value = '';
+  document.getElementById('settoreFilter').value = '';
   render();
 }
 
@@ -5027,7 +5044,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_264';
+    verEl.textContent = 'DS_STABILE_265';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
