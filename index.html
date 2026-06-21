@@ -478,7 +478,14 @@ nav {
   display: flex;
   gap: 10px;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.toolbar::-webkit-scrollbar { display: none; }
+.toolbar > * {
+  flex-shrink: 0;
 }
 .search-wrap {
   position: relative;
@@ -2538,7 +2545,7 @@ td:nth-child(7){
 
 
 /* ── Toolbar laptop/14": una sola riga garantita, scroll orizzontale se serve ─────────── */
-@media (max-width: 1500px) and (min-width: 601px) {
+@media (max-width: 1700px) and (min-width: 601px) {
   .toolbar {
     margin: 0 16px 20px;
     padding: 10px 14px;
@@ -2590,6 +2597,8 @@ td:nth-child(7){
     padding: 10px 12px;
     gap: 7px;
     position: static;
+    flex-wrap: wrap !important;
+    overflow-x: visible;
   }
   /* Date picker: mettiamo i due campi su una riga */
   .toolbar .date-range-wrap {
@@ -5122,7 +5131,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_275';
+    verEl.textContent = 'DS_STABILE_276';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
