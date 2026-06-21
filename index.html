@@ -2537,72 +2537,49 @@ td:nth-child(7){
 .vbtn:hover { color:var(--white); }
 
 
-/* ── Toolbar laptop/14": comprime gli elementi per restare su una riga ─────────── */
-@media (max-width: 1500px) {
+/* ── Toolbar laptop/14": una sola riga garantita, scroll orizzontale se serve ─────────── */
+@media (max-width: 1500px) and (min-width: 601px) {
   .toolbar {
     margin: 0 16px 20px;
-    padding: 12px 14px;
+    padding: 10px 14px;
     gap: 6px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-  .search-wrap {
-    min-width: 110px;
-    flex-basis: 110px;
-    flex-shrink: 1;
-  }
-  select {
-    min-width: 88px;
-    padding: 8px 6px;
-    flex-shrink: 1;
-  }
-  input[type=date] {
-    width: 105px;
-    padding: 8px 4px;
-    flex-shrink: 1;
-  }
-  .date-range-wrap {
-    flex-shrink: 1;
-  }
-  #toolbarResetBtn {
-    padding: 8px 8px;
+  .toolbar::-webkit-scrollbar { display: none; }
+  .toolbar > * {
     flex-shrink: 0;
   }
-  .btn-export {
-    padding: 8px 8px;
-    min-width: 46px;
-    flex-shrink: 0;
-  }
-}
-
-/* ── Toolbar laptop piccolo/14" stretto: ulteriore compressione ─────────── */
-@media (max-width: 1280px) {
-  .toolbar {
-    gap: 5px;
-  }
   .search-wrap {
+    flex-shrink: 1;
     min-width: 90px;
     flex-basis: 90px;
+    max-width: 160px;
   }
   select {
-    min-width: 72px;
-    padding: 8px 4px;
-    font-size: 13px;
+    min-width: 70px !important;
+    width: auto;
+    padding: 8px 6px;
+    font-size: 12.5px;
   }
   input[type=date] {
-    width: 92px;
+    width: 88px;
     padding: 8px 3px;
     font-size: 12px;
   }
   .date-sep {
     font-size: 11px;
   }
-  #toolbarResetBtn {
+  .toolbar-reset-btn {
     font-size: 12px;
-    padding: 8px 6px;
+    padding: 8px 8px;
   }
   .btn-export {
     font-size: 12px;
-    padding: 8px 6px;
-    min-width: 40px;
+    padding: 8px 8px;
+    min-width: 38px;
   }
 }
 
@@ -5145,7 +5122,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_274';
+    verEl.textContent = 'DS_STABILE_275';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
