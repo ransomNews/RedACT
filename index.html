@@ -4080,6 +4080,8 @@ document.getElementById('regioneFilter').addEventListener('change', checkToolbar
 document.getElementById('regioneFilter').addEventListener('change', () => { currentPage = 1; updateURL(); render(); });
 document.getElementById('gruppoFilter').addEventListener('change', checkToolbarReset);
 document.getElementById('gruppoFilter').addEventListener('change', () => { currentPage = 1; updateURL(); render(); });
+document.getElementById('settoreFilter').addEventListener('change', checkToolbarReset);
+document.getElementById('settoreFilter').addEventListener('change', () => { currentPage = 1; updateURL(); render(); });
 
 populate();
 initFromURL();
@@ -4838,10 +4840,12 @@ function checkToolbarReset() {
   const q  = document.getElementById('searchInput').value;
   const re = document.getElementById('regioneFilter').value;
   const gr = document.getElementById('gruppoFilter').value;
+  const seEl = document.getElementById('settoreFilter');
+  const se = seEl ? seEl.value : '';
   const df = document.getElementById('dateFrom').value;
   const dt = document.getElementById('dateTo').value;
   const btn = document.getElementById('toolbarResetBtn');
-  if (btn) btn.style.display = (q || re || gr || df || dt) ? '' : 'none';
+  if (btn) btn.style.display = (q || re || gr || se || df || dt) ? '' : 'none';
 }
 
 function onDateChange() {
@@ -4922,18 +4926,21 @@ function updateURL() {
   const q  = document.getElementById('searchInput').value;
   const re = document.getElementById('regioneFilter').value;
   const gr = document.getElementById('gruppoFilter').value;
+  const seEl = document.getElementById('settoreFilter');
+  const se = seEl ? seEl.value : '';
   const df = document.getElementById('dateFrom').value;
   const dt = document.getElementById('dateTo').value;
   if (year)        params.set('anno', year);
   if (q)           params.set('q', q);
   if (re)          params.set('regione', re);
   if (gr)          params.set('gruppo', gr);
+  if (se)          params.set('settore', se);
   if (df)          params.set('dal', df);
   if (dt)          params.set('al', dt);
   if (currentPage > 1) params.set('pag', currentPage);
   const qs = params.toString();
   const newUrl = qs ? (location.pathname + '?' + qs) : location.pathname;
-  history.pushState({ anno: year, q, re, gr, df, dt, pag: currentPage }, '', newUrl);
+  history.pushState({ anno: year, q, re, gr, se, df, dt, pag: currentPage }, '', newUrl);
 }
 
 function initFromURL() {
@@ -4942,6 +4949,7 @@ function initFromURL() {
   const q    = params.get('q')       || '';
   const re   = params.get('regione') || '';
   const gr   = params.get('gruppo')  || '';
+  const se   = params.get('settore') || '';
   const df   = params.get('dal')     || '';
   const dt   = params.get('al')      || '';
   const pag  = parseInt(params.get('pag') || '1');
@@ -4950,6 +4958,7 @@ function initFromURL() {
   if (q)  document.getElementById('searchInput').value = q;
   if (re) document.getElementById('regioneFilter').value = re;
   if (gr) document.getElementById('gruppoFilter').value = gr;
+  if (se) { const seEl = document.getElementById('settoreFilter'); if (seEl) seEl.value = se; }
   if (df) document.getElementById('dateFrom').value = df;
   if (dt) document.getElementById('dateTo').value = dt;
   if (pag > 1) currentPage = pag;
@@ -4964,6 +4973,8 @@ window.addEventListener('popstate', e => {
   document.getElementById('searchInput').value = s.q  || '';
   document.getElementById('regioneFilter').value = s.re || '';
   document.getElementById('gruppoFilter').value  = s.gr || '';
+  const seEl = document.getElementById('settoreFilter');
+  if (seEl) seEl.value = s.se || '';
   document.getElementById('dateFrom').value = s.df || '';
   document.getElementById('dateTo').value   = s.dt || '';
   // Aggiorna tab attivo
@@ -5049,7 +5060,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_288';
+    verEl.textContent = 'DS_STABILE_289';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
