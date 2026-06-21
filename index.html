@@ -2510,6 +2510,33 @@ td:nth-child(7){
 .vbtn:hover { color:var(--white); }
 
 
+/* ── Toolbar laptop/14": comprime gli elementi per restare su una riga ─────────── */
+@media (max-width: 1500px) {
+  .toolbar {
+    margin: 0 16px 20px;
+    padding: 12px 16px;
+    gap: 8px;
+  }
+  .search-wrap {
+    min-width: 140px;
+    flex-basis: 140px;
+  }
+  select {
+    min-width: 110px;
+    padding: 8px 8px;
+  }
+  input[type=date] {
+    width: 120px;
+    padding: 8px 6px;
+  }
+  #toolbarResetBtn, .btn-export {
+    padding: 8px 10px;
+  }
+  .btn-export {
+    min-width: 52px;
+  }
+}
+
 /* ── Toolbar mobile ottimizzata ─────────── */
 @media (max-width: 600px) {
   .toolbar {
@@ -5049,7 +5076,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_272';
+    verEl.textContent = 'DS_STABILE_273';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
