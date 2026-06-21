@@ -550,6 +550,33 @@ html.light input[type=date] {
   color: var(--text);
 }
 
+.toolbar-reset-btn {
+  font-size: 13px;
+  color: var(--blue);
+  background: rgba(77,159,255,0.1);
+  border: 1px solid rgba(77,159,255,0.35);
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.toolbar-reset-btn:hover { background: rgba(77,159,255,0.2); }
+.hm-reset-btn {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--red);
+  background: rgba(230,57,70,0.1);
+  border: 1px solid rgba(230,57,70,0.35);
+  border-radius: 3px;
+  padding: 8px 12px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background 0.2s;
+}
+.hm-reset-btn:hover { background: rgba(230,57,70,0.2); }
+
 /* Bottone esporta CSV */
 .btn-export {
   font-family: var(--mono);
@@ -2514,26 +2541,68 @@ td:nth-child(7){
 @media (max-width: 1500px) {
   .toolbar {
     margin: 0 16px 20px;
-    padding: 12px 16px;
-    gap: 8px;
+    padding: 12px 14px;
+    gap: 6px;
   }
   .search-wrap {
-    min-width: 140px;
-    flex-basis: 140px;
+    min-width: 110px;
+    flex-basis: 110px;
+    flex-shrink: 1;
   }
   select {
-    min-width: 110px;
-    padding: 8px 8px;
+    min-width: 88px;
+    padding: 8px 6px;
+    flex-shrink: 1;
   }
   input[type=date] {
-    width: 120px;
-    padding: 8px 6px;
+    width: 105px;
+    padding: 8px 4px;
+    flex-shrink: 1;
   }
-  #toolbarResetBtn, .btn-export {
-    padding: 8px 10px;
+  .date-range-wrap {
+    flex-shrink: 1;
+  }
+  #toolbarResetBtn {
+    padding: 8px 8px;
+    flex-shrink: 0;
   }
   .btn-export {
-    min-width: 52px;
+    padding: 8px 8px;
+    min-width: 46px;
+    flex-shrink: 0;
+  }
+}
+
+/* ── Toolbar laptop piccolo/14" stretto: ulteriore compressione ─────────── */
+@media (max-width: 1280px) {
+  .toolbar {
+    gap: 5px;
+  }
+  .search-wrap {
+    min-width: 90px;
+    flex-basis: 90px;
+  }
+  select {
+    min-width: 72px;
+    padding: 8px 4px;
+    font-size: 13px;
+  }
+  input[type=date] {
+    width: 92px;
+    padding: 8px 3px;
+    font-size: 12px;
+  }
+  .date-sep {
+    font-size: 11px;
+  }
+  #toolbarResetBtn {
+    font-size: 12px;
+    padding: 8px 6px;
+  }
+  .btn-export {
+    font-size: 12px;
+    padding: 8px 6px;
+    min-width: 40px;
   }
 }
 
@@ -3248,12 +3317,12 @@ td:nth-child(7){
   <select id="gruppoFilter">  <option value="">Tutti i gruppi</option></select>
   <select id="settoreFilter"><option value="">Tutti i settori</option></select>
   <span class="date-range-wrap"><input type="date" id="dateFrom" title="Data inizio" onchange="onDateChange()"><span class="date-sep">→</span><input type="date" id="dateTo" title="Data fine" onchange="onDateChange()"></span>
-  <button id="toolbarResetBtn" onclick="resetToolbar()" style="display:none;font-size:13px;color:var(--blue);background:rgba(77,159,255,0.1);border:1px solid rgba(77,159,255,0.35);border-radius:6px;padding:8px 14px;cursor:pointer;letter-spacing:0.04em;white-space:nowrap;" title="Azzera ricerca e filtri tabella" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">✕ reset ricerca</button>
+  <button id="toolbarResetBtn" class="toolbar-reset-btn" onclick="resetToolbar()" style="display:none;" title="Azzera ricerca e filtri tabella">✕ reset ricerca</button>
   <div class="view-toggle" style="margin-left:auto;display:none">
     <button class="vbtn" id="btnVT" onclick="setView('table')" title="Vista tabella">≡ Lista</button>
     <button class="vbtn active" id="btnVC" onclick="setView('cards')" title="Vista card">⊞ Card</button>
   </div>
-  <button id="hmResetBtn" onclick="resetHmFilter()" style="display:none;font-family:var(--mono);font-size: 13px;color:var(--red);background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.35);border-radius:3px;padding:8px 12px;cursor:pointer;letter-spacing:0.04em;" onmouseover="this.style.background='rgba(230,57,70,0.2)'" onmouseout="this.style.background='rgba(230,57,70,0.1)'" title="Rimuovi filtro heatmap e torna alla vista completa">✕ reset heatmap</button>
+  <button id="hmResetBtn" class="hm-reset-btn" onclick="resetHmFilter()" style="display:none;" title="Rimuovi filtro heatmap e torna alla vista completa">✕ reset heatmap</button>
   <button class="btn-export" id="exportCsvBtn" onclick="exportCSV()" title="Esporta i dati filtrati in CSV">↓ CSV</button>
   <button class="btn-export" id="exportJsonBtn" onclick="exportJSON()" title="Esporta i dati filtrati in JSON" style="color:var(--blue);background:rgba(77,159,255,0.1);border-color:rgba(77,159,255,0.35);" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">↓ JSON</button>
   <div class="count-info">Visualizzate <strong id="countNum">—</strong> righe</div>
@@ -5076,7 +5145,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_273';
+    verEl.textContent = 'DS_STABILE_274';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
