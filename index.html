@@ -2512,11 +2512,11 @@ td:nth-child(7){
 
 /* ── Toolbar: laptop 14" (spazio ridotto rispetto a 16") ── */
 @media (min-width: 601px) and (max-width: 1550px) {
-  .toolbar { gap: 7px; padding: 14px 16px; }
-  #settoreFilter { max-width: 150px !important; }
-  #regioneFilter, #gruppoFilter { min-width: 120px; }
-  input[type=date] { width: 125px; }
-  #toolbarResetBtn { padding: 6px 10px !important; font-size: 12px !important; }
+  .toolbar { gap: 6px; padding: 14px 14px; }
+  #settoreFilter { max-width: 135px !important; }
+  #regioneFilter, #gruppoFilter { min-width: 115px; }
+  input[type=date] { width: 140px; }
+  #toolbarResetBtn { padding: 6px 9px !important; font-size: 12px !important; }
 }
 
 /* ── Toolbar mobile ottimizzata ─────────── */
@@ -5069,7 +5069,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_290';
+    verEl.textContent = 'DS_STABILE_291';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
