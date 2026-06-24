@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-23T09:18:06.854115+00:00",
+  "generated": "2026-06-24T05:20:53.562570+00:00",
   "anno": 2026,
   "total": 140,
   "records": [
@@ -68,7 +68,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00323",
@@ -79,7 +79,7 @@
       "provincia": "Parma",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00324",
@@ -101,7 +101,7 @@
       "provincia": "Ancona",
       "regione": "Marche",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00326",
@@ -123,7 +123,7 @@
       "provincia": "Cagliari",
       "regione": "Sardegna",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00328",
@@ -134,7 +134,7 @@
       "provincia": "Perugia",
       "regione": "Umbria",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00329",
@@ -145,7 +145,7 @@
       "provincia": "Forlì-Cesena",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00330",
@@ -156,7 +156,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00331",
@@ -178,7 +178,7 @@
       "provincia": "Bari",
       "regione": "Puglia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00333",
@@ -200,7 +200,7 @@
       "provincia": "Genova",
       "regione": "Liguria",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00335",
@@ -211,7 +211,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00336",
@@ -222,7 +222,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00337",
@@ -266,7 +266,7 @@
       "provincia": "Vercelli",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00341",
@@ -288,7 +288,7 @@
       "provincia": "Reggio Emilia",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00343",
@@ -299,7 +299,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00344",
@@ -310,7 +310,7 @@
       "provincia": "Ancona",
       "regione": "Marche",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00345",
@@ -332,7 +332,7 @@
       "provincia": "Varese",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00347",
@@ -409,7 +409,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00354",
@@ -442,7 +442,7 @@
       "provincia": "Sconosciuta",
       "regione": "Sconosciuta",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00357",
@@ -497,7 +497,7 @@
       "provincia": "Cosenza",
       "regione": "Calabria",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00362",
@@ -706,7 +706,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00381",
@@ -750,7 +750,7 @@
       "provincia": "Monza e della Brianza",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00385",
@@ -772,7 +772,7 @@
       "provincia": "Fermo",
       "regione": "Marche",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00387",
@@ -783,7 +783,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00388",
@@ -882,7 +882,7 @@
       "provincia": "Parma",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00397",
@@ -1058,7 +1058,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00413",
@@ -1091,7 +1091,7 @@
       "provincia": "Alessandria",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00416",
@@ -1146,7 +1146,7 @@
       "provincia": "Padova",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00421",

@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-23T09:18:06.854115+00:00",
+  "generated": "2026-06-24T05:20:53.562570+00:00",
   "anno": 2023,
   "total": 183,
   "records": [
@@ -167,7 +167,7 @@
       "provincia": "Lecco",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00016",
@@ -178,7 +178,7 @@
       "provincia": "Treviso",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00017",
@@ -266,7 +266,7 @@
       "provincia": "Enna",
       "regione": "Sicilia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00025",
@@ -288,7 +288,7 @@
       "provincia": "Ancona",
       "regione": "Marche",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00027",
@@ -299,7 +299,7 @@
       "provincia": "Bologna",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00028",
@@ -871,7 +871,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00080",
@@ -893,7 +893,7 @@
       "provincia": "Alessandria",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00082",
@@ -926,7 +926,7 @@
       "provincia": "Forlì-Cesena",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00085",
@@ -948,7 +948,7 @@
       "provincia": "Ravenna",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00087",
@@ -959,7 +959,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00088",
@@ -970,7 +970,7 @@
       "provincia": "Latina",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00089",
@@ -992,7 +992,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00091",
@@ -1036,7 +1036,7 @@
       "provincia": "Monza e della Brianza",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00095",
@@ -1245,7 +1245,7 @@
       "provincia": "Trento",
       "regione": "Trentino Alto Adige",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00114",
@@ -1256,7 +1256,7 @@
       "provincia": "Venezia",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00115",
@@ -1311,7 +1311,7 @@
       "provincia": "Chieti",
       "regione": "Abruzzo",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00120",
@@ -1333,7 +1333,7 @@
       "provincia": "Vicenza",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00122",
@@ -1355,7 +1355,7 @@
       "provincia": "Parma",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00124",
@@ -1366,7 +1366,7 @@
       "provincia": "Cuneo",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00125",
@@ -1399,7 +1399,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00128",
@@ -1410,7 +1410,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00129",
@@ -1443,7 +1443,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00132",
@@ -1454,7 +1454,7 @@
       "provincia": "Napoli",
       "regione": "Campania",
       "dati_gb": 0.0,
-      "note": "Doppia rivendicazione"
+      "note": ""
     },
     {
       "id": "00133",
@@ -1520,7 +1520,7 @@
       "provincia": "Napoli",
       "regione": "Campania",
       "dati_gb": 0.0,
-      "note": "Doppia rivendicazione"
+      "note": ""
     },
     {
       "id": "00139",
@@ -1608,7 +1608,7 @@
       "provincia": "Bari",
       "regione": "Puglia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00147",
@@ -1652,7 +1652,7 @@
       "provincia": "Prato",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00151",
@@ -1674,7 +1674,7 @@
       "provincia": "Vicenza",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00153",
@@ -1740,7 +1740,7 @@
       "provincia": "Pescara",
       "regione": "Abruzzo",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00159",
@@ -1751,7 +1751,7 @@
       "provincia": "Forlì-Cesena",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00160",
@@ -1850,7 +1850,7 @@
       "provincia": "Brescia",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00169",
@@ -1872,7 +1872,7 @@
       "provincia": "Trieste",
       "regione": "Friuli Venezia Giulia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00171",
@@ -2004,7 +2004,7 @@
       "provincia": "Vicenza",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00183",

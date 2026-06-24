@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-23T09:18:06.854115+00:00",
+  "generated": "2026-06-24T05:20:53.562570+00:00",
   "total": 781,
   "records": [
     {
@@ -1381,7 +1381,7 @@
       "provincia": "Firenze",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "8 Italy Districts"
+      "note": ""
     },
     {
       "id": "00071",
@@ -1393,7 +1393,7 @@
       "provincia": "Firenze",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "8 Italy Districts"
+      "note": ""
     },
     {
       "id": "00072",
@@ -1405,7 +1405,7 @@
       "provincia": "Firenze",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "8 Italy Districts"
+      "note": ""
     },
     {
       "id": "00073",
@@ -1417,7 +1417,7 @@
       "provincia": "Firenze",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "8 Italy Districts"
+      "note": ""
     },
     {
       "id": "00074",
@@ -1429,7 +1429,7 @@
       "provincia": "Firenze",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "8 Italy Districts"
+      "note": ""
     },
     {
       "id": "00075",
@@ -1441,7 +1441,7 @@
       "provincia": "Firenze",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "8 Italy Districts"
+      "note": ""
     },
     {
       "id": "00076",
@@ -1453,7 +1453,7 @@
       "provincia": "Firenze",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "8 Italy Districts"
+      "note": ""
     },
     {
       "id": "00077",
@@ -1885,7 +1885,7 @@
       "provincia": "Lecco",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00016",
@@ -1897,7 +1897,7 @@
       "provincia": "Treviso",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00017",
@@ -1993,7 +1993,7 @@
       "provincia": "Enna",
       "regione": "Sicilia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00025",
@@ -2017,7 +2017,7 @@
       "provincia": "Ancona",
       "regione": "Marche",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00027",
@@ -2029,7 +2029,7 @@
       "provincia": "Bologna",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00028",
@@ -2653,7 +2653,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00080",
@@ -2677,7 +2677,7 @@
       "provincia": "Alessandria",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00082",
@@ -2713,7 +2713,7 @@
       "provincia": "Forlì-Cesena",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00085",
@@ -2737,7 +2737,7 @@
       "provincia": "Ravenna",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00087",
@@ -2749,7 +2749,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00088",
@@ -2761,7 +2761,7 @@
       "provincia": "Latina",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00089",
@@ -2785,7 +2785,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00091",
@@ -2833,7 +2833,7 @@
       "provincia": "Monza e della Brianza",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00095",
@@ -3061,7 +3061,7 @@
       "provincia": "Trento",
       "regione": "Trentino Alto Adige",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00114",
@@ -3073,7 +3073,7 @@
       "provincia": "Venezia",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00115",
@@ -3133,7 +3133,7 @@
       "provincia": "Chieti",
       "regione": "Abruzzo",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00120",
@@ -3157,7 +3157,7 @@
       "provincia": "Vicenza",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00122",
@@ -3181,7 +3181,7 @@
       "provincia": "Parma",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00124",
@@ -3193,7 +3193,7 @@
       "provincia": "Cuneo",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00125",
@@ -3229,7 +3229,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00128",
@@ -3241,7 +3241,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00129",
@@ -3277,7 +3277,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00132",
@@ -3289,7 +3289,7 @@
       "provincia": "Napoli",
       "regione": "Campania",
       "dati_gb": 0.0,
-      "note": "Doppia rivendicazione"
+      "note": ""
     },
     {
       "id": "00133",
@@ -3361,7 +3361,7 @@
       "provincia": "Napoli",
       "regione": "Campania",
       "dati_gb": 0.0,
-      "note": "Doppia rivendicazione"
+      "note": ""
     },
     {
       "id": "00139",
@@ -3457,7 +3457,7 @@
       "provincia": "Bari",
       "regione": "Puglia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00147",
@@ -3505,7 +3505,7 @@
       "provincia": "Prato",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00151",
@@ -3529,7 +3529,7 @@
       "provincia": "Vicenza",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00153",
@@ -3601,7 +3601,7 @@
       "provincia": "Pescara",
       "regione": "Abruzzo",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00159",
@@ -3613,7 +3613,7 @@
       "provincia": "Forlì-Cesena",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00160",
@@ -3721,7 +3721,7 @@
       "provincia": "Brescia",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00169",
@@ -3745,7 +3745,7 @@
       "provincia": "Trieste",
       "regione": "Friuli Venezia Giulia",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00171",
@@ -3889,7 +3889,7 @@
       "provincia": "Vicenza",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Da verificare"
+      "note": ""
     },
     {
       "id": "00183",
@@ -5713,7 +5713,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00152",
@@ -5737,7 +5737,7 @@
       "provincia": "Sconosciuta",
       "regione": "Sconosciuta",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00154",
@@ -5749,7 +5749,7 @@
       "provincia": "Alessandria",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00155",
@@ -5785,7 +5785,7 @@
       "provincia": "Ravenna",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00158",
@@ -5869,7 +5869,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00165",
@@ -5881,7 +5881,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00166",
@@ -5929,7 +5929,7 @@
       "provincia": "Treviso",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00170",
@@ -5941,7 +5941,7 @@
       "provincia": "Treviso",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00171",
@@ -5977,7 +5977,7 @@
       "provincia": "Perugia",
       "regione": "Umbria",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00174",
@@ -5989,7 +5989,7 @@
       "provincia": "Sconosciuta",
       "regione": "Sconosciuta",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00175",
@@ -6097,7 +6097,7 @@
       "provincia": "Monza e della Brianza",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00184",
@@ -6109,7 +6109,7 @@
       "provincia": "Modena",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00185",
@@ -6145,7 +6145,7 @@
       "provincia": "Rovigo",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00188",
@@ -6157,7 +6157,7 @@
       "provincia": "Torino",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00189",
@@ -6181,7 +6181,7 @@
       "provincia": "Lucca",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00191",
@@ -6193,7 +6193,7 @@
       "provincia": "Treviso",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00192",
@@ -6205,7 +6205,7 @@
       "provincia": "Torino",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00193",
@@ -6253,7 +6253,7 @@
       "provincia": "Varese",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00197",
@@ -6289,7 +6289,7 @@
       "provincia": "Arezzo",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00200",
@@ -6349,7 +6349,7 @@
       "provincia": "Sconosciuta",
       "regione": "Sconosciuta",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00205",
@@ -6361,7 +6361,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00206",
@@ -6373,7 +6373,7 @@
       "provincia": "Salerno",
       "regione": "Campania",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00207",
@@ -6385,7 +6385,7 @@
       "provincia": "Cremona",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00208",
@@ -6397,7 +6397,7 @@
       "provincia": "Mantova",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00209",
@@ -6445,7 +6445,7 @@
       "provincia": "Ragusa",
       "regione": "Sicilia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00213",
@@ -6457,7 +6457,7 @@
       "provincia": "Forlì-Cesena",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00214",
@@ -6469,7 +6469,7 @@
       "provincia": "Como",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00215",
@@ -6481,7 +6481,7 @@
       "provincia": "Brescia",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00216",
@@ -6493,7 +6493,7 @@
       "provincia": "Varese",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00217",
@@ -6529,7 +6529,7 @@
       "provincia": "Genova",
       "regione": "Liguria",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00220",
@@ -6553,7 +6553,7 @@
       "provincia": "Pordedone",
       "regione": "Friuli Venezia Giulia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00222",
@@ -6577,7 +6577,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00224",
@@ -6589,7 +6589,7 @@
       "provincia": "Mantova",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00225",
@@ -6601,7 +6601,7 @@
       "provincia": "Verona",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00226",
@@ -6625,7 +6625,7 @@
       "provincia": "Firenze",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00228",
@@ -6733,7 +6733,7 @@
       "provincia": "Cuneo",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00237",
@@ -6745,7 +6745,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00238",
@@ -6757,7 +6757,7 @@
       "provincia": "Ancona",
       "regione": "Marche",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00239",
@@ -6781,7 +6781,7 @@
       "provincia": "Padova",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00241",
@@ -6793,7 +6793,7 @@
       "provincia": "Terni",
       "regione": "Umbria",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00242",
@@ -6889,7 +6889,7 @@
       "provincia": "Napoli",
       "regione": "Campania",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00250",
@@ -6901,7 +6901,7 @@
       "provincia": "Prato",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00251",
@@ -6973,7 +6973,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00257",
@@ -6985,7 +6985,7 @@
       "provincia": "Bergamo",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00258",
@@ -7009,7 +7009,7 @@
       "provincia": "Venezia",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00260",
@@ -7033,7 +7033,7 @@
       "provincia": "Pavia",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00262",
@@ -7081,7 +7081,7 @@
       "provincia": "Rimini",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00266",
@@ -7105,7 +7105,7 @@
       "provincia": "Trento",
       "regione": "Trentino Alto Adige",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00268",
@@ -7117,7 +7117,7 @@
       "provincia": "Firenze",
       "regione": "Toscana",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00269",
@@ -7129,7 +7129,7 @@
       "provincia": "Vicenza",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00270",
@@ -7141,7 +7141,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00271",
@@ -7153,7 +7153,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00272",
@@ -7165,7 +7165,7 @@
       "provincia": "Bolzano",
       "regione": "Trentino Alto Adige",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00273",
@@ -7177,7 +7177,7 @@
       "provincia": "Bolzano",
       "regione": "Trentino Alto Adige",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00274",
@@ -7189,7 +7189,7 @@
       "provincia": "Teramo",
       "regione": "Abruzzo",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00275",
@@ -7249,7 +7249,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00280",
@@ -7285,7 +7285,7 @@
       "provincia": "Brescia",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00283",
@@ -7357,7 +7357,7 @@
       "provincia": "Mantova",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00289",
@@ -7381,7 +7381,7 @@
       "provincia": "Bologna",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00291",
@@ -7405,7 +7405,7 @@
       "provincia": "Biella",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00293",
@@ -7417,7 +7417,7 @@
       "provincia": "Crotone",
       "regione": "Calabria",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00294",
@@ -7429,7 +7429,7 @@
       "provincia": "Bologna",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00295",
@@ -7441,7 +7441,7 @@
       "provincia": "Bologna",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00296",
@@ -7453,7 +7453,7 @@
       "provincia": "Sconosciuta",
       "regione": "Sconosciuta",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00297",
@@ -7465,7 +7465,7 @@
       "provincia": "Treviso",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00298",
@@ -7477,7 +7477,7 @@
       "provincia": "Napoli",
       "regione": "Campania",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00299",
@@ -7525,7 +7525,7 @@
       "provincia": "Lodi",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00303",
@@ -7561,7 +7561,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00306",
@@ -7573,7 +7573,7 @@
       "provincia": "Pordedone",
       "regione": "Friuli Venezia Giulia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00307",
@@ -7597,7 +7597,7 @@
       "provincia": "Crotone",
       "regione": "Calabria",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00309",
@@ -7609,7 +7609,7 @@
       "provincia": "Vibo Valentia",
       "regione": "Calabria",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00310",
@@ -7633,7 +7633,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00312",
@@ -7657,7 +7657,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00314",
@@ -7669,7 +7669,7 @@
       "provincia": "Vicenza",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00315",
@@ -7681,7 +7681,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00316",
@@ -7693,7 +7693,7 @@
       "provincia": "Genova",
       "regione": "Liguria",
       "dati_gb": 0.0,
-      "note": "Dati non pubblicati"
+      "note": ""
     },
     {
       "id": "00317",
@@ -7765,7 +7765,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00323",
@@ -7777,7 +7777,7 @@
       "provincia": "Parma",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00324",
@@ -7801,7 +7801,7 @@
       "provincia": "Ancona",
       "regione": "Marche",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00326",
@@ -7825,7 +7825,7 @@
       "provincia": "Cagliari",
       "regione": "Sardegna",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00328",
@@ -7837,7 +7837,7 @@
       "provincia": "Perugia",
       "regione": "Umbria",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00329",
@@ -7849,7 +7849,7 @@
       "provincia": "Forlì-Cesena",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00330",
@@ -7861,7 +7861,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00331",
@@ -7885,7 +7885,7 @@
       "provincia": "Bari",
       "regione": "Puglia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00333",
@@ -7909,7 +7909,7 @@
       "provincia": "Genova",
       "regione": "Liguria",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00335",
@@ -7921,7 +7921,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00336",
@@ -7933,7 +7933,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00337",
@@ -7981,7 +7981,7 @@
       "provincia": "Vercelli",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00341",
@@ -8005,7 +8005,7 @@
       "provincia": "Reggio Emilia",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00343",
@@ -8017,7 +8017,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00344",
@@ -8029,7 +8029,7 @@
       "provincia": "Ancona",
       "regione": "Marche",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00345",
@@ -8053,7 +8053,7 @@
       "provincia": "Varese",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00347",
@@ -8137,7 +8137,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00354",
@@ -8173,7 +8173,7 @@
       "provincia": "Sconosciuta",
       "regione": "Sconosciuta",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00357",
@@ -8233,7 +8233,7 @@
       "provincia": "Cosenza",
       "regione": "Calabria",
       "dati_gb": 0.0,
-      "note": "Rimossa dal DLS"
+      "note": ""
     },
     {
       "id": "00362",
@@ -8461,7 +8461,7 @@
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00381",
@@ -8509,7 +8509,7 @@
       "provincia": "Monza e della Brianza",
       "regione": "Lombardia",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00385",
@@ -8533,7 +8533,7 @@
       "provincia": "Fermo",
       "regione": "Marche",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00387",
@@ -8545,7 +8545,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00388",
@@ -8653,7 +8653,7 @@
       "provincia": "Parma",
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00397",
@@ -8845,7 +8845,7 @@
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00413",
@@ -8881,7 +8881,7 @@
       "provincia": "Alessandria",
       "regione": "Piemonte",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00416",
@@ -8941,7 +8941,7 @@
       "provincia": "Padova",
       "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": "Dati pubblicati, no quantità"
+      "note": ""
     },
     {
       "id": "00421",
