@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 24 Jun 2026 05:20:53 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 10:59:14 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -24,7 +24,7 @@
     <item>
       <title>SEI NordOvest S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00454 | Gruppo: safepay | Data: 18/06/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <description>ID: 00454 | Gruppo: safepay | Data: 18/06/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 124,00</description>
       <pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00454</guid>
       <category>safepay</category>
@@ -32,7 +32,7 @@
     <item>
       <title>B.R.S. Cappuccio S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00455 | Gruppo: safepay | Data: 18/06/2026 | Provincia: Napoli | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
+      <description>ID: 00455 | Gruppo: safepay | Data: 18/06/2026 | Provincia: Napoli | Regione: Campania | Zona: Sud | Dati pubblicati: GB 37,00</description>
       <pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00455</guid>
       <category>safepay</category>
