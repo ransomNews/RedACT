@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-24T10:59:14.267815+00:00",
+  "generated": "2026-06-24T14:01:52.172963+00:00",
   "anno": 2026,
-  "total": 140,
+  "total": 141,
   "records": [
     {
       "id": "00317",
@@ -1541,6 +1541,17 @@
       "link": "ravagnan.com",
       "provincia": "Padova",
       "regione": "Veneto",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00457",
+      "data": "24/06/2026",
+      "vittima": "Meccanica GN S.P.A.",
+      "gruppo": "thegentlemen",
+      "link": "meccanicagn.com",
+      "provincia": "Modena",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }
