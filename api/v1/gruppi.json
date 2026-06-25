@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-24T14:01:52.172963+00:00",
+  "generated": "2026-06-25T03:56:18.359436+00:00",
   "total": 171,
   "gruppi": [
     {
@@ -1189,11 +1189,12 @@
     },
     {
       "nome": "stormous",
-      "rivendicazioni": 5,
+      "rivendicazioni": 9,
       "dati_gb": 204.0,
       "anni_attivi": [
         2023,
-        2024
+        2024,
+        2026
       ]
     },
     {

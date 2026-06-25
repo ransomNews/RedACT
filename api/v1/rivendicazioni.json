@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-24T14:01:52.172963+00:00",
-  "total": 782,
+  "generated": "2026-06-25T03:56:18.359436+00:00",
+  "total": 786,
   "records": [
     {
       "id": "00001",
@@ -9386,6 +9386,54 @@
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
+    },
+    {
+      "id": "00458",
+      "data": "24/06/2026",
+      "anno": 2026,
+      "vittima": "Maglificio Liliana di Lorenzoni Andrea & C. S.N.C.",
+      "gruppo": "stormous",
+      "link": "maglificioliliana.com",
+      "provincia": "Brescia",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00459",
+      "data": "24/06/2026",
+      "anno": 2026,
+      "vittima": "Lorenzoni Store",
+      "gruppo": "stormous",
+      "link": "lorenzoni-store.com",
+      "provincia": "Brescia",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": "Brand di Maglificio Liliana di Lorenzoni Andrea & C. S.N.C."
+    },
+    {
+      "id": "00460",
+      "data": "24/06/2026",
+      "anno": 2026,
+      "vittima": "Montechiaro Store",
+      "gruppo": "stormous",
+      "link": "montechiaro-store.com",
+      "provincia": "Brescia",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": "Brand di Maglificio Liliana di Lorenzoni Andrea & C. S.N.C."
+    },
+    {
+      "id": "00461",
+      "data": "24/06/2026",
+      "anno": 2026,
+      "vittima": "Impulso Store",
+      "gruppo": "stormous",
+      "link": "impulso-store.com",
+      "provincia": "Brescia",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": "Brand di Maglificio Liliana di Lorenzoni Andrea & C. S.N.C."
     }
   ]
 }

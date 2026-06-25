@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 24 Jun 2026 14:01:52 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 03:56:18 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -20,6 +20,38 @@
       <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00457</guid>
       <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>Maglificio Liliana di Lorenzoni Andrea &amp; C. S.N.C.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00458 | Gruppo: stormous | Data: 24/06/2026 | Provincia: Brescia | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00458</guid>
+      <category>stormous</category>
+    </item>
+    <item>
+      <title>Lorenzoni Store</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00459 | Gruppo: stormous | Data: 24/06/2026 | Provincia: Brescia | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0 | Nota: Brand di Maglificio Liliana di Lorenzoni Andrea &amp;amp; C. S.N.C.</description>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00459</guid>
+      <category>stormous</category>
+    </item>
+    <item>
+      <title>Montechiaro Store</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00460 | Gruppo: stormous | Data: 24/06/2026 | Provincia: Brescia | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0 | Nota: Brand di Maglificio Liliana di Lorenzoni Andrea &amp;amp; C. S.N.C.</description>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00460</guid>
+      <category>stormous</category>
+    </item>
+    <item>
+      <title>Impulso Store</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00461 | Gruppo: stormous | Data: 24/06/2026 | Provincia: Brescia | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0 | Nota: Brand di Maglificio Liliana di Lorenzoni Andrea &amp;amp; C. S.N.C.</description>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00461</guid>
+      <category>stormous</category>
     </item>
     <item>
       <title>Ravagnan S.P.A.</title>
@@ -140,38 +172,6 @@
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00448</guid>
       <category>deadlock</category>
-    </item>
-    <item>
-      <title>Integra ERP S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00449 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0 | Nota: Con L'Operosa S.P.A.</description>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00449</guid>
-      <category>deadlock</category>
-    </item>
-    <item>
-      <title>Integra S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00450 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Isernia | Regione: Molise | Zona: Sud | Dati pubblicati: GB 0 | Nota: Con L'Operosa S.P.A.</description>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00450</guid>
-      <category>deadlock</category>
-    </item>
-    <item>
-      <title>C.A.A. Giorgio Nicoli S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00451 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0 | Nota: Con L'Operosa S.P.A.</description>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00451</guid>
-      <category>deadlock</category>
-    </item>
-    <item>
-      <title>Cattani S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00438 | Gruppo: spacebears | Data: 10/06/2026 | Provincia: Parma | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00438</guid>
-      <category>spacebears</category>
     </item>
   </channel>
 </rss>
