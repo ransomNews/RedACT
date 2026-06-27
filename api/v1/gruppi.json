@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-25T03:56:18.359436+00:00",
-  "total": 171,
+  "generated": "2026-06-27T13:56:39.986363+00:00",
+  "total": 173,
   "gruppi": [
     {
       "nome": "8base",
@@ -217,6 +217,12 @@
     },
     {
       "nome": "blackx",
+      "rivendicazioni": 0,
+      "dati_gb": 0.0,
+      "anni_attivi": []
+    },
+    {
+      "nome": "booba project",
       "rivendicazioni": 0,
       "dati_gb": 0.0,
       "anni_attivi": []
@@ -1127,6 +1133,12 @@
       "anni_attivi": [
         2024
       ]
+    },
+    {
+      "nome": "settra",
+      "rivendicazioni": 0,
+      "dati_gb": 0.0,
+      "anni_attivi": []
     },
     {
       "nome": "shinyhunters",
