@@ -1576,6 +1576,7 @@ html.light .hm-btn { color: #7a82b0; }
   }
 
   #regioneFilter { order: 3; }
+#gruppoFilter { display: none; }
 #settoreFilter { order: 3; max-width: 190px; }
   #gruppoFilter { order: 2; }
   #searchInput, .search-wrap { order: 1; }
@@ -2511,6 +2512,7 @@ td:nth-child(7){
   }
   /* Dropdown gruppo e regione: metà larghezza ciascuno */
   #gruppoFilter, #regioneFilter, #settoreFilter {
+    display: block !important;
     flex: 1 !important;
     min-width: 0 !important;
     max-width: none !important;
@@ -3206,7 +3208,7 @@ td:nth-child(7){
     <input type="text" id="searchInput" placeholder="Cerca vittima, gruppo, regione…">
   </div>
   <select id="regioneFilter"><option value="">Tutte le regioni</option></select>
-  <select id="gruppoFilter" style="display:none !important;">  <option value="">Tutti i gruppi</option></select>
+  <select id="gruppoFilter">  <option value="">Tutti i gruppi</option></select>
   <select id="settoreFilter"><option value="">Tutti i settori</option></select>
   <span class="date-range-wrap"><input type="date" id="dateFrom" title="Data inizio" onchange="onDateChange()"><span class="date-sep">→</span><input type="date" id="dateTo" title="Data fine" onchange="onDateChange()"></span>
   <button id="toolbarResetBtn" onclick="resetToolbar()" style="display:none;font-size:13px;color:var(--blue);background:rgba(77,159,255,0.1);border:1px solid rgba(77,159,255,0.35);border-radius:6px;padding:8px 14px;cursor:pointer;letter-spacing:0.04em;white-space:nowrap;" title="Azzera ricerca e filtri tabella" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">✕ reset ricerca</button>
@@ -4081,7 +4083,6 @@ function switchTab(y, noURL) {
     document.getElementById('groupsView').style.display = 'block';
     // Hide filters not applicable to groups
     document.getElementById('regioneFilter').style.display = 'none';
-    document.getElementById('gruppoFilter').style.display = 'none';
     var sf = document.getElementById('settoreFilter'); if (sf) sf.style.display = 'none';
     var dr = document.querySelector('.date-range-wrap'); if (dr) dr.style.display = 'none';
     var vt = document.querySelector('.view-toggle'); if (vt) vt.style.display = 'none';
@@ -4094,7 +4095,6 @@ function switchTab(y, noURL) {
     // Restore normal view
     document.getElementById('groupsView').style.display = 'none';
     document.getElementById('regioneFilter').style.display = '';
-    document.getElementById('gruppoFilter').style.display = 'none';
     var sf = document.getElementById('settoreFilter'); if (sf) sf.style.display = '';
     var dr = document.querySelector('.date-range-wrap'); if (dr) dr.style.display = '';
     var vt = document.querySelector('.view-toggle'); if (vt) vt.style.display = 'none';
