@@ -2694,7 +2694,7 @@ td:nth-child(7){
 
 .kpi-strip-v2 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
 .kpi-card-v2 {
@@ -2734,6 +2734,7 @@ td:nth-child(7){
 .kpi-card-v2.kpi-red-v2 .kpi-val-v2 { color: var(--red); }
 
 .kpi-card-v2.kpi-yellow-v2 .kpi-val-v2 { color: #f0b429; }
+.kpi-card-v2.kpi-blue-v2 .kpi-val-v2 { color: #4d9fff; }
 
 
 /* Year strip v2 */
@@ -3060,6 +3061,10 @@ td:nth-child(7){
         <div class="kpi-card-v2 kpi-active-v2">
           <div class="kpi-label-v2">GRUPPI ATTIVI 2026</div>
           <div class="kpi-val-v2" id="statActiveGroups">—</div>
+        </div>
+        <div class="kpi-card-v2 kpi-blue-v2">
+          <div class="kpi-label-v2" id="statMonthLabel">RIVENDICAZIONI MESE</div>
+          <div class="kpi-val-v2" id="statMonth">—</div>
         </div>
         <div class="kpi-card-v2 kpi-red-v2">
           <div class="kpi-label-v2">RIVENDICAZIONI TOTALI</div>
@@ -5055,6 +5060,19 @@ function buildStats() {
   document.getElementById('statGb').textContent = fmt(gbTot);
   document.getElementById('statActiveGroups').textContent = activeGroups2026;
 
+  // Rivendicazioni mese corrente
+  const now = new Date();
+  const curMonth = now.getMonth() + 1; // 1-12
+  const curYear = now.getFullYear();
+  const mesiIT = ['','Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+  const monthCount = all.filter(r => {
+    if (!r.DATA) return false;
+    const p = r.DATA.split('/');
+    return parseInt(p[1],10) === curMonth && parseInt(p[2],10) === curYear;
+  }).length;
+  document.getElementById('statMonth').textContent = monthCount;
+  document.getElementById('statMonthLabel').textContent = 'RIVENDICAZIONI ' + mesiIT[curMonth].toUpperCase() + ' ' + curYear;
+
   // Tutti gli anni
   document.getElementById('stat2020').textContent = DATA_2020.length;
   document.getElementById('stat2020gb').textContent = fmt(gb20) + ' GB';
@@ -5238,7 +5256,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_333';
+    verEl.textContent = 'DS_STABILE_334';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
