@@ -3206,7 +3206,7 @@ td:nth-child(7){
     <input type="text" id="searchInput" placeholder="Cerca vittima, gruppo, regione…">
   </div>
   <select id="regioneFilter"><option value="">Tutte le regioni</option></select>
-  <select id="gruppoFilter">  <option value="">Tutti i gruppi</option></select>
+  <select id="gruppoFilter" style="display:none !important;">  <option value="">Tutti i gruppi</option></select>
   <select id="settoreFilter"><option value="">Tutti i settori</option></select>
   <span class="date-range-wrap"><input type="date" id="dateFrom" title="Data inizio" onchange="onDateChange()"><span class="date-sep">→</span><input type="date" id="dateTo" title="Data fine" onchange="onDateChange()"></span>
   <button id="toolbarResetBtn" onclick="resetToolbar()" style="display:none;font-size:13px;color:var(--blue);background:rgba(77,159,255,0.1);border:1px solid rgba(77,159,255,0.35);border-radius:6px;padding:8px 14px;cursor:pointer;letter-spacing:0.04em;white-space:nowrap;" title="Azzera ricerca e filtri tabella" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">✕ reset ricerca</button>
@@ -3222,6 +3222,7 @@ td:nth-child(7){
 
 <!-- TABS -->
 <div class="tabs">
+    <div class="tab" id="tabGruppi" onclick="switchTab('gruppi')" style="margin-right:auto;border-color:var(--text-muted);">☰ Catalogo Gruppi <span class="cnt" id="tabCntGruppi">0</span></div>
     <div class="tab active" id="tabAll"  onclick="switchTab(0)">Tutti <span class="cnt" id="tabCntAll">460</span></div>
   <div class="tab" id="tab2026" onclick="switchTab(2026)">2026 <span class="cnt" id="tabCnt2026">99</span></div>
   <div class="tab" id="tab2025" onclick="switchTab(2025)">2025 <span class="cnt" id="tabCnt2025">172</span></div>
@@ -3266,6 +3267,10 @@ td:nth-child(7){
   <div id="rss"></div>
   <div class="cards-grid" id="cardsGrid"></div>
   <div id="cardsPager" style="padding:20px 32px 4px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;"></div>
+</div>
+<div id="groupsView" style="display:none;padding:20px 32px 20px;">
+  <div class="cards-grid" id="groupsGrid"></div>
+  <div id="groupsPager" style="padding:20px 32px 4px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;"></div>
 </div>
 
 <!-- HEATMAP SECTION -->
@@ -4056,17 +4061,52 @@ function sort(k) {
 }
 
 function switchTab(y, noURL) {
-  year = y;
+  // Exit groups mode if switching to a year
+  if (y !== 'gruppi') {
+    groupsMode = false;
+    year = y;
+  } else {
+    groupsMode = true;
+  }
   currentPage = 1;
+  currentPageGroups = 1;
   document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
-  const activeTab = document.getElementById(y===0 ? 'tabAll' : 'tab'+y);
-  if (activeTab) activeTab.classList.add('active');
-  if (!noURL) updateURL();
-  render();
+
+  if (groupsMode) {
+    document.getElementById('tabGruppi').classList.add('active');
+    // Hide table/cards, show groups
+    document.getElementById('cardsView').style.display = 'none';
+    document.querySelector('.table-wrapper').style.display = 'none';
+    document.getElementById('tablePager').style.display = 'none';
+    document.getElementById('groupsView').style.display = 'block';
+    // Hide filters not applicable to groups
+    document.getElementById('regioneFilter').style.display = 'none';
+    document.getElementById('gruppoFilter').style.display = 'none';
+    var sf = document.getElementById('settoreFilter'); if (sf) sf.style.display = 'none';
+    var dr = document.querySelector('.date-range-wrap'); if (dr) dr.style.display = 'none';
+    var vt = document.querySelector('.view-toggle'); if (vt) vt.style.display = 'none';
+    var csvBtn = document.getElementById('exportCsvBtn'); if (csvBtn) csvBtn.style.display = 'none';
+    var jsonBtn = document.getElementById('exportJsonBtn'); if (jsonBtn) jsonBtn.style.display = 'none';
+    renderGroupCards();
+  } else {
+    const activeTab = document.getElementById(y===0 ? 'tabAll' : 'tab'+y);
+    if (activeTab) activeTab.classList.add('active');
+    // Restore normal view
+    document.getElementById('groupsView').style.display = 'none';
+    document.getElementById('regioneFilter').style.display = '';
+    document.getElementById('gruppoFilter').style.display = 'none';
+    var sf = document.getElementById('settoreFilter'); if (sf) sf.style.display = '';
+    var dr = document.querySelector('.date-range-wrap'); if (dr) dr.style.display = '';
+    var vt = document.querySelector('.view-toggle'); if (vt) vt.style.display = 'none';
+    var csvBtn = document.getElementById('exportCsvBtn'); if (csvBtn) csvBtn.style.display = '';
+    var jsonBtn = document.getElementById('exportJsonBtn'); if (jsonBtn) jsonBtn.style.display = '';
+    if (!noURL) updateURL();
+    render();
+  }
 }
 
 document.getElementById('searchInput').addEventListener('input', checkToolbarReset);
-document.getElementById('searchInput').addEventListener('input', () => { currentPage = 1; updateURL(); render(); });
+document.getElementById('searchInput').addEventListener('input', () => { currentPage = 1; currentPageGroups = 1; updateURL(); if (groupsMode) { renderGroupCards(); } else { render(); } });
 document.getElementById('regioneFilter').addEventListener('change', checkToolbarReset);
 document.getElementById('regioneFilter').addEventListener('change', () => { currentPage = 1; updateURL(); render(); });
 document.getElementById('gruppoFilter').addEventListener('change', checkToolbarReset);
@@ -4459,6 +4499,78 @@ function buildTop5Settori() {
   if (el) el.innerHTML = `<div style="display:flex;flex-direction:column;gap:10px;">${html}</div>` + legend;
 }
 buildTop5Settori();
+
+// ── Catalogo Gruppi: vista card ──────────────────────────
+let groupsMode = false;
+let currentPageGroups = 1;
+const PAGE_SIZE_GROUPS = 12;
+
+function buildGroupsData() {
+  const map = {};
+  const currentYear = new Date().getFullYear();
+  const cyGroups = new Set(
+    (DATASETS[currentYear] || []).map(r => String(r.GRUPPO || '').toLowerCase().trim()).filter(Boolean)
+  );
+  all.forEach(r => {
+    const g = String(r.GRUPPO || '').toLowerCase().trim();
+    if (!g) return;
+    if (!map[g]) map[g] = { name: g, count: 0, gb: 0, firstDate: null, lastDate: null, active: false };
+    map[g].count++;
+    const gb = parseFloat(r.DATI) || 0;
+    if (gb > 0) map[g].gb += gb;
+    const d = parseRecDate(r.DATA);
+    if (d) {
+      if (!map[g].firstDate || d < map[g].firstDate) map[g].firstDate = d;
+      if (!map[g].lastDate || d > map[g].lastDate) map[g].lastDate = d;
+    }
+  });
+  // Include ALL catalog groups (even with 0 claims)
+  OFFICIAL_GROUP_CATALOG.forEach(g => {
+    if (!map[g]) map[g] = { name: g, count: 0, gb: 0, firstDate: null, lastDate: null, active: false };
+    map[g].active = cyGroups.has(g);
+  });
+  return Object.values(map).sort((a, b) => a.name.localeCompare(b.name, 'it'));
+}
+
+function groupCardRow(g) {
+  const gs = groupStyle(g.name);
+  const firstYear = g.firstDate ? g.firstDate.getFullYear() : '—';
+  const gbStr = g.gb > 0 ? (function(n){ const pts = n.toFixed(2).split('.'); pts[0] = pts[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.'); return pts[0]+','+pts[1]+' GB'; })(g.gb) : '0';
+  const actDot = g.active ? '<span style="color:#00c896;margin-right:8px;font-size:24px;">●</span>' : '<span style="color:#e74c3c;margin-right:8px;font-size:24px;">●</span>';
+  return '<div class="rcard">'
+    + '<div class="rcard-top">' + actDot + '<span class="rcard-gruppo" style="' + gs + ';font-size:14px;padding:6px 14px;">' + g.name + '</span></div>'
+    + '<hr class="rcard-div">'
+    + '<div class="rcard-bottom"><div class="rcard-loc">'
+    + '<span class="rcard-row"><span class="rcard-sym">◎</span><span style="color:var(--text-muted)"> Prima rivendicazione:</span> <span class="v">' + firstYear + '</span></span>'
+    + '<span class="rcard-row"><span class="rcard-sym">◈</span><span style="color:var(--text-muted)"> Totale rivendicazioni:</span> <span class="v">' + g.count + '</span></span>'
+    + '<span class="rcard-row"><span class="rcard-sym">▣</span><span style="color:var(--text-muted)"> Dati pubblicati:</span> <span class="v">' + gbStr + '</span></span>'
+    + '</div></div></div>';
+}
+
+function renderGroupCards() {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  let groups = buildGroupsData();
+  if (q) groups = groups.filter(g => g.name.includes(q));
+  const total = groups.length;
+  const tp = Math.max(1, Math.ceil(total / PAGE_SIZE_GROUPS));
+  if (currentPageGroups > tp) currentPageGroups = tp;
+  const s = (currentPageGroups - 1) * PAGE_SIZE_GROUPS;
+
+  document.getElementById('groupsGrid').innerHTML = groups.slice(s, s + PAGE_SIZE_GROUPS).map(groupCardRow).join('');
+  document.getElementById('groupsPager').innerHTML = tp <= 1 ? '' : buildPagerHTML(currentPageGroups, tp, 'goGroupsPage');
+  document.getElementById('countNum').textContent = total;
+
+  // Update tab count
+  const cntEl = document.getElementById('tabCntGruppi');
+  if (cntEl) cntEl.textContent = buildGroupsData().length;
+}
+
+function goGroupsPage(p) {
+  currentPageGroups = p;
+  renderGroupCards();
+  if (window.innerWidth <= 480) { window.scrollTo({top:0,behavior:'smooth'}); }
+  else { const el = document.getElementById('groupsView'); if(el){ const top = el.getBoundingClientRect().top + window.scrollY - 130; window.scrollTo({top,behavior:'smooth'}); } }
+}
 
 function recomputeDashboard() {
   all = YEARS.slice().sort((a,b) => a-b).flatMap(y => DATASETS[y]);
@@ -4891,8 +5003,13 @@ function resetToolbar() {
   document.getElementById('dateTo').value = '';
   document.getElementById('toolbarResetBtn').style.display = 'none';
   currentPage = 1;
-  updateURL();
-  render();
+  currentPageGroups = 1;
+  if (groupsMode) {
+    renderGroupCards();
+  } else {
+    updateURL();
+    render();
+  }
 }
 
 function checkToolbarReset() {
@@ -4961,6 +5078,7 @@ function buildStats() {
   document.getElementById('tabCnt2024').textContent = DATA_2024.length;
   document.getElementById('tabCnt2025').textContent = DATA_2025.length;
   document.getElementById('tabCnt2026').textContent = DATA_2026.length;
+  document.getElementById('tabCntGruppi').textContent = OFFICIAL_GROUP_CATALOG.length;
 }
 
 function resetHmFilter() {
@@ -5119,7 +5237,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_330';
+    verEl.textContent = 'DS_STABILE_331';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
