@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-28T11:26:52.014790+00:00",
-  "total": 175,
+  "generated": "2026-06-28T16:05:00.377659+00:00",
+  "total": 122,
   "gruppi": [
     {
       "nome": "8base",
@@ -20,12 +20,6 @@
       "anni_attivi": [
         2024
       ]
-    },
-    {
-      "nome": "ailock",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "akira",
@@ -97,24 +91,6 @@
       ]
     },
     {
-      "nome": "atomsilo",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "audit",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "aur0ra",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "avaddon",
       "rivendicazioni": 2,
       "dati_gb": 0.0,
@@ -131,24 +107,12 @@
       ]
     },
     {
-      "nome": "bashe",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "beast",
       "rivendicazioni": 1,
       "dati_gb": 0.0,
       "anni_attivi": [
         2025
       ]
-    },
-    {
-      "nome": "benzona",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "bianlian",
@@ -195,12 +159,6 @@
       ]
     },
     {
-      "nome": "blackshrantac",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "blacksuit",
       "rivendicazioni": 3,
       "dati_gb": 1377.0,
@@ -208,42 +166,6 @@
         2023,
         2024
       ]
-    },
-    {
-      "nome": "blackwater",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "blackx",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "booba project",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "bqtlock",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "braincipher",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "bravox",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "brotherhood",
@@ -288,12 +210,6 @@
       ]
     },
     {
-      "nome": "cipherforce",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "cl0p",
       "rivendicazioni": 5,
       "dati_gb": 860.6,
@@ -319,12 +235,6 @@
         2022,
         2023
       ]
-    },
-    {
-      "nome": "cmd organization",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "coinbasecartel",
@@ -451,12 +361,6 @@
       ]
     },
     {
-      "nome": "embargo",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "everest",
       "rivendicazioni": 17,
       "dati_gb": 1044.33,
@@ -469,24 +373,12 @@
       ]
     },
     {
-      "nome": "exitium",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "fog",
       "rivendicazioni": 5,
       "dati_gb": 125.5,
       "anni_attivi": [
         2025
       ]
-    },
-    {
-      "nome": "genesis",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "global",
@@ -531,12 +423,6 @@
       ]
     },
     {
-      "nome": "icarus",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "imncrew",
       "rivendicazioni": 2,
       "dati_gb": 192.9,
@@ -555,12 +441,6 @@
       ]
     },
     {
-      "nome": "insomnia",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "interlock",
       "rivendicazioni": 1,
       "dati_gb": 710.0,
@@ -577,12 +457,6 @@
       ]
     },
     {
-      "nome": "kairos",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "karakurt",
       "rivendicazioni": 1,
       "dati_gb": 0.0,
@@ -591,24 +465,12 @@
       ]
     },
     {
-      "nome": "kazu",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "killsec",
       "rivendicazioni": 2,
       "dati_gb": 0.0,
       "anni_attivi": [
         2025
       ]
-    },
-    {
-      "nome": "kittykatkrew",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "knight",
@@ -627,42 +489,12 @@
       ]
     },
     {
-      "nome": "krybit",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "kryptos",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "kyber",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "lamashtu",
       "rivendicazioni": 5,
       "dati_gb": 200.0,
       "anni_attivi": [
         2026
       ]
-    },
-    {
-      "nome": "leakeddata",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "linkc",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "lockbit2",
@@ -692,12 +524,6 @@
         2025,
         2026
       ]
-    },
-    {
-      "nome": "loki",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "losttrust",
@@ -785,12 +611,6 @@
       ]
     },
     {
-      "nome": "meduza locker",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "meow",
       "rivendicazioni": 5,
       "dati_gb": 112.0,
@@ -805,18 +625,6 @@
       "anni_attivi": [
         2023
       ]
-    },
-    {
-      "nome": "minteye",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "mnt6",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "moneymessage",
@@ -858,12 +666,6 @@
       "anni_attivi": [
         2024
       ]
-    },
-    {
-      "nome": "nasir security",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "netrunner",
@@ -908,24 +710,12 @@
       ]
     },
     {
-      "nome": "obscura",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "orca",
       "rivendicazioni": 1,
       "dati_gb": 253.0,
       "anni_attivi": [
         2025
       ]
-    },
-    {
-      "nome": "osiris",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "payload",
@@ -945,24 +735,12 @@
       ]
     },
     {
-      "nome": "pear",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "play",
       "rivendicazioni": 5,
       "dati_gb": 0.0,
       "anni_attivi": [
         2023
       ]
-    },
-    {
-      "nome": "prinz eugen",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "pysa",
@@ -989,12 +767,6 @@
       "anni_attivi": [
         2022
       ]
-    },
-    {
-      "nome": "radar",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "ragnarlocker",
@@ -1060,18 +832,6 @@
       ]
     },
     {
-      "nome": "redact",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "reynolds",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "rhysida",
       "rivendicazioni": 11,
       "dati_gb": 2712.0,
@@ -1127,12 +887,6 @@
       ]
     },
     {
-      "nome": "secp0",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "sensayq",
       "rivendicazioni": 1,
       "dati_gb": 200.0,
@@ -1141,36 +895,12 @@
       ]
     },
     {
-      "nome": "settra",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "shinyhunters",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "sicari knife",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "sinobi",
       "rivendicazioni": 3,
       "dati_gb": 7.5,
       "anni_attivi": [
         2025
       ]
-    },
-    {
-      "nome": "skira",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "snatch",
@@ -1200,12 +930,6 @@
       ]
     },
     {
-      "nome": "spycorporate",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "stormous",
       "rivendicazioni": 9,
       "dati_gb": 204.0,
@@ -1224,12 +948,6 @@
       ]
     },
     {
-      "nome": "termite",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "thegentlemen",
       "rivendicazioni": 17,
       "dati_gb": 2000.0,
@@ -1237,12 +955,6 @@
         2025,
         2026
       ]
-    },
-    {
-      "nome": "thegreenblood",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "threeam",
@@ -1253,24 +965,12 @@
       ]
     },
     {
-      "nome": "timc",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "titan",
       "rivendicazioni": 1,
       "dati_gb": 29.8,
       "anni_attivi": [
         2026
       ]
-    },
-    {
-      "nome": "tridentlocker",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     },
     {
       "nome": "trigona",
@@ -1315,18 +1015,6 @@
       ]
     },
     {
-      "nome": "wallstreet",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
-      "nome": "walocker",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
-    },
-    {
       "nome": "warlock",
       "rivendicazioni": 1,
       "dati_gb": 0.0,
@@ -1357,12 +1045,6 @@
       "anni_attivi": [
         2021
       ]
-    },
-    {
-      "nome": "xp95",
-      "rivendicazioni": 0,
-      "dati_gb": 0.0,
-      "anni_attivi": []
     }
   ]
 }
