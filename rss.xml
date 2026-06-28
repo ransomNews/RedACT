@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sun, 28 Jun 2026 10:08:14 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 11:06:26 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>CNA Toscana Centro</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00462 | Gruppo: deadlock | Data: 28/06/2026 | Provincia: Prato | Regione: Toscana | Zona: Centro | Dati pubblicati: GB 0</description>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00462</guid>
+      <category>deadlock</category>
+    </item>
     <item>
       <title>Meccanica GN S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00447 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00447</guid>
-      <category>deadlock</category>
-    </item>
-    <item>
-      <title>L'Operosa S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00448 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00448</guid>
       <category>deadlock</category>
     </item>
   </channel>

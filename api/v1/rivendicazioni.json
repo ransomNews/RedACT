@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-28T10:08:14.073382+00:00",
-  "total": 786,
+  "generated": "2026-06-28T11:06:26.452025+00:00",
+  "total": 787,
   "records": [
     {
       "id": "00001",
@@ -9434,6 +9434,18 @@
       "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": "Brand di Maglificio Liliana di Lorenzoni Andrea & C. S.N.C."
+    },
+    {
+      "id": "00462",
+      "data": "28/06/2026",
+      "anno": 2026,
+      "vittima": "CNA Toscana Centro",
+      "gruppo": "deadlock",
+      "link": "toscanacentro.cna.it",
+      "provincia": "Prato",
+      "regione": "Toscana",
+      "dati_gb": 0.0,
+      "note": ""
     }
   ]
 }
