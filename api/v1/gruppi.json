@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-28T09:48:00.088822+00:00",
-  "total": 174,
+  "generated": "2026-06-28T10:08:14.073382+00:00",
+  "total": 175,
   "gruppi": [
     {
       "nome": "8base",
@@ -1058,6 +1058,12 @@
       "anni_attivi": [
         2024
       ]
+    },
+    {
+      "nome": "redact",
+      "rivendicazioni": 0,
+      "dati_gb": 0.0,
+      "anni_attivi": []
     },
     {
       "nome": "reynolds",
