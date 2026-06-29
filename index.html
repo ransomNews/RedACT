@@ -3800,6 +3800,40 @@ function fmtNC(n) {
   return n;
 }
 
+// ── Nazionalità presunta gruppi ransomware ──────────
+const GROUP_NATIONALITIES = {
+  "akira": "Russia",
+  "alp-001": "Sconosciuta",
+  "anubis": "Sconosciuta",
+  "brotherhood": "Sconosciuta",
+  "cl0p": "Russia",
+  "coinbasecartel": "Sconosciuta",
+  "cry0": "Sconosciuta",
+  "deadlock": "Sconosciuta",
+  "dragonforce": "Malaysia",
+  "everest": "Russia",
+  "incransom": "Sconosciuta",
+  "lamashtu": "Sconosciuta",
+  "lockbit5": "Russia",
+  "m3rx": "Sconosciuta",
+  "medusa": "Russia",
+  "medusalocker": "Russia",
+  "netrunner": "Sconosciuta",
+  "nightspire": "Sconosciuta",
+  "nova": "Sconosciuta",
+  "payload": "Sconosciuta",
+  "payoutsking": "Sconosciuta",
+  "qilin": "Russia",
+  "safepay": "Sconosciuta",
+  "sarcoma": "Sconosciuta",
+  "spacebears": "Sconosciuta",
+  "stormous": "Paesi arabi",
+  "tengu": "Sconosciuta",
+  "thegentlemen": "Russia",
+  "titan": "Sconosciuta",
+  "vect": "Sconosciuta"
+};
+
 function settoreLabel(code) {
   if (!code) return '—';
   const found = ATECO_CATALOG.find(x => x.code === code);
@@ -4489,6 +4523,7 @@ function groupCardRow(g) {
     + '<div class="rcard-top">' + actDot + '<span class="rcard-gruppo" style="' + gs + ';font-size:14px;padding:6px 14px;">' + g.name + '</span></div>'
     + '<hr class="rcard-div">'
     + '<div class="rcard-bottom"><div class="rcard-loc">'
+    + '<span class="rcard-row"><span class="rcard-sym">⚑</span><span style="color:var(--text-muted)"> Nazionalità presunta:</span> <span class="v">' + (GROUP_NATIONALITIES[g.name] || 'Sconosciuta') + '</span></span>'
     + '<span class="rcard-row"><span class="rcard-sym">◎</span><span style="color:var(--text-muted)"> Prima rivendicazione:</span> <span class="v">' + firstYear + '</span></span>'
     + '<span class="rcard-row"><span class="rcard-sym">◈</span><span style="color:var(--text-muted)"> Totale rivendicazioni:</span> <span class="v">' + g.count + '</span></span>'
     + '<span class="rcard-row"><span class="rcard-sym">▣</span><span style="color:var(--text-muted)"> Dati pubblicati:</span> <span class="v">' + gbStr + '</span></span>'
@@ -5198,7 +5233,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_336';
+    verEl.textContent = 'TEST_NAZ_337';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
