@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Tue, 30 Jun 2026 14:48:06 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 17:16:14 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -20,6 +20,14 @@
       <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00463</guid>
       <category>incransom</category>
+    </item>
+    <item>
+      <title>Naturghiaccio S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00464 | Gruppo: thegentlemen | Data: 30/06/2026 | Provincia: Cagliari | Regione: Sardegna | Zona: Isole | Dati pubblicati: GB 0</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00464</guid>
+      <category>thegentlemen</category>
     </item>
     <item>
       <title>CNA Toscana Centro</title>
@@ -163,14 +171,6 @@
       <description>ID: 00445 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Torino | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00445</guid>
-      <category>deadlock</category>
-    </item>
-    <item>
-      <title>F.lli Zaffrani S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00446 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Macerata | Regione: Marche | Zona: Centro | Dati pubblicati: GB 0</description>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00446</guid>
       <category>deadlock</category>
     </item>
   </channel>

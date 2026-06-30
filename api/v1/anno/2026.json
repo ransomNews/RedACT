@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-30T14:48:06.858418+00:00",
+  "generated": "2026-06-30T17:16:14.061643+00:00",
   "anno": 2026,
-  "total": 147,
+  "total": 148,
   "records": [
     {
       "id": "00317",
@@ -1618,6 +1618,17 @@
       "link": "sza.it",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00464",
+      "data": "30/06/2026",
+      "vittima": "Naturghiaccio S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "naturghiaccio.it",
+      "provincia": "Cagliari",
+      "regione": "Sardegna",
       "dati_gb": 0.0,
       "note": ""
     }
