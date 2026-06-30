@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Mon, 29 Jun 2026 15:45:09 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 14:48:06 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>SZA Studio Legale</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00463 | Gruppo: incransom | Data: 30/06/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00463</guid>
+      <category>incransom</category>
+    </item>
     <item>
       <title>CNA Toscana Centro</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00446 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Macerata | Regione: Marche | Zona: Centro | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00446</guid>
-      <category>deadlock</category>
-    </item>
-    <item>
-      <title>Industrie Tecnologiche S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00447 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00447</guid>
       <category>deadlock</category>
     </item>
   </channel>

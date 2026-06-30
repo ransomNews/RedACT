@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-06-29T15:45:09.342748+00:00",
-  "total": 787,
+  "generated": "2026-06-30T14:48:06.858418+00:00",
+  "total": 788,
   "records": [
     {
       "id": "00001",
@@ -9444,6 +9444,18 @@
       "link": "toscanacentro.cna.it",
       "provincia": "Prato",
       "regione": "Toscana",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00463",
+      "data": "30/06/2026",
+      "anno": 2026,
+      "vittima": "SZA Studio Legale",
+      "gruppo": "incransom",
+      "link": "sza.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
