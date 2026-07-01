@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-01T08:23:37.382885+00:00",
+  "generated": "2026-07-01T14:45:57.092685+00:00",
   "total": 122,
   "gruppi": [
     {
@@ -1032,10 +1032,11 @@
     },
     {
       "nome": "worldleaks",
-      "rivendicazioni": 2,
+      "rivendicazioni": 3,
       "dati_gb": 2958.4,
       "anni_attivi": [
-        2025
+        2025,
+        2026
       ]
     },
     {

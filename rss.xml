@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 01 Jul 2026 08:23:37 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 14:45:57 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Starpool S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00465 | Gruppo: worldleaks | Data: 01/07/2026 | Provincia: Trento | Regione: Trentino Alto Adige | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00465</guid>
+      <category>worldleaks</category>
+    </item>
     <item>
       <title>SZA Studio Legale</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00444 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Cuneo | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0 | Nota: Con Nippon Express Italia S.P.A.</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00444</guid>
-      <category>deadlock</category>
-    </item>
-    <item>
-      <title>WiBeats S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00445 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Torino | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00445</guid>
       <category>deadlock</category>
     </item>
   </channel>

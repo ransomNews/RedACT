@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-01T08:23:37.382885+00:00",
+  "generated": "2026-07-01T14:45:57.092685+00:00",
   "anno": 2026,
-  "total": 148,
+  "total": 149,
   "records": [
     {
       "id": "00317",
@@ -1629,6 +1629,17 @@
       "link": "naturghiaccio.it",
       "provincia": "Cagliari",
       "regione": "Sardegna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00465",
+      "data": "01/07/2026",
+      "vittima": "Starpool S.R.L.",
+      "gruppo": "worldleaks",
+      "link": "starpool.com",
+      "provincia": "Trento",
+      "regione": "Trentino Alto Adige",
       "dati_gb": 0.0,
       "note": ""
     }
