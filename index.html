@@ -1195,14 +1195,18 @@ html.light .footer-logo img {
   border-bottom: 1px solid var(--border);
   text-align: center;
   background: var(--surface2);
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 .heatmap-table th.hm-row-label {
   text-align: left;
   min-width: 150px;
   position: sticky;
   left: 0;
+  top: 0;
   background: var(--surface2);
-  z-index: 2;
+  z-index: 4;
   border-right: 1px solid var(--border);
 }
 .heatmap-table tr:last-child td { border-bottom: none; }
@@ -4773,6 +4777,21 @@ function buildHeatmap() {
   });
 
   // Sort rows by total desc o alfabetico
+  // Include all ATECO sectors even with zero claims
+  if (hmMode === 'settore') {
+    ATECO_CATALOG.forEach(function(cat) {
+      if (!counts[cat.code]) counts[cat.code] = {};
+    });
+  }
+  // Include all Italian regions even with zero claims
+  if (hmMode === 'regione') {
+    ["Valle d'Aosta","Piemonte","Liguria","Lombardia","Trentino Alto Adige",
+     "Veneto","Friuli Venezia Giulia","Emilia Romagna","Toscana","Umbria",
+     "Marche","Lazio","Abruzzo","Molise","Campania","Puglia","Basilicata",
+     "Calabria","Sicilia","Sardegna"].forEach(function(r) {
+      if (!counts[r]) counts[r] = {};
+    });
+  }
   // Per il settore l'ordine predefinito è alfabetico (codice ATECO A→V);
   // hmSortAlpha permette comunque il toggle manuale per tutte le modalità che lo supportano.
   const useAlphaSort = hmMode === 'settore' ? !hmSortAlpha : hmSortAlpha;
@@ -4856,16 +4875,34 @@ function buildHeatmap() {
   // Render heatmap pager
   const pagerEl = document.getElementById('hmPager');
   if (pagerEl) pagerEl.innerHTML = buildPagerHTML(hmPage, totalHmPages, 'goHmPage');
+
+  // Dynamic scroll: internal scroll only for groups, CSS defaults for regions/sectors
+  var hmWrap = document.querySelector('.heatmap-wrap');
+  if (hmWrap) {
+    if (hmMode === 'gruppo') {
+      hmWrap.style.maxHeight = '450px';
+      hmWrap.style.overflow = 'auto';
+      hmWrap.style.overscrollBehavior = 'none';
+    } else {
+      hmWrap.style.maxHeight = '';
+      hmWrap.style.overflow = '';
+      hmWrap.style.overscrollBehavior = '';
+    }
+  }
 }
 
 function goHmPage(p) {
   hmPage = p;
   buildHeatmap();
   buildTrendChart();
-  const hmEl = document.getElementById('heatmapTable');
-  if (hmEl) {
-    const top = hmEl.getBoundingClientRect().top + window.scrollY - 175;
-    window.scrollTo({ top, behavior: 'smooth' });
+  // Reset internal scroll to top
+  var wrap = document.querySelector('.heatmap-wrap');
+  if (wrap) wrap.scrollTop = 0;
+  // Scroll page to show heatmap section title
+  var sect = document.querySelector('.heatmap-section');
+  if (sect) {
+    var top = sect.getBoundingClientRect().top + window.scrollY - 60;
+    window.scrollTo({ top: top, behavior: 'smooth' });
   }
 }
 
@@ -4877,6 +4914,8 @@ function switchHeatmap(mode) {
   document.getElementById('hmBtnSettore').classList.toggle('active', mode === 'settore');
   buildHeatmap();
   buildTrendChart();
+  var wrap = document.querySelector('.heatmap-wrap');
+  if (wrap) wrap.scrollTop = 0;
 }
 
 buildHeatmap();
@@ -5325,7 +5364,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_339';
+    verEl.textContent = 'DS_STABILE_340';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
@@ -5416,6 +5455,19 @@ document.addEventListener('DOMContentLoaded', updateFooterMeta);
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
 
   window.openCardModal = openCardModal;
+})();
+
+// Heatmap scroll trap: prevent scroll from leaking to page
+(function(){
+  var wrap = document.querySelector('.heatmap-wrap');
+  if (!wrap) return;
+  wrap.addEventListener('wheel', function(e) {
+    var top = this.scrollTop;
+    var maxScroll = this.scrollHeight - this.clientHeight;
+    if (maxScroll <= 0) return; // no internal scroll, let page scroll
+    if (e.deltaY < 0 && top <= 0) { e.preventDefault(); }
+    if (e.deltaY > 0 && top >= maxScroll) { e.preventDefault(); }
+  }, { passive: false });
 })();
 </script>
 
