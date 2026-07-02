@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 02 Jul 2026 03:38:26 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 17:03:38 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Flazio S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00466 | Gruppo: apt73/bashe | Data: 02/07/2026 | Provincia: Catania | Regione: Sicilia | Zona: Isole | Dati pubblicati: GB 0</description>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00466</guid>
+      <category>apt73/bashe</category>
+    </item>
     <item>
       <title>Starpool S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00443 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Firenze | Regione: Toscana | Zona: Centro | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00443</guid>
-      <category>deadlock</category>
-    </item>
-    <item>
-      <title>Nuova Traconf S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00444 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Cuneo | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0 | Nota: Con Nippon Express Italia S.P.A.</description>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00444</guid>
       <category>deadlock</category>
     </item>
   </channel>

@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-02T03:38:26.131884+00:00",
+  "generated": "2026-07-02T17:03:38.086852+00:00",
   "total": 122,
   "gruppi": [
     {
@@ -59,10 +59,11 @@
     },
     {
       "nome": "apt73/bashe",
-      "rivendicazioni": 1,
+      "rivendicazioni": 2,
       "dati_gb": 1000.0,
       "anni_attivi": [
-        2024
+        2024,
+        2026
       ]
     },
     {

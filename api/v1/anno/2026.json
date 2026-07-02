@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-02T03:38:26.131884+00:00",
+  "generated": "2026-07-02T17:03:38.086852+00:00",
   "anno": 2026,
-  "total": 149,
+  "total": 150,
   "records": [
     {
       "id": "00317",
@@ -1640,6 +1640,17 @@
       "link": "starpool.com",
       "provincia": "Trento",
       "regione": "Trentino Alto Adige",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00466",
+      "data": "02/07/2026",
+      "vittima": "Flazio S.R.L.",
+      "gruppo": "apt73/bashe",
+      "link": "flazio.com",
+      "provincia": "Catania",
+      "regione": "Sicilia",
       "dati_gb": 0.0,
       "note": ""
     }
