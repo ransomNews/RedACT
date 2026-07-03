@@ -1,10 +1,10 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-02T17:03:38.086852+00:00",
+  "generated": "2026-07-03T14:17:42.946484+00:00",
   "totali": {
     "rivendicazioni": 791,
     "gruppi_a_catalogo": 122,
-    "dati_gb": 70082.54
+    "dati_gb": 75482.54
   },
   "per_anno": {
     "2020": {
@@ -39,7 +39,7 @@
     },
     "2026": {
       "rivendicazioni": 150,
-      "dati_gb": 13200.22,
+      "dati_gb": 18600.22,
       "gruppi_attivi": 32
     }
   },
@@ -71,6 +71,10 @@
       "dati_gb": 10737.0
     },
     {
+      "gruppo": "worldleaks",
+      "dati_gb": 8358.4
+    },
+    {
       "gruppo": "ransomhub",
       "dati_gb": 5348.56
     },
@@ -81,10 +85,6 @@
     {
       "gruppo": "payoutsking",
       "dati_gb": 4114.0
-    },
-    {
-      "gruppo": "dragonforce",
-      "dati_gb": 3881.77
     }
   ],
   "top5_regioni": [
