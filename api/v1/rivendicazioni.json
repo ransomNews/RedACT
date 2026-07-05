@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-04T05:23:00.089955+00:00",
-  "total": 791,
+  "generated": "2026-07-05T15:09:07.540834+00:00",
+  "total": 792,
   "records": [
     {
       "id": "00001",
@@ -9492,6 +9492,18 @@
       "link": "flazio.com",
       "provincia": "Catania",
       "regione": "Sicilia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00467",
+      "data": "05/07/2026",
+      "anno": 2026,
+      "vittima": "Vela Film S.R.L.",
+      "gruppo": "payload",
+      "link": "velafilm.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
       "dati_gb": 0.0,
       "note": ""
     }

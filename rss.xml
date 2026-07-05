@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sat, 04 Jul 2026 05:23:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 15:09:07 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Vela Film S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00467 | Gruppo: payload | Data: 05/07/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00467</guid>
+      <category>payload</category>
+    </item>
     <item>
       <title>Flazio S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00442 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Prato | Regione: Toscana | Zona: Centro | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00442</guid>
-      <category>deadlock</category>
-    </item>
-    <item>
-      <title>Nippon Express Italia S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00443 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Firenze | Regione: Toscana | Zona: Centro | Dati pubblicati: GB 0</description>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00443</guid>
       <category>deadlock</category>
     </item>
   </channel>

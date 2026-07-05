@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-04T05:23:00.089955+00:00",
+  "generated": "2026-07-05T15:09:07.540834+00:00",
   "total": 122,
   "gruppi": [
     {
@@ -720,7 +720,7 @@
     },
     {
       "nome": "payload",
-      "rivendicazioni": 1,
+      "rivendicazioni": 2,
       "dati_gb": 27.6,
       "anni_attivi": [
         2026
