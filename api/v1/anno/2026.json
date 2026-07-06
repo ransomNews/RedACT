@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-05T15:21:57.523297+00:00",
+  "generated": "2026-07-06T17:13:34.538153+00:00",
   "anno": 2026,
-  "total": 151,
+  "total": 152,
   "records": [
     {
       "id": "00317",
@@ -1662,6 +1662,17 @@
       "link": "velafilmsrl.com",
       "provincia": "Roma",
       "regione": "Lazio",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00468",
+      "data": "06/07/2026",
+      "vittima": "C****p",
+      "gruppo": "payoutsking",
+      "link": "c****.com",
+      "provincia": "Sconosciuta",
+      "regione": "Sconosciuta",
       "dati_gb": 0.0,
       "note": ""
     }
