@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Mon, 06 Jul 2026 17:13:34 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 08:41:09 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Matrix Consulting Group S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00469 | Gruppo: safepay | Data: 07/07/2026 | Provincia: Napoli | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00469</guid>
+      <category>safepay</category>
+    </item>
     <item>
       <title>C****p</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00440 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00440</guid>
-      <category>deadlock</category>
-    </item>
-    <item>
-      <title>Bridgeport S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00441 | Gruppo: deadlock | Data: 12/06/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00441</guid>
       <category>deadlock</category>
     </item>
   </channel>

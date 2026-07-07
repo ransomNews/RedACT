@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-06T17:13:34.538153+00:00",
+  "generated": "2026-07-07T08:41:09.006266+00:00",
   "anno": 2026,
-  "total": 152,
+  "total": 153,
   "records": [
     {
       "id": "00317",
@@ -1673,6 +1673,17 @@
       "link": "c****.com",
       "provincia": "Sconosciuta",
       "regione": "Sconosciuta",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00469",
+      "data": "07/07/2026",
+      "vittima": "Matrix Consulting Group S.R.L.",
+      "gruppo": "safepay",
+      "link": "matrixdigitalfactory.com",
+      "provincia": "Napoli",
+      "regione": "Campania",
       "dati_gb": 0.0,
       "note": ""
     }
