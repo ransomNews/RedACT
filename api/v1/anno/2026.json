@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-07T08:41:09.006266+00:00",
+  "generated": "2026-07-07T09:47:03.108182+00:00",
   "anno": 2026,
-  "total": 153,
+  "total": 154,
   "records": [
     {
       "id": "00317",
@@ -1684,6 +1684,17 @@
       "link": "matrixdigitalfactory.com",
       "provincia": "Napoli",
       "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00470",
+      "data": "07/07/2026",
+      "vittima": "Studio Sardano Rag. Vincenzo",
+      "gruppo": "ailock",
+      "link": "studiosardano-riccione.com",
+      "provincia": "Rimini",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }
