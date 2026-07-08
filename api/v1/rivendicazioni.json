@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-07T09:47:03.108182+00:00",
-  "total": 795,
+  "generated": "2026-07-08T06:52:52.622985+00:00",
+  "total": 796,
   "records": [
     {
       "id": "00001",
@@ -9540,6 +9540,18 @@
       "link": "studiosardano-riccione.com",
       "provincia": "Rimini",
       "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00471",
+      "data": "08/07/2026",
+      "anno": 2026,
+      "vittima": "BiesSse Tape Solutions S.P.A.",
+      "gruppo": "spacebears",
+      "link": "biessseworld.com",
+      "provincia": "Milano",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
