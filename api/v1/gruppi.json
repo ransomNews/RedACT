@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-08T06:52:52.622985+00:00",
-  "total": 123,
+  "generated": "2026-07-09T04:28:36.154720+00:00",
+  "total": 124,
   "gruppi": [
     {
       "nome": "8base",
@@ -261,6 +261,12 @@
         2021,
         2022
       ]
+    },
+    {
+      "nome": "crpxo",
+      "rivendicazioni": 0,
+      "dati_gb": 0.0,
+      "anni_attivi": []
     },
     {
       "nome": "cry0",
