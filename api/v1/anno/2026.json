@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-09T04:28:36.154720+00:00",
+  "generated": "2026-07-10T04:32:55.989098+00:00",
   "anno": 2026,
-  "total": 155,
+  "total": 156,
   "records": [
     {
       "id": "00317",
@@ -1706,6 +1706,17 @@
       "link": "biessseworld.com",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00472",
+      "data": "10/07/2026",
+      "vittima": "Vicenzi S.P.A.",
+      "gruppo": "thegentlemen",
+      "link": "vicenzi.it",
+      "provincia": "Verona",
+      "regione": "Veneto",
       "dati_gb": 0.0,
       "note": ""
     }
