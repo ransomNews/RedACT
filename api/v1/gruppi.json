@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-10T04:32:55.989098+00:00",
+  "generated": "2026-07-10T10:08:53.638228+00:00",
   "total": 124,
   "gruppi": [
     {
@@ -68,7 +68,7 @@
     {
       "nome": "apt73/bashe",
       "rivendicazioni": 2,
-      "dati_gb": 1000.0,
+      "dati_gb": 1001.0,
       "anni_attivi": [
         2024,
         2026
@@ -876,7 +876,7 @@
     {
       "nome": "safepay",
       "rivendicazioni": 15,
-      "dati_gb": 2377.19,
+      "dati_gb": 2406.67,
       "anni_attivi": [
         2024,
         2025,
