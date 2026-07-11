@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-10T10:08:53.638228+00:00",
+  "generated": "2026-07-11T15:02:44.903497+00:00",
   "anno": 2026,
-  "total": 156,
+  "total": 157,
   "records": [
     {
       "id": "00317",
@@ -1717,6 +1717,17 @@
       "link": "vicenzi.it",
       "provincia": "Verona",
       "regione": "Veneto",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00473",
+      "data": "11/07/2026",
+      "vittima": "Retelit S.P.A.",
+      "gruppo": "qilin",
+      "link": "retelit.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
