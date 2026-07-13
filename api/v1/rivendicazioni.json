@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-13T08:12:26.095923+00:00",
+  "generated": "2026-07-13T16:26:42.528095+00:00",
   "total": 799,
   "records": [
     {
@@ -9508,18 +9508,6 @@
       "note": ""
     },
     {
-      "id": "00468",
-      "data": "06/07/2026",
-      "anno": 2026,
-      "vittima": "C****p",
-      "gruppo": "payoutsking",
-      "link": "c****.com",
-      "provincia": "Sconosciuta",
-      "regione": "Sconosciuta",
-      "dati_gb": 0.0,
-      "note": ""
-    },
-    {
       "id": "00469",
       "data": "07/07/2026",
       "anno": 2026,
@@ -9590,6 +9578,18 @@
       "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
+    },
+    {
+      "id": "00475",
+      "data": "13/07/2026",
+      "anno": 2026,
+      "vittima": "Casta Diva Group S.P.A.",
+      "gruppo": "payoutsking",
+      "link": "castadivagroup.com",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": "Completa di C****p | c****.com | del 06/07/2026"
     }
   ]
 }

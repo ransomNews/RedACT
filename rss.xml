@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Mon, 13 Jul 2026 08:12:26 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 16:26:42 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -20,6 +20,14 @@
       <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00474</guid>
       <category>lockbit5</category>
+    </item>
+    <item>
+      <title>Casta Diva Group S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00475 | Gruppo: payoutsking | Data: 13/07/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0 | Nota: Completa di C****p | c****.com | del 06/07/2026</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00475</guid>
+      <category>payoutsking</category>
     </item>
     <item>
       <title>Retelit S.P.A.</title>
@@ -60,14 +68,6 @@
       <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00470</guid>
       <category>ailock</category>
-    </item>
-    <item>
-      <title>C****p</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00468 | Gruppo: payoutsking | Data: 06/07/2026 | Provincia: Sconosciuta | Regione: Sconosciuta | Zona: --- | Dati pubblicati: GB 0</description>
-      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00468</guid>
-      <category>payoutsking</category>
     </item>
     <item>
       <title>Vela Film S.R.L.</title>
