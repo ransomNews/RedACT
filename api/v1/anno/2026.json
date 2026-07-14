@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-13T16:26:42.528095+00:00",
+  "generated": "2026-07-14T14:33:54.980579+00:00",
   "anno": 2026,
-  "total": 158,
+  "total": 159,
   "records": [
     {
       "id": "00317",
@@ -1741,6 +1741,17 @@
       "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": "Completa di C****p | c****.com | del 06/07/2026"
+    },
+    {
+      "id": "00476",
+      "data": "14/07/2026",
+      "vittima": "SITAV Società Italiana Treni Alta Velocità S.P.A.",
+      "gruppo": "dragonforce",
+      "link": "sitav.eu",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
     }
   ]
 }
