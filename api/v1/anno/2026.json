@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-15T16:05:48.099790+00:00",
+  "generated": "2026-07-18T13:41:49.966079+00:00",
   "anno": 2026,
-  "total": 159,
+  "total": 160,
   "records": [
     {
       "id": "00317",
@@ -1750,6 +1750,17 @@
       "link": "sitav.eu",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00477",
+      "data": "18/07/2026",
+      "vittima": "Sicc S.R.L.",
+      "gruppo": "qilin",
+      "link": "sicc-srl.com",
+      "provincia": "Padova",
+      "regione": "Veneto",
       "dati_gb": 0.0,
       "note": ""
     }
