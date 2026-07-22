@@ -1,10 +1,10 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-21T11:01:50.678628+00:00",
+  "generated": "2026-07-22T03:41:24.664686+00:00",
   "totali": {
     "rivendicazioni": 801,
     "gruppi_a_catalogo": 123,
-    "dati_gb": 75718.02
+    "dati_gb": 77718.02
   },
   "per_anno": {
     "2020": {
@@ -39,7 +39,7 @@
     },
     "2026": {
       "rivendicazioni": 160,
-      "dati_gb": 18835.7,
+      "dati_gb": 20835.7,
       "gruppi_attivi": 33
     }
   },
@@ -75,16 +75,16 @@
       "dati_gb": 8358.4
     },
     {
+      "gruppo": "payoutsking",
+      "dati_gb": 6114.0
+    },
+    {
       "gruppo": "ransomhub",
       "dati_gb": 5348.56
     },
     {
       "gruppo": "hunters",
       "dati_gb": 5294.7
-    },
-    {
-      "gruppo": "payoutsking",
-      "dati_gb": 4114.0
     }
   ],
   "top5_regioni": [
