@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 22 Jul 2026 03:41:24 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 08:29:47 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -24,7 +24,7 @@
     <item>
       <title>SITAV Società Italiana Treni Alta Velocità S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00476 | Gruppo: dragonforce | Data: 14/07/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <description>ID: 00476 | Gruppo: dragonforce | Data: 14/07/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 410,00</description>
       <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00476</guid>
       <category>dragonforce</category>
