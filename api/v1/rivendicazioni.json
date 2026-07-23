@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-22T08:29:47.451867+00:00",
-  "total": 801,
+  "generated": "2026-07-23T11:49:58.069608+00:00",
+  "total": 802,
   "records": [
     {
       "id": "00001",
@@ -9612,6 +9612,18 @@
       "link": "sicc-srl.com",
       "provincia": "Padova",
       "regione": "Veneto",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00478",
+      "data": "23/07/2026",
+      "anno": 2026,
+      "vittima": "Auto Royal Company S.R.L.",
+      "gruppo": "nightspire",
+      "link": "autoroyalcompany.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
       "dati_gb": 0.0,
       "note": ""
     }
