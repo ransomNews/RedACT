@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 23 Jul 2026 11:49:58 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 12:34:30 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Sistnet Sistemi 3 S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00479 | Gruppo: nova | Data: 25/07/2026 | Provincia: Cuneo | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00479</guid>
+      <category>nova</category>
+    </item>
     <item>
       <title>Auto Royal Company S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00459 | Gruppo: stormous | Data: 24/06/2026 | Provincia: Brescia | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0 | Nota: Brand di Maglificio Liliana di Lorenzoni Andrea &amp;amp; C. S.N.C.</description>
       <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00459</guid>
-      <category>stormous</category>
-    </item>
-    <item>
-      <title>Montechiaro Store</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00460 | Gruppo: stormous | Data: 24/06/2026 | Provincia: Brescia | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0 | Nota: Brand di Maglificio Liliana di Lorenzoni Andrea &amp;amp; C. S.N.C.</description>
-      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00460</guid>
       <category>stormous</category>
     </item>
   </channel>
