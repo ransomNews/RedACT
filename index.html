@@ -3315,7 +3315,7 @@ td:nth-child(7){
   <div class="heatmap-header">
     <div class="heatmap-title-block">
       <span class="heatmap-title-label">Rivendicazioni per Mese</span>
-      <span class="heatmap-title-sub">distribuzione mensile ·</span>
+      <span class="heatmap-title-sub">distribuzione mensile</span>
     </div>
     <div class="heatmap-toggle">
       <button class="hm-btn active" id="hmBtnGruppo" onclick="switchHeatmap('gruppo')">Per Gruppo</button>
@@ -3343,6 +3343,7 @@ td:nth-child(7){
       <div class="heatmap-toggle">
         <button class="hm-btn active" id="semBtnGruppo" onclick="switchSemestre('gruppo')">Per Gruppo</button>
         <button class="hm-btn" id="semBtnRegione" onclick="switchSemestre('regione')">Per Regione</button>
+        <button class="hm-btn" id="semBtnNuts" onclick="switchSemestre('nuts')">Aree NUTS 1</button>
         <button class="hm-btn" id="semBtnSettore" onclick="switchSemestre('settore')">Per Settore</button>
         <button class="hm-btn" id="semBtnDati" onclick="switchSemestre('dati')">Dati Pubblicati</button>
       </div>
@@ -4979,6 +4980,7 @@ function switchSemestre(mode) {
   semMode = mode;
   document.getElementById('semBtnGruppo').classList.toggle('active', mode === 'gruppo');
   document.getElementById('semBtnRegione').classList.toggle('active', mode === 'regione');
+  document.getElementById('semBtnNuts').classList.toggle('active', mode === 'nuts');
   document.getElementById('semBtnSettore').classList.toggle('active', mode === 'settore');
   document.getElementById('semBtnDati').classList.toggle('active', mode === 'dati');
   buildSemestrale();
@@ -4997,7 +4999,7 @@ function buildSemestrale() {
   const mesiSemestre = semPeriodo === 1 ? [1,2,3,4,5,6] : [7,8,9,10,11,12];
 
   document.getElementById('semSubtitle').textContent =
-    'distribuzione ' + (semPeriodo === 1 ? '1° semestre' : '2° semestre') + ' ' + currentYear + ' ·';
+    'distribuzione ' + (semPeriodo === 1 ? '1° semestre' : '2° semestre') + ' ' + currentYear;
 
   // Filtra record dell'anno corrente e semestre selezionato
   const semRecords = all.filter(r => {
@@ -5018,6 +5020,15 @@ function buildSemestrale() {
       ? (String(r.GRUPPO).toLowerCase() || 'N/D').trim()
       : semMode === 'settore'
       ? (r.SETTORE || 'N/D').trim()
+      : semMode === 'nuts'
+      ? (function() {
+          const reg = normalizeRegionName(r.REGIONE);
+          if (!reg || reg.toLowerCase() === 'sconosciuta') return 'Sconosciuta';
+          for (const [macro, regions] of Object.entries(MACRO_AREE)) {
+            if (regions.map(normalizeRegionName).includes(reg)) return macro;
+          }
+          return 'Sconosciuta';
+        })()
       : (r.REGIONE || 'N/D').trim();
     const value = semMode === 'dati' ? (parseFloat(r.DATI) || 0) : 1;
     if (!counts[label]) counts[label] = {};
@@ -5038,6 +5049,11 @@ function buildSemestrale() {
       if (!counts[r]) counts[r] = {};
     });
   }
+  if (semMode === 'nuts') {
+    ["Nord-Ovest","Nord-Est","Centro","Sud","Isole","Sconosciuta"].forEach(function(m) {
+      if (!counts[m]) counts[m] = {};
+    });
+  }
 
   const rows = Object.entries(counts)
     .map(([label, mc]) => ({ label, mc, total: Object.values(mc).reduce((a,b)=>a+b,0) }))
@@ -5054,10 +5070,12 @@ function buildSemestrale() {
     ? 'Settore ' + (semSortAlpha ? '↑ A-Z' : '↓ N')
     : semMode === 'dati'
     ? 'Gruppo ' + (semSortAlpha ? '↑ A-Z' : '↓ GB')
+    : semMode === 'nuts'
+    ? 'Area NUTS 1'
     : 'Regione';
 
   const headRow = `<tr>
-    <th class="hm-row-label" style="cursor:pointer;user-select:none;" onclick="if(semMode==='gruppo'||semMode==='settore'||semMode==='dati'){semSortAlpha=!semSortAlpha;buildSemestrale();}" title="${semMode!=='regione'?'Clicca per ordinare':''}">
+    <th class="hm-row-label" style="cursor:pointer;user-select:none;" onclick="if(semMode==='gruppo'||semMode==='settore'||semMode==='dati'){semSortAlpha=!semSortAlpha;buildSemestrale();}" title="${semMode!=='regione'&&semMode!=='nuts'?'Clicca per ordinare':''}">
       ${headLabel}
     </th>
     <th style="border-right:1px solid var(--border)">Tot.</th>
@@ -5121,6 +5139,7 @@ function buildSemestrale() {
   var semWrap = document.getElementById('semWrap');
   if (semWrap) {
     semWrap.style.maxHeight = '450px';
+    semWrap.style.minHeight = '450px';
     semWrap.style.overflow = 'auto';
     semWrap.style.overscrollBehavior = 'none';
     semWrap.classList.toggle('sem-dati-mode', semMode === 'dati');
@@ -5575,7 +5594,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_366';
+    verEl.textContent = 'DS_STABILE_369';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
