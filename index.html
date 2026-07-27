@@ -618,6 +618,9 @@ thead {
   top: 0;
   z-index: 50;
 }
+#semTable thead {
+  position: static;
+}
 thead th {
   background: var(--surface2);
   border-top: 1px solid var(--border);
@@ -1178,6 +1181,30 @@ html.light .footer-logo img {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--surface);
+}
+#semTable {
+  table-layout: fixed;
+  width: 100%;
+}
+#semWrap.sem-dati-mode #semTable .hm-cell {
+  width: 100%;
+  min-width: 0;
+}
+#semWrap.sem-dati-mode #semTable .hm-num {
+  white-space: nowrap;
+  min-width: 0;
+}
+#semTable th:first-child,
+#semTable td:first-child {
+  width: 18%;
+}
+#semTable th:nth-child(2),
+#semTable td:nth-child(2) {
+  width: 10%;
+}
+#semTable th:nth-child(n+3),
+#semTable td:nth-child(n+3) {
+  width: 12%;
 }
 .heatmap-table {
   border-collapse: collapse;
@@ -3305,6 +3332,35 @@ td:nth-child(7){
   <div id="hmPager"></div>
 </div>
 
+<!-- STATISTICHE SEMESTRALI (TEST) -->
+<div class="heatmap-section" id="semSection">
+  <div class="heatmap-header">
+    <div class="heatmap-title-block">
+      <span class="heatmap-title-label">Statistiche semestrali</span>
+      <span class="heatmap-title-sub" id="semSubtitle">distribuzione semestrale ·</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+      <div class="heatmap-toggle">
+        <button class="hm-btn active" id="semBtnGruppo" onclick="switchSemestre('gruppo')">Per Gruppo</button>
+        <button class="hm-btn" id="semBtnRegione" onclick="switchSemestre('regione')">Per Regione</button>
+        <button class="hm-btn" id="semBtnSettore" onclick="switchSemestre('settore')">Per Settore</button>
+        <button class="hm-btn" id="semBtnDati" onclick="switchSemestre('dati')">Dati Pubblicati</button>
+      </div>
+      <div style="width:1px;height:24px;background:var(--border2);"></div>
+      <div class="heatmap-toggle">
+        <button class="hm-btn active" id="semBtnS1" onclick="switchSemestrePeriodo(1)">1° Semestre</button>
+        <button class="hm-btn" id="semBtnS2" onclick="switchSemestrePeriodo(2)">2° Semestre</button>
+      </div>
+    </div>
+  </div>
+  <div class="heatmap-wrap" id="semWrap">
+    <table class="heatmap-table" id="semTable">
+      <thead id="semHead"></thead>
+      <tbody id="semBody"></tbody>
+    </table>
+  </div>
+</div>
+
 <!-- FOOTER -->
 
 
@@ -4914,6 +4970,165 @@ function switchHeatmap(mode) {
   if (wrap) wrap.scrollTop = 0;
 }
 
+// ── STATISTICHE SEMESTRALI (TEST) ──────────
+let semMode = 'gruppo';
+let semPeriodo = 1;
+let semSortAlpha = false;
+
+function switchSemestre(mode) {
+  semMode = mode;
+  document.getElementById('semBtnGruppo').classList.toggle('active', mode === 'gruppo');
+  document.getElementById('semBtnRegione').classList.toggle('active', mode === 'regione');
+  document.getElementById('semBtnSettore').classList.toggle('active', mode === 'settore');
+  document.getElementById('semBtnDati').classList.toggle('active', mode === 'dati');
+  buildSemestrale();
+}
+
+function switchSemestrePeriodo(periodo) {
+  semPeriodo = periodo;
+  document.getElementById('semBtnS1').classList.toggle('active', periodo === 1);
+  document.getElementById('semBtnS2').classList.toggle('active', periodo === 2);
+  buildSemestrale();
+}
+
+function buildSemestrale() {
+  const currentYear = new Date().getFullYear();
+  const meseNomi = ['','Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+  const mesiSemestre = semPeriodo === 1 ? [1,2,3,4,5,6] : [7,8,9,10,11,12];
+
+  document.getElementById('semSubtitle').textContent =
+    'distribuzione ' + (semPeriodo === 1 ? '1° semestre' : '2° semestre') + ' ' + currentYear + ' ·';
+
+  // Filtra record dell'anno corrente e semestre selezionato
+  const semRecords = all.filter(r => {
+    if (!r.DATA) return false;
+    const parts = r.DATA.split('/');
+    if (parts.length < 3) return false;
+    const y = parseInt(parts[2], 10);
+    const m = parseInt(parts[1], 10);
+    return y === currentYear && m >= mesiSemestre[0] && m <= mesiSemestre[5];
+  });
+
+  // Aggrega per label e mese
+  const counts = {}; // { label: { mese: n } }
+  semRecords.forEach(r => {
+    const parts = r.DATA.split('/');
+    const m = parseInt(parts[1], 10);
+    const label = semMode === 'gruppo' || semMode === 'dati'
+      ? (String(r.GRUPPO).toLowerCase() || 'N/D').trim()
+      : semMode === 'settore'
+      ? (r.SETTORE || 'N/D').trim()
+      : (r.REGIONE || 'N/D').trim();
+    const value = semMode === 'dati' ? (parseFloat(r.DATI) || 0) : 1;
+    if (!counts[label]) counts[label] = {};
+    counts[label][m] = (counts[label][m] || 0) + value;
+  });
+
+  // Include tutte le categorie ufficiali anche a zero
+  if (semMode === 'settore') {
+    ATECO_CATALOG.forEach(function(cat) {
+      if (!counts[cat.code]) counts[cat.code] = {};
+    });
+  }
+  if (semMode === 'regione') {
+    ["Valle d'Aosta","Piemonte","Liguria","Lombardia","Trentino Alto Adige",
+     "Veneto","Friuli Venezia Giulia","Emilia Romagna","Toscana","Umbria",
+     "Marche","Lazio","Abruzzo","Molise","Campania","Puglia","Basilicata",
+     "Calabria","Sicilia","Sardegna"].forEach(function(r) {
+      if (!counts[r]) counts[r] = {};
+    });
+  }
+
+  const rows = Object.entries(counts)
+    .map(([label, mc]) => ({ label, mc, total: Object.values(mc).reduce((a,b)=>a+b,0) }))
+    .sort((a,b) => semSortAlpha
+      ? a.label.localeCompare(b.label, 'it')
+      : b.total - a.total);
+
+  let globalMax = 0;
+  rows.forEach(r => mesiSemestre.forEach(m => { const v = r.mc[m] || 0; if (v > globalMax) globalMax = v; }));
+
+  const headLabel = semMode === 'gruppo'
+    ? 'Gruppo ' + (semSortAlpha ? '↑ A-Z' : '↓ N')
+    : semMode === 'settore'
+    ? 'Settore ' + (semSortAlpha ? '↑ A-Z' : '↓ N')
+    : semMode === 'dati'
+    ? 'Gruppo ' + (semSortAlpha ? '↑ A-Z' : '↓ GB')
+    : 'Regione';
+
+  const headRow = `<tr>
+    <th class="hm-row-label" style="cursor:pointer;user-select:none;" onclick="if(semMode==='gruppo'||semMode==='settore'||semMode==='dati'){semSortAlpha=!semSortAlpha;buildSemestrale();}" title="${semMode!=='regione'?'Clicca per ordinare':''}">
+      ${headLabel}
+    </th>
+    <th style="border-right:1px solid var(--border)">Tot.</th>
+    ${mesiSemestre.map(m => `<th>${meseNomi[m]}</th>`).join('')}
+  </tr>`;
+  document.getElementById('semHead').innerHTML = headRow;
+
+  // Riga totali per mese (su tutte le righe, non solo visibili)
+  const monthTotals = {};
+  rows.forEach(({ mc }) => {
+    mesiSemestre.forEach(m => {
+      monthTotals[m] = (monthTotals[m] || 0) + (mc[m] || 0);
+    });
+  });
+  const grandTotal = Object.values(monthTotals).reduce((a,b)=>a+b,0);
+  const fmtEuroGB = n => {
+    const parts = (n||0).toFixed(2).split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    return parts.join(',');
+  };
+  const fmtN = v => semMode === 'dati' ? fmtEuroGB(v) : (v || '·');
+
+  const totalsRow = `<tr class="hm-totals-row">
+    <td class="hm-row-label" style="font-weight:700;color:var(--red);letter-spacing:0.06em;font-size:12px;">TOTALE</td>
+    <td class="hm-total-col" style="font-weight:700;color:var(--red);border-right:1px solid var(--border)">${semMode==='dati' ? fmtEuroGB(grandTotal) : grandTotal}</td>
+    ${mesiSemestre.map(m => {
+      const n = monthTotals[m] || 0;
+      return `<td><div class="hm-cell ${n>0?'nonzero':'zero'}">
+        <span class="hm-num" style="font-weight:700">${fmtN(n)}</span>
+        <div class="hm-spark-track"><div class="hm-spark" style="width:0%"></div></div>
+      </div></td>`;
+    }).join('')}
+  </tr>`;
+
+  const bodyRows = rows.map(({ label, mc, total }) => {
+    const cells = mesiSemestre.map(m => {
+      const n = mc[m] || 0;
+      const pct = globalMax > 0 ? Math.round((n / globalMax) * 100) : 0;
+      const cls = n === 0 ? 'zero' : 'nonzero';
+      return `<td><div class="hm-cell ${cls}">
+        <span class="hm-num">${fmtN(n)}</span>
+        <div class="hm-spark-track"><div class="hm-spark" style="width:${pct}%"></div></div>
+      </div></td>`;
+    }).join('');
+    const totalPct = rows.length > 0 && rows[0].total > 0 ? Math.round((total / rows[0].total) * 100) : 0;
+    const displayLabel = semMode === 'settore' ? settoreLabel(label) : label;
+    return `<tr>
+      <td class="hm-row-label">${displayLabel}</td>
+      <td class="hm-total-col" style="border-right:1px solid var(--border)">
+        <div class="hm-cell nonzero" style="width:100%;height:40px;">
+          <span class="hm-num">${semMode==='dati' ? fmtEuroGB(total) : total}</span>
+          <div class="hm-spark-track"><div class="hm-spark" style="width:${totalPct}%"></div></div>
+        </div>
+      </td>
+      ${cells}
+    </tr>`;
+  }).join('');
+
+  document.getElementById('semBody').innerHTML = totalsRow + bodyRows;
+
+  var semWrap = document.getElementById('semWrap');
+  if (semWrap) {
+    semWrap.style.maxHeight = '450px';
+    semWrap.style.overflow = 'auto';
+    semWrap.style.overscrollBehavior = 'none';
+    semWrap.classList.toggle('sem-dati-mode', semMode === 'dati');
+  }
+}
+
+buildSemestrale();
+
 buildHeatmap();
   buildTrendChart();
 
@@ -5360,7 +5575,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_365';
+    verEl.textContent = 'DS_STABILE_366';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
