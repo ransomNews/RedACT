@@ -3343,9 +3343,9 @@ td:nth-child(7){
       <div class="heatmap-toggle">
         <button class="hm-btn active" id="semBtnGruppo" onclick="switchSemestre('gruppo')">Per Gruppo</button>
         <button class="hm-btn" id="semBtnRegione" onclick="switchSemestre('regione')">Per Regione</button>
-        <button class="hm-btn" id="semBtnNuts" onclick="switchSemestre('nuts')">Aree NUTS 1</button>
+        <button class="hm-btn" id="semBtnNuts" onclick="switchSemestre('nuts')">Per Aree NUTS 1</button>
         <button class="hm-btn" id="semBtnSettore" onclick="switchSemestre('settore')">Per Settore</button>
-        <button class="hm-btn" id="semBtnDati" onclick="switchSemestre('dati')">Dati Pubblicati</button>
+        <button class="hm-btn" id="semBtnDati" onclick="switchSemestre('dati')">Per Dati Pubblicati</button>
       </div>
       <div style="width:1px;height:24px;background:var(--border2);"></div>
       <div class="heatmap-toggle">
@@ -5610,7 +5610,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_370';
+    verEl.textContent = 'DS_STABILE_372';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
