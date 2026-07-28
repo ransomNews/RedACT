@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-28T13:34:28.889808+00:00",
-  "total": 804,
+  "generated": "2026-07-28T15:33:57.261914+00:00",
+  "total": 805,
   "records": [
     {
       "id": "00001",
@@ -9648,6 +9648,18 @@
       "link": "takisbiotech.com",
       "provincia": "Roma",
       "regione": "Lazio",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00481",
+      "data": "28/07/2026",
+      "anno": 2026,
+      "vittima": "Pasello Trattamenti Termici S.R.L.",
+      "gruppo": "deadlock",
+      "link": "pasello.com",
+      "provincia": "Bologna",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }
