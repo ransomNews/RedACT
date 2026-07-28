@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-28T10:06:12.486434+00:00",
-  "total": 803,
+  "generated": "2026-07-28T13:34:28.889808+00:00",
+  "total": 804,
   "records": [
     {
       "id": "00001",
@@ -9636,6 +9636,18 @@
       "link": "sistnet.it",
       "provincia": "Cuneo",
       "regione": "Piemonte",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00480",
+      "data": "28/07/2026",
+      "anno": 2026,
+      "vittima": "Takis S.R.L.",
+      "gruppo": "deadlock",
+      "link": "takisbiotech.com",
+      "provincia": "Roma",
+      "regione": "Lazio",
       "dati_gb": 0.0,
       "note": ""
     }

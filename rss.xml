@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Tue, 28 Jul 2026 10:06:12 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 13:34:28 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Takis S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00480 | Gruppo: deadlock | Data: 28/07/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00480</guid>
+      <category>deadlock</category>
+    </item>
     <item>
       <title>Sistnet Sistemi 3 S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00458 | Gruppo: stormous | Data: 24/06/2026 | Provincia: Brescia | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 10,97</description>
       <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00458</guid>
-      <category>stormous</category>
-    </item>
-    <item>
-      <title>Lorenzoni Store</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00459 | Gruppo: stormous | Data: 24/06/2026 | Provincia: Brescia | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0 | Nota: Brand di Maglificio Liliana di Lorenzoni Andrea &amp;amp; C. S.N.C.</description>
-      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00459</guid>
       <category>stormous</category>
     </item>
   </channel>
