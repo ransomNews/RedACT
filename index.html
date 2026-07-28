@@ -3352,6 +3352,8 @@ td:nth-child(7){
         <button class="hm-btn active" id="semBtnS1" onclick="switchSemestrePeriodo(1)">1° Semestre</button>
         <button class="hm-btn" id="semBtnS2" onclick="switchSemestrePeriodo(2)">2° Semestre</button>
       </div>
+      <div style="width:1px;height:24px;background:var(--border2);"></div>
+      <select id="semYearSelect" onchange="switchSemestreAnno(this.value)" style="background:var(--surface2);color:var(--text);border:1px solid var(--border2);border-radius:8px;padding:8px 12px;font-family:var(--sans);font-weight:700;font-size:14px;cursor:pointer;"></select>
     </div>
   </div>
   <div class="heatmap-wrap" id="semWrap">
@@ -4974,7 +4976,20 @@ function switchHeatmap(mode) {
 // ── STATISTICHE SEMESTRALI (TEST) ──────────
 let semMode = 'gruppo';
 let semPeriodo = 1;
+let semYear = new Date().getFullYear();
 let semSortAlpha = false;
+
+function switchSemestreAnno(y) {
+  semYear = parseInt(y, 10);
+  buildSemestrale();
+}
+
+function initSemYearSelect() {
+  const sel = document.getElementById('semYearSelect');
+  if (!sel) return;
+  const opts = YEARS.slice().sort((a,b) => b - a);
+  sel.innerHTML = opts.map(y => `<option value="${y}"${y === semYear ? ' selected' : ''}>${y}</option>`).join('');
+}
 
 function switchSemestre(mode) {
   semMode = mode;
@@ -4994,7 +5009,7 @@ function switchSemestrePeriodo(periodo) {
 }
 
 function buildSemestrale() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = semYear;
   const meseNomi = ['','Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
   const mesiSemestre = semPeriodo === 1 ? [1,2,3,4,5,6] : [7,8,9,10,11,12];
 
@@ -5146,6 +5161,7 @@ function buildSemestrale() {
   }
 }
 
+initSemYearSelect();
 buildSemestrale();
 
 buildHeatmap();
@@ -5594,7 +5610,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_369';
+    verEl.textContent = 'DS_STABILE_370';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
