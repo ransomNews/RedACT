@@ -621,6 +621,9 @@ thead {
 #semTable thead {
   position: static;
 }
+#heatmapTable thead {
+  position: static;
+}
 thead th {
   background: var(--surface2);
   border-top: 1px solid var(--border);
@@ -897,7 +900,6 @@ thead .c-dati {
   padding: 0 2px;
 }
 #tablePager { padding: 0 32px 48px; }
-#hmPager    { padding: 0 32px; }
 
 /* Spazio tra tabella e heatmap */
 
@@ -1191,6 +1193,14 @@ html.light .footer-logo img {
   min-width: 0;
 }
 #semWrap.sem-dati-mode #semTable .hm-num {
+  white-space: nowrap;
+  min-width: 0;
+}
+#hmWrap.hm-dati-mode #heatmapTable .hm-cell {
+  width: auto;
+  min-width: 0;
+}
+#hmWrap.hm-dati-mode #heatmapTable .hm-num {
   white-space: nowrap;
   min-width: 0;
 }
@@ -3315,21 +3325,26 @@ td:nth-child(7){
   <div class="heatmap-header">
     <div class="heatmap-title-block">
       <span class="heatmap-title-label">Rivendicazioni per Mese</span>
-      <span class="heatmap-title-sub">distribuzione mensile</span>
+      <span class="heatmap-title-sub" id="hmSubtitle">distribuzione mensile</span>
     </div>
-    <div class="heatmap-toggle">
-      <button class="hm-btn active" id="hmBtnGruppo" onclick="switchHeatmap('gruppo')">Per Gruppo</button>
-      <button class="hm-btn" id="hmBtnRegione" onclick="switchHeatmap('regione')">Per Regione</button>
-      <button class="hm-btn" id="hmBtnSettore" onclick="switchHeatmap('settore')">Per Settore</button>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+      <div class="heatmap-toggle">
+        <button class="hm-btn active" id="hmBtnGruppo" onclick="switchHeatmap('gruppo')">Per Gruppo</button>
+        <button class="hm-btn" id="hmBtnRegione" onclick="switchHeatmap('regione')">Per Regione</button>
+        <button class="hm-btn" id="hmBtnNuts" onclick="switchHeatmap('nuts')">Per Aree NUTS 1</button>
+        <button class="hm-btn" id="hmBtnSettore" onclick="switchHeatmap('settore')">Per Settore</button>
+        <button class="hm-btn" id="hmBtnDati" onclick="switchHeatmap('dati')">Per Dati Pubblicati</button>
+      </div>
+      <div style="width:1px;height:24px;background:var(--border2);"></div>
+      <select id="hmYearSelect" onchange="switchHmAnno(this.value)" style="background:var(--surface2);color:var(--text);border:1px solid var(--border2);border-radius:8px;padding:8px 12px;font-family:var(--sans);font-weight:700;font-size:14px;cursor:pointer;"></select>
     </div>
   </div>
-  <div class="heatmap-wrap">
+  <div class="heatmap-wrap" id="hmWrap">
     <table class="heatmap-table" id="heatmapTable">
       <thead id="heatmapHead"></thead>
       <tbody id="heatmapBody"></tbody>
     </table>
   </div>
-  <div id="hmPager"></div>
 </div>
 
 <!-- STATISTICHE SEMESTRALI (TEST) -->
@@ -4792,43 +4807,57 @@ function getDatiClass(val) {
 
 // ── Heatmap ───────────────────────────────
 let hmMode = 'gruppo';
-let hmPage = 1;
+let hmYear = new Date().getFullYear();
+
+function initHmYearSelect() {
+  const sel = document.getElementById('hmYearSelect');
+  if (!sel) return;
+  const opts = YEARS.slice().sort((a,b) => b - a);
+  sel.innerHTML = opts.map(y => `<option value="${y}"${y === hmYear ? ' selected' : ''}>${y}</option>`).join('');
+}
+
+function switchHmAnno(y) {
+  hmYear = parseInt(y, 10);
+  buildHeatmap();
+  buildTrendChart();
+}
 
 function buildHeatmap() {
-  const months = [];
-  const monthSet = new Set();
-  all.forEach(r => {
-    if (!r.DATA) return;
-    const parts = r.DATA.split('/');
-    if (parts.length < 2) return;
-    const key = `${parts[2] || '20??'}-${parts[1]}`;
-    monthSet.add(key);
-  });
+  const sub = document.getElementById('hmSubtitle');
+  if (sub) sub.textContent = 'distribuzione mensile ' + hmYear;
+  const meseNomi = ['','Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'];
+  const sortedMonths = [];
+  const monthLabels = [];
+  for (let m = 1; m <= 12; m++) {
+    sortedMonths.push(`${hmYear}-${String(m).padStart(2,'0')}`);
+    monthLabels.push(meseNomi[m] + '\u00A0' + String(hmYear).slice(-2));
+  }
 
-  // Sort months chronologically
-  const sortedMonths = Array.from(monthSet).sort().reverse();
-  const monthLabels = sortedMonths.map(k => {
-    const [y, m] = k.split('-');
-    const d = new Date(+y, +m - 1, 1);
-    return d
-      .toLocaleDateString('it-IT', { month: 'short', year: '2-digit' })
-      .replace(/\s+/g, '\u00A0');
-  });
-
-  // Aggregate data
+  // Aggregate data (solo anno selezionato)
   const counts = {}; // { key: { monthKey: n } }
   all.forEach(r => {
     if (!r.DATA) return;
     const parts = r.DATA.split('/');
-    if (parts.length < 2) return;
-    const monthKey = `${parts[2] || '20??'}-${parts[1]}`;
-    const label = hmMode === 'gruppo'
+    if (parts.length < 3) return;
+    if (parseInt(parts[2], 10) !== hmYear) return;
+    const monthKey = `${parts[2]}-${parts[1]}`;
+    const label = hmMode === 'gruppo' || hmMode === 'dati'
       ? (String(r.GRUPPO).toLowerCase() || 'N/D').trim()
       : hmMode === 'settore'
       ? (r.SETTORE || 'N/D').trim()
+      : hmMode === 'nuts'
+      ? (function() {
+          const reg = normalizeRegionName(r.REGIONE);
+          if (!reg || reg.toLowerCase() === 'sconosciuta') return 'Sconosciuta';
+          for (const [macro, regions] of Object.entries(MACRO_AREE)) {
+            if (regions.map(normalizeRegionName).includes(reg)) return macro;
+          }
+          return 'Sconosciuta';
+        })()
       : (r.REGIONE || 'N/D').trim();
+    const value = hmMode === 'dati' ? (parseFloat(r.DATI) || 0) : 1;
     if (!counts[label]) counts[label] = {};
-    counts[label][monthKey] = (counts[label][monthKey] || 0) + 1;
+    counts[label][monthKey] = (counts[label][monthKey] || 0) + value;
   });
 
   // Sort rows by total desc o alfabetico
@@ -4847,6 +4876,11 @@ function buildHeatmap() {
       if (!counts[r]) counts[r] = {};
     });
   }
+  if (hmMode === 'nuts') {
+    ["Nord-Ovest","Nord-Est","Centro","Sud","Isole","Sconosciuta"].forEach(function(m) {
+      if (!counts[m]) counts[m] = {};
+    });
+  }
   // Per il settore l'ordine predefinito è alfabetico (codice ATECO A→V);
   // hmSortAlpha permette comunque il toggle manuale per tutte le modalità che lo supportano.
   const useAlphaSort = hmMode === 'settore' ? !hmSortAlpha : hmSortAlpha;
@@ -4856,11 +4890,7 @@ function buildHeatmap() {
       ? a.label.localeCompare(b.label, 'it')
       : b.total - a.total);
 
-  // Pagination
-  const totalHmPages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
-  if (hmPage > totalHmPages) hmPage = totalHmPages;
-  const hmStart = (hmPage - 1) * PAGE_SIZE;
-  const visibleRows = rows.slice(hmStart, hmStart + PAGE_SIZE);
+  // Tutte le righe (nessuna paginazione, scroll interno gestisce la navigazione)
 
   // Global max for sparkbar scaling (based on all rows, not just visible)
   let globalMax = 0;
@@ -4868,8 +4898,12 @@ function buildHeatmap() {
 
   // Build head
   const headRow = `<tr>
-    <th class="hm-row-label" style="cursor:pointer;user-select:none;" onclick="if(hmMode==='gruppo'||hmMode==='settore'){hmSortAlpha=!hmSortAlpha;buildHeatmap();}" title="${hmMode!=='regione'?'Clicca per ordinare':''}">
-      ${hmMode === 'gruppo' ? 'Gruppo ' + (hmSortAlpha ? '↑ A-Z' : '↓ N') : hmMode === 'settore' ? 'Settore ' + (useAlphaSort ? '↑ A-Z' : '↓ N') : 'Regione'}
+    <th class="hm-row-label" style="cursor:pointer;user-select:none;" onclick="if(hmMode==='gruppo'||hmMode==='settore'||hmMode==='dati'){hmSortAlpha=!hmSortAlpha;buildHeatmap();}" title="${hmMode!=='regione'&&hmMode!=='nuts'?'Clicca per ordinare':''}">
+      ${hmMode === 'gruppo' ? 'Gruppo ' + (hmSortAlpha ? '↑ A-Z' : '↓ N')
+        : hmMode === 'settore' ? 'Settore ' + (useAlphaSort ? '↑ A-Z' : '↓ N')
+        : hmMode === 'dati' ? 'Gruppo ' + (hmSortAlpha ? '↑ A-Z' : '↓ GB')
+        : hmMode === 'nuts' ? 'Area NUTS 1'
+        : 'Regione'}
     </th>
     <th style="border-right:1px solid var(--border)">Tot.</th>
     ${sortedMonths.map((mk, i) => `<th>${monthLabels[i]}</th>`).join('')}
@@ -4884,22 +4918,28 @@ function buildHeatmap() {
     });
   });
   const grandTotal = Object.values(monthTotals).reduce((a,b)=>a+b,0);
+  const fmtHmEuroGB = n => {
+    const parts = (n||0).toFixed(2).split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    return parts.join(',');
+  };
+  const fmtHmN = v => hmMode === 'dati' ? fmtHmEuroGB(v) : (v || '·');
   const totalsRow = `<tr class="hm-totals-row">
     <td class="hm-row-label" style="font-weight:700;color:var(--red);letter-spacing:0.06em;font-size:12px;">TOTALE</td>
-    <td class="hm-total-col" style="font-weight:700;color:var(--red);border-right:1px solid var(--border)">${grandTotal}</td>
+    <td class="hm-total-col" style="font-weight:700;color:var(--red);border-right:1px solid var(--border)">${hmMode==='dati' ? fmtHmEuroGB(grandTotal) : grandTotal}</td>
     ${sortedMonths.map(mk => {
       const n = monthTotals[mk] || 0;
       const clickable = n > 0;
       const xClick = clickable ? `onclick="applyHmFilterMonth('${mk}')"` : '';
       return `<td><div class="hm-cell ${n>0?'nonzero':'zero'}${clickable?' hm-clickable':''}" ${xClick}>
-        <span class="hm-num" style="font-weight:700">${n || '·'}</span>
+        <span class="hm-num" style="font-weight:700">${fmtHmN(n)}</span>
         <div class="hm-spark-track"><div class="hm-spark" style="width:0%"></div></div>
       </div></td>`;
     }).join('')}
   </tr>`;
   document.getElementById('heatmapBody').innerHTML = totalsRow;
 
-  const bodyRows = visibleRows.map(({ label, mc, total }) => {
+  const bodyRows = rows.map(({ label, mc, total }) => {
     const cells = sortedMonths.map(mk => {
       const n = mc[mk] || 0;
       const pct = globalMax > 0 ? Math.round((n / globalMax) * 100) : 0;
@@ -4908,7 +4948,7 @@ function buildHeatmap() {
       const xCls = clickable ? ' hm-clickable' : '';
       const xClick = clickable ? `onclick="applyHmFilter('${label}','${mk}')"` : '';
       return `<td><div class="hm-cell ${cls}${xCls}" ${xClick}>
-        <span class="hm-num">${n || '·'}</span>
+        <span class="hm-num">${fmtHmN(n)}</span>
         <div class="hm-spark-track"><div class="hm-spark" style="width:${pct}%"></div></div>
       </div></td>`;
     }).join('');
@@ -4918,7 +4958,7 @@ function buildHeatmap() {
       <td class="hm-row-label">${displayLabel}</td>
       <td class="hm-total-col" style="border-right:1px solid var(--border)">
         <div class="hm-cell nonzero hm-clickable" style="width:100%;height:40px;" onclick="applyHmFilterTotal('${label}')" title="Vedi tutte le rivendicazioni">
-          <span class="hm-num">${total}</span>
+          <span class="hm-num">${hmMode==='dati' ? fmtHmEuroGB(total) : total}</span>
           <div class="hm-spark-track"><div class="hm-spark" style="width:${totalPct}%"></div></div>
         </div>
       </td>
@@ -4927,46 +4967,24 @@ function buildHeatmap() {
   }).join('');
   document.getElementById('heatmapBody').innerHTML += bodyRows;
 
-  // Render heatmap pager
-  const pagerEl = document.getElementById('hmPager');
-  if (pagerEl) pagerEl.innerHTML = buildPagerHTML(hmPage, totalHmPages, 'goHmPage');
-
-  // Dynamic scroll: internal scroll only for groups, CSS defaults for regions/sectors
-  var hmWrap = document.querySelector('.heatmap-wrap');
+  // Scroll interno costante su tutte le viste (Gruppo/Regione/NUTS1/Settore/Dati)
+  var hmWrap = document.getElementById('hmWrap');
   if (hmWrap) {
-    if (hmMode === 'gruppo') {
-      hmWrap.style.maxHeight = '450px';
-      hmWrap.style.overflow = 'auto';
-      hmWrap.style.overscrollBehavior = 'none';
-    } else {
-      hmWrap.style.maxHeight = '';
-      hmWrap.style.overflow = '';
-      hmWrap.style.overscrollBehavior = '';
-    }
-  }
-}
-
-function goHmPage(p) {
-  hmPage = p;
-  buildHeatmap();
-  buildTrendChart();
-  // Reset internal scroll to top
-  var wrap = document.querySelector('.heatmap-wrap');
-  if (wrap) wrap.scrollTop = 0;
-  // Scroll page to show heatmap section title
-  var sect = document.querySelector('.heatmap-section');
-  if (sect) {
-    var top = sect.getBoundingClientRect().top + window.scrollY - 60;
-    window.scrollTo({ top: top, behavior: 'smooth' });
+    hmWrap.style.maxHeight = '450px';
+    hmWrap.style.minHeight = '450px';
+    hmWrap.style.overflow = 'auto';
+    hmWrap.style.overscrollBehavior = 'none';
+    hmWrap.classList.toggle('hm-dati-mode', hmMode === 'dati');
   }
 }
 
 function switchHeatmap(mode) {
   hmMode = mode;
-  hmPage = 1;
   document.getElementById('hmBtnGruppo').classList.toggle('active', mode === 'gruppo');
   document.getElementById('hmBtnRegione').classList.toggle('active', mode === 'regione');
+  document.getElementById('hmBtnNuts').classList.toggle('active', mode === 'nuts');
   document.getElementById('hmBtnSettore').classList.toggle('active', mode === 'settore');
+  document.getElementById('hmBtnDati').classList.toggle('active', mode === 'dati');
   buildHeatmap();
   buildTrendChart();
   var wrap = document.querySelector('.heatmap-wrap');
@@ -5164,6 +5182,7 @@ function buildSemestrale() {
 initSemYearSelect();
 buildSemestrale();
 
+initHmYearSelect();
 buildHeatmap();
   buildTrendChart();
 
@@ -5610,7 +5629,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_377';
+    verEl.textContent = 'DS_STABILE_378';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
