@@ -1196,6 +1196,9 @@ html.light .footer-logo img {
   white-space: nowrap;
   min-width: 0;
 }
+#semWrap.sem-dati-mode.sem-anno-mode #semTable .hm-num {
+  font-size: 13px;
+}
 #hmWrap.hm-dati-mode #heatmapTable .hm-cell {
   width: 100%;
   min-width: 0;
@@ -1205,33 +1208,13 @@ html.light .footer-logo img {
   min-width: 0;
   font-size: 13px;
 }
-#semTable th:first-child,
-#semTable td:first-child {
-  width: 18%;
-}
-#semTable th:nth-child(2),
-#semTable td:nth-child(2) {
-  width: 10%;
-}
-#semTable th:nth-child(n+3),
-#semTable td:nth-child(n+3) {
-  width: 12%;
+#semTable th, #semTable td,
+#heatmapTable th, #heatmapTable td {
+  box-sizing: border-box;
 }
 #heatmapTable {
   table-layout: fixed;
   width: 100%;
-}
-#heatmapTable th:first-child,
-#heatmapTable td:first-child {
-  width: 18%;
-}
-#heatmapTable th:nth-child(2),
-#heatmapTable td:nth-child(2) {
-  width: 10%;
-}
-#heatmapTable th:nth-child(n+3),
-#heatmapTable td:nth-child(n+3) {
-  width: 6%;
 }
 .heatmap-table {
   border-collapse: collapse;
@@ -3341,16 +3324,16 @@ td:nth-child(7){
 <div class="heatmap-section">
   <div class="heatmap-header">
     <div class="heatmap-title-block">
-      <span class="heatmap-title-label">Rivendicazioni per Mese e Statistiche Annuali</span>
+      <span class="heatmap-title-label">Rivendicazioni per Mese</span>
       <span class="heatmap-title-sub" id="hmSubtitle">distribuzione mensile</span>
     </div>
     <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
       <div class="heatmap-toggle">
-        <button class="hm-btn active" id="hmBtnGruppo" onclick="switchHeatmap('gruppo')">Per Gruppo</button>
-        <button class="hm-btn" id="hmBtnRegione" onclick="switchHeatmap('regione')">Per Regione</button>
-        <button class="hm-btn" id="hmBtnNuts" onclick="switchHeatmap('nuts')">Per Aree NUTS 1</button>
-        <button class="hm-btn" id="hmBtnSettore" onclick="switchHeatmap('settore')">Per Settore</button>
-        <button class="hm-btn" id="hmBtnDati" onclick="switchHeatmap('dati')">Per Dati Pubblicati</button>
+        <button class="hm-btn active" id="hmBtnGruppo" onclick="switchHeatmap('gruppo')">Gruppo</button>
+        <button class="hm-btn" id="hmBtnRegione" onclick="switchHeatmap('regione')">Regione</button>
+        <button class="hm-btn" id="hmBtnNuts" onclick="switchHeatmap('nuts')">Aree NUTS 1</button>
+        <button class="hm-btn" id="hmBtnSettore" onclick="switchHeatmap('settore')">Settore</button>
+        <button class="hm-btn" id="hmBtnDati" onclick="switchHeatmap('dati')">Dati Pubblicati</button>
       </div>
       <div style="width:1px;height:24px;background:var(--border2);"></div>
       <select id="hmYearSelect" onchange="switchHmAnno(this.value)" style="background:var(--surface2);color:var(--text);border:1px solid var(--border2);border-radius:8px;padding:8px 12px;font-family:var(--sans);font-weight:700;font-size:14px;cursor:pointer;"></select>
@@ -3358,6 +3341,7 @@ td:nth-child(7){
   </div>
   <div class="heatmap-wrap" id="hmWrap">
     <table class="heatmap-table" id="heatmapTable">
+      <colgroup id="hmColgroup"></colgroup>
       <thead id="heatmapHead"></thead>
       <tbody id="heatmapBody"></tbody>
     </table>
@@ -3368,21 +3352,22 @@ td:nth-child(7){
 <div class="heatmap-section" id="semSection">
   <div class="heatmap-header">
     <div class="heatmap-title-block">
-      <span class="heatmap-title-label">Statistiche Semestrali</span>
+      <span class="heatmap-title-label">Statistiche Semestrali ed Annuali</span>
       <span class="heatmap-title-sub" id="semSubtitle">distribuzione semestrale ·</span>
     </div>
     <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
       <div class="heatmap-toggle">
-        <button class="hm-btn active" id="semBtnGruppo" onclick="switchSemestre('gruppo')">Per Gruppo</button>
-        <button class="hm-btn" id="semBtnRegione" onclick="switchSemestre('regione')">Per Regione</button>
-        <button class="hm-btn" id="semBtnNuts" onclick="switchSemestre('nuts')">Per Aree NUTS 1</button>
-        <button class="hm-btn" id="semBtnSettore" onclick="switchSemestre('settore')">Per Settore</button>
-        <button class="hm-btn" id="semBtnDati" onclick="switchSemestre('dati')">Per Dati Pubblicati</button>
+        <button class="hm-btn active" id="semBtnGruppo" onclick="switchSemestre('gruppo')">Gruppo</button>
+        <button class="hm-btn" id="semBtnRegione" onclick="switchSemestre('regione')">Regione</button>
+        <button class="hm-btn" id="semBtnNuts" onclick="switchSemestre('nuts')">Aree NUTS 1</button>
+        <button class="hm-btn" id="semBtnSettore" onclick="switchSemestre('settore')">Settore</button>
+        <button class="hm-btn" id="semBtnDati" onclick="switchSemestre('dati')">Dati Pubblicati</button>
       </div>
       <div style="width:1px;height:24px;background:var(--border2);"></div>
       <div class="heatmap-toggle">
         <button class="hm-btn active" id="semBtnS1" onclick="switchSemestrePeriodo(1)">1° Semestre</button>
         <button class="hm-btn" id="semBtnS2" onclick="switchSemestrePeriodo(2)">2° Semestre</button>
+        <button class="hm-btn" id="semBtnAnno" onclick="switchSemestrePeriodo('anno')">Anno Intero</button>
       </div>
       <div style="width:1px;height:24px;background:var(--border2);"></div>
       <select id="semYearSelect" onchange="switchSemestreAnno(this.value)" style="background:var(--surface2);color:var(--text);border:1px solid var(--border2);border-radius:8px;padding:8px 12px;font-family:var(--sans);font-weight:700;font-size:14px;cursor:pointer;"></select>
@@ -3390,6 +3375,7 @@ td:nth-child(7){
   </div>
   <div class="heatmap-wrap" id="semWrap">
     <table class="heatmap-table" id="semTable">
+      <colgroup id="semColgroup"></colgroup>
       <thead id="semHead"></thead>
       <tbody id="semBody"></tbody>
     </table>
@@ -4928,6 +4914,12 @@ function buildHeatmap() {
   </tr>`;
   document.getElementById('heatmapHead').innerHTML = headRow;
 
+  const hmMonthColWidth = (72 / sortedMonths.length).toFixed(4);
+  const hmColgroupHtml = '<col style="width:18%">' +
+    '<col style="width:10%">' +
+    sortedMonths.map(() => `<col style="width:${hmMonthColWidth}%">`).join('');
+  document.getElementById('hmColgroup').innerHTML = hmColgroupHtml;
+
   // Build totals row (sum per month across ALL rows, not just visible page)
   const monthTotals = {};
   rows.forEach(({ mc }) => {
@@ -5044,16 +5036,17 @@ function switchSemestrePeriodo(periodo) {
   semPeriodo = periodo;
   document.getElementById('semBtnS1').classList.toggle('active', periodo === 1);
   document.getElementById('semBtnS2').classList.toggle('active', periodo === 2);
+  document.getElementById('semBtnAnno').classList.toggle('active', periodo === 'anno');
   buildSemestrale();
 }
 
 function buildSemestrale() {
   const currentYear = semYear;
-  const meseNomi = ['','Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
-  const mesiSemestre = semPeriodo === 1 ? [1,2,3,4,5,6] : [7,8,9,10,11,12];
+  const meseNomi = ['','Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'];
+  const mesiSemestre = semPeriodo === 1 ? [1,2,3,4,5,6] : semPeriodo === 2 ? [7,8,9,10,11,12] : [1,2,3,4,5,6,7,8,9,10,11,12];
 
   document.getElementById('semSubtitle').textContent =
-    'distribuzione ' + (semPeriodo === 1 ? '1° semestre' : '2° semestre') + ' ' + currentYear;
+    'distribuzione ' + (semPeriodo === 1 ? '1° semestre' : semPeriodo === 2 ? '2° semestre' : 'annuale') + ' ' + currentYear;
 
   // Filtra record dell'anno corrente e semestre selezionato
   const semRecords = all.filter(r => {
@@ -5062,7 +5055,7 @@ function buildSemestrale() {
     if (parts.length < 3) return false;
     const y = parseInt(parts[2], 10);
     const m = parseInt(parts[1], 10);
-    return y === currentYear && m >= mesiSemestre[0] && m <= mesiSemestre[5];
+    return y === currentYear && m >= mesiSemestre[0] && m <= mesiSemestre[mesiSemestre.length - 1];
   });
 
   // Aggrega per label e mese
@@ -5133,9 +5126,15 @@ function buildSemestrale() {
       ${headLabel}
     </th>
     <th style="border-right:1px solid var(--border)">Tot.</th>
-    ${mesiSemestre.map(m => `<th>${meseNomi[m]}</th>`).join('')}
+    ${mesiSemestre.map(m => `<th>${meseNomi[m]}&nbsp;${String(currentYear).slice(-2)}</th>`).join('')}
   </tr>`;
   document.getElementById('semHead').innerHTML = headRow;
+
+  const monthColWidth = (72 / mesiSemestre.length).toFixed(4);
+  const colgroupHtml = '<col style="width:18%">' +
+    '<col style="width:10%">' +
+    mesiSemestre.map(() => `<col style="width:${monthColWidth}%">`).join('');
+  document.getElementById('semColgroup').innerHTML = colgroupHtml;
 
   // Riga totali per mese (su tutte le righe, non solo visibili)
   const monthTotals = {};
@@ -5207,6 +5206,7 @@ function buildSemestrale() {
     semWrap.style.overflow = 'auto';
     semWrap.style.overscrollBehavior = 'none';
     semWrap.classList.toggle('sem-dati-mode', semMode === 'dati');
+    semWrap.classList.toggle('sem-anno-mode', mesiSemestre.length === 12);
   }
 }
 
@@ -5765,7 +5765,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_382';
+    verEl.textContent = 'DS_STABILE_384';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
