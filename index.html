@@ -1197,12 +1197,13 @@ html.light .footer-logo img {
   min-width: 0;
 }
 #hmWrap.hm-dati-mode #heatmapTable .hm-cell {
-  width: auto;
+  width: 100%;
   min-width: 0;
 }
 #hmWrap.hm-dati-mode #heatmapTable .hm-num {
   white-space: nowrap;
   min-width: 0;
+  font-size: 13px;
 }
 #semTable th:first-child,
 #semTable td:first-child {
@@ -1215,6 +1216,22 @@ html.light .footer-logo img {
 #semTable th:nth-child(n+3),
 #semTable td:nth-child(n+3) {
   width: 12%;
+}
+#heatmapTable {
+  table-layout: fixed;
+  width: 100%;
+}
+#heatmapTable th:first-child,
+#heatmapTable td:first-child {
+  width: 18%;
+}
+#heatmapTable th:nth-child(2),
+#heatmapTable td:nth-child(2) {
+  width: 10%;
+}
+#heatmapTable th:nth-child(n+3),
+#heatmapTable td:nth-child(n+3) {
+  width: 6%;
 }
 .heatmap-table {
   border-collapse: collapse;
@@ -5629,7 +5646,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_378';
+    verEl.textContent = 'DS_STABILE_379';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
