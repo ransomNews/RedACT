@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-29T04:23:55.896048+00:00",
+  "generated": "2026-07-29T04:47:14.990394+00:00",
   "total": 123,
   "gruppi": [
     {
@@ -24,7 +24,7 @@
     {
       "nome": "ailock",
       "rivendicazioni": 1,
-      "dati_gb": 0.0,
+      "dati_gb": 64.9,
       "anni_attivi": [
         2026
       ]
