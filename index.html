@@ -624,6 +624,9 @@ thead {
 #heatmapTable thead {
   position: static;
 }
+#annTable thead {
+  position: static;
+}
 thead th {
   background: var(--surface2);
   border-top: 1px solid var(--border);
@@ -1232,6 +1235,31 @@ html.light .footer-logo img {
 #heatmapTable th:nth-child(n+3),
 #heatmapTable td:nth-child(n+3) {
   width: 6%;
+}
+#annTable {
+  table-layout: fixed;
+  width: 100%;
+}
+#annTable th:first-child,
+#annTable td:first-child {
+  width: 18%;
+}
+#annTable th:nth-child(2),
+#annTable td:nth-child(2) {
+  width: 10%;
+}
+#annTable th:nth-child(n+3),
+#annTable td:nth-child(n+3) {
+  width: 6%;
+}
+#annWrap.ann-dati-mode #annTable .hm-cell {
+  width: 100%;
+  min-width: 0;
+}
+#annWrap.ann-dati-mode #annTable .hm-num {
+  white-space: nowrap;
+  min-width: 0;
+  font-size: 13px;
 }
 .heatmap-table {
   border-collapse: collapse;
@@ -3396,6 +3424,32 @@ td:nth-child(7){
   </div>
 </div>
 
+<div class="heatmap-section" id="annSection">
+  <div class="heatmap-header">
+    <div class="heatmap-title-block">
+      <span class="heatmap-title-label">Statistiche Annuali</span>
+      <span class="heatmap-title-sub" id="annSubtitle">distribuzione annuale</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+      <div class="heatmap-toggle">
+        <button class="hm-btn active" id="annBtnGruppo" onclick="switchAnnuale('gruppo')">Per Gruppo</button>
+        <button class="hm-btn" id="annBtnRegione" onclick="switchAnnuale('regione')">Per Regione</button>
+        <button class="hm-btn" id="annBtnNuts" onclick="switchAnnuale('nuts')">Per Aree NUTS 1</button>
+        <button class="hm-btn" id="annBtnSettore" onclick="switchAnnuale('settore')">Per Settore</button>
+        <button class="hm-btn" id="annBtnDati" onclick="switchAnnuale('dati')">Per Dati Pubblicati</button>
+      </div>
+      <div style="width:1px;height:24px;background:var(--border2);"></div>
+      <select id="annYearSelect" onchange="switchAnnAnno(this.value)" style="background:var(--surface2);color:var(--text);border:1px solid var(--border2);border-radius:8px;padding:8px 12px;font-family:var(--sans);font-weight:700;font-size:14px;cursor:pointer;"></select>
+    </div>
+  </div>
+  <div class="heatmap-wrap" id="annWrap">
+    <table class="heatmap-table" id="annTable">
+      <thead id="annHead"></thead>
+      <tbody id="annBody"></tbody>
+    </table>
+  </div>
+</div>
+
 <!-- FOOTER -->
 
 
@@ -4823,6 +4877,299 @@ function getDatiClass(val) {
 }
 
 // ── Heatmap ───────────────────────────────
+let annMode = 'gruppo';
+let annSortAlpha = false;
+let annYear = new Date().getFullYear();
+
+function initAnnYearSelect() {
+  const sel = document.getElementById('annYearSelect');
+  if (!sel) return;
+  const opts = YEARS.slice().sort((a,b) => b - a);
+  sel.innerHTML = opts.map(y => `<option value="${y}"${y === annYear ? ' selected' : ''}>${y}</option>`).join('');
+}
+
+function switchAnnAnno(y) {
+  annYear = parseInt(y, 10);
+  buildAnnuale();
+}
+
+function buildAnnuale() {
+  const sub = document.getElementById('annSubtitle');
+  if (sub) sub.textContent = 'distribuzione annuale ' + annYear;
+  const meseNomi = ['','Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'];
+  const sortedMonths = [];
+  const monthLabels = [];
+  for (let m = 1; m <= 12; m++) {
+    sortedMonths.push(`${annYear}-${String(m).padStart(2,'0')}`);
+    monthLabels.push(meseNomi[m] + '\u00A0' + String(annYear).slice(-2));
+  }
+
+  // Aggregate data (solo anno selezionato)
+  const counts = {}; // { key: { monthKey: n } }
+  all.forEach(r => {
+    if (!r.DATA) return;
+    const parts = r.DATA.split('/');
+    if (parts.length < 3) return;
+    if (parseInt(parts[2], 10) !== annYear) return;
+    const monthKey = `${parts[2]}-${parts[1]}`;
+    const label = annMode === 'gruppo' || annMode === 'dati'
+      ? (String(r.GRUPPO).toLowerCase() || 'N/D').trim()
+      : annMode === 'settore'
+      ? (r.SETTORE || 'N/D').trim()
+      : annMode === 'nuts'
+      ? (function() {
+          const reg = normalizeRegionName(r.REGIONE);
+          if (!reg || reg.toLowerCase() === 'sconosciuta') return 'Sconosciuta';
+          for (const [macro, regions] of Object.entries(MACRO_AREE)) {
+            if (regions.map(normalizeRegionName).includes(reg)) return macro;
+          }
+          return 'Sconosciuta';
+        })()
+      : (r.REGIONE || 'N/D').trim();
+    const value = annMode === 'dati' ? (parseFloat(r.DATI) || 0) : 1;
+    if (!counts[label]) counts[label] = {};
+    counts[label][monthKey] = (counts[label][monthKey] || 0) + value;
+  });
+
+  // Sort rows by total desc o alfabetico
+  // Include all ATECO sectors even with zero claims
+  if (annMode === 'settore') {
+    ATECO_CATALOG.forEach(function(cat) {
+      if (!counts[cat.code]) counts[cat.code] = {};
+    });
+  }
+  // Include all Italian regions even with zero claims
+  if (annMode === 'regione') {
+    ["Valle d'Aosta","Piemonte","Liguria","Lombardia","Trentino Alto Adige",
+     "Veneto","Friuli Venezia Giulia","Emilia Romagna","Toscana","Umbria",
+     "Marche","Lazio","Abruzzo","Molise","Campania","Puglia","Basilicata",
+     "Calabria","Sicilia","Sardegna"].forEach(function(r) {
+      if (!counts[r]) counts[r] = {};
+    });
+  }
+  if (annMode === 'nuts') {
+    ["Nord-Ovest","Nord-Est","Centro","Sud","Isole","Sconosciuta"].forEach(function(m) {
+      if (!counts[m]) counts[m] = {};
+    });
+  }
+  // Per il settore l'ordine predefinito è alfabetico (codice ATECO A→V);
+  // annSortAlpha permette comunque il toggle manuale per tutte le modalità che lo supportano.
+  const useAlphaSort = annMode === 'settore' ? !annSortAlpha : annSortAlpha;
+  const rows = Object.entries(counts)
+    .map(([label, mc]) => ({ label, mc, total: Object.values(mc).reduce((a,b)=>a+b,0) }))
+    .sort((a,b) => useAlphaSort
+      ? a.label.localeCompare(b.label, 'it')
+      : b.total - a.total);
+
+  // Tutte le righe (nessuna paginazione, scroll interno gestisce la navigazione)
+
+  // Global max for sparkbar scaling (based on all rows, not just visible)
+  let globalMax = 0;
+  rows.forEach(r => Object.values(r.mc).forEach(v => { if (v > globalMax) globalMax = v; }));
+
+  // Build head
+  const headRow = `<tr>
+    <th class="hm-row-label" style="cursor:pointer;user-select:none;" onclick="if(annMode==='gruppo'||annMode==='settore'||annMode==='dati'){annSortAlpha=!annSortAlpha;buildAnnuale();}" title="${annMode!=='regione'&&annMode!=='nuts'?'Clicca per ordinare':''}">
+      ${annMode === 'gruppo' ? 'Gruppo ' + (annSortAlpha ? '↑ A-Z' : '↓ N')
+        : annMode === 'settore' ? 'Settore ' + (useAlphaSort ? '↑ A-Z' : '↓ N')
+        : annMode === 'dati' ? 'Gruppo ' + (annSortAlpha ? '↑ A-Z' : '↓ GB')
+        : annMode === 'nuts' ? 'Area NUTS 1'
+        : 'Regione'}
+    </th>
+    <th style="border-right:1px solid var(--border)">Tot.</th>
+    ${sortedMonths.map((mk, i) => `<th>${monthLabels[i]}</th>`).join('')}
+  </tr>`;
+  document.getElementById('annHead').innerHTML = headRow;
+
+  // Build totals row (sum per month across ALL rows, not just visible page)
+  const monthTotals = {};
+  rows.forEach(({ mc }) => {
+    sortedMonths.forEach(mk => {
+      monthTotals[mk] = (monthTotals[mk] || 0) + (mc[mk] || 0);
+    });
+  });
+  const grandTotal = Object.values(monthTotals).reduce((a,b)=>a+b,0);
+  const fmtHmEuroGB = n => {
+    const parts = (n||0).toFixed(2).split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    return parts.join(',');
+  };
+  const fmtHmN = v => annMode === 'dati' ? fmtHmEuroGB(v) : (v || '·');
+  const totalsRow = `<tr class="hm-totals-row">
+    <td class="hm-row-label" style="font-weight:700;color:var(--red);letter-spacing:0.06em;font-size:12px;">TOTALE</td>
+    <td class="hm-total-col" style="font-weight:700;color:var(--red);border-right:1px solid var(--border)">${annMode==='dati' ? fmtHmEuroGB(grandTotal) : grandTotal}</td>
+    ${sortedMonths.map(mk => {
+      const n = monthTotals[mk] || 0;
+      const clickable = n > 0;
+      const xClick = clickable ? `onclick="applyAnnFilterMonth('${mk}')"` : '';
+      return `<td><div class="hm-cell ${n>0?'nonzero':'zero'}${clickable?' hm-clickable':''}" ${xClick}>
+        <span class="hm-num" style="font-weight:700">${fmtHmN(n)}</span>
+        <div class="hm-spark-track"><div class="hm-spark" style="width:0%"></div></div>
+      </div></td>`;
+    }).join('')}
+  </tr>`;
+  document.getElementById('annBody').innerHTML = totalsRow;
+
+  const bodyRows = rows.map(({ label, mc, total }) => {
+    const cells = sortedMonths.map(mk => {
+      const n = mc[mk] || 0;
+      const pct = globalMax > 0 ? Math.round((n / globalMax) * 100) : 0;
+      const cls = n === 0 ? 'zero' : 'nonzero';
+      const clickable = n > 0 && annMode !== 'nuts';
+      const xCls = clickable ? ' hm-clickable' : '';
+      const xClick = clickable ? `onclick="applyAnnFilter('${label}','${mk}')"` : '';
+      return `<td><div class="hm-cell ${cls}${xCls}" ${xClick}>
+        <span class="hm-num">${fmtHmN(n)}</span>
+        <div class="hm-spark-track"><div class="hm-spark" style="width:${pct}%"></div></div>
+      </div></td>`;
+    }).join('');
+    const totalPct = rows.length > 0 && rows[0].total > 0 ? Math.round((total / rows[0].total) * 100) : 0;
+    const displayLabel = annMode === 'settore' ? settoreLabel(label) : label;
+    const totClickable = annMode !== 'nuts';
+    const totCls = totClickable ? ' hm-clickable' : '';
+    const totClick = totClickable ? `onclick="applyAnnFilterTotal('${label}')" title="Vedi tutte le rivendicazioni"` : '';
+    return `<tr>
+      <td class="hm-row-label">${displayLabel}</td>
+      <td class="hm-total-col" style="border-right:1px solid var(--border)">
+        <div class="hm-cell nonzero${totCls}" style="width:100%;height:40px;" ${totClick}>
+          <span class="hm-num">${annMode==='dati' ? fmtHmEuroGB(total) : total}</span>
+          <div class="hm-spark-track"><div class="hm-spark" style="width:${totalPct}%"></div></div>
+        </div>
+      </td>
+      ${cells}
+    </tr>`;
+  }).join('');
+  document.getElementById('annBody').innerHTML += bodyRows;
+
+  // Scroll interno costante su tutte le viste (Gruppo/Regione/NUTS1/Settore/Dati)
+  var annWrap = document.getElementById('annWrap');
+  if (annWrap) {
+    annWrap.style.maxHeight = '450px';
+    annWrap.style.minHeight = '450px';
+    annWrap.style.overflow = 'auto';
+    annWrap.style.overscrollBehavior = 'none';
+    annWrap.classList.toggle('ann-dati-mode', annMode === 'dati');
+  }
+}
+
+function switchAnnuale(mode) {
+  annMode = mode;
+  document.getElementById('annBtnGruppo').classList.toggle('active', mode === 'gruppo');
+  document.getElementById('annBtnRegione').classList.toggle('active', mode === 'regione');
+  document.getElementById('annBtnNuts').classList.toggle('active', mode === 'nuts');
+  document.getElementById('annBtnSettore').classList.toggle('active', mode === 'settore');
+  document.getElementById('annBtnDati').classList.toggle('active', mode === 'dati');
+  buildAnnuale();
+  var wrap = document.getElementById('annWrap');
+  if (wrap) wrap.scrollTop = 0;
+}
+
+
+function applyAnnFilter(label, monthKey) {
+  const [y, m] = monthKey.split('-');
+  const yr = parseInt(y, 10);
+  hmMonth = parseInt(m, 10);
+  hmGroup = (annMode === 'gruppo' || annMode === 'dati') ? label.toLowerCase() : null;
+  hmRegione = annMode === 'regione' ? label : null;
+  hmSettore = annMode === 'settore' ? label : null;
+
+  year = yr;
+  ['tabAll','tab2020','tab2021','tab2022','tab2023','tab2024','tab2025','tab2026'].forEach(id => document.getElementById(id).classList.remove('active'));
+  document.getElementById(yr === 2025 ? 'tab2025' : yr === 2026 ? 'tab2026' : 'tabAll').classList.add('active');
+
+  document.getElementById('gruppoFilter').value = hmGroup || '';
+  document.getElementById('regioneFilter').value = hmRegione || '';
+  document.getElementById('settoreFilter').value = hmSettore || '';
+  document.getElementById('searchInput').value = '';
+
+  const mesi = ['','gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
+  const badgeLabel = annMode === 'settore' ? settoreLabel(label) : label;
+  document.getElementById('hmFilterLabel').textContent = badgeLabel + ' · ' + mesi[hmMonth] + ' ' + y;
+  document.getElementById('hmFilterBadge').style.display = '';
+  document.getElementById('hmResetBtn').style.display = '';
+
+  currentPage = 1;
+  render();
+  setTimeout(() => {
+    const target = currentView === 'cards'
+      ? document.getElementById('cardsView')
+      : document.getElementById('mainTable');
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 175;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }, 50);
+}
+
+function applyAnnFilterMonth(monthKey) {
+  const [y, m] = monthKey.split('-');
+  const yr = parseInt(y, 10);
+  hmMonth = parseInt(m, 10);
+  hmGroup = null;
+  hmRegione = null;
+  hmSettore = null;
+
+  year = yr;
+  ['tabAll','tab2020','tab2021','tab2022','tab2023','tab2024','tab2025','tab2026'].forEach(id => document.getElementById(id).classList.remove('active'));
+  document.getElementById(yr === 2025 ? 'tab2025' : yr === 2026 ? 'tab2026' : 'tabAll').classList.add('active');
+
+  document.getElementById('gruppoFilter').value = '';
+  document.getElementById('regioneFilter').value = '';
+  document.getElementById('settoreFilter').value = '';
+  document.getElementById('searchInput').value = '';
+
+  const mesi = ['','gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
+  const tuttiLabel = annMode === 'gruppo' || annMode === 'dati' ? 'tutti i gruppi' : annMode === 'settore' ? 'tutti i settori' : 'tutte le regioni';
+  document.getElementById('hmFilterLabel').textContent = tuttiLabel + ' · ' + mesi[hmMonth] + ' ' + y;
+  document.getElementById('hmFilterBadge').style.display = '';
+  document.getElementById('hmResetBtn').style.display = '';
+
+  currentPage = 1;
+  render();
+  setTimeout(() => {
+    const target = currentView === 'cards'
+      ? document.getElementById('cardsView')
+      : document.getElementById('mainTable');
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 175;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }, 50);
+}
+
+function applyAnnFilterTotal(label) {
+  hmMonth = null;
+  hmGroup = (annMode === 'gruppo' || annMode === 'dati') ? label.toLowerCase() : null;
+  hmRegione = annMode === 'regione' ? label : null;
+  hmSettore = annMode === 'settore' ? label : null;
+
+  year = annYear;
+  ['tabAll','tab2020','tab2021','tab2022','tab2023','tab2024','tab2025','tab2026'].forEach(id => document.getElementById(id).classList.remove('active'));
+  document.getElementById(annYear === 2025 ? 'tab2025' : annYear === 2026 ? 'tab2026' : 'tabAll').classList.add('active');
+
+  document.getElementById('gruppoFilter').value = hmGroup || '';
+  document.getElementById('regioneFilter').value = hmRegione || '';
+  document.getElementById('settoreFilter').value = hmSettore || '';
+  document.getElementById('searchInput').value = '';
+
+  const badgeLabel = annMode === 'settore' ? settoreLabel(label) : label;
+  document.getElementById('hmFilterLabel').textContent = badgeLabel + ' · ' + annYear;
+  document.getElementById('hmFilterBadge').style.display = '';
+  document.getElementById('hmResetBtn').style.display = '';
+
+  currentPage = 1;
+  render();
+  setTimeout(() => {
+    const target = currentView === 'cards'
+      ? document.getElementById('cardsView')
+      : document.getElementById('mainTable');
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 175;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }, 50);
+}
+
 let hmMode = 'gruppo';
 let hmYear = new Date().getFullYear();
 
@@ -4961,7 +5308,7 @@ function buildHeatmap() {
       const n = mc[mk] || 0;
       const pct = globalMax > 0 ? Math.round((n / globalMax) * 100) : 0;
       const cls = n === 0 ? 'zero' : 'nonzero';
-      const clickable = n > 0;
+      const clickable = n > 0 && hmMode !== 'nuts';
       const xCls = clickable ? ' hm-clickable' : '';
       const xClick = clickable ? `onclick="applyHmFilter('${label}','${mk}')"` : '';
       return `<td><div class="hm-cell ${cls}${xCls}" ${xClick}>
@@ -4971,10 +5318,13 @@ function buildHeatmap() {
     }).join('');
     const totalPct = rows.length > 0 && rows[0].total > 0 ? Math.round((total / rows[0].total) * 100) : 0;
     const displayLabel = hmMode === 'settore' ? settoreLabel(label) : label;
+    const totClickable = hmMode !== 'nuts';
+    const totCls = totClickable ? ' hm-clickable' : '';
+    const totClick = totClickable ? `onclick="applyHmFilterTotal('${label}')" title="Vedi tutte le rivendicazioni"` : '';
     return `<tr>
       <td class="hm-row-label">${displayLabel}</td>
       <td class="hm-total-col" style="border-right:1px solid var(--border)">
-        <div class="hm-cell nonzero hm-clickable" style="width:100%;height:40px;" onclick="applyHmFilterTotal('${label}')" title="Vedi tutte le rivendicazioni">
+        <div class="hm-cell nonzero${totCls}" style="width:100%;height:40px;" ${totClick}>
           <span class="hm-num">${hmMode==='dati' ? fmtHmEuroGB(total) : total}</span>
           <div class="hm-spark-track"><div class="hm-spark" style="width:${totalPct}%"></div></div>
         </div>
@@ -5153,7 +5503,10 @@ function buildSemestrale() {
     <td class="hm-total-col" style="font-weight:700;color:var(--red);border-right:1px solid var(--border)">${semMode==='dati' ? fmtEuroGB(grandTotal) : grandTotal}</td>
     ${mesiSemestre.map(m => {
       const n = monthTotals[m] || 0;
-      return `<td><div class="hm-cell ${n>0?'nonzero':'zero'}">
+      const clickable = n > 0;
+      const monthKey = `${currentYear}-${String(m).padStart(2,'0')}`;
+      const xClick = clickable ? `onclick="applySemFilterMonth('${monthKey}')"` : '';
+      return `<td><div class="hm-cell ${n>0?'nonzero':'zero'}${clickable?' hm-clickable':''}" ${xClick}>
         <span class="hm-num" style="font-weight:700">${fmtN(n)}</span>
         <div class="hm-spark-track"><div class="hm-spark" style="width:0%"></div></div>
       </div></td>`;
@@ -5165,17 +5518,24 @@ function buildSemestrale() {
       const n = mc[m] || 0;
       const pct = globalMax > 0 ? Math.round((n / globalMax) * 100) : 0;
       const cls = n === 0 ? 'zero' : 'nonzero';
-      return `<td><div class="hm-cell ${cls}">
+      const clickable = n > 0 && semMode !== 'nuts';
+      const xCls = clickable ? ' hm-clickable' : '';
+      const monthKey = `${currentYear}-${String(m).padStart(2,'0')}`;
+      const xClick = clickable ? `onclick="applySemFilter('${label}','${monthKey}')"` : '';
+      return `<td><div class="hm-cell ${cls}${xCls}" ${xClick}>
         <span class="hm-num">${fmtN(n)}</span>
         <div class="hm-spark-track"><div class="hm-spark" style="width:${pct}%"></div></div>
       </div></td>`;
     }).join('');
     const totalPct = rows.length > 0 && rows[0].total > 0 ? Math.round((total / rows[0].total) * 100) : 0;
     const displayLabel = semMode === 'settore' ? settoreLabel(label) : label;
+    const totClickable = semMode !== 'nuts';
+    const totCls = totClickable ? ' hm-clickable' : '';
+    const totClick = totClickable ? `onclick="applySemFilterTotal('${label}')" title="Vedi tutte le rivendicazioni"` : '';
     return `<tr>
       <td class="hm-row-label">${displayLabel}</td>
       <td class="hm-total-col" style="border-right:1px solid var(--border)">
-        <div class="hm-cell nonzero" style="width:100%;height:40px;">
+        <div class="hm-cell nonzero${totCls}" style="width:100%;height:40px;" ${totClick}>
           <span class="hm-num">${semMode==='dati' ? fmtEuroGB(total) : total}</span>
           <div class="hm-spark-track"><div class="hm-spark" style="width:${totalPct}%"></div></div>
         </div>
@@ -5199,6 +5559,9 @@ function buildSemestrale() {
 initSemYearSelect();
 buildSemestrale();
 
+initAnnYearSelect();
+buildAnnuale();
+
 initHmYearSelect();
 buildHeatmap();
   buildTrendChart();
@@ -5214,7 +5577,7 @@ function applyHmFilter(label, monthKey) {
   const [y, m] = monthKey.split('-');
   const yr = parseInt(y, 10);
   hmMonth = parseInt(m, 10);
-  hmGroup = hmMode === 'gruppo' ? label.toLowerCase() : null;
+  hmGroup = (hmMode === 'gruppo' || hmMode === 'dati') ? label.toLowerCase() : null;
   hmRegione = hmMode === 'regione' ? label : null;
   hmSettore = hmMode === 'settore' ? label : null;
 
@@ -5251,7 +5614,7 @@ function applyHmFilter(label, monthKey) {
 
 function applyHmFilterTotal(label) {
   hmMonth = null;
-  hmGroup = hmMode === 'gruppo' ? label.toLowerCase() : null;
+  hmGroup = (hmMode === 'gruppo' || hmMode === 'dati') ? label.toLowerCase() : null;
   hmRegione = hmMode === 'regione' ? label : null;
   hmSettore = hmMode === 'settore' ? label : null;
 
@@ -5266,6 +5629,111 @@ function applyHmFilterTotal(label) {
 
   const badgeLabel = hmMode === 'settore' ? settoreLabel(label) : label;
   document.getElementById('hmFilterLabel').textContent = badgeLabel + ' · tutti i mesi';
+  document.getElementById('hmFilterBadge').style.display = '';
+  document.getElementById('hmResetBtn').style.display = '';
+
+  currentPage = 1;
+  render();
+  setTimeout(() => {
+    const target = currentView === 'cards'
+      ? document.getElementById('cardsView')
+      : document.getElementById('mainTable');
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 175;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }, 50);
+}
+
+function applySemFilter(label, monthKey) {
+  const [y, m] = monthKey.split('-');
+  const yr = parseInt(y, 10);
+  hmMonth = parseInt(m, 10);
+  hmGroup = (semMode === 'gruppo' || semMode === 'dati') ? label.toLowerCase() : null;
+  hmRegione = semMode === 'regione' ? label : null;
+  hmSettore = semMode === 'settore' ? label : null;
+
+  year = yr;
+  ['tabAll','tab2020','tab2021','tab2022','tab2023','tab2024','tab2025','tab2026'].forEach(id => document.getElementById(id).classList.remove('active'));
+  document.getElementById(yr === 2025 ? 'tab2025' : yr === 2026 ? 'tab2026' : 'tabAll').classList.add('active');
+
+  document.getElementById('gruppoFilter').value = hmGroup || '';
+  document.getElementById('regioneFilter').value = hmRegione || '';
+  document.getElementById('settoreFilter').value = hmSettore || '';
+  document.getElementById('searchInput').value = '';
+
+  const mesi = ['','gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
+  const badgeLabel = semMode === 'settore' ? settoreLabel(label) : label;
+  document.getElementById('hmFilterLabel').textContent = badgeLabel + ' · ' + mesi[hmMonth] + ' ' + y;
+  document.getElementById('hmFilterBadge').style.display = '';
+  document.getElementById('hmResetBtn').style.display = '';
+
+  currentPage = 1;
+  render();
+  setTimeout(() => {
+    const target = currentView === 'cards'
+      ? document.getElementById('cardsView')
+      : document.getElementById('mainTable');
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 175;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }, 50);
+}
+
+function applySemFilterMonth(monthKey) {
+  const [y, m] = monthKey.split('-');
+  const yr = parseInt(y, 10);
+  hmMonth = parseInt(m, 10);
+  hmGroup = null;
+  hmRegione = null;
+  hmSettore = null;
+
+  year = yr;
+  ['tabAll','tab2020','tab2021','tab2022','tab2023','tab2024','tab2025','tab2026'].forEach(id => document.getElementById(id).classList.remove('active'));
+  document.getElementById(yr === 2025 ? 'tab2025' : yr === 2026 ? 'tab2026' : 'tabAll').classList.add('active');
+
+  document.getElementById('gruppoFilter').value = '';
+  document.getElementById('regioneFilter').value = '';
+  document.getElementById('settoreFilter').value = '';
+  document.getElementById('searchInput').value = '';
+
+  const mesi = ['','gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
+  const tuttiLabel = semMode === 'gruppo' || semMode === 'dati' ? 'tutti i gruppi' : semMode === 'settore' ? 'tutti i settori' : 'tutte le regioni';
+  document.getElementById('hmFilterLabel').textContent = tuttiLabel + ' · ' + mesi[hmMonth] + ' ' + y;
+  document.getElementById('hmFilterBadge').style.display = '';
+  document.getElementById('hmResetBtn').style.display = '';
+
+  currentPage = 1;
+  render();
+  setTimeout(() => {
+    const target = currentView === 'cards'
+      ? document.getElementById('cardsView')
+      : document.getElementById('mainTable');
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 175;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }, 50);
+}
+
+function applySemFilterTotal(label) {
+  hmMonth = null;
+  hmGroup = (semMode === 'gruppo' || semMode === 'dati') ? label.toLowerCase() : null;
+  hmRegione = semMode === 'regione' ? label : null;
+  hmSettore = semMode === 'settore' ? label : null;
+
+  year = semYear;
+  ['tabAll','tab2020','tab2021','tab2022','tab2023','tab2024','tab2025','tab2026'].forEach(id => document.getElementById(id).classList.remove('active'));
+  document.getElementById(semYear === 2025 ? 'tab2025' : semYear === 2026 ? 'tab2026' : 'tabAll').classList.add('active');
+
+  document.getElementById('gruppoFilter').value = hmGroup || '';
+  document.getElementById('regioneFilter').value = hmRegione || '';
+  document.getElementById('settoreFilter').value = hmSettore || '';
+  document.getElementById('searchInput').value = '';
+
+  const badgeLabel = semMode === 'settore' ? settoreLabel(label) : label;
+  document.getElementById('hmFilterLabel').textContent = badgeLabel + ' · ' + semYear;
   document.getElementById('hmFilterBadge').style.display = '';
   document.getElementById('hmResetBtn').style.display = '';
 
@@ -5646,7 +6114,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_379';
+    verEl.textContent = 'DS_STABILE_380';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
