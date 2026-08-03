@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-03T16:11:13.282654+00:00",
-  "total": 30,
+  "generated": "2026-08-03T16:23:59.425905+00:00",
+  "total": 31,
   "records": [
     {
       "id": "#00001",
@@ -301,6 +301,16 @@
       "provincia": "Arezzo",
       "regione": "Toscana",
       "fonte": "https://www.unoaerrecorporate.it/comunicazione-sulla-violazione-dei-dati-personali/",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00031",
+      "data": "25/07/2026",
+      "vittima": "Primo Caredent Group S.P.A.",
+      "link": "primocaredentgroup.it",
+      "provincia": "Padova",
+      "regione": "Veneto",
+      "fonte": "https://www.mattinopadova.it/cronaca/attacco-hacker-caredent-trebaseleghe-dati-pazienti-sicurezza-bzxcdny5",
       "note": "Confermato: SI | Attribuito a: —"
     }
   ]
