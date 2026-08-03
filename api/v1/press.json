@@ -1,10 +1,20 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-07-31T16:35:27.629133+00:00",
+  "generated": "2026-08-03T16:11:13.282654+00:00",
   "total": 30,
   "records": [
     {
       "id": "#00001",
+      "data": "09/2023",
+      "vittima": "CEI — Comitato Elettrotecnico Italiano",
+      "link": "ceinorme.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "fonte": "https://www.redhotcyber.com/post/attacco-informatico-al-comitato-elettronico-italiano-una-intrusione-abusiva-mette-fuori-uso-i-sistemi/",
+      "note": "Confermato: NO | Attribuito a: —"
+    },
+    {
+      "id": "#00002",
       "data": "30/03/2021",
       "vittima": "Comune di Brescia",
       "link": "comune.brescia.it",
@@ -14,7 +24,7 @@
       "note": "Confermato: SI | Attribuito a: DoppelPaymer"
     },
     {
-      "id": "#00002",
+      "id": "#00003",
       "data": "01/08/2021",
       "vittima": "Regione Lazio / LazioCrea",
       "link": "regione.lazio.it",
@@ -24,7 +34,7 @@
       "note": "Confermato: SI | Attribuito a: RansomEXX"
     },
     {
-      "id": "#00003",
+      "id": "#00004",
       "data": "12/09/2021",
       "vittima": "AO San Giovanni Addolorata",
       "link": "hsangiovanni.roma.it",
@@ -34,7 +44,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00004",
+      "id": "#00005",
       "data": "30/10/2021",
       "vittima": "ASL Roma 3",
       "link": "aslroma3.it",
@@ -44,7 +54,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00005",
+      "id": "#00006",
       "data": "23/02/2022",
       "vittima": "EAV S.r.l. (Ente Autonomo Volturno)",
       "link": "eavsrl.it",
@@ -54,7 +64,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00006",
+      "id": "#00007",
       "data": "19/08/2022",
       "vittima": "ASL Città di Torino",
       "link": "aslcittaditorino.it",
@@ -64,7 +74,7 @@
       "note": "Confermato: SI | Attribuito a: HIVE"
     },
     {
-      "id": "#00007",
+      "id": "#00008",
       "data": "26/06/2023",
       "vittima": "Runner S.P.A.",
       "link": "runner.it",
@@ -74,7 +84,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00008",
+      "id": "#00009",
       "data": "05/07/2023",
       "vittima": "AO Universitaria Luigi Vanvitelli",
       "link": "policliniconapoli.it",
@@ -82,16 +92,6 @@
       "regione": "Campania",
       "fonte": "https://www.ansa.it/campania/notizie/2023/07/05/attacco-hacker-a-un-ospedale-di-napoli-chiesto-un-riscatto_7b967a76-723e-4488-a410-c04313dc4e3b.html",
       "note": "Confermato: SI | Attribuito a: —"
-    },
-    {
-      "id": "#00009",
-      "data": "09/2023",
-      "vittima": "CEI — Comitato Elettrotecnico Italiano",
-      "link": "ceinorme.it",
-      "provincia": "Milano",
-      "regione": "Lombardia",
-      "fonte": "https://www.redhotcyber.com/post/attacco-informatico-al-comitato-elettronico-italiano-una-intrusione-abusiva-mette-fuori-uso-i-sistemi/",
-      "note": "Confermato: NO | Attribuito a: —"
     },
     {
       "id": "#00010",
@@ -165,6 +165,16 @@
     },
     {
       "id": "#00017",
+      "data": "24/03/2025",
+      "vittima": "AMA S.P.A. (Azienda Municipale Ambiente)",
+      "link": "amaroma.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
+      "fonte": "https://www.romatoday.it/attualita/attacco-hacker-ama-roma.html",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00018",
       "data": "29/03/2025",
       "vittima": "Gestopark S.R.L.",
       "link": "gestopark.it",
@@ -174,7 +184,7 @@
       "note": "Confermato: NO | Attribuito a: —"
     },
     {
-      "id": "#00018",
+      "id": "#00019",
       "data": "31/03/2025",
       "vittima": "MOM S.P.A. (Mobilità di Marca)",
       "link": "mobilitadimarca.it",
@@ -184,7 +194,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00019",
+      "id": "#00020",
       "data": "15/04/2025",
       "vittima": "Polizia Locale Roma Capitale",
       "link": "comune.roma.it",
@@ -194,7 +204,7 @@
       "note": "Confermato: NO | Attribuito a: —"
     },
     {
-      "id": "#00020",
+      "id": "#00021",
       "data": "01/05/2025",
       "vittima": "Breton S.P.A.",
       "link": "breton.it",
@@ -204,7 +214,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00021",
+      "id": "#00022",
       "data": "08/05/2025",
       "vittima": "Università Roma Tre",
       "link": "uniroma3.it",
@@ -214,7 +224,7 @@
       "note": "Confermato: SI | Attribuito a: INC Ransom"
     },
     {
-      "id": "#00022",
+      "id": "#00023",
       "data": "18/06/2025",
       "vittima": "ASP di Palermo",
       "link": "asppalermo.org",
@@ -224,7 +234,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00023",
+      "id": "#00024",
       "data": "01/02/2026",
       "vittima": "Gallerie degli Uffizi",
       "link": "uffizi.it",
@@ -234,7 +244,7 @@
       "note": "Confermato: SI | Attribuito a: BabLock/Rorschach"
     },
     {
-      "id": "#00024",
+      "id": "#00025",
       "data": "02/02/2026",
       "vittima": "Università La Sapienza",
       "link": "uniroma1.it",
@@ -244,7 +254,7 @@
       "note": "Confermato: SI | Attribuito a: Femwar02/BabLock"
     },
     {
-      "id": "#00025",
+      "id": "#00026",
       "data": "04/02/2026",
       "vittima": "SST Chioggia",
       "link": "sstchioggia.it",
@@ -254,7 +264,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00026",
+      "id": "#00027",
       "data": "09/02/2026",
       "vittima": "Comune di Nosate",
       "link": "comune.nosate.mi.it",
@@ -264,7 +274,7 @@
       "note": "Confermato: NO | Attribuito a: —"
     },
     {
-      "id": "#00027",
+      "id": "#00028",
       "data": "22/02/2026",
       "vittima": "Biblioteche di Roma",
       "link": "bibliotechediroma.it",
@@ -274,7 +284,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00028",
+      "id": "#00029",
       "data": "25/03/2026",
       "vittima": "A.O. Papardo",
       "link": "papardo.it",
@@ -284,23 +294,13 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00029",
+      "id": "#00030",
       "data": "09/05/2026",
       "vittima": "Unoaerre Industries S.P.A.",
       "link": "unoaerre.it",
       "provincia": "Arezzo",
       "regione": "Toscana",
       "fonte": "https://www.unoaerrecorporate.it/comunicazione-sulla-violazione-dei-dati-personali/",
-      "note": "Confermato: SI | Attribuito a: —"
-    },
-    {
-      "id": "#00030",
-      "data": "22/05/2026",
-      "vittima": "Casalp S.p.A.",
-      "link": "casalp.it",
-      "provincia": "Livorno",
-      "regione": "Toscana",
-      "fonte": "https://www.casalp.it/archivio5_notizie_0_129.html",
       "note": "Confermato: SI | Attribuito a: —"
     }
   ]
