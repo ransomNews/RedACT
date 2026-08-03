@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-03T16:23:59.425905+00:00",
+  "generated": "2026-08-03T19:45:44.758681+00:00",
   "anno": 2026,
-  "total": 164,
+  "total": 165,
   "records": [
     {
       "id": "00317",
@@ -1805,6 +1805,17 @@
       "link": "pasello.com",
       "provincia": "Bologna",
       "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00482",
+      "data": "03/08/2026",
+      "vittima": "New Point S.P.A.",
+      "gruppo": "safepay",
+      "link": "new-point.it",
+      "provincia": "Firenze",
+      "regione": "Toscana",
       "dati_gb": 0.0,
       "note": ""
     }

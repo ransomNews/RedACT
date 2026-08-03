@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-03T16:23:59.425905+00:00",
+  "generated": "2026-08-03T19:45:44.758681+00:00",
   "total": 123,
   "gruppi": [
     {
@@ -869,7 +869,7 @@
     },
     {
       "nome": "safepay",
-      "rivendicazioni": 15,
+      "rivendicazioni": 16,
       "dati_gb": 2406.67,
       "anni_attivi": [
         2024,
