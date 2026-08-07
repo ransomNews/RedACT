@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-07T08:26:44.560571+00:00",
-  "total": 811,
+  "generated": "2026-08-07T16:26:23.856931+00:00",
+  "total": 812,
   "records": [
     {
       "id": "00001",
@@ -9732,6 +9732,18 @@
       "link": "vemecsrl.com",
       "provincia": "Bergamo",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00488",
+      "data": "07/08/2026",
+      "anno": 2026,
+      "vittima": "Hitech Distribuzione Informatica S.R.L.",
+      "gruppo": "spacebears",
+      "link": "htdi.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
       "dati_gb": 0.0,
       "note": ""
     }
