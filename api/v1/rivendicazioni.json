@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-03T19:45:44.758681+00:00",
-  "total": 806,
+  "generated": "2026-08-07T08:26:44.560571+00:00",
+  "total": 811,
   "records": [
     {
       "id": "00001",
@@ -9672,6 +9672,66 @@
       "link": "new-point.it",
       "provincia": "Firenze",
       "regione": "Toscana",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00483",
+      "data": "07/08/2026",
+      "anno": 2026,
+      "vittima": "Hiwin S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "hiwin.it",
+      "provincia": "Monza e della Brianza",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00484",
+      "data": "07/08/2026",
+      "anno": 2026,
+      "vittima": "Tesi S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "aeronet.it",
+      "provincia": "Napoli",
+      "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00485",
+      "data": "07/08/2026",
+      "anno": 2026,
+      "vittima": "Feraboli Zootech S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "feraboli.it",
+      "provincia": "Cremona",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00486",
+      "data": "07/08/2026",
+      "anno": 2026,
+      "vittima": "Nobema S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "nobema.com",
+      "provincia": "Torino",
+      "regione": "Piemonte",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00487",
+      "data": "07/08/2026",
+      "anno": 2026,
+      "vittima": "Vemec S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "vemecsrl.com",
+      "provincia": "Bergamo",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }

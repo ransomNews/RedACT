@@ -6,13 +6,53 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Mon, 03 Aug 2026 19:45:44 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 08:26:44 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Hiwin S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00483 | Gruppo: thegentlemen | Data: 07/08/2026 | Provincia: Monza e della Brianza | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00483</guid>
+      <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>Tesi S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00484 | Gruppo: thegentlemen | Data: 07/08/2026 | Provincia: Napoli | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00484</guid>
+      <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>Feraboli Zootech S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00485 | Gruppo: thegentlemen | Data: 07/08/2026 | Provincia: Cremona | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00485</guid>
+      <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>Nobema S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00486 | Gruppo: thegentlemen | Data: 07/08/2026 | Provincia: Torino | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00486</guid>
+      <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>Vemec S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00487 | Gruppo: thegentlemen | Data: 07/08/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00487</guid>
+      <category>thegentlemen</category>
+    </item>
     <item>
       <title>New Point S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -132,46 +172,6 @@
       <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00470</guid>
       <category>ailock</category>
-    </item>
-    <item>
-      <title>Vela Film S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00467 | Gruppo: payload | Data: 05/07/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
-      <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00467</guid>
-      <category>payload</category>
-    </item>
-    <item>
-      <title>Flazio S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00466 | Gruppo: apt73/bashe | Data: 02/07/2026 | Provincia: Catania | Regione: Sicilia | Zona: Isole | Dati pubblicati: GB 1,00</description>
-      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00466</guid>
-      <category>apt73/bashe</category>
-    </item>
-    <item>
-      <title>Starpool S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00465 | Gruppo: worldleaks | Data: 01/07/2026 | Provincia: Trento | Regione: Trentino Alto Adige | Zona: --- | Dati pubblicati: GB 5.400,00</description>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00465</guid>
-      <category>worldleaks</category>
-    </item>
-    <item>
-      <title>SZA Studio Legale</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00463 | Gruppo: incransom | Data: 30/06/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00463</guid>
-      <category>incransom</category>
-    </item>
-    <item>
-      <title>Naturghiaccio S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00464 | Gruppo: thegentlemen | Data: 30/06/2026 | Provincia: Cagliari | Regione: Sardegna | Zona: Isole | Dati pubblicati: GB 0</description>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00464</guid>
-      <category>thegentlemen</category>
     </item>
   </channel>
 </rss>
