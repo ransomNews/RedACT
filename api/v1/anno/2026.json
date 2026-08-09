@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-09T04:05:16.419004+00:00",
+  "generated": "2026-08-09T19:26:00.563966+00:00",
   "anno": 2026,
-  "total": 172,
+  "total": 173,
   "records": [
     {
       "id": "00317",
@@ -1893,6 +1893,17 @@
       "link": "studiotibaldi.it",
       "provincia": "Roma",
       "regione": "Lazio",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00490",
+      "data": "09/08/2026",
+      "vittima": "Marconi Industrial Services S.P.A.",
+      "gruppo": "play",
+      "link": "marconi-spa.com",
+      "provincia": "Mantova",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
