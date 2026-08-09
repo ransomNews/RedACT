@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-08T13:42:44.780819+00:00",
-  "total": 812,
+  "generated": "2026-08-09T04:05:16.419004+00:00",
+  "total": 813,
   "records": [
     {
       "id": "00001",
@@ -9742,6 +9742,18 @@
       "vittima": "HTDI S.R.L.",
       "gruppo": "spacebears",
       "link": "htdi.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00489",
+      "data": "09/08/2026",
+      "anno": 2026,
+      "vittima": "Studio Associato Tibaldi",
+      "gruppo": "krybit",
+      "link": "studiotibaldi.it",
       "provincia": "Roma",
       "regione": "Lazio",
       "dati_gb": 0.0,
