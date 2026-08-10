@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-09T19:26:00.563966+00:00",
+  "generated": "2026-08-10T17:10:28.489030+00:00",
   "anno": 2026,
-  "total": 173,
+  "total": 174,
   "records": [
     {
       "id": "00317",
@@ -1904,6 +1904,17 @@
       "link": "marconi-spa.com",
       "provincia": "Mantova",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00491",
+      "data": "10/08/2026",
+      "vittima": "Verona 83 Soc. Cooperativa a r.l.",
+      "gruppo": "bravox",
+      "link": "verona83.it",
+      "provincia": "Verona",
+      "regione": "Veneto",
       "dati_gb": 0.0,
       "note": ""
     }
