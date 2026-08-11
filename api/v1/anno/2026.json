@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-11T02:55:56.363176+00:00",
+  "generated": "2026-08-11T19:02:20.032999+00:00",
   "anno": 2026,
-  "total": 175,
+  "total": 176,
   "records": [
     {
       "id": "00317",
@@ -1926,6 +1926,17 @@
       "link": "elettricasystem.it",
       "provincia": "Monza e della Brianza",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00493",
+      "data": "11/08/2026",
+      "vittima": "GMA Grandi Marche Automobili S.R.L.",
+      "gruppo": "qilin",
+      "link": "autogma.it",
+      "provincia": "Novara",
+      "regione": "Piemonte",
       "dati_gb": 0.0,
       "note": ""
     }
