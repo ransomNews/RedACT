@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 12 Aug 2026 14:25:09 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 15:02:28 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -44,6 +44,22 @@
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00497</guid>
       <category>majinahanashi</category>
+    </item>
+    <item>
+      <title>Srnet S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00498 | Gruppo: cl0p | Data: 12/08/2026 | Provincia: Padova | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00498</guid>
+      <category>cl0p</category>
+    </item>
+    <item>
+      <title>Nuova CMM S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00499 | Gruppo: cl0p | Data: 12/08/2026 | Provincia: Vicenza | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00499</guid>
+      <category>cl0p</category>
     </item>
     <item>
       <title>GMA Grandi Marche Automobili S.R.L.</title>
@@ -156,22 +172,6 @@
       <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00481</guid>
       <category>deadlock</category>
-    </item>
-    <item>
-      <title>Sistnet Sistemi 3 S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00479 | Gruppo: nova | Data: 25/07/2026 | Provincia: Cuneo | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00479</guid>
-      <category>nova</category>
-    </item>
-    <item>
-      <title>Primo Caredent Group S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT/press.html</link>
-      <description>ID: #00031 | Tipo: RansomNews Press | Data: 25/07/2026 | Provincia: Padova | Regione: Veneto | Zona: Nord-Est | Nota: Confermato: SI | Attribuito a: —</description>
-      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/press.html##00031</guid>
-      <category>press</category>
     </item>
   </channel>
 </rss>

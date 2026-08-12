@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-12T14:25:09.220474+00:00",
-  "total": 821,
+  "generated": "2026-08-12T15:02:28.820194+00:00",
+  "total": 823,
   "records": [
     {
       "id": "00001",
@@ -9853,6 +9853,30 @@
       "provincia": "Brindisi",
       "regione": "Puglia",
       "dati_gb": 73.4,
+      "note": ""
+    },
+    {
+      "id": "00498",
+      "data": "12/08/2026",
+      "anno": 2026,
+      "vittima": "Srnet S.R.L.",
+      "gruppo": "cl0p",
+      "link": "srnet.it",
+      "provincia": "Padova",
+      "regione": "Veneto",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00499",
+      "data": "12/08/2026",
+      "anno": 2026,
+      "vittima": "Nuova CMM S.R.L.",
+      "gruppo": "cl0p",
+      "link": "nuovacmm.com",
+      "provincia": "Vicenza",
+      "regione": "Veneto",
+      "dati_gb": 0.0,
       "note": ""
     }
   ]
