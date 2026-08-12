@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-12T04:33:58.212502+00:00",
-  "total": 125,
+  "generated": "2026-08-12T07:23:59.506648+00:00",
+  "total": 126,
   "gruppi": [
     {
       "nome": "8base",
@@ -589,6 +589,14 @@
       "dati_gb": 0.0,
       "anni_attivi": [
         2024
+      ]
+    },
+    {
+      "nome": "majinahanashi",
+      "rivendicazioni": 2,
+      "dati_gb": 0.0,
+      "anni_attivi": [
+        2026
       ]
     },
     {

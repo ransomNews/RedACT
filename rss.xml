@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 12 Aug 2026 04:33:58 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 07:23:59 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -28,6 +28,22 @@
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00495</guid>
       <category>spacebears</category>
+    </item>
+    <item>
+      <title>Goccia S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00496 | Gruppo: majinahanashi | Data: 12/08/2026 | Provincia: Asti | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00496</guid>
+      <category>majinahanashi</category>
+    </item>
+    <item>
+      <title>Studio Radiologico C.D.A. Diagnostica per Immagini S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00497 | Gruppo: majinahanashi | Data: 12/08/2026 | Provincia: Brindisi | Regione: Puglia | Zona: Sud | Dati pubblicati: GB 0</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00497</guid>
+      <category>majinahanashi</category>
     </item>
     <item>
       <title>GMA Grandi Marche Automobili S.R.L.</title>
@@ -156,22 +172,6 @@
       <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/press.html##00031</guid>
       <category>press</category>
-    </item>
-    <item>
-      <title>Auto Royal Company S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00478 | Gruppo: nightspire | Data: 23/07/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
-      <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00478</guid>
-      <category>nightspire</category>
-    </item>
-    <item>
-      <title>Sicc S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00477 | Gruppo: qilin | Data: 18/07/2026 | Provincia: Padova | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
-      <pubDate>Sat, 18 Jul 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00477</guid>
-      <category>qilin</category>
     </item>
   </channel>
 </rss>

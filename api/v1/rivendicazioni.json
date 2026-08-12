@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-12T04:33:58.212502+00:00",
-  "total": 819,
+  "generated": "2026-08-12T07:23:59.506648+00:00",
+  "total": 821,
   "records": [
     {
       "id": "00001",
@@ -9830,6 +9830,30 @@
       "regione": "Campania",
       "dati_gb": 0.0,
       "note": "Con Basso Fedele & Figli S.R.L."
+    },
+    {
+      "id": "00496",
+      "data": "12/08/2026",
+      "anno": 2026,
+      "vittima": "Goccia S.P.A.",
+      "gruppo": "majinahanashi",
+      "link": "gocciaspa.com",
+      "provincia": "Asti",
+      "regione": "Piemonte",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00497",
+      "data": "12/08/2026",
+      "anno": 2026,
+      "vittima": "Studio Radiologico C.D.A. Diagnostica per Immagini S.R.L.",
+      "gruppo": "majinahanashi",
+      "link": "centrodiagnosticocda.it",
+      "provincia": "Brindisi",
+      "regione": "Puglia",
+      "dati_gb": 0.0,
+      "note": ""
     }
   ]
 }
