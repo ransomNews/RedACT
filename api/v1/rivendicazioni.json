@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-12T07:23:59.506648+00:00",
+  "generated": "2026-08-12T14:25:09.220474+00:00",
   "total": 821,
   "records": [
     {
@@ -9837,7 +9837,7 @@
       "anno": 2026,
       "vittima": "Goccia S.P.A.",
       "gruppo": "majinahanashi",
-      "link": "gocciaspa.com",
+      "link": "gocciagioielli.com",
       "provincia": "Asti",
       "regione": "Piemonte",
       "dati_gb": 0.0,
@@ -9852,7 +9852,7 @@
       "link": "centrodiagnosticocda.it",
       "provincia": "Brindisi",
       "regione": "Puglia",
-      "dati_gb": 0.0,
+      "dati_gb": 73.4,
       "note": ""
     }
   ]
