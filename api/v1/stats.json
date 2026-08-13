@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-13T05:34:30.643507+00:00",
+  "generated": "2026-08-13T15:01:19.930596+00:00",
   "totali": {
-    "rivendicazioni": 823,
+    "rivendicazioni": 824,
     "gruppi_a_catalogo": 126,
     "dati_gb": 78668.44
   },
@@ -38,7 +38,7 @@
       "gruppi_attivi": 51
     },
     "2026": {
-      "rivendicazioni": 182,
+      "rivendicazioni": 183,
       "dati_gb": 21786.12,
       "gruppi_attivi": 37
     }

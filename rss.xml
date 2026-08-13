@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 13 Aug 2026 05:34:30 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 15:01:19 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>IPS S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00501 | Gruppo: thegentlemen | Data: 13/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00501</guid>
+      <category>thegentlemen</category>
+    </item>
     <item>
       <title>Basso Fedele &amp; Figli S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00480 | Gruppo: deadlock | Data: 28/07/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
       <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00480</guid>
-      <category>deadlock</category>
-    </item>
-    <item>
-      <title>Pasello Trattamenti Termici S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00481 | Gruppo: deadlock | Data: 28/07/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
-      <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00481</guid>
       <category>deadlock</category>
     </item>
   </channel>

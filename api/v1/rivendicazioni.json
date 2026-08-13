@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-13T05:34:30.643507+00:00",
-  "total": 823,
+  "generated": "2026-08-13T15:01:19.930596+00:00",
+  "total": 824,
   "records": [
     {
       "id": "00001",
@@ -9876,6 +9876,18 @@
       "link": "nuovacmm.com",
       "provincia": "Vicenza",
       "regione": "Veneto",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00501",
+      "data": "13/08/2026",
+      "anno": 2026,
+      "vittima": "IPS S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "ipssrl.com",
+      "provincia": "Avellino",
+      "regione": "Campania",
       "dati_gb": 0.0,
       "note": ""
     }
