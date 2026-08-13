@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 12 Aug 2026 15:29:01 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 05:34:30 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -88,7 +88,7 @@
     <item>
       <title>Studio Associato Tibaldi</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00489 | Gruppo: krybit | Data: 09/08/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
+      <description>ID: 00489 | Gruppo: krybit | Data: 09/08/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 219,92</description>
       <pubDate>Sun, 09 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00489</guid>
       <category>krybit</category>
@@ -96,7 +96,7 @@
     <item>
       <title>Marconi Industrial Services S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00490 | Gruppo: play | Data: 09/08/2026 | Provincia: Mantova | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <description>ID: 00490 | Gruppo: play | Data: 09/08/2026 | Provincia: Mantova | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 3,30</description>
       <pubDate>Sun, 09 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00490</guid>
       <category>play</category>
@@ -144,7 +144,7 @@
     <item>
       <title>HTDI S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00488 | Gruppo: spacebears | Data: 07/08/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
+      <description>ID: 00488 | Gruppo: spacebears | Data: 07/08/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 3,20</description>
       <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00488</guid>
       <category>spacebears</category>
