@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-14T04:46:10.623233+00:00",
-  "total": 825,
+  "generated": "2026-08-14T06:47:50.613977+00:00",
+  "total": 826,
   "records": [
     {
       "id": "00001",
@@ -9902,6 +9902,18 @@
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": "Vedi anche 00470 del 07/01/2025, di 8base"
+    },
+    {
+      "id": "00503",
+      "data": "14/08/2026",
+      "anno": 2026,
+      "vittima": "ACLI Associazioni Cristiane Lavoratori Italiani",
+      "gruppo": "thegentlemen",
+      "link": "acli.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
+      "dati_gb": 0.0,
+      "note": ""
     }
   ]
 }
