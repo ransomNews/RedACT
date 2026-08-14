@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-13T15:01:19.930596+00:00",
+  "generated": "2026-08-14T04:01:12.274481+00:00",
   "total": 126,
   "gruppi": [
     {
@@ -161,10 +161,11 @@
     },
     {
       "nome": "blacknevas",
-      "rivendicazioni": 1,
+      "rivendicazioni": 2,
       "dati_gb": 0.0,
       "anni_attivi": [
-        2025
+        2025,
+        2026
       ]
     },
     {

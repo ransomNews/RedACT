@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-13T15:01:19.930596+00:00",
-  "total": 824,
+  "generated": "2026-08-14T04:01:12.274481+00:00",
+  "total": 825,
   "records": [
     {
       "id": "00001",
@@ -9888,6 +9888,18 @@
       "link": "ipssrl.com",
       "provincia": "Avellino",
       "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00502",
+      "data": "14/08/2026",
+      "anno": 2026,
+      "vittima": "Ascom S.P.A.",
+      "gruppo": "blacknevas",
+      "link": "ascom-italy.it",
+      "provincia": "Modena",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }

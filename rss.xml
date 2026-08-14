@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 13 Aug 2026 15:01:19 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 04:01:12 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Ascom S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00502 | Gruppo: blacknevas | Data: 14/08/2026 | Provincia: Modena | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00502</guid>
+      <category>blacknevas</category>
+    </item>
     <item>
       <title>IPS S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -164,14 +172,6 @@
       <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00482</guid>
       <category>safepay</category>
-    </item>
-    <item>
-      <title>Takis S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00480 | Gruppo: deadlock | Data: 28/07/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
-      <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00480</guid>
-      <category>deadlock</category>
     </item>
   </channel>
 </rss>
