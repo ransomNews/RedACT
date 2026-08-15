@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-15T11:26:48.899984+00:00",
-  "total": 33,
+  "generated": "2026-08-15T11:47:30.700202+00:00",
+  "total": 31,
   "records": [
     {
       "id": "#00001",
@@ -125,16 +125,6 @@
     },
     {
       "id": "#00013",
-      "data": "01/02/2024",
-      "vittima": "Petroltecnica S.R.L.",
-      "link": "petroltecnica.it",
-      "provincia": "Rimini",
-      "regione": "Emilia-Romagna",
-      "fonte": "https://www.ilrestodelcarlino.it/rimini/cronaca/attacco-hacker-petroltecnica-e48271dd",
-      "note": "Confermato: SI | Attribuito a: —"
-    },
-    {
-      "id": "#00014",
       "data": "19/05/2024",
       "vittima": "CUP Marche",
       "link": "cupmarche.it",
@@ -144,17 +134,7 @@
       "note": "Confermato: NO | Attribuito a: —"
     },
     {
-      "id": "#00015",
-      "data": "16/08/2024",
-      "vittima": "Contarina S.P.A.",
-      "link": "contarina.it",
-      "provincia": "Treviso",
-      "regione": "Veneto",
-      "fonte": "https://www.tribunatreviso.it/cronaca/attacco-hacker-alla-societa-di-rifiuti-contarina-distributori-dei-sacchetti-fuori-uso-a3ui23m6",
-      "note": "Confermato: SI | Attribuito a: —"
-    },
-    {
-      "id": "#00016",
+      "id": "#00014",
       "data": "13/10/2024",
       "vittima": "Comune di Sorso",
       "link": "comune.sorso.ss.it",
@@ -164,7 +144,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00017",
+      "id": "#00015",
       "data": "18/11/2024",
       "vittima": "INPS Servizi S.P.A.",
       "link": "inpsservizi.it",
@@ -174,7 +154,7 @@
       "note": "Confermato: SI | Attribuito a: Lynx"
     },
     {
-      "id": "#00018",
+      "id": "#00016",
       "data": "10/02/2025",
       "vittima": "Alf Group S.P.A.",
       "link": "alfgroup.com",
@@ -184,7 +164,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00019",
+      "id": "#00017",
       "data": "24/03/2025",
       "vittima": "AMA S.P.A. (Azienda Municipale Ambiente)",
       "link": "amaroma.it",
@@ -194,7 +174,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00020",
+      "id": "#00018",
       "data": "29/03/2025",
       "vittima": "Gestopark S.R.L.",
       "link": "gestopark.it",
@@ -204,7 +184,7 @@
       "note": "Confermato: NO | Attribuito a: —"
     },
     {
-      "id": "#00021",
+      "id": "#00019",
       "data": "31/03/2025",
       "vittima": "MOM S.P.A. (Mobilità di Marca)",
       "link": "mobilitadimarca.it",
@@ -214,7 +194,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00022",
+      "id": "#00020",
       "data": "15/04/2025",
       "vittima": "Polizia Locale Roma Capitale",
       "link": "comune.roma.it",
@@ -224,7 +204,7 @@
       "note": "Confermato: NO | Attribuito a: —"
     },
     {
-      "id": "#00023",
+      "id": "#00021",
       "data": "01/05/2025",
       "vittima": "Breton S.P.A.",
       "link": "breton.it",
@@ -234,7 +214,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00024",
+      "id": "#00022",
       "data": "08/05/2025",
       "vittima": "Università Roma Tre",
       "link": "uniroma3.it",
@@ -244,7 +224,7 @@
       "note": "Confermato: SI | Attribuito a: INC Ransom"
     },
     {
-      "id": "#00025",
+      "id": "#00023",
       "data": "18/06/2025",
       "vittima": "ASP di Palermo",
       "link": "asppalermo.org",
@@ -254,7 +234,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00026",
+      "id": "#00024",
       "data": "01/02/2026",
       "vittima": "Gallerie degli Uffizi",
       "link": "uffizi.it",
@@ -264,7 +244,7 @@
       "note": "Confermato: SI | Attribuito a: BabLock/Rorschach"
     },
     {
-      "id": "#00027",
+      "id": "#00025",
       "data": "02/02/2026",
       "vittima": "Università La Sapienza",
       "link": "uniroma1.it",
@@ -274,7 +254,7 @@
       "note": "Confermato: SI | Attribuito a: Femwar02/BabLock"
     },
     {
-      "id": "#00028",
+      "id": "#00026",
       "data": "04/02/2026",
       "vittima": "SST Chioggia",
       "link": "sstchioggia.it",
@@ -284,7 +264,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00029",
+      "id": "#00027",
       "data": "09/02/2026",
       "vittima": "Comune di Nosate",
       "link": "comune.nosate.mi.it",
@@ -294,7 +274,7 @@
       "note": "Confermato: NO | Attribuito a: —"
     },
     {
-      "id": "#00030",
+      "id": "#00028",
       "data": "22/02/2026",
       "vittima": "Biblioteche di Roma",
       "link": "bibliotechediroma.it",
@@ -304,7 +284,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00031",
+      "id": "#00029",
       "data": "25/03/2026",
       "vittima": "A.O. Papardo",
       "link": "papardo.it",
@@ -314,7 +294,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00032",
+      "id": "#00030",
       "data": "09/05/2026",
       "vittima": "Unoaerre Industries S.P.A.",
       "link": "unoaerre.it",
@@ -324,7 +304,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00033",
+      "id": "#00031",
       "data": "25/07/2026",
       "vittima": "Primo Caredent Group S.P.A.",
       "link": "primocaredentgroup.it",
