@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-14T16:40:20.355242+00:00",
+  "generated": "2026-08-15T04:39:11.464316+00:00",
   "anno": 2026,
-  "total": 185,
+  "total": 186,
   "records": [
     {
       "id": "00317",
@@ -2036,6 +2036,17 @@
       "link": "acli.it",
       "provincia": "Roma",
       "regione": "Lazio",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00504",
+      "data": "14/08/2026",
+      "vittima": "Ferrari Mangimi S.R.L.",
+      "gruppo": "qilin",
+      "link": "ferrarimangimi.it",
+      "provincia": "Piacenza",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }
