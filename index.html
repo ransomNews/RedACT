@@ -1621,6 +1621,7 @@ html.light .hm-btn { color: #7a82b0; }
 #settoreFilter { order: 3; max-width: 190px; }
   #gruppoFilter { order: 2; }
   #searchInput, .search-wrap { order: 1; }
+  #toolbarSep, #exportCsvBtn, #exportJsonBtn { order: 3; }
   #toolbarResetBtn { order: 4; }
   #hmResetBtn { order: 5; }
   .count-info { order: 6; }
@@ -3255,6 +3256,9 @@ td:nth-child(7){
   <select id="regioneFilter"><option value="">Tutte le regioni</option></select>
   <select id="gruppoFilter">  <option value="">Tutti i gruppi</option></select>
   <select id="settoreFilter"><option value="">Tutti i settori</option></select>
+  <div id="toolbarSep" style="width:1px;height:24px;background:var(--border2);"></div>
+  <button class="btn-export" id="exportCsvBtn" onclick="exportCSV()" title="Esporta i dati visualizzati in CSV">↓ CSV</button>
+  <button class="btn-export" id="exportJsonBtn" onclick="exportJSON()" title="Esporta i dati visualizzati in JSON" style="color:var(--blue);background:rgba(77,159,255,0.1);border-color:rgba(77,159,255,0.35);" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">↓ JSON</button>
   <span class="date-range-wrap"><input type="date" id="dateFrom" title="Data inizio" onchange="onDateChange()"><span class="date-sep">→</span><input type="date" id="dateTo" title="Data fine" onchange="onDateChange()"></span>
   <button id="toolbarResetBtn" onclick="resetToolbar()" style="display:none;font-size:13px;color:var(--blue);background:rgba(77,159,255,0.1);border:1px solid rgba(77,159,255,0.35);border-radius:6px;padding:8px 14px;cursor:pointer;letter-spacing:0.04em;white-space:nowrap;" title="Azzera ricerca e filtri tabella" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">✕ reset ricerca</button>
   <div class="view-toggle" style="margin-left:auto;display:none">
@@ -3262,8 +3266,7 @@ td:nth-child(7){
     <button class="vbtn active" id="btnVC" onclick="setView('cards')" title="Vista card">⊞ Card</button>
   </div>
   <button id="hmResetBtn" onclick="resetHmFilter()" style="display:none;font-family:var(--mono);font-size: 13px;color:var(--red);background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.35);border-radius:3px;padding:8px 12px;cursor:pointer;letter-spacing:0.04em;" onmouseover="this.style.background='rgba(230,57,70,0.2)'" onmouseout="this.style.background='rgba(230,57,70,0.1)'" title="Rimuovi filtro heatmap e torna alla vista completa">✕ reset heatmap</button>
-  <button class="btn-export" id="exportCsvBtn" onclick="exportCSV()" title="Esporta i dati visualizzati in CSV">↓ CSV</button>
-  <button class="btn-export" id="exportJsonBtn" onclick="exportJSON()" title="Esporta i dati visualizzati in JSON" style="color:var(--blue);background:rgba(77,159,255,0.1);border-color:rgba(77,159,255,0.35);" onmouseover="this.style.background='rgba(77,159,255,0.2)'" onmouseout="this.style.background='rgba(77,159,255,0.1)'">↓ JSON</button>
+  
   <div class="count-info">Visualizzate <strong id="countNum">—</strong> righe</div>
 </div>
 
@@ -5771,7 +5774,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_417';
+    verEl.textContent = 'DS_STABILE_420';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
