@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sun, 16 Aug 2026 19:16:42 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 19:24:09 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -54,7 +54,7 @@
       <category>qilin</category>
     </item>
     <item>
-      <title>Coface For Trade Italy S.R.L.</title>
+      <title>Coface Italia S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
       <description>ID: 00510 | Gruppo: qilin | Data: 16/08/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
       <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
