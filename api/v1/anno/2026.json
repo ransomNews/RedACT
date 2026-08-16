@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-16T18:58:17.167572+00:00",
+  "generated": "2026-08-16T19:16:42.424106+00:00",
   "anno": 2026,
   "total": 192,
   "records": [
@@ -2108,7 +2108,7 @@
     {
       "id": "00510",
       "data": "16/08/2026",
-      "vittima": "Compagnie Française d’Assurance pour le Commerce Extérieur S.A. Rappresentanza Generale per l’Italia",
+      "vittima": "Coface For Trade Italy S.R.L.",
       "gruppo": "qilin",
       "link": "coface.it",
       "provincia": "Milano",
