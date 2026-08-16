@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sun, 16 Aug 2026 11:44:58 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 12:24:43 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -28,6 +28,22 @@
       <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00506</guid>
       <category>lockbit5</category>
+    </item>
+    <item>
+      <title>Zanichelli editore S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00507 | Gruppo: qilin | Data: 16/08/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00507</guid>
+      <category>qilin</category>
+    </item>
+    <item>
+      <title>Loescher Editore (Zanichelli Editore S.P.A.)</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00508 | Gruppo: qilin | Data: 16/08/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00508</guid>
+      <category>qilin</category>
     </item>
     <item>
       <title>Ascom S.P.A.</title>
@@ -155,22 +171,6 @@
       <description>ID: 00483 | Gruppo: thegentlemen | Data: 07/08/2026 | Provincia: Monza e della Brianza | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00483</guid>
-      <category>thegentlemen</category>
-    </item>
-    <item>
-      <title>Tesi S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00484 | Gruppo: thegentlemen | Data: 07/08/2026 | Provincia: Napoli | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
-      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00484</guid>
-      <category>thegentlemen</category>
-    </item>
-    <item>
-      <title>Feraboli Zootech S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00485 | Gruppo: thegentlemen | Data: 07/08/2026 | Provincia: Cremona | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00485</guid>
       <category>thegentlemen</category>
     </item>
   </channel>

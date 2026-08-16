@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-16T11:44:57.950355+00:00",
+  "generated": "2026-08-16T12:24:43.676667+00:00",
   "totali": {
-    "rivendicazioni": 829,
+    "rivendicazioni": 831,
     "gruppi_a_catalogo": 127,
     "dati_gb": 78668.44
   },
@@ -38,18 +38,18 @@
       "gruppi_attivi": 51
     },
     "2026": {
-      "rivendicazioni": 188,
+      "rivendicazioni": 190,
       "dati_gb": 21786.12,
       "gruppi_attivi": 39
     }
   },
   "top5_gruppi_per_rivendicazioni": [
     {
-      "gruppo": "lockbit3",
-      "rivendicazioni": 61
+      "gruppo": "qilin",
+      "rivendicazioni": 63
     },
     {
-      "gruppo": "qilin",
+      "gruppo": "lockbit3",
       "rivendicazioni": 61
     },
     {
@@ -94,7 +94,7 @@
     },
     {
       "regione": "Emilia Romagna",
-      "rivendicazioni": 104
+      "rivendicazioni": 106
     },
     {
       "regione": "Lazio",
