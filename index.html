@@ -3572,7 +3572,7 @@ function fmtDati(v) {
 
 function row(r) {
   const link = r.LINK
-    ? `<a href="https://${r.LINK.trim()}" target="_blank" rel="noopener">${r.LINK.trim()}</a>`
+    ? `<a href="${linkHref(r.LINK)}" target="_blank" rel="noopener">${r.LINK.trim()}</a>`
     : '<span style="color:var(--text-muted)">—</span>';
   const _noteBadge = r.NOTE ? fmtNote(r.NOTE) : '';
   const noteIcon = _noteBadge
@@ -4014,6 +4014,11 @@ const GROUP_NATIONALITIES = {
   "ransomedvc": "Sconosciuta"
 };
 
+function linkHref(link) {
+  const l = link.trim();
+  return 'https://' + (l.toLowerCase().startsWith('www.') ? l : 'www.' + l);
+}
+
 function settoreLabel(code) {
   if (!code) return '—';
   const found = ATECO_CATALOG.find(x => x.code === code);
@@ -4027,7 +4032,7 @@ function cardRow(r) {
   const gs = groupStyle(String(r.GRUPPO).toLowerCase());
   return '<div class="rcard">'
     +'<div class="rcard-top"><span class="rcard-id">#'+r.SEQ+'</span><span class="rcard-date">'+r.DATA+'</span>'+nb+'<span class="rcard-gruppo" style="'+gs+'">'+String(r.GRUPPO).toLowerCase()+'</span><button class="rcard-expand-btn" data-ridx="'+r.SEQ+'" title="Espandi" aria-label="Espandi card">⤢</button></div>'
-    +'<div><div class="rcard-name">'+(r.VITTIMA||'')+'</div>'+(r.LINK?'<a class="rcard-link" href="https://'+r.LINK.trim()+'" target="_blank" rel="noopener">'+r.LINK.trim()+'</a>':'')
+    +'<div><div class="rcard-name">'+(r.VITTIMA||'')+'</div>'+(r.LINK?'<a class="rcard-link" href="'+linkHref(r.LINK)+'" target="_blank" rel="noopener">'+r.LINK.trim()+'</a>':'')
     +'<div class="rcard-settore"><span class="rcard-sym">▣</span><span style="color:var(--text-muted)"> Settore:</span> <span class="v">'+settoreLabel(r.SETTORE)+'</span></div>'
     +'</div>'
     +'<hr class="rcard-div">'
@@ -5776,7 +5781,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_427';
+    verEl.textContent = 'DS_STABILE_428';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
@@ -5829,7 +5834,7 @@ document.addEventListener('DOMContentLoaded', updateFooterMeta);
       + '<span class="modal-gruppo" style="' + gs + '">' + String(r.GRUPPO).toLowerCase() + '</span>'
       + '</div>'
       + '<div class="modal-name">' + (r.VITTIMA||'') + '</div>'
-      + (r.LINK ? '<a class="modal-link" href="https://' + r.LINK.trim() + '" target="_blank" rel="noopener">' + r.LINK.trim() + '</a>' : '')
+      + (r.LINK ? '<a class="modal-link" href="' + linkHref(r.LINK) + '" target="_blank" rel="noopener">' + r.LINK.trim() + '</a>' : '')
       + '<div class="modal-settore"><span style="opacity:.65">▣</span><span style="color:var(--text-muted)"> Settore:</span> <span class="v">' + settoreLabel(r.SETTORE) + '</span></div>'
       + '<hr class="modal-div">'
       + '<div class="modal-bottom"><div class="modal-loc">'
