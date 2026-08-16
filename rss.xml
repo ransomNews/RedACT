@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sun, 16 Aug 2026 05:26:28 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 11:05:06 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>********* (Target senza nome)</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00505 | Gruppo: xpl0itrs | Data: 16/08/2026 | Provincia: Sconosciuta | Regione: Sconosciuta | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00505</guid>
+      <category>xpl0itrs</category>
+    </item>
     <item>
       <title>Ascom S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00486 | Gruppo: thegentlemen | Data: 07/08/2026 | Provincia: Torino | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00486</guid>
-      <category>thegentlemen</category>
-    </item>
-    <item>
-      <title>Vemec S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00487 | Gruppo: thegentlemen | Data: 07/08/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00487</guid>
       <category>thegentlemen</category>
     </item>
   </channel>

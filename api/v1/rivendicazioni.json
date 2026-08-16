@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-16T05:26:28.521571+00:00",
-  "total": 827,
+  "generated": "2026-08-16T11:05:06.795750+00:00",
+  "total": 828,
   "records": [
     {
       "id": "00001",
@@ -9924,6 +9924,18 @@
       "link": "ferrarimangimi.it",
       "provincia": "Piacenza",
       "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00505",
+      "data": "16/08/2026",
+      "anno": 2026,
+      "vittima": "********* (Target senza nome)",
+      "gruppo": "xpl0itrs",
+      "link": "",
+      "provincia": "Sconosciuta",
+      "regione": "Sconosciuta",
       "dati_gb": 0.0,
       "note": ""
     }
