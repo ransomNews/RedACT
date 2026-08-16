@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-16T15:54:24.821174+00:00",
+  "generated": "2026-08-16T18:58:17.167572+00:00",
   "anno": 2026,
-  "total": 191,
+  "total": 192,
   "records": [
     {
       "id": "00317",
@@ -2102,6 +2102,17 @@
       "link": "mulinopadano.it",
       "provincia": "Rovigo",
       "regione": "Veneto",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00510",
+      "data": "16/08/2026",
+      "vittima": "Compagnie Française d’Assurance pour le Commerce Extérieur S.A. Rappresentanza Generale per l’Italia",
+      "gruppo": "qilin",
+      "link": "coface.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
