@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-16T12:24:43.676667+00:00",
+  "generated": "2026-08-16T12:37:37.020994+00:00",
   "anno": 2026,
   "total": 190,
   "records": [
@@ -2086,11 +2086,11 @@
     {
       "id": "00508",
       "data": "16/08/2026",
-      "vittima": "Loescher Editore (Zanichelli Editore S.P.A.)",
+      "vittima": "Loescher Editore (Divisione Zanichelli Editore S.P.A.)",
       "gruppo": "qilin",
       "link": "loescher.it",
-      "provincia": "Bologna",
-      "regione": "Emilia Romagna",
+      "provincia": "Torino",
+      "regione": "Piemonte",
       "dati_gb": 0.0,
       "note": ""
     }
