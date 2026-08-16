@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sun, 16 Aug 2026 11:26:47 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 11:44:58 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -20,6 +20,14 @@
       <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00505</guid>
       <category>xpl0itrs</category>
+    </item>
+    <item>
+      <title>Agricola Galbusera Orto Brianza S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00506 | Gruppo: lockbit5 | Data: 16/08/2026 | Provincia: Lecco | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00506</guid>
+      <category>lockbit5</category>
     </item>
     <item>
       <title>Ascom S.P.A.</title>
@@ -163,14 +171,6 @@
       <description>ID: 00485 | Gruppo: thegentlemen | Data: 07/08/2026 | Provincia: Cremona | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00485</guid>
-      <category>thegentlemen</category>
-    </item>
-    <item>
-      <title>Nobema S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00486 | Gruppo: thegentlemen | Data: 07/08/2026 | Provincia: Torino | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00486</guid>
       <category>thegentlemen</category>
     </item>
   </channel>
