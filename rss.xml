@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sun, 16 Aug 2026 19:24:09 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 12:27:39 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Doimo Cucine S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00511 | Gruppo: panzer | Data: 17/08/2026 | Provincia: Brescia | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00511</guid>
+      <category>panzer</category>
+    </item>
     <item>
       <title>********* (Target senza nome)</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -164,14 +172,6 @@
       <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00492</guid>
       <category>bravox</category>
-    </item>
-    <item>
-      <title>Studio Associato Tibaldi</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00489 | Gruppo: krybit | Data: 09/08/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 219,92</description>
-      <pubDate>Sun, 09 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00489</guid>
-      <category>krybit</category>
     </item>
   </channel>
 </rss>

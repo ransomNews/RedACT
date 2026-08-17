@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-16T19:24:09.542165+00:00",
+  "generated": "2026-08-17T12:27:39.406989+00:00",
   "anno": 2026,
-  "total": 192,
+  "total": 193,
   "records": [
     {
       "id": "00317",
@@ -2112,6 +2112,17 @@
       "gruppo": "qilin",
       "link": "coface.it",
       "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00511",
+      "data": "17/08/2026",
+      "vittima": "Doimo Cucine S.R.L.",
+      "gruppo": "panzer",
+      "link": "doimocucine.com",
+      "provincia": "Brescia",
       "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
