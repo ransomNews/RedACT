@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-17T12:27:39.406989+00:00",
+  "generated": "2026-08-17T17:46:34.857275+00:00",
   "anno": 2026,
-  "total": 193,
+  "total": 194,
   "records": [
     {
       "id": "00317",
@@ -2124,6 +2124,17 @@
       "link": "doimocucine.com",
       "provincia": "Brescia",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00512",
+      "data": "17/08/2026",
+      "vittima": "Euroscreen S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "euroscreen.it",
+      "provincia": "Sassuolo",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }
