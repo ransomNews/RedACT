@@ -4902,9 +4902,8 @@ function buildHeatmap() {
       if (!counts[m]) counts[m] = {};
     });
   }
-  // Per il settore l'ordine predefinito è alfabetico (codice ATECO A→V);
-  // hmSortAlpha permette comunque il toggle manuale per tutte le modalità che lo supportano.
-  const useAlphaSort = hmMode === 'settore' ? !hmSortAlpha : hmSortAlpha;
+  // Ordine predefinito per tutte le modalità (incluso settore) è per numero di rivendicazioni, decrescente.
+  const useAlphaSort = hmSortAlpha;
   const rows = Object.entries(counts)
     .map(([label, mc]) => ({ label, mc, total: Object.values(mc).reduce((a,b)=>a+b,0) }))
     .sort((a,b) => useAlphaSort
@@ -5782,7 +5781,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_437';
+    verEl.textContent = 'DS_STABILE_438';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
