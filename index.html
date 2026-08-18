@@ -1540,6 +1540,10 @@ html.light .hm-btn { color: #7a82b0; }
     justify-content: space-between;
     margin-bottom: 18px;
   }
+  .trend-header-right {
+    display: flex;
+    align-items: center;
+  }
   .trend-label {
     font-size: 13px;
     font-weight: 700;
@@ -3232,9 +3236,19 @@ td:nth-child(7){
 <div class="trend-section">
   <div class="trend-header">
     <div id="trendLegend" style="display:flex;align-items:center;gap:16px;font-size:12px;color:var(--text-muted)"><span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:2px;background:#ff0000;display:inline-block"></span>2025</span><span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:2px;background:#5b9cf6;display:inline-block"></span>2026</span></div>
-    <div class="trend-title-block">
-      <span class="trend-label">TREND MENSILE</span>
-      <span class="trend-sub">rivendicazioni per mese · 2025–2026</span>
+    <div class="trend-header-right">
+      <div class="trend-title-block">
+        <span class="trend-label">TREND MENSILE</span>
+        <span class="trend-sub" id="trendSub">rivendicazioni per mese · 2025–2026</span>
+      </div>
+      <select id="trendYearPairSelect" style="margin-left:16px;background:var(--surface3);border:1px solid var(--border2);border-radius:3px;color:var(--text);font-family:var(--sans);font-size:14px;font-weight:700;padding:8px 12px;cursor:pointer">
+        <option value="2026-2025">2026/2025</option>
+        <option value="2025-2024">2025/2024</option>
+        <option value="2024-2023">2024/2023</option>
+        <option value="2023-2022">2023/2022</option>
+      <option value="2022-2021">2022/2021</option>
+      <option value="2021-2020">2021/2020</option>
+    </select>
     </div>
   </div>
   <div class="trend-chart-wrap">
@@ -4759,6 +4773,10 @@ function recomputeDashboard() {
 }
 
 window.recomputeDashboard = recomputeDashboard;
+document.addEventListener('DOMContentLoaded', function() {
+  const trendSel = document.getElementById('trendYearPairSelect');
+  if (trendSel) trendSel.addEventListener('change', buildTrendChart);
+});
 
 // ── Top 5 gruppi per dati pubblicati GB ───────────────────
 function buildTop5GB() {
@@ -5456,6 +5474,10 @@ function applyHmFilterMonth(monthKey) {
 
 
 function buildTrendChart() {
+  const sel = document.getElementById('trendYearPairSelect');
+  const pair = sel ? sel.value : '2026-2025';
+  const [yLatest, yPrev] = pair.split('-');
+
   const counts = {};
   all.forEach(r => {
     if (!r.DATA) return;
@@ -5466,57 +5488,63 @@ function buildTrendChart() {
     counts[y][m] = (counts[y][m] || 0) + 1;
   });
 
-  const months2025 = counts['2025'] || {};
-  const months2026 = counts['2026'] || {};
+  const monthsPrev = counts[yPrev] || {};
+  const monthsLatest = counts[yLatest] || {};
+  const yPrevShort = yPrev.slice(2);
+  const yLatestShort = yLatest.slice(2);
 
-  // All 12 months of 2025 in order
-  const all2025 = Object.keys(months2025).map(Number).sort((a,b) => a-b);
-  const commonMonths = new Set(Object.keys(months2026).map(Number));
+  const legendEl = document.getElementById('trendLegend');
+  if (legendEl) {
+    legendEl.innerHTML = `<span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:2px;background:#ff0000;display:inline-block"></span>${yPrev}</span><span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:2px;background:#5b9cf6;display:inline-block"></span>${yLatest}</span>`;
+  }
+  const subEl = document.getElementById('trendSub');
+  if (subEl) subEl.textContent = `rivendicazioni per mese \u00b7 ${yPrev}\u2013${yLatest}`;
+
+  const allPrev = Object.keys(monthsPrev).map(Number).sort((a,b) => a-b);
+  const commonMonths = new Set(Object.keys(monthsLatest).map(Number));
 
   const mesi = ['','Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'];
   const H = 150;
 
   const allVals = [
-    ...all2025.map(m => months2025[m] || 0),
-    ...Array.from(commonMonths).map(m => months2026[m] || 0)
+    ...allPrev.map(m => monthsPrev[m] || 0),
+    ...Array.from(commonMonths).map(m => monthsLatest[m] || 0)
   ];
-  const maxVal = Math.max(...allVals);
+  const maxVal = Math.max(...allVals, 1);
 
   let bars = '';
 
-  all2025.forEach(m => {
-    const n25 = months2025[m] || 0;
-    const barH25 = maxVal > 0 ? Math.max(2, Math.round((n25 / maxVal) * H)) : 2;
+  allPrev.forEach(m => {
+    const nPrev = monthsPrev[m] || 0;
+    const barHPrev = maxVal > 0 ? Math.max(2, Math.round((nPrev / maxVal) * H)) : 2;
 
     if (commonMonths.has(m)) {
-      // Paired comparison bar
-      const n26 = months2026[m] || 0;
-      const barH26 = maxVal > 0 ? Math.max(2, Math.round((n26 / maxVal) * H)) : 2;
-      const pct = n25 > 0 ? Math.round(((n26 - n25) / n25) * 100) : null;
-      const pctStr = pct === null ? '—' : (pct > 0 ? `+${pct}%` : `${pct}%`);
+      const nLatest = monthsLatest[m] || 0;
+      const barHLatest = maxVal > 0 ? Math.max(2, Math.round((nLatest / maxVal) * H)) : 2;
+      const pct = nPrev > 0 ? Math.round(((nLatest - nPrev) / nPrev) * 100) : null;
+      const pctStr = pct === null ? '\u2014' : (pct > 0 ? `+${pct}%` : `${pct}%`);
       const pctColor = pct === null ? 'var(--text-muted)' : (pct > 0 ? '#ff0000' : '#4caf82');
 
       bars += `<div class="trend-compare-group" style="flex:1;min-width:80px">
         <div class="trend-compare-bars">
           <div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex:1">
-            <span class="trend-val" style="color:#ff0000">${n25}</span>
-            <div class="trend-bar" style="height:${barH25}px;background:linear-gradient(to top, #ff0000, rgba(255,0,0,0.15));border-radius:4px 4px 0 0;width:100%"></div>
-            <span class="trend-lbl">${mesi[m]} 25</span>
+            <span class="trend-val" style="color:#ff0000">${nPrev}</span>
+            <div class="trend-bar" style="height:${barHPrev}px;background:linear-gradient(to top, #ff0000, rgba(255,0,0,0.15));border-radius:4px 4px 0 0;width:100%"></div>
+            <span class="trend-lbl">${mesi[m]} ${yPrevShort}</span>
           </div>
           <div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex:1">
-            <span class="trend-val" style="color:#5b9cf6">${n26}</span>
-            <div class="trend-bar" style="height:${barH26}px;background:linear-gradient(to top, #5b9cf6, rgba(91,156,246,0.15));border-radius:4px 4px 0 0;width:100%"></div>
-            <span class="trend-lbl">${mesi[m]} 26</span>
+            <span class="trend-val" style="color:#5b9cf6">${nLatest}</span>
+            <div class="trend-bar" style="height:${barHLatest}px;background:linear-gradient(to top, #5b9cf6, rgba(91,156,246,0.15));border-radius:4px 4px 0 0;width:100%"></div>
+            <span class="trend-lbl">${mesi[m]} ${yLatestShort}</span>
           </div>
         </div>
         <span class="trend-pct" style="color:${pctColor};margin-top:4px">${pctStr}</span>
       </div>`;
     } else {
-      // Solo 2025 bar
       bars += `<div class="trend-bar-group" style="flex:1;min-width:48px">
-        <span class="trend-val" style="color:#ff0000">${n25}</span>
-        <div class="trend-bar" style="height:${barH25}px;background:linear-gradient(to top, #ff0000, rgba(255,0,0,0.15));border-radius:4px 4px 0 0;width:100%"></div>
-        <span class="trend-lbl">${mesi[m]} 25</span>
+        <span class="trend-val" style="color:#ff0000">${nPrev}</span>
+        <div class="trend-bar" style="height:${barHPrev}px;background:linear-gradient(to top, #ff0000, rgba(255,0,0,0.15));border-radius:4px 4px 0 0;width:100%"></div>
+        <span class="trend-lbl">${mesi[m]} ${yPrevShort}</span>
       </div>`;
     }
   });
@@ -5781,7 +5809,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_439';
+    verEl.textContent = 'DS_STABILE_440';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
