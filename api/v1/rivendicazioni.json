@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-19T05:58:20.026662+00:00",
-  "total": 835,
+  "generated": "2026-08-19T13:38:36.432219+00:00",
+  "total": 836,
   "records": [
     {
       "id": "00001",
@@ -10020,6 +10020,18 @@
       "link": "euroscreen.it",
       "provincia": "Sassuolo",
       "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00513",
+      "data": "19/08/2026",
+      "anno": 2026,
+      "vittima": "S.I.P.R.E.S. Società italiana progetti ricerche e sviluppo S.R.L.",
+      "gruppo": "krybit",
+      "link": "sipresitalia.it",
+      "provincia": "Padova",
+      "regione": "Veneto",
       "dati_gb": 0.0,
       "note": ""
     }
