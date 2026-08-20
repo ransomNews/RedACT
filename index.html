@@ -5742,7 +5742,7 @@ window.addEventListener('popstate', e => {
 function exportCSV() {
   const headers = ['ID','Data','Vittima','Gruppo','Link','Provincia','Regione','Dati GB','Settore','Note'];
   const rows = filteredRows.map(r => [
-    r.ID, r.DATA, r.VITTIMA, r.GRUPPO, r.LINK, r.PROVINCIA, r.REGIONE, r.DATI, settoreLabel(r.SETTORE), r.NOTE
+    r.SEQ, r.DATA, r.VITTIMA, r.GRUPPO, r.LINK, r.PROVINCIA, r.REGIONE, r.DATI, settoreLabel(r.SETTORE), r.NOTE
   ].map(v => {
     const s = String(v ?? '').replace(/"/g, '""');
     return s.includes(',') || s.includes('"') || s.includes('\n') ? `"${s}"` : s;
@@ -5761,7 +5761,7 @@ function exportCSV() {
 
 function exportJSON() {
   const data = filteredRows.map(r => ({
-    id: r.ID, data: r.DATA, vittima: r.VITTIMA, gruppo: r.GRUPPO,
+    id: r.SEQ, data: r.DATA, vittima: r.VITTIMA, gruppo: r.GRUPPO,
     link: r.LINK, provincia: r.PROVINCIA, regione: r.REGIONE,
     dati_gb: parseFloat(r.DATI) || 0, settore: settoreLabel(r.SETTORE), note: r.NOTE
   }));
@@ -5809,7 +5809,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_445';
+    verEl.textContent = 'DS_STABILE_446';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
