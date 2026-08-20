@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 20 Aug 2026 11:07:57 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 14:39:45 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -19,6 +19,62 @@
       <description>ID: 00514 | Gruppo: titan | Data: 20/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00514</guid>
+      <category>titan</category>
+    </item>
+    <item>
+      <title>Tecnologica S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00515 | Gruppo: titan | Data: 20/08/2026 | Provincia: Forlì-Cesena | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00515</guid>
+      <category>titan</category>
+    </item>
+    <item>
+      <title>Condor S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00516 | Gruppo: titan | Data: 20/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00516</guid>
+      <category>titan</category>
+    </item>
+    <item>
+      <title>Elbor S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00517 | Gruppo: titan | Data: 20/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00517</guid>
+      <category>titan</category>
+    </item>
+    <item>
+      <title>CTP S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00518 | Gruppo: titan | Data: 20/08/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00518</guid>
+      <category>titan</category>
+    </item>
+    <item>
+      <title>Alto Calore Servizi S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00519 | Gruppo: titan | Data: 20/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0 | Nota: Vedi anche 00219 del 02/05/2023, di medusa</description>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00519</guid>
+      <category>titan</category>
+    </item>
+    <item>
+      <title>Tedesco &amp; Partners STP S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00520 | Gruppo: titan | Data: 20/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00520</guid>
+      <category>titan</category>
+    </item>
+    <item>
+      <title>Poema S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00521 | Gruppo: titan | Data: 20/08/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00521</guid>
       <category>titan</category>
     </item>
     <item>
@@ -116,62 +172,6 @@
       <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00504</guid>
       <category>qilin</category>
-    </item>
-    <item>
-      <title>IPS S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00501 | Gruppo: thegentlemen | Data: 13/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00501</guid>
-      <category>thegentlemen</category>
-    </item>
-    <item>
-      <title>Basso Fedele &amp; Figli S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00494 | Gruppo: spacebears | Data: 12/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 105,00</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00494</guid>
-      <category>spacebears</category>
-    </item>
-    <item>
-      <title>Villa Raiano S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00495 | Gruppo: spacebears | Data: 12/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0 | Nota: Con Basso Fedele &amp;amp; Figli S.R.L.</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00495</guid>
-      <category>spacebears</category>
-    </item>
-    <item>
-      <title>Goccia S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00496 | Gruppo: majinahanashi | Data: 12/08/2026 | Provincia: Asti | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00496</guid>
-      <category>majinahanashi</category>
-    </item>
-    <item>
-      <title>C.D.A. Diagnostica per Immagini S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00497 | Gruppo: majinahanashi | Data: 12/08/2026 | Provincia: Brindisi | Regione: Puglia | Zona: Sud | Dati pubblicati: GB 73,40</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00497</guid>
-      <category>majinahanashi</category>
-    </item>
-    <item>
-      <title>Srnet S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00498 | Gruppo: cl0p | Data: 12/08/2026 | Provincia: Padova | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00498</guid>
-      <category>cl0p</category>
-    </item>
-    <item>
-      <title>Nuova CMM S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00499 | Gruppo: cl0p | Data: 12/08/2026 | Provincia: Vicenza | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00499</guid>
-      <category>cl0p</category>
     </item>
   </channel>
 </rss>

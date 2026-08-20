@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-20T11:07:57.678607+00:00",
-  "total": 837,
+  "generated": "2026-08-20T14:39:45.473206+00:00",
+  "total": 844,
   "records": [
     {
       "id": "00001",
@@ -10044,6 +10044,90 @@
       "link": "elconmegarad.com",
       "provincia": "Avellino",
       "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00515",
+      "data": "20/08/2026",
+      "anno": 2026,
+      "vittima": "Tecnologica S.R.L.",
+      "gruppo": "titan",
+      "link": "technologicasrl.com",
+      "provincia": "Forlì-Cesena",
+      "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00516",
+      "data": "20/08/2026",
+      "anno": 2026,
+      "vittima": "Condor S.P.A.",
+      "gruppo": "titan",
+      "link": "condor-group.it",
+      "provincia": "Avellino",
+      "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00517",
+      "data": "20/08/2026",
+      "anno": 2026,
+      "vittima": "Elbor S.P.A.",
+      "gruppo": "titan",
+      "link": "elbor.it",
+      "provincia": "Avellino",
+      "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00518",
+      "data": "20/08/2026",
+      "anno": 2026,
+      "vittima": "CTP S.R.L.",
+      "gruppo": "titan",
+      "link": "ctp-srl.it",
+      "provincia": "Bergamo",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00519",
+      "data": "20/08/2026",
+      "anno": 2026,
+      "vittima": "Alto Calore Servizi S.P.A.",
+      "gruppo": "titan",
+      "link": "altocalore.it",
+      "provincia": "Avellino",
+      "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": "Vedi anche 00219 del 02/05/2023, di medusa"
+    },
+    {
+      "id": "00520",
+      "data": "20/08/2026",
+      "anno": 2026,
+      "vittima": "Tedesco & Partners STP S.R.L.",
+      "gruppo": "titan",
+      "link": "tedescoepartners.it",
+      "provincia": "Avellino",
+      "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00521",
+      "data": "20/08/2026",
+      "anno": 2026,
+      "vittima": "Poema S.R.L.",
+      "gruppo": "titan",
+      "link": "poemasrl.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
       "dati_gb": 0.0,
       "note": ""
     }
