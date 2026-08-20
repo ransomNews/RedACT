@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-20T16:43:21.787375+00:00",
+  "generated": "2026-08-20T18:49:34.310957+00:00",
   "anno": 2026,
   "total": 204,
   "records": [
@@ -2052,14 +2052,14 @@
     },
     {
       "id": "00505",
-      "data": "16/08/2026",
-      "vittima": "********* (Target senza nome)",
+      "data": "20/08/2026",
+      "vittima": "Gruppo Spaggiari Parma S.P.A.",
       "gruppo": "xpl0itrs",
-      "link": "",
-      "provincia": "Sconosciuta",
-      "regione": "Sconosciuta",
+      "link": "spaggiari.eu",
+      "provincia": "Parma",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": ""
+      "note": "Completa di ********* (Target senza nome) | del 16/08/2026"
     },
     {
       "id": "00506",
