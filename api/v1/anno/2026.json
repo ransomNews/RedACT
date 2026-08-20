@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-20T05:19:07.253385+00:00",
+  "generated": "2026-08-20T11:07:57.678607+00:00",
   "anno": 2026,
-  "total": 195,
+  "total": 196,
   "records": [
     {
       "id": "00317",
@@ -2146,6 +2146,17 @@
       "link": "sipresitalia.it",
       "provincia": "Padova",
       "regione": "Veneto",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00514",
+      "data": "20/08/2026",
+      "vittima": "Elcon Megarad S.P.A.",
+      "gruppo": "titan",
+      "link": "elconmegarad.com",
+      "provincia": "Avellino",
+      "regione": "Campania",
       "dati_gb": 0.0,
       "note": ""
     }
