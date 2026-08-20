@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-20T14:39:45.473206+00:00",
+  "generated": "2026-08-20T16:43:21.787375+00:00",
   "anno": 2026,
-  "total": 203,
+  "total": 204,
   "records": [
     {
       "id": "00317",
@@ -2234,6 +2234,17 @@
       "link": "poemasrl.it",
       "provincia": "Roma",
       "regione": "Lazio",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00522",
+      "data": "20/08/2026",
+      "vittima": "Termotecnica Industriale S.R.L.",
+      "gruppo": "titan",
+      "link": "termotecnica.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
