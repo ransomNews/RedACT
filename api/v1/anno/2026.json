@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-21T05:44:48.824285+00:00",
+  "generated": "2026-08-21T08:40:47.462311+00:00",
   "anno": 2026,
-  "total": 204,
+  "total": 205,
   "records": [
     {
       "id": "00317",
@@ -2245,6 +2245,17 @@
       "link": "termotecnica.it",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00523",
+      "data": "21/08/2026",
+      "vittima": "Ariel Energia GDL S.P.A.",
+      "gruppo": "thegentlemen",
+      "link": "arielenergia.it",
+      "provincia": "Torino",
+      "regione": "Piemonte",
       "dati_gb": 0.0,
       "note": ""
     }
