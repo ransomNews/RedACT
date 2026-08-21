@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-21T08:40:47.462311+00:00",
-  "total": 846,
+  "generated": "2026-08-21T17:44:53.574958+00:00",
+  "total": 847,
   "records": [
     {
       "id": "00001",
@@ -10152,6 +10152,18 @@
       "link": "arielenergia.it",
       "provincia": "Torino",
       "regione": "Piemonte",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00524",
+      "data": "22/08/2026",
+      "anno": 2026,
+      "vittima": "New Technology Engineering Italia S.R.L.",
+      "gruppo": "panzer",
+      "link": "nteitalia.it",
+      "provincia": "Catanzaro",
+      "regione": "Calabria",
       "dati_gb": 0.0,
       "note": ""
     }
