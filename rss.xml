@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Fri, 21 Aug 2026 17:52:38 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 18:20:50 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -22,7 +22,7 @@
       <category>thegentlemen</category>
     </item>
     <item>
-      <title>New Technology Engineering Italia S.R.L.</title>
+      <title>NTE Italia (New Technology Engineering Italia) S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
       <description>ID: 00524 | Gruppo: panzer | Data: 21/08/2026 | Provincia: Catanzaro | Regione: Calabria | Zona: Sud | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
