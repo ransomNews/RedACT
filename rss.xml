@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Fri, 21 Aug 2026 17:44:53 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 17:52:38 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -14,20 +14,20 @@
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
     <item>
-      <title>New Technology Engineering Italia S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00524 | Gruppo: panzer | Data: 22/08/2026 | Provincia: Catanzaro | Regione: Calabria | Zona: Sud | Dati pubblicati: GB 0</description>
-      <pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00524</guid>
-      <category>panzer</category>
-    </item>
-    <item>
       <title>Ariel Energia GDL S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
       <description>ID: 00523 | Gruppo: thegentlemen | Data: 21/08/2026 | Provincia: Torino | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00523</guid>
       <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>New Technology Engineering Italia S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00524 | Gruppo: panzer | Data: 21/08/2026 | Provincia: Catanzaro | Regione: Calabria | Zona: Sud | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00524</guid>
+      <category>panzer</category>
     </item>
     <item>
       <title>Gruppo Spaggiari Parma S.P.A.</title>
