@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Fri, 21 Aug 2026 18:20:50 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 02:45:59 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -28,6 +28,14 @@
       <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00524</guid>
       <category>panzer</category>
+    </item>
+    <item>
+      <title>R.C.F. S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00525 | Gruppo: thegentlemen | Data: 21/08/2026 | Provincia: Reggio Emilia | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00525</guid>
+      <category>thegentlemen</category>
     </item>
     <item>
       <title>Gruppo Spaggiari Parma S.P.A.</title>
@@ -163,14 +171,6 @@
       <description>ID: 00509 | Gruppo: qilin | Data: 16/08/2026 | Provincia: Rovigo | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
       <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00509</guid>
-      <category>qilin</category>
-    </item>
-    <item>
-      <title>Coface Italia S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00510 | Gruppo: qilin | Data: 16/08/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00510</guid>
       <category>qilin</category>
     </item>
   </channel>

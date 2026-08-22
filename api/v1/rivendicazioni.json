@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-21T18:20:50.005033+00:00",
-  "total": 847,
+  "generated": "2026-08-22T02:45:59.629933+00:00",
+  "total": 848,
   "records": [
     {
       "id": "00001",
@@ -10164,6 +10164,18 @@
       "link": "nteitalia.it",
       "provincia": "Catanzaro",
       "regione": "Calabria",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00525",
+      "data": "21/08/2026",
+      "anno": 2026,
+      "vittima": "R.C.F. S.P.A.",
+      "gruppo": "thegentlemen",
+      "link": "rcf.it",
+      "provincia": "Reggio Emilia",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }
