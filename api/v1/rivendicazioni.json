@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-23T11:05:52.968807+00:00",
-  "total": 848,
+  "generated": "2026-08-23T15:19:31.140383+00:00",
+  "total": 849,
   "records": [
     {
       "id": "00001",
@@ -10176,6 +10176,18 @@
       "link": "rcf.it",
       "provincia": "Reggio Emilia",
       "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00526",
+      "data": "23/08/2026",
+      "anno": 2026,
+      "vittima": "Aurore Development S.P.A.",
+      "gruppo": "qilin",
+      "link": "auroredevelopment.it",
+      "provincia": "Venezia",
+      "regione": "Veneto",
       "dati_gb": 0.0,
       "note": ""
     }
