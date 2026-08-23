@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sun, 23 Aug 2026 15:19:31 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 15:46:41 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -19,6 +19,14 @@
       <description>ID: 00526 | Gruppo: qilin | Data: 23/08/2026 | Provincia: Venezia | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
       <pubDate>Sun, 23 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00526</guid>
+      <category>qilin</category>
+    </item>
+    <item>
+      <title>Studio Boldrin S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00527 | Gruppo: qilin | Data: 23/08/2026 | Provincia: Venezia | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00527</guid>
       <category>qilin</category>
     </item>
     <item>
@@ -163,14 +171,6 @@
       <description>ID: 00507 | Gruppo: qilin | Data: 16/08/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
       <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00507</guid>
-      <category>qilin</category>
-    </item>
-    <item>
-      <title>Loescher Editore (Divisione Zanichelli Editore S.P.A.)</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00508 | Gruppo: qilin | Data: 16/08/2026 | Provincia: Torino | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00508</guid>
       <category>qilin</category>
     </item>
   </channel>

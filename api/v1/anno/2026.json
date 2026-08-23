@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-23T15:19:31.140383+00:00",
+  "generated": "2026-08-23T15:46:41.600815+00:00",
   "anno": 2026,
-  "total": 208,
+  "total": 209,
   "records": [
     {
       "id": "00317",
@@ -2287,6 +2287,17 @@
       "vittima": "Aurore Development S.P.A.",
       "gruppo": "qilin",
       "link": "auroredevelopment.it",
+      "provincia": "Venezia",
+      "regione": "Veneto",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00527",
+      "data": "23/08/2026",
+      "vittima": "Studio Boldrin S.R.L.",
+      "gruppo": "qilin",
+      "link": "paoloboldrin.it",
       "provincia": "Venezia",
       "regione": "Veneto",
       "dati_gb": 0.0,
