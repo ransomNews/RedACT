@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-23T16:41:04.990273+00:00",
-  "total": 852,
+  "generated": "2026-08-23T19:06:12.342655+00:00",
+  "total": 853,
   "records": [
     {
       "id": "00001",
@@ -10224,6 +10224,18 @@
       "link": "tecniciassociati.it",
       "provincia": "Udine",
       "regione": "Friuli Venezia Giulia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00530",
+      "data": "23/08/2026",
+      "anno": 2026,
+      "vittima": "S.E.M.P. S.R.L.",
+      "gruppo": "qilin",
+      "link": "semp.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
