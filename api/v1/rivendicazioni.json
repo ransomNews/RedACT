@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-23T19:06:12.342655+00:00",
-  "total": 853,
+  "generated": "2026-08-24T19:24:09.837847+00:00",
+  "total": 854,
   "records": [
     {
       "id": "00001",
@@ -10235,6 +10235,18 @@
       "gruppo": "qilin",
       "link": "semp.it",
       "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00531",
+      "data": "24/08/2026",
+      "anno": 2026,
+      "vittima": "La Ge Gè Pesca S.R.L.",
+      "gruppo": "safepay",
+      "link": "lagegepesca.it",
+      "provincia": "Bergamo",
       "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
