@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-24T19:24:09.837847+00:00",
+  "generated": "2026-08-25T16:31:52.972858+00:00",
   "total": 128,
   "gruppi": [
     {
@@ -337,10 +337,11 @@
     },
     {
       "nome": "direwolf",
-      "rivendicazioni": 2,
+      "rivendicazioni": 3,
       "dati_gb": 350.0,
       "anni_attivi": [
-        2025
+        2025,
+        2026
       ]
     },
     {

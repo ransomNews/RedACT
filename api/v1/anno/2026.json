@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-24T19:24:09.837847+00:00",
+  "generated": "2026-08-25T16:31:52.972858+00:00",
   "anno": 2026,
-  "total": 213,
+  "total": 214,
   "records": [
     {
       "id": "00317",
@@ -2343,6 +2343,17 @@
       "gruppo": "safepay",
       "link": "lagegepesca.it",
       "provincia": "Bergamo",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00532",
+      "data": "25/08/2026",
+      "vittima": "Studio Legale ESE",
+      "gruppo": "direwolf",
+      "link": "studiolegaleese.it",
+      "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
