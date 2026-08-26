@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-26T06:55:56.576329+00:00",
+  "generated": "2026-08-26T07:21:13.097772+00:00",
   "anno": 2026,
   "total": 214,
   "records": [
@@ -1987,11 +1987,11 @@
     {
       "id": "00498",
       "data": "12/08/2026",
-      "vittima": "Srnet S.R.L.",
+      "vittima": "Softech - Software & Technology S.R.L.",
       "gruppo": "cl0p",
-      "link": "srnet.it",
-      "provincia": "Padova",
-      "regione": "Veneto",
+      "link": "stnet.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     },
