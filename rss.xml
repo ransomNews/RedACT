@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Fri, 28 Aug 2026 20:37:03 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 20:51:13 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -19,6 +19,14 @@
       <description>ID: 00533 | Gruppo: thegentlemen | Data: 28/08/2026 | Provincia: Lucca | Regione: Toscana | Zona: Centro | Dati pubblicati: GB 0</description>
       <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00533</guid>
+      <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>Exacta Labcenter S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00534 | Gruppo: thegentlemen | Data: 28/08/2026 | Provincia: Modena | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00534</guid>
       <category>thegentlemen</category>
     </item>
     <item>
@@ -163,14 +171,6 @@
       <description>ID: 00519 | Gruppo: titan | Data: 20/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0 | Nota: Vedi anche 00219 del 02/05/2023, di medusa</description>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00519</guid>
-      <category>titan</category>
-    </item>
-    <item>
-      <title>Tedesco &amp; Partners STP S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00520 | Gruppo: titan | Data: 20/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00520</guid>
       <category>titan</category>
     </item>
   </channel>

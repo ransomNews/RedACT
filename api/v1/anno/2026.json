@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-28T20:37:03.444060+00:00",
+  "generated": "2026-08-28T20:51:13.413749+00:00",
   "anno": 2026,
-  "total": 215,
+  "total": 216,
   "records": [
     {
       "id": "00317",
@@ -2366,6 +2366,17 @@
       "link": "generalgruppo.it",
       "provincia": "Lucca",
       "regione": "Toscana",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00534",
+      "data": "28/08/2026",
+      "vittima": "Exacta Labcenter S.P.A.",
+      "gruppo": "thegentlemen",
+      "link": "exactalabcenter.it",
+      "provincia": "Modena",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }
