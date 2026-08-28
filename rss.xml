@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 26 Aug 2026 07:21:13 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 10:35:43 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -28,6 +28,14 @@
       <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00531</guid>
       <category>safepay</category>
+    </item>
+    <item>
+      <title>TeamSystem S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT/press.html</link>
+      <description>ID: #00034 | Tipo: RansomNews Press | Data: 24/08/2026 | Provincia: Pesaro-Urbino | Regione: Marche | Zona: Centro | Nota: Confermato: SI | Attribuito a: —</description>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/press.html##00034</guid>
+      <category>press</category>
     </item>
     <item>
       <title>Aurore Development S.P.A.</title>
@@ -163,14 +171,6 @@
       <description>ID: 00521 | Gruppo: titan | Data: 20/08/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00521</guid>
-      <category>titan</category>
-    </item>
-    <item>
-      <title>Termotecnica Industriale S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00522 | Gruppo: titan | Data: 20/08/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00522</guid>
       <category>titan</category>
     </item>
   </channel>
