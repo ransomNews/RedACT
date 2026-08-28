@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-08-28T10:35:43.177165+00:00",
-  "total": 855,
+  "generated": "2026-08-28T20:37:03.444060+00:00",
+  "total": 856,
   "records": [
     {
       "id": "00001",
@@ -10260,6 +10260,18 @@
       "link": "studiolegaleese.it",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00533",
+      "data": "28/08/2026",
+      "anno": 2026,
+      "vittima": "General S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "generalgruppo.it",
+      "provincia": "Lucca",
+      "regione": "Toscana",
       "dati_gb": 0.0,
       "note": ""
     }
