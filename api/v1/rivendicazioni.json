@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-02T16:54:11.960519+00:00",
+  "generated": "2026-09-02T17:10:56.999314+00:00",
   "total": 859,
   "records": [
     {
@@ -10303,9 +10303,9 @@
       "id": "00537",
       "data": "02/09/2026",
       "anno": 2026,
-      "vittima": "Policlinico Triestino S.P.A.",
+      "vittima": "Policlinico Triestino S.P.A. (Gruppo Policlinico Triestino)",
       "gruppo": "incransom",
-      "link": "polifvg.it",
+      "link": "polits.it",
       "provincia": "Gorizia",
       "regione": "Friuli Venezia Giulia",
       "dati_gb": 0.0,
