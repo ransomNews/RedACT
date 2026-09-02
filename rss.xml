@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 02 Sep 2026 10:35:24 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 11:21:14 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Salus S.R.L. (Casa di Cura Salus)</title>
+      <link>https://ransomnews.github.io/RedACT/press.html</link>
+      <description>ID: #00035 | Tipo: RansomNews Press | Data: 31/08/2026 | Provincia: Trieste | Regione: Friuli-Venezia Giulia | Zona: Nord-Est | Nota: Confermato: SI | Attribuito a: —</description>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/press.html##00035</guid>
+      <category>press</category>
+    </item>
     <item>
       <title>General S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00518 | Gruppo: titan | Data: 20/08/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00518</guid>
-      <category>titan</category>
-    </item>
-    <item>
-      <title>Alto Calore Servizi S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00519 | Gruppo: titan | Data: 20/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0 | Nota: Vedi anche 00219 del 02/05/2023, di medusa</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00519</guid>
       <category>titan</category>
     </item>
   </channel>
