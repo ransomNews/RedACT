@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-02T12:09:11.627835+00:00",
+  "generated": "2026-09-02T16:22:38.698687+00:00",
   "anno": 2026,
-  "total": 216,
+  "total": 217,
   "records": [
     {
       "id": "00317",
@@ -1322,6 +1322,17 @@
       "provincia": "Monza e della Brianza",
       "regione": "Lombardia",
       "dati_gb": 776.45,
+      "note": ""
+    },
+    {
+      "id": "00536",
+      "data": "08/06/2026",
+      "vittima": "ACIL S.R.L.",
+      "gruppo": "payload",
+      "link": "acil.it",
+      "provincia": "Belluno",
+      "regione": "Veneto",
+      "dati_gb": 22.8,
       "note": ""
     },
     {
