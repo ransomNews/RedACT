@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-02T16:22:38.698687+00:00",
+  "generated": "2026-09-02T16:54:11.960519+00:00",
   "total": 128,
   "gruppi": [
     {
@@ -451,7 +451,7 @@
     },
     {
       "nome": "incransom",
-      "rivendicazioni": 12,
+      "rivendicazioni": 13,
       "dati_gb": 2381.61,
       "anni_attivi": [
         2023,

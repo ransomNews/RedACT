@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-02T16:22:38.698687+00:00",
-  "total": 858,
+  "generated": "2026-09-02T16:54:11.960519+00:00",
+  "total": 859,
   "records": [
     {
       "id": "00001",
@@ -10296,6 +10296,18 @@
       "link": "exactalabcenter.it",
       "provincia": "Modena",
       "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00537",
+      "data": "02/09/2026",
+      "anno": 2026,
+      "vittima": "Policlinico Triestino S.P.A.",
+      "gruppo": "incransom",
+      "link": "polifvg.it",
+      "provincia": "Gorizia",
+      "regione": "Friuli Venezia Giulia",
       "dati_gb": 0.0,
       "note": ""
     }
