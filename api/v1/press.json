@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-02T17:10:56.999314+00:00",
-  "total": 35,
+  "generated": "2026-09-03T05:11:04.747243+00:00",
+  "total": 34,
   "records": [
     {
       "id": "#00001",
@@ -341,16 +341,6 @@
       "provincia": "Pesaro-Urbino",
       "regione": "Marche",
       "fonte": "https://www.teamsystem.com/",
-      "note": "Confermato: SI | Attribuito a: —"
-    },
-    {
-      "id": "#00035",
-      "data": "31/08/2026",
-      "vittima": "Salus S.R.L. (Casa di Cura Salus)",
-      "link": "casadicurasalus.it",
-      "provincia": "Trieste",
-      "regione": "Friuli-Venezia Giulia",
-      "fonte": "https://www.triesteprima.it/cronaca/ransomware-salus-trieste.html",
       "note": "Confermato: SI | Attribuito a: —"
     }
   ]
