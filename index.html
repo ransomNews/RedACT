@@ -4128,7 +4128,16 @@ const GROUP_NATIONALITIES = {
 
 function linkHref(link) {
   const l = link.trim();
-  return 'https://' + (l.toLowerCase().startsWith('www.') ? l : 'www.' + l);
+  const lower = l.toLowerCase();
+  // Non anteporre www. se il link ha già un sottodominio (es. int.diasorin.com)
+  // o inizia già con www. Un dominio "nudo" ha esattamente un punto prima del path.
+  const hostPart = lower.split('/')[0];
+  const dotCount = (hostPart.match(/\./g) || []).length;
+  const hasSubdomain = dotCount >= 2 && !hostPart.startsWith('www.');
+  if (lower.startsWith('www.') || hasSubdomain) {
+    return 'https://' + l;
+  }
+  return 'https://www.' + l;
 }
 
 function settoreLabel(code) {
@@ -5906,7 +5915,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_484';
+    verEl.textContent = 'DS_STABILE_485';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
