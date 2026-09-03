@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 03 Sep 2026 05:11:04 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 06:12:31 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -16,7 +16,7 @@
     <item>
       <title>Policlinico Triestino S.P.A. (Gruppo Policlinico Triestino)</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00537 | Gruppo: incransom | Data: 02/09/2026 | Provincia: Gorizia | Regione: Friuli Venezia Giulia | Zona: --- | Dati pubblicati: GB 0</description>
+      <description>ID: 00537 | Gruppo: incransom | Data: 02/09/2026 | Provincia: Trieste | Regione: Friuli Venezia Giulia | Zona: --- | Dati pubblicati: GB 0</description>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00537</guid>
       <category>incransom</category>
