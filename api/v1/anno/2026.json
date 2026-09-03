@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-03T06:12:31.101758+00:00",
+  "generated": "2026-09-03T10:03:47.788375+00:00",
   "anno": 2026,
-  "total": 218,
+  "total": 219,
   "records": [
     {
       "id": "00317",
@@ -2399,6 +2399,17 @@
       "link": "polits.it",
       "provincia": "Trieste",
       "regione": "Friuli Venezia Giulia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00538",
+      "data": "03/09/2026",
+      "vittima": "DiaSorin S.P.A.",
+      "gruppo": "settra",
+      "link": "int.diasorin.com",
+      "provincia": "Vercelli",
+      "regione": "Piemonte",
       "dati_gb": 0.0,
       "note": ""
     }

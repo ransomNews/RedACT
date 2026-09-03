@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 03 Sep 2026 06:12:31 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 10:03:47 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>DiaSorin S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00538 | Gruppo: settra | Data: 03/09/2026 | Provincia: Vercelli | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00538</guid>
+      <category>settra</category>
+    </item>
     <item>
       <title>Policlinico Triestino S.P.A. (Gruppo Policlinico Triestino)</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00517 | Gruppo: titan | Data: 20/08/2026 | Provincia: Avellino | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00517</guid>
-      <category>titan</category>
-    </item>
-    <item>
-      <title>CTP S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00518 | Gruppo: titan | Data: 20/08/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00518</guid>
       <category>titan</category>
     </item>
   </channel>
