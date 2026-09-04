@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-04T04:56:23.400080+00:00",
+  "generated": "2026-09-04T07:22:34.144296+00:00",
   "anno": 2026,
-  "total": 220,
+  "total": 221,
   "records": [
     {
       "id": "00317",
@@ -2421,6 +2421,17 @@
       "link": "oculisticaciraci.it",
       "provincia": "Bari",
       "regione": "Puglia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00540",
+      "data": "04/09/2026",
+      "vittima": "EDIF S.P.A.",
+      "gruppo": "aur0ra",
+      "link": "gruppoedif.it",
+      "provincia": "Macerata",
+      "regione": "Marche",
       "dati_gb": 0.0,
       "note": ""
     }

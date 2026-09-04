@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-04T04:56:23.400080+00:00",
-  "total": 129,
+  "generated": "2026-09-04T07:22:34.144296+00:00",
+  "total": 130,
   "gruppi": [
     {
       "nome": "8base",
@@ -97,6 +97,14 @@
       "dati_gb": 402.0,
       "anni_attivi": [
         2024
+      ]
+    },
+    {
+      "nome": "aur0ra",
+      "rivendicazioni": 1,
+      "dati_gb": 0.0,
+      "anni_attivi": [
+        2026
       ]
     },
     {
