@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-03T10:10:11.594714+00:00",
-  "total": 860,
+  "generated": "2026-09-04T04:56:23.400080+00:00",
+  "total": 861,
   "records": [
     {
       "id": "00001",
@@ -10320,6 +10320,18 @@
       "link": "int.diasorin.com",
       "provincia": "Vercelli",
       "regione": "Piemonte",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00539",
+      "data": "04/09/2026",
+      "anno": 2026,
+      "vittima": "Studio Oculistico Ciraci S.R.L.",
+      "gruppo": "spacebears",
+      "link": "oculisticaciraci.it",
+      "provincia": "Bari",
+      "regione": "Puglia",
       "dati_gb": 0.0,
       "note": ""
     }
