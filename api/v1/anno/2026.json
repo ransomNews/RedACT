@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-07T14:25:24.420019+00:00",
+  "generated": "2026-09-07T17:16:15.306046+00:00",
   "anno": 2026,
-  "total": 221,
+  "total": 222,
   "records": [
     {
       "id": "00317",
@@ -2433,6 +2433,17 @@
       "provincia": "Macerata",
       "regione": "Marche",
       "dati_gb": 197.42,
+      "note": ""
+    },
+    {
+      "id": "00541",
+      "data": "07/09/2026",
+      "vittima": "Abaco Viaggi S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "abacoviaggi.com",
+      "provincia": "Udine",
+      "regione": "Friuli Venezia Giulia",
+      "dati_gb": 0.0,
       "note": ""
     }
   ]
