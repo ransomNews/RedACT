@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-07T17:16:15.306046+00:00",
-  "total": 863,
+  "generated": "2026-09-08T20:01:40.493710+00:00",
+  "total": 864,
   "records": [
     {
       "id": "00001",
@@ -10356,6 +10356,18 @@
       "link": "abacoviaggi.com",
       "provincia": "Udine",
       "regione": "Friuli Venezia Giulia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00542",
+      "data": "08/09/2026",
+      "anno": 2026,
+      "vittima": "Assiprime 2020 S.R.L.",
+      "gruppo": "safepay",
+      "link": "assiprime.it",
+      "provincia": "Piacenza",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }
