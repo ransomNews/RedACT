@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Tue, 08 Sep 2026 20:01:40 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 12:40:03 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -152,7 +152,7 @@
     <item>
       <title>NTE Italia (New Technology Engineering Italia) S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00524 | Gruppo: panzer | Data: 21/08/2026 | Provincia: Catanzaro | Regione: Calabria | Zona: Sud | Dati pubblicati: GB 0</description>
+      <description>ID: 00524 | Gruppo: panzer | Data: 21/08/2026 | Provincia: Catanzaro | Regione: Calabria | Zona: Sud | Dati pubblicati: GB 16,30</description>
       <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00524</guid>
       <category>panzer</category>
