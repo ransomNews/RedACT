@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-14T14:02:46.521220+00:00",
-  "total": 865,
+  "generated": "2026-09-14T14:48:55.366610+00:00",
+  "total": 866,
   "records": [
     {
       "id": "00001",
@@ -10380,6 +10380,18 @@
       "link": "comune.robeccosulnaviglio.mi.it",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00544",
+      "data": "14/09/2026",
+      "anno": 2026,
+      "vittima": "A.C.A. S.P.A.",
+      "gruppo": "thegentlemen",
+      "link": "aca.pescara.it",
+      "provincia": "Pescara",
+      "regione": "Abruzzo",
       "dati_gb": 0.0,
       "note": ""
     }
