@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-13T16:37:45.086388+00:00",
+  "generated": "2026-09-14T12:46:01.832776+00:00",
   "anno": 2026,
-  "total": 223,
+  "total": 224,
   "records": [
     {
       "id": "00317",
@@ -2455,6 +2455,17 @@
       "provincia": "Piacenza",
       "regione": "Emilia Romagna",
       "dati_gb": 11.49,
+      "note": ""
+    },
+    {
+      "id": "00543",
+      "data": "14/09/2026",
+      "vittima": "Comune di Robecco sul Naviglio",
+      "gruppo": "lockbit5",
+      "link": "comune.robeccosulnaviglio.mi.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
       "note": ""
     }
   ]
