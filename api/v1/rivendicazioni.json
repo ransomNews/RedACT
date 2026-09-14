@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-14T14:48:55.366610+00:00",
-  "total": 866,
+  "generated": "2026-09-14T17:40:44.840899+00:00",
+  "total": 867,
   "records": [
     {
       "id": "00001",
@@ -10392,6 +10392,18 @@
       "link": "aca.pescara.it",
       "provincia": "Pescara",
       "regione": "Abruzzo",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00545",
+      "data": "14/09/2026",
+      "anno": 2026,
+      "vittima": "Vittoria Assicurazioni S.P.A. Agenzia Lodi Stazione Garati Massimo",
+      "gruppo": "thegentlemen",
+      "link": "assicurazionilodi.it",
+      "provincia": "Lodi",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
