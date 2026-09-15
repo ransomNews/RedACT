@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-14T17:40:44.840899+00:00",
+  "generated": "2026-09-15T10:45:04.584757+00:00",
   "anno": 2026,
-  "total": 226,
+  "total": 227,
   "records": [
     {
       "id": "00317",
@@ -2487,6 +2487,17 @@
       "link": "assicurazionilodi.it",
       "provincia": "Lodi",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00546",
+      "data": "15/09/2026",
+      "vittima": "Bravo Group S.P.A.",
+      "gruppo": "qilin",
+      "link": "bravogroup.it",
+      "provincia": "Genova",
+      "regione": "Liguria",
       "dati_gb": 0.0,
       "note": ""
     }
