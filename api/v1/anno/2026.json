@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-15T10:45:04.584757+00:00",
+  "generated": "2026-09-17T05:26:43.450616+00:00",
   "anno": 2026,
-  "total": 227,
+  "total": 228,
   "records": [
     {
       "id": "00317",
@@ -2498,6 +2498,17 @@
       "link": "bravogroup.it",
       "provincia": "Genova",
       "regione": "Liguria",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00547",
+      "data": "19/09/2026",
+      "vittima": "RDA Motors S.P.A.",
+      "gruppo": "emperador",
+      "link": "rda-stellantis.it/concessionario",
+      "provincia": "Roma",
+      "regione": "Lazio",
       "dati_gb": 0.0,
       "note": ""
     }
