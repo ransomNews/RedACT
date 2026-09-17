@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 17 Sep 2026 05:26:43 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 08:59:46 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -20,6 +20,14 @@
       <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00547</guid>
       <category>emperador</category>
+    </item>
+    <item>
+      <title>STP Fashion Lab</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00548 | Gruppo: vexy | Data: 19/09/2026 | Provincia: Firenze | Regione: Toscana | Zona: Centro | Dati pubblicati: GB 0</description>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00548</guid>
+      <category>vexy</category>
     </item>
     <item>
       <title>Bravo Group S.P.A.</title>
@@ -163,14 +171,6 @@
       <description>ID: 00528 | Gruppo: qilin | Data: 23/08/2026 | Provincia: Monza e della Brianza | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 124,19</description>
       <pubDate>Sun, 23 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00528</guid>
-      <category>qilin</category>
-    </item>
-    <item>
-      <title>Tecnici Associati S.T.P.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00529 | Gruppo: qilin | Data: 23/08/2026 | Provincia: Udine | Regione: Friuli Venezia Giulia | Zona: --- | Dati pubblicati: GB 41,60</description>
-      <pubDate>Sun, 23 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00529</guid>
       <category>qilin</category>
     </item>
   </channel>

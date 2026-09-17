@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-17T05:26:43.450616+00:00",
+  "generated": "2026-09-17T08:59:46.506312+00:00",
   "anno": 2026,
-  "total": 228,
+  "total": 229,
   "records": [
     {
       "id": "00317",
@@ -2509,6 +2509,17 @@
       "link": "rda-stellantis.it/concessionario",
       "provincia": "Roma",
       "regione": "Lazio",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00548",
+      "data": "19/09/2026",
+      "vittima": "STP Fashion Lab",
+      "gruppo": "vexy",
+      "link": "stpfashionlab.it",
+      "provincia": "Firenze",
+      "regione": "Toscana",
       "dati_gb": 0.0,
       "note": ""
     }
