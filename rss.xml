@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 17 Sep 2026 08:59:46 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 13:00:00 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -14,18 +14,26 @@
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
     <item>
+      <title>td***up (Target senza nome)</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00549 | Gruppo: audit | Data: 19/09/2026 | Provincia: Sconosciuta | Regione: Sconosciuta | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00549</guid>
+      <category>audit</category>
+    </item>
+    <item>
       <title>RDA Motors S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00547 | Gruppo: emperador | Data: 19/09/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
-      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
+      <description>ID: 00547 | Gruppo: emperador | Data: 17/09/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00547</guid>
       <category>emperador</category>
     </item>
     <item>
       <title>STP Fashion Lab</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00548 | Gruppo: vexy | Data: 19/09/2026 | Provincia: Firenze | Regione: Toscana | Zona: Centro | Dati pubblicati: GB 0</description>
-      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
+      <description>ID: 00548 | Gruppo: vexy | Data: 17/09/2026 | Provincia: Firenze | Regione: Toscana | Zona: Centro | Dati pubblicati: GB 0</description>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00548</guid>
       <category>vexy</category>
     </item>
@@ -163,14 +171,6 @@
       <description>ID: 00527 | Gruppo: qilin | Data: 23/08/2026 | Provincia: Venezia | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
       <pubDate>Sun, 23 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00527</guid>
-      <category>qilin</category>
-    </item>
-    <item>
-      <title>Euroflora S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00528 | Gruppo: qilin | Data: 23/08/2026 | Provincia: Monza e della Brianza | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 124,19</description>
-      <pubDate>Sun, 23 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00528</guid>
       <category>qilin</category>
     </item>
   </channel>

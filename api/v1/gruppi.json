@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-17T08:59:46.506312+00:00",
-  "total": 132,
+  "generated": "2026-09-19T13:00:00.057864+00:00",
+  "total": 133,
   "gruppi": [
     {
       "nome": "8base",
@@ -97,6 +97,14 @@
       "dati_gb": 402.0,
       "anni_attivi": [
         2024
+      ]
+    },
+    {
+      "nome": "audit",
+      "rivendicazioni": 1,
+      "dati_gb": 0.0,
+      "anni_attivi": [
+        2026
       ]
     },
     {
