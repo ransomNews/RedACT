@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sat, 19 Sep 2026 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 09:25:59 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Studio Notarile Associato Salvatore Costantino e Anna Favarato</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00550 | Gruppo: emperador | Data: 20/09/2026 | Provincia: Treviso | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00550</guid>
+      <category>emperador</category>
+    </item>
     <item>
       <title>td***up (Target senza nome)</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00526 | Gruppo: qilin | Data: 23/08/2026 | Provincia: Venezia | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 163,42</description>
       <pubDate>Sun, 23 Aug 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00526</guid>
-      <category>qilin</category>
-    </item>
-    <item>
-      <title>Studio Boldrin S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00527 | Gruppo: qilin | Data: 23/08/2026 | Provincia: Venezia | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
-      <pubDate>Sun, 23 Aug 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00527</guid>
       <category>qilin</category>
     </item>
   </channel>

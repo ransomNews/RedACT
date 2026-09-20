@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-19T13:00:00.057864+00:00",
+  "generated": "2026-09-20T09:25:59.636812+00:00",
   "anno": 2026,
-  "total": 230,
+  "total": 231,
   "records": [
     {
       "id": "00317",
@@ -2531,6 +2531,17 @@
       "link": "",
       "provincia": "Sconosciuta",
       "regione": "Sconosciuta",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00550",
+      "data": "20/09/2026",
+      "vittima": "Studio Notarile Associato Salvatore Costantino e Anna Favarato",
+      "gruppo": "emperador",
+      "link": "costantinofavarato.it",
+      "provincia": "Treviso",
+      "regione": "Veneto",
       "dati_gb": 0.0,
       "note": ""
     }
