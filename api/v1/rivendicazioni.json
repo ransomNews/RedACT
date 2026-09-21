@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-20T19:36:22.757706+00:00",
-  "total": 873,
+  "generated": "2026-09-21T18:47:38.154742+00:00",
+  "total": 874,
   "records": [
     {
       "id": "00001",
@@ -10476,6 +10476,18 @@
       "link": "AUDIT ID: 661EB89AEF2A1E8D",
       "provincia": "Sconosciuta",
       "regione": "Sconosciuta",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00552",
+      "data": "21/09/2026",
+      "anno": 2026,
+      "vittima": "360 Consulenza S.R.L.",
+      "gruppo": "nightspire",
+      "link": "360consulenza.com",
+      "provincia": "Bari",
+      "regione": "Puglia",
       "dati_gb": 0.0,
       "note": ""
     }
