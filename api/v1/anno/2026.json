@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-22T12:39:16.918935+00:00",
+  "generated": "2026-09-22T13:14:20.001611+00:00",
   "anno": 2026,
-  "total": 234,
+  "total": 235,
   "records": [
     {
       "id": "00317",
@@ -2575,6 +2575,17 @@
       "link": "columbusinformatica.it",
       "provincia": "Genova",
       "regione": "Liguria",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00554",
+      "data": "22/09/2026",
+      "vittima": "DI.C.S.EL. S.R.L.",
+      "gruppo": "akira",
+      "link": "dicsel.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
