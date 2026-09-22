@@ -3391,7 +3391,7 @@ html.light .ytile-v2:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
   <div class="tab" id="tab2022" onclick="switchTab(2022)">2022 <span class="cnt" id="tabCnt2022">0</span></div>
   <div class="tab" id="tab2021" onclick="switchTab(2021)">2021 <span class="cnt" id="tabCnt2021">44</span></div>
   <div class="tab" id="tab2020" onclick="switchTab(2020)">2020 <span class="cnt" id="tabCnt2020">1</span></div>
-  <div style="width:1px;align-self:stretch;background:var(--border,#3a3d5c);margin:4px 6px;"></div>
+  <div style="width:1px;height:24px;background:var(--border2);"></div>
   <div class="tab" id="tabParziali" onclick="switchTab('parziali')" title="Rivendicazioni con identità del target parzialmente o completamente rivelata dopo la pubblicazione iniziale">Cestino <span class="cnt" id="tabCntParziali">0</span></div>
   <div class="impact-legend">
         <span class="legend-item" title="Dati esfiltrati > 500 GB"><span class="legend-dot legend-red"></span><span>CRITICO &gt;500 GB</span></span>
@@ -5951,7 +5951,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_518';
+    verEl.textContent = 'DS_STABILE_519';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
