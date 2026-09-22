@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-22T10:12:43.094622+00:00",
+  "generated": "2026-09-22T10:30:16.632950+00:00",
   "anno": 2026,
-  "total": 233,
+  "total": 234,
   "records": [
     {
       "id": "00317",
@@ -2564,6 +2564,17 @@
       "link": "360consulenza.com",
       "provincia": "Bari",
       "regione": "Puglia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00553",
+      "data": "22/09/2026",
+      "vittima": "Columbus Informatica S.R.L.",
+      "gruppo": "qilin",
+      "link": "columbusinformatica.it",
+      "provincia": "Genova",
+      "regione": "Liguria",
       "dati_gb": 0.0,
       "note": ""
     }
