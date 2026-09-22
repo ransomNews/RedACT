@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-22T13:14:20.001611+00:00",
-  "total": 876,
+  "generated": "2026-09-22T13:30:06.887765+00:00",
+  "total": 877,
   "records": [
     {
       "id": "00001",
@@ -10512,6 +10512,18 @@
       "link": "dicsel.it",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00555",
+      "data": "22/09/2026",
+      "anno": 2026,
+      "vittima": "Pr***IT (Target senza nome)",
+      "gruppo": "audit",
+      "link": "AUDIT ID: 746464CD386A9234",
+      "provincia": "Sconosciuta",
+      "regione": "Sconosciuta",
       "dati_gb": 0.0,
       "note": ""
     }
