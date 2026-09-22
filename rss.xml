@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Mon, 21 Sep 2026 18:47:38 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 10:12:43 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -112,7 +112,7 @@
     <item>
       <title>Studio Oculistico Ciraci S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00539 | Gruppo: spacebears | Data: 04/09/2026 | Provincia: Bari | Regione: Puglia | Zona: Sud | Dati pubblicati: GB 0</description>
+      <description>ID: 00539 | Gruppo: spacebears | Data: 04/09/2026 | Provincia: Bari | Regione: Puglia | Zona: Sud | Dati pubblicati: GB 5,50</description>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00539</guid>
       <category>spacebears</category>
