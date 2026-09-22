@@ -3391,6 +3391,8 @@ html.light .ytile-v2:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
   <div class="tab" id="tab2022" onclick="switchTab(2022)">2022 <span class="cnt" id="tabCnt2022">0</span></div>
   <div class="tab" id="tab2021" onclick="switchTab(2021)">2021 <span class="cnt" id="tabCnt2021">44</span></div>
   <div class="tab" id="tab2020" onclick="switchTab(2020)">2020 <span class="cnt" id="tabCnt2020">1</span></div>
+  <div style="width:1px;align-self:stretch;background:var(--border,#3a3d5c);margin:4px 6px;"></div>
+  <div class="tab" id="tabParziali" onclick="switchTab('parziali')" title="Rivendicazioni con identità del target parzialmente o completamente rivelata dopo la pubblicazione iniziale">Cestino <span class="cnt" id="tabCntParziali">0</span></div>
   <div class="impact-legend">
         <span class="legend-item" title="Dati esfiltrati > 500 GB"><span class="legend-dot legend-red"></span><span>CRITICO &gt;500 GB</span></span>
         <span class="legend-item" title="Dati esfiltrati tra 100 e 500 GB"><span class="legend-dot legend-orange"></span><span>ALTO 100–500 GB</span></span>
@@ -3910,7 +3912,36 @@ function getAllGroupsCatalog() {
   return [...merged].sort((a, b) => a.localeCompare(b, 'it'));
 }
 
+function parseOriginalFromNote(note) {
+  if (!note || note.indexOf('Completa di') !== 0) return null;
+  const rest = note.replace(/^Completa di\s*/, '');
+  const parts = rest.split('|').map(s => s.trim());
+  let date = null;
+  const nonDateParts = [];
+  parts.forEach(p => {
+    if (/^del\s+/i.test(p)) date = p.replace(/^del\s+/i, '');
+    else nonDateParts.push(p);
+  });
+  return { name: nonDateParts[0] || null, link: nonDateParts[1] || null, date: date };
+}
+
 function base() {
+  if (year === 'parziali') {
+    return all.filter(r => r.NOTE && r.NOTE.indexOf('Completa di') === 0).map(r => {
+      const orig = parseOriginalFromNote(r.NOTE);
+      if (!orig) return r;
+      return Object.assign({}, r, {
+        VITTIMA: orig.name || r.VITTIMA,
+        LINK: orig.link || '',
+        DATA: orig.date || r.DATA,
+        PROVINCIA: 'Sconosciuta',
+        REGIONE: 'Sconosciuta',
+        SETTORE: '',
+        DATI: '0',
+        NOTE: 'Identità completata successivamente: vedi ' + (r.VITTIMA || '')
+      });
+    });
+  }
   if (year === 0) return all;
   return DATASETS[year] || all;
 }
@@ -4382,7 +4413,7 @@ function switchTab(y, noURL) {
     var jsonBtn = document.getElementById('exportJsonBtn'); if (jsonBtn) jsonBtn.style.display = 'none';
     renderGroupCards();
   } else {
-    const activeTab = document.getElementById(y===0 ? 'tabAll' : 'tab'+y);
+    const activeTab = document.getElementById(y===0 ? 'tabAll' : (y==='parziali' ? 'tabParziali' : 'tab'+y));
     if (activeTab) activeTab.classList.add('active');
     // Restore normal view
     document.getElementById('groupsView').style.display = 'none';
@@ -5761,6 +5792,7 @@ function buildStats() {
   document.getElementById('tabCnt2025').textContent = DATA_2025.length;
   document.getElementById('tabCnt2026').textContent = DATA_2026.length;
   document.getElementById('tabCntGruppi').textContent = OFFICIAL_GROUP_CATALOG.length;
+  document.getElementById('tabCntParziali').textContent = all.filter(r => r.NOTE && r.NOTE.indexOf('Completa di') === 0).length;
 }
 
 function resetHmFilter() {
@@ -5919,7 +5951,7 @@ function updateFooterMeta() {
     updateEl.textContent = `Ultimo aggiornamento dati: ${data} - ${ora}`;
   }
   if (verEl) {
-    verEl.textContent = 'DS_STABILE_514';
+    verEl.textContent = 'DS_STABILE_515';
   }
 }
 document.addEventListener('DOMContentLoaded', updateFooterMeta);
