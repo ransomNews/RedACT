@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-23T08:43:14.312006+00:00",
-  "total": 133,
+  "generated": "2026-09-23T10:32:46.323831+00:00",
+  "total": 134,
   "gruppi": [
     {
       "nome": "8base",
@@ -191,6 +191,14 @@
       "anni_attivi": [
         2023,
         2024
+      ]
+    },
+    {
+      "nome": "boobaproject",
+      "rivendicazioni": 1,
+      "dati_gb": 0.0,
+      "anni_attivi": [
+        2026
       ]
     },
     {

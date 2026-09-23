@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-23T08:43:14.312006+00:00",
+  "generated": "2026-09-23T10:32:46.323831+00:00",
   "anno": 2026,
-  "total": 236,
+  "total": 237,
   "records": [
     {
       "id": "00317",
@@ -2597,6 +2597,17 @@
       "link": "AUDIT ID: 746464CD386A9234",
       "provincia": "Sconosciuta",
       "regione": "Sconosciuta",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00556",
+      "data": "23/09/2026",
+      "vittima": "COSEF Consorzio di Sviluppo Economico del Friuli",
+      "gruppo": "boobaproject",
+      "link": "cosef.fvg.it",
+      "provincia": "Udine",
+      "regione": "Friuli Venezia Giulia",
       "dati_gb": 0.0,
       "note": ""
     }
