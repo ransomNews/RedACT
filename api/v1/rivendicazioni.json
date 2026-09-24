@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-24T18:09:51.864106+00:00",
-  "total": 880,
+  "generated": "2026-09-24T18:29:00.279888+00:00",
+  "total": 881,
   "records": [
     {
       "id": "00001",
@@ -10558,6 +10558,18 @@
       "vittima": "NEAD Pro Professionisti Riuniti",
       "gruppo": "rhysida",
       "link": "nead.pro",
+      "provincia": "Gorizia",
+      "regione": "Friuli Venezia Giulia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00559",
+      "data": "24/09/2026",
+      "anno": 2026,
+      "vittima": "North East Advisor S.R.L.",
+      "gruppo": "rhysida",
+      "link": "",
       "provincia": "Gorizia",
       "regione": "Friuli Venezia Giulia",
       "dati_gb": 0.0,
