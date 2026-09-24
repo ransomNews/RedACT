@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-24T15:04:40.652269+00:00",
+  "generated": "2026-09-24T18:09:51.864106+00:00",
   "total": 134,
   "gruppi": [
     {
@@ -909,12 +909,13 @@
     },
     {
       "nome": "rhysida",
-      "rivendicazioni": 11,
+      "rivendicazioni": 12,
       "dati_gb": 2712.0,
       "anni_attivi": [
         2023,
         2024,
-        2025
+        2025,
+        2026
       ]
     },
     {

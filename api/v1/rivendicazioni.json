@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-24T15:04:40.652269+00:00",
-  "total": 879,
+  "generated": "2026-09-24T18:09:51.864106+00:00",
+  "total": 880,
   "records": [
     {
       "id": "00001",
@@ -10548,6 +10548,18 @@
       "link": "corisricambi.it",
       "provincia": "Catania",
       "regione": "Sicilia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00558",
+      "data": "24/09/2026",
+      "anno": 2026,
+      "vittima": "NEAD Pro Professionisti Riuniti",
+      "gruppo": "rhysida",
+      "link": "nead.pro",
+      "provincia": "Gorizia",
+      "regione": "Friuli Venezia Giulia",
       "dati_gb": 0.0,
       "note": ""
     }
