@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Fri, 25 Sep 2026 05:13:49 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 11:02:13 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -40,7 +40,7 @@
     <item>
       <title>COSEF Consorzio di Sviluppo Economico del Friuli</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00556 | Gruppo: boobaproject | Data: 23/09/2026 | Provincia: Udine | Regione: Friuli Venezia Giulia | Zona: --- | Dati pubblicati: GB 0</description>
+      <description>ID: 00556 | Gruppo: boobaproject | Data: 23/09/2026 | Provincia: Udine | Regione: Friuli Venezia Giulia | Zona: --- | Dati pubblicati: GB 184,90</description>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00556</guid>
       <category>boobaproject</category>
