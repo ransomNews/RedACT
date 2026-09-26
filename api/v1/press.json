@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-25T11:02:13.031210+00:00",
-  "total": 35,
+  "generated": "2026-09-26T06:41:12.658631+00:00",
+  "total": 36,
   "records": [
     {
       "id": "#00001",
@@ -351,6 +351,16 @@
       "provincia": "Prato",
       "regione": "Toscana",
       "fonte": "https://www.notiziediprato.it/attualita/attacco-informatico-al-comune-di-prato-nessuna-violazione-delle-banche-dati/",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00036",
+      "data": "25/09/2026",
+      "vittima": "A.P.S.P. San Gaetano",
+      "link": "apspsangaetano.it",
+      "provincia": "Trento",
+      "regione": "Trentino-Alto Adige",
+      "fonte": "https://www.ladige.it/territori/fiemme-fassa/attacco-hacker-alla-casa-di-riposo-di-predazzo-sistemi-bloccati-chiesto-un-riscatto-nx12zn6t",
       "note": "Confermato: SI | Attribuito a: —"
     }
   ]
