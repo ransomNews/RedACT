@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-29T12:22:12.950982+00:00",
-  "total": 881,
+  "generated": "2026-09-29T16:11:58.700293+00:00",
+  "total": 882,
   "records": [
     {
       "id": "00001",
@@ -10574,6 +10574,18 @@
       "regione": "Friuli Venezia Giulia",
       "dati_gb": 0.0,
       "note": "Con NEAD Pro Professionisti Riuniti"
+    },
+    {
+      "id": "00560",
+      "data": "29/09/2026",
+      "anno": 2026,
+      "vittima": "Top Sport S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "topsportitalia.it",
+      "provincia": "Bari",
+      "regione": "Puglia",
+      "dati_gb": 0.0,
+      "note": ""
     }
   ]
 }
