@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Tue, 29 Sep 2026 16:11:58 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 16:51:08 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -14,9 +14,9 @@
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
     <item>
-      <title>Top Sport S.R.L.</title>
+      <title>Quality Sport Italia S.R.L. (Topsport Italia)</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00560 | Gruppo: thegentlemen | Data: 29/09/2026 | Provincia: Bari | Regione: Puglia | Zona: Sud | Dati pubblicati: GB 0</description>
+      <description>ID: 00560 | Gruppo: thegentlemen | Data: 29/09/2026 | Provincia: Bari | Regione: Puglia | Zona: Sud | Dati pubblicati: GB 0 | Nota: Vedi anche topsportitalia.it</description>
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00560</guid>
       <category>thegentlemen</category>

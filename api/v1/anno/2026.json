@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-29T16:11:58.700293+00:00",
+  "generated": "2026-09-29T16:51:08.559388+00:00",
   "anno": 2026,
   "total": 241,
   "records": [
@@ -2647,13 +2647,13 @@
     {
       "id": "00560",
       "data": "29/09/2026",
-      "vittima": "Top Sport S.R.L.",
+      "vittima": "Quality Sport Italia S.R.L. (Topsport Italia)",
       "gruppo": "thegentlemen",
-      "link": "topsportitalia.it",
+      "link": "qualitysport.com",
       "provincia": "Bari",
       "regione": "Puglia",
       "dati_gb": 0.0,
-      "note": ""
+      "note": "Vedi anche topsportitalia.it"
     }
   ]
 }
