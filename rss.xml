@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Tue, 29 Sep 2026 09:12:08 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 12:22:13 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -136,7 +136,7 @@
     <item>
       <title>Comune di Robecco sul Naviglio</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00543 | Gruppo: lockbit5 | Data: 14/09/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <description>ID: 00543 | Gruppo: lockbit5 | Data: 14/09/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 13,20</description>
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00543</guid>
       <category>lockbit5</category>
