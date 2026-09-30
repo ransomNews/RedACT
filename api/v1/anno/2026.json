@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-30T09:08:18.823790+00:00",
+  "generated": "2026-09-30T13:49:46.280336+00:00",
   "anno": 2026,
-  "total": 241,
+  "total": 242,
   "records": [
     {
       "id": "00317",
@@ -2654,6 +2654,17 @@
       "regione": "Puglia",
       "dati_gb": 0.0,
       "note": "Vedi anche topsportitalia.it"
+    },
+    {
+      "id": "00561",
+      "data": "30/09/2026",
+      "vittima": "Astidental di Sabbione S.P.A.",
+      "gruppo": "lamashtu",
+      "link": "bquadro.it",
+      "provincia": "Asti",
+      "regione": "Piemonte",
+      "dati_gb": 0.0,
+      "note": ""
     }
   ]
 }

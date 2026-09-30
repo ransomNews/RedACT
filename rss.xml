@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 30 Sep 2026 09:08:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 13:49:46 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Astidental di Sabbione S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00561 | Gruppo: lamashtu | Data: 30/09/2026 | Provincia: Asti | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00561</guid>
+      <category>lamashtu</category>
+    </item>
     <item>
       <title>Quality Sport Italia S.R.L. (Topsport Italia)</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -164,14 +172,6 @@
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00545</guid>
       <category>thegentlemen</category>
-    </item>
-    <item>
-      <title>Assiprime 2020 S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00542 | Gruppo: safepay | Data: 08/09/2026 | Provincia: Piacenza | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 11,49</description>
-      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00542</guid>
-      <category>safepay</category>
     </item>
   </channel>
 </rss>
