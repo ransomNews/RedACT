@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Tue, 29 Sep 2026 16:51:08 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 09:08:18 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -96,7 +96,7 @@
     <item>
       <title>Studio Notarile Associato Salvatore Costantino e Anna Favarato</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00550 | Gruppo: emperador | Data: 20/09/2026 | Provincia: Treviso | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
+      <description>ID: 00550 | Gruppo: emperador | Data: 20/09/2026 | Provincia: Treviso | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 7,10</description>
       <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00550</guid>
       <category>emperador</category>
