@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-01T16:05:11.615807+00:00",
+  "generated": "2026-10-01T16:33:25.971629+00:00",
   "anno": 2026,
-  "total": 241,
+  "total": 242,
   "records": [
     {
       "id": "00317",
@@ -2654,6 +2654,17 @@
       "regione": "Piemonte",
       "dati_gb": 0.0,
       "note": ""
+    },
+    {
+      "id": "00562",
+      "data": "01/10/2026",
+      "vittima": "Promind S.N.C.",
+      "gruppo": "audit",
+      "link": "promind.it",
+      "provincia": "Reggio Emilia",
+      "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": "AUDIT ID: 746464CD386A9234"
     }
   ]
 }
