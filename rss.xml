@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 01 Oct 2026 16:33:26 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 16:42:52 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -24,7 +24,7 @@
     <item>
       <title>Promind S.N.C.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00562 | Gruppo: audit | Data: 01/10/2026 | Provincia: Reggio Emilia | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0 | Nota: AUDIT ID: 746464CD386A9234</description>
+      <description>ID: 00562 | Gruppo: audit | Data: 01/10/2026 | Provincia: Reggio Emilia | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0 | Nota: Completa di Pr***IT (Target senza nome) | AUDIT ID: 746464CD386A9234 | del 22/09/2026</description>
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00562</guid>
       <category>audit</category>
