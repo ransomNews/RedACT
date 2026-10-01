@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 30 Sep 2026 13:49:46 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 15:47:46 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Steelco S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00551 | Gruppo: audit | Data: 01/10/2026 | Provincia: Treviso | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0 | Nota: Completa di st***co (Target senza nome) | AUDIT ID: 661EB89AEF2A1E8D | del 20/09/2026</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00551</guid>
+      <category>audit</category>
+    </item>
     <item>
       <title>Astidental di Sabbione S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -108,14 +116,6 @@
       <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00550</guid>
       <category>emperador</category>
-    </item>
-    <item>
-      <title>st***co (Target senza nome)</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00551 | Gruppo: audit | Data: 20/09/2026 | Provincia: Sconosciuta | Regione: Sconosciuta | Zona: --- | Dati pubblicati: GB 0</description>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00551</guid>
-      <category>audit</category>
     </item>
     <item>
       <title>td***up (Target senza nome)</title>

@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-09-30T13:49:46.280336+00:00",
+  "generated": "2026-10-01T15:47:46.375540+00:00",
   "total": 883,
   "records": [
     {
@@ -10469,15 +10469,15 @@
     },
     {
       "id": "00551",
-      "data": "20/09/2026",
+      "data": "01/10/2026",
       "anno": 2026,
-      "vittima": "st***co (Target senza nome)",
+      "vittima": "Steelco S.P.A.",
       "gruppo": "audit",
-      "link": "AUDIT ID: 661EB89AEF2A1E8D",
-      "provincia": "Sconosciuta",
-      "regione": "Sconosciuta",
+      "link": "steelcobelimed.com",
+      "provincia": "Treviso",
+      "regione": "Veneto",
       "dati_gb": 0.0,
-      "note": ""
+      "note": "Completa di st***co (Target senza nome) | AUDIT ID: 661EB89AEF2A1E8D | del 20/09/2026"
     },
     {
       "id": "00552",
