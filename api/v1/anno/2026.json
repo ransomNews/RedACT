@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-06T05:29:17.241548+00:00",
+  "generated": "2026-10-06T17:17:50.728236+00:00",
   "anno": 2026,
-  "total": 243,
+  "total": 244,
   "records": [
     {
       "id": "00317",
@@ -2674,6 +2674,17 @@
       "link": "mywic.it",
       "provincia": "Vercelli",
       "regione": "Piemonte",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00564",
+      "data": "06/10/2026",
+      "vittima": "Rino Greggio Argenterie S.P.A.",
+      "gruppo": "deadlock",
+      "link": "greggio.com",
+      "provincia": "Padova",
+      "regione": "Veneto",
       "dati_gb": 0.0,
       "note": ""
     }
