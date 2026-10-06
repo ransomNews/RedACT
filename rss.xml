@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 01 Oct 2026 19:14:43 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 05:29:17 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>WIC - HAL Service S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00563 | Gruppo: safepay | Data: 05/10/2026 | Provincia: Vercelli | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00563</guid>
+      <category>safepay</category>
+    </item>
     <item>
       <title>Steelco S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00544 | Gruppo: thegentlemen | Data: 14/09/2026 | Provincia: Pescara | Regione: Abruzzo | Zona: Sud | Dati pubblicati: GB 0</description>
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00544</guid>
-      <category>thegentlemen</category>
-    </item>
-    <item>
-      <title>Vittoria Assicurazioni S.P.A. Agenzia Lodi Stazione Garati Massimo</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00545 | Gruppo: thegentlemen | Data: 14/09/2026 | Provincia: Lodi | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00545</guid>
       <category>thegentlemen</category>
     </item>
   </channel>

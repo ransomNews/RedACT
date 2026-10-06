@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-01T19:14:43.413803+00:00",
-  "total": 883,
+  "generated": "2026-10-06T05:29:17.241548+00:00",
+  "total": 884,
   "records": [
     {
       "id": "00001",
@@ -10598,6 +10598,18 @@
       "regione": "Emilia Romagna",
       "dati_gb": 26.3,
       "note": "Completa di Pr***IT (Target senza nome) | AUDIT ID: 746464CD386A9234 | del 22/09/2026"
+    },
+    {
+      "id": "00563",
+      "data": "05/10/2026",
+      "anno": 2026,
+      "vittima": "WIC - HAL Service S.P.A.",
+      "gruppo": "safepay",
+      "link": "mywic.it",
+      "provincia": "Vercelli",
+      "regione": "Piemonte",
+      "dati_gb": 0.0,
+      "note": ""
     }
   ]
 }
