@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-09T09:39:04.253619+00:00",
+  "generated": "2026-10-09T14:00:24.943071+00:00",
   "anno": 2026,
-  "total": 245,
+  "total": 246,
   "records": [
     {
       "id": "00317",
@@ -2695,6 +2695,17 @@
       "gruppo": "nightspire",
       "link": "valvorobica.eu",
       "provincia": "Bergamo",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00566",
+      "data": "09/10/2026",
+      "vittima": "Melchioni S.P.A.",
+      "gruppo": "qilin",
+      "link": "melchioni.com",
+      "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
