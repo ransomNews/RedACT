@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-09T06:08:24.321178+00:00",
+  "generated": "2026-10-09T09:39:04.253619+00:00",
   "anno": 2026,
-  "total": 244,
+  "total": 245,
   "records": [
     {
       "id": "00317",
@@ -2685,6 +2685,17 @@
       "link": "greggio.com",
       "provincia": "Padova",
       "regione": "Veneto",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00565",
+      "data": "09/10/2026",
+      "vittima": "Valvorobica Industriale S.P.A.",
+      "gruppo": "nightspire",
+      "link": "valvorobica.eu",
+      "provincia": "Bergamo",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
