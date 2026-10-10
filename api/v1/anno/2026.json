@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-09T16:02:53.735148+00:00",
+  "generated": "2026-10-10T01:51:35.826919+00:00",
   "anno": 2026,
-  "total": 246,
+  "total": 247,
   "records": [
     {
       "id": "00317",
@@ -2707,6 +2707,17 @@
       "link": "melchioni.com",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00567",
+      "data": "10/10/2026",
+      "vittima": "IDI Integratori Dietetici Italiani S.R.L.",
+      "gruppo": "deadlock",
+      "link": "idipharma.com",
+      "provincia": "Catania",
+      "regione": "Sicilia",
       "dati_gb": 0.0,
       "note": ""
     }
