@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-10T02:29:27.920232+00:00",
-  "total": 888,
+  "generated": "2026-10-11T06:57:34.470708+00:00",
+  "total": 891,
   "records": [
     {
       "id": "00001",
@@ -10657,6 +10657,42 @@
       "provincia": "Catania",
       "regione": "Sicilia",
       "dati_gb": 39.82,
+      "note": ""
+    },
+    {
+      "id": "00568",
+      "data": "11/10/2026",
+      "anno": 2026,
+      "vittima": "HYSYTECH S.R.L.",
+      "gruppo": "majinahanashi",
+      "link": "hysytech.com",
+      "provincia": "Torino",
+      "regione": "Piemonte",
+      "dati_gb": 1.0,
+      "note": ""
+    },
+    {
+      "id": "00569",
+      "data": "11/10/2026",
+      "anno": 2026,
+      "vittima": "Albertin Alcide e Figli S.N.C.",
+      "gruppo": "majinahanashi",
+      "link": "albertin-cliches.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00570",
+      "data": "11/10/2026",
+      "anno": 2026,
+      "vittima": "Tema Energy S.R.L.",
+      "gruppo": "majinahanashi",
+      "link": "tema-energy.it",
+      "provincia": "Bergamo",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
       "note": ""
     }
   ]

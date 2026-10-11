@@ -1,10 +1,10 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-10T02:29:27.920232+00:00",
+  "generated": "2026-10-11T06:57:34.470708+00:00",
   "totali": {
-    "rivendicazioni": 888,
+    "rivendicazioni": 891,
     "gruppi_a_catalogo": 134,
-    "dati_gb": 83389.6
+    "dati_gb": 83390.6
   },
   "per_anno": {
     "2020": {
@@ -38,8 +38,8 @@
       "gruppi_attivi": 51
     },
     "2026": {
-      "rivendicazioni": 247,
-      "dati_gb": 26507.28,
+      "rivendicazioni": 250,
+      "dati_gb": 26508.28,
       "gruppi_attivi": 48
     }
   },
@@ -90,7 +90,7 @@
   "top5_regioni": [
     {
       "regione": "Lombardia",
-      "rivendicazioni": 260
+      "rivendicazioni": 262
     },
     {
       "regione": "Emilia Romagna",
@@ -106,7 +106,7 @@
     },
     {
       "regione": "Piemonte",
-      "rivendicazioni": 72
+      "rivendicazioni": 73
     }
   ]
 }

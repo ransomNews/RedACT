@@ -6,13 +6,37 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sat, 10 Oct 2026 02:29:27 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 06:57:34 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>HYSYTECH S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00568 | Gruppo: majinahanashi | Data: 11/10/2026 | Provincia: Torino | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 1,00</description>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00568</guid>
+      <category>majinahanashi</category>
+    </item>
+    <item>
+      <title>Albertin Alcide e Figli S.N.C.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00569 | Gruppo: majinahanashi | Data: 11/10/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00569</guid>
+      <category>majinahanashi</category>
+    </item>
+    <item>
+      <title>Tema Energy S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00570 | Gruppo: majinahanashi | Data: 11/10/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00570</guid>
+      <category>majinahanashi</category>
+    </item>
     <item>
       <title>IDI Integratori Dietetici Italiani S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -148,30 +172,6 @@
       <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00552</guid>
       <category>nightspire</category>
-    </item>
-    <item>
-      <title>Studio Notarile Associato Salvatore Costantino e Anna Favarato</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00550 | Gruppo: emperador | Data: 20/09/2026 | Provincia: Treviso | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 7,10</description>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00550</guid>
-      <category>emperador</category>
-    </item>
-    <item>
-      <title>td***up (Target senza nome)</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00549 | Gruppo: audit | Data: 19/09/2026 | Provincia: Sconosciuta | Regione: Sconosciuta | Zona: --- | Dati pubblicati: GB 0</description>
-      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00549</guid>
-      <category>audit</category>
-    </item>
-    <item>
-      <title>RDA Motors S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00547 | Gruppo: emperador | Data: 17/09/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 7,30</description>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00547</guid>
-      <category>emperador</category>
     </item>
   </channel>
 </rss>
