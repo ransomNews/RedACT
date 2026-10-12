@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-11T06:57:34.470708+00:00",
-  "total": 891,
+  "generated": "2026-10-12T05:56:58.678329+00:00",
+  "total": 892,
   "records": [
     {
       "id": "00001",
@@ -10690,6 +10690,18 @@
       "vittima": "Tema Energy S.R.L.",
       "gruppo": "majinahanashi",
       "link": "tema-energy.it",
+      "provincia": "Bergamo",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00571",
+      "data": "12/10/2026",
+      "anno": 2026,
+      "vittima": "CFG Serramenti S.R.L.",
+      "gruppo": "majinahanashi",
+      "link": "cfgserramenti.com",
       "provincia": "Bergamo",
       "regione": "Lombardia",
       "dati_gb": 0.0,
