@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-13T16:17:16.391167+00:00",
+  "generated": "2026-10-13T16:29:15.011415+00:00",
   "anno": 2026,
-  "total": 251,
+  "total": 252,
   "records": [
     {
       "id": "00317",
@@ -2762,6 +2762,17 @@
       "link": "cfgserramenti.com",
       "provincia": "Bergamo",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00572",
+      "data": "13/10/2026",
+      "vittima": "Ze***ce (Target senza nome)",
+      "gruppo": "audit",
+      "link": "AUDIT ID: AE29646C5B89FA91",
+      "provincia": "Sconosciuta",
+      "regione": "Sconosciuta",
       "dati_gb": 0.0,
       "note": ""
     }
