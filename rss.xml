@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Tue, 13 Oct 2026 16:29:15 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 14:06:40 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -112,7 +112,7 @@
     <item>
       <title>Astidental di Sabbione S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00561 | Gruppo: lamashtu | Data: 30/09/2026 | Provincia: Asti | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <description>ID: 00561 | Gruppo: lamashtu | Data: 30/09/2026 | Provincia: Asti | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 85,00</description>
       <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00561</guid>
       <category>lamashtu</category>
