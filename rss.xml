@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 14 Oct 2026 14:06:40 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 03:27:03 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -24,7 +24,7 @@
     <item>
       <title>CFG Serramenti S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00571 | Gruppo: majinahanashi | Data: 12/10/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <description>ID: 00571 | Gruppo: majinahanashi | Data: 12/10/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 3,88</description>
       <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00571</guid>
       <category>majinahanashi</category>
