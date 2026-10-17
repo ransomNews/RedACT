@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-15T06:26:03.693708+00:00",
-  "total": 894,
+  "generated": "2026-10-17T12:00:10.397783+00:00",
+  "total": 895,
   "records": [
     {
       "id": "00001",
@@ -10728,6 +10728,18 @@
       "link": "almacenter.it",
       "provincia": "Napoli",
       "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00574",
+      "data": "17/10/2026",
+      "anno": 2026,
+      "vittima": "Galleria di Base del Brennero",
+      "gruppo": "everest",
+      "link": "bbt-se.com",
+      "provincia": "Bolzano",
+      "regione": "Trentino Alto Adige",
       "dati_gb": 0.0,
       "note": ""
     }
