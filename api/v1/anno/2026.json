@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-17T12:06:59.232271+00:00",
+  "generated": "2026-10-18T09:57:36.720811+00:00",
   "anno": 2026,
-  "total": 254,
+  "total": 255,
   "records": [
     {
       "id": "00317",
@@ -2795,6 +2795,17 @@
       "link": "bbt-se.com",
       "provincia": "Bolzano",
       "regione": "Trentino Alto Adige",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00575",
+      "data": "18/10/2026",
+      "vittima": "Mastelli S.R.L.",
+      "gruppo": "qilin",
+      "link": "mastelli.com",
+      "provincia": "Imperia",
+      "regione": "Liguria",
       "dati_gb": 0.0,
       "note": ""
     }
