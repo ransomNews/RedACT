@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sun, 18 Oct 2026 09:57:36 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 17:02:47 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -104,7 +104,7 @@
     <item>
       <title>Rino Greggio Argenterie S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00564 | Gruppo: deadlock | Data: 06/10/2026 | Provincia: Padova | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
+      <description>ID: 00564 | Gruppo: deadlock | Data: 06/10/2026 | Provincia: Padova | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 478,00</description>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00564</guid>
       <category>deadlock</category>
