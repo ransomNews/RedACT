@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-23T14:26:30.552437+00:00",
+  "generated": "2026-10-23T14:50:05.850604+00:00",
   "total": 898,
   "records": [
     {
@@ -10759,11 +10759,11 @@
       "id": "00576",
       "data": "23/10/2026",
       "anno": 2026,
-      "vittima": "Coop italia Società Cooperativa",
+      "vittima": "Unicoop Etruria Società Cooperativa",
       "gruppo": "qilin",
-      "link": "coop.it",
-      "provincia": "Bologna",
-      "regione": "Emilia Romagna",
+      "link": "coopetruria.coop.it",
+      "provincia": "Livorno",
+      "regione": "Toscana",
       "dati_gb": 0.0,
       "note": ""
     },
