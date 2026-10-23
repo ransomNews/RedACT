@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-19T17:02:47.868731+00:00",
+  "generated": "2026-10-23T08:34:46.536164+00:00",
   "anno": 2026,
-  "total": 255,
+  "total": 256,
   "records": [
     {
       "id": "00317",
@@ -2806,6 +2806,17 @@
       "link": "mastelli.com",
       "provincia": "Imperia",
       "regione": "Liguria",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00576",
+      "data": "23/10/2026",
+      "vittima": "Coop italia Società Cooperativa",
+      "gruppo": "qilin",
+      "link": "coop.it",
+      "provincia": "Bologna",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }

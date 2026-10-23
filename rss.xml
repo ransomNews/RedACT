@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Mon, 19 Oct 2026 17:02:47 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 08:34:46 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Coop italia Società Cooperativa</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00576 | Gruppo: qilin | Data: 23/10/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00576</guid>
+      <category>qilin</category>
+    </item>
     <item>
       <title>Mastelli S.R.L.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -164,14 +172,6 @@
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00557</guid>
       <category>lockbit5</category>
-    </item>
-    <item>
-      <title>NEAD Pro Professionisti Riuniti</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00558 | Gruppo: rhysida | Data: 24/09/2026 | Provincia: Gorizia | Regione: Friuli Venezia Giulia | Zona: --- | Dati pubblicati: GB 193,50</description>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00558</guid>
-      <category>rhysida</category>
     </item>
   </channel>
 </rss>
