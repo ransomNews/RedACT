@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-23T10:27:30.632146+00:00",
+  "generated": "2026-10-23T14:26:30.552437+00:00",
   "anno": 2026,
-  "total": 256,
+  "total": 257,
   "records": [
     {
       "id": "00317",
@@ -2817,6 +2817,17 @@
       "link": "coop.it",
       "provincia": "Bologna",
       "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00577",
+      "data": "23/10/2026",
+      "vittima": "Art School Società Cooperativa Sociale",
+      "gruppo": "lockbit5",
+      "link": "dorsiacademy.it",
+      "provincia": "Varese",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
