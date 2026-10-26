@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-26T10:34:57.965245+00:00",
+  "generated": "2026-10-26T15:38:24.093707+00:00",
   "anno": 2026,
-  "total": 258,
+  "total": 260,
   "records": [
     {
       "id": "00317",
@@ -2837,6 +2837,28 @@
       "vittima": "Ernesto Malvestiti S.P.A.",
       "gruppo": "aur0ra",
       "link": "malvestiti.com",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00579",
+      "data": "26/10/2026",
+      "vittima": "Spontini Holding S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "spontinimilano.com",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00580",
+      "data": "26/10/2026",
+      "vittima": "SOME S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "some.it",
       "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,

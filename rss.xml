@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Mon, 26 Oct 2026 10:34:58 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 15:38:24 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -20,6 +20,22 @@
       <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00578</guid>
       <category>aur0ra</category>
+    </item>
+    <item>
+      <title>Spontini Holding S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00579 | Gruppo: thegentlemen | Data: 26/10/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00579</guid>
+      <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>SOME S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00580 | Gruppo: thegentlemen | Data: 26/10/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00580</guid>
+      <category>thegentlemen</category>
     </item>
     <item>
       <title>Zena Office S.R.L.</title>
@@ -156,22 +172,6 @@
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00562</guid>
       <category>audit</category>
-    </item>
-    <item>
-      <title>Astidental di Sabbione S.P.A.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00561 | Gruppo: lamashtu | Data: 30/09/2026 | Provincia: Asti | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 85,00</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00561</guid>
-      <category>lamashtu</category>
-    </item>
-    <item>
-      <title>Quality Sport Italia S.R.L. (Topsport Italia)</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00560 | Gruppo: thegentlemen | Data: 29/09/2026 | Provincia: Bari | Regione: Puglia | Zona: Sud | Dati pubblicati: GB 0 | Nota: Vedi anche topsportitalia.it</description>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00560</guid>
-      <category>thegentlemen</category>
     </item>
   </channel>
 </rss>
