@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-23T14:50:05.850604+00:00",
+  "generated": "2026-10-26T10:34:57.965245+00:00",
   "anno": 2026,
-  "total": 257,
+  "total": 258,
   "records": [
     {
       "id": "00317",
@@ -2827,6 +2827,17 @@
       "gruppo": "lockbit5",
       "link": "dorsiacademy.it",
       "provincia": "Varese",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00578",
+      "data": "26/10/2026",
+      "vittima": "Ernesto Malvestiti S.P.A.",
+      "gruppo": "aur0ra",
+      "link": "malvestiti.com",
+      "provincia": "Milano",
       "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
