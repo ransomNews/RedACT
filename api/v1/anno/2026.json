@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-26T15:38:24.093707+00:00",
+  "generated": "2026-10-27T07:10:48.606060+00:00",
   "anno": 2026,
-  "total": 260,
+  "total": 261,
   "records": [
     {
       "id": "00317",
@@ -2861,6 +2861,17 @@
       "link": "some.it",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00581",
+      "data": "27/10/2026",
+      "vittima": "Natuzzi S.P.A.",
+      "gruppo": "everest",
+      "link": "natuzzi.com",
+      "provincia": "Bari",
+      "regione": "Puglia",
       "dati_gb": 0.0,
       "note": ""
     }
