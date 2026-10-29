@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-28T19:45:06.162208+00:00",
+  "generated": "2026-10-29T17:35:49.691482+00:00",
   "anno": 2026,
-  "total": 262,
+  "total": 263,
   "records": [
     {
       "id": "00317",
@@ -2883,6 +2883,17 @@
       "link": "www2.pqegroup.com",
       "provincia": "Firenze",
       "regione": "Toscana",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00583",
+      "data": "29/10/2026",
+      "vittima": "La Profumeria S.R.L.",
+      "gruppo": "emperador",
+      "link": "laprofumeriasrl.com",
+      "provincia": "Napoli",
+      "regione": "Campania",
       "dati_gb": 0.0,
       "note": ""
     }
