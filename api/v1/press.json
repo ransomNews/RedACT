@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-29T17:35:49.691482+00:00",
-  "total": 36,
+  "generated": "2026-10-30T12:03:21.609758+00:00",
+  "total": 37,
   "records": [
     {
       "id": "#00001",
@@ -361,6 +361,16 @@
       "provincia": "Trento",
       "regione": "Trentino-Alto Adige",
       "fonte": "https://www.ladige.it/territori/fiemme-fassa/attacco-hacker-alla-casa-di-riposo-di-predazzo-sistemi-bloccati-chiesto-un-riscatto-nx12zn6t",
+      "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00037",
+      "data": "29/10/2026",
+      "vittima": "Casa di Riposo di Rovereto",
+      "link": "casadiriposo.rovereto.tn.it",
+      "provincia": "Trento",
+      "regione": "Trentino-Alto Adige",
+      "fonte": "https://www.trentotoday.it/cronaca/attacco-hacker-rsa-rovereto.html",
       "note": "Confermato: SI | Attribuito a: —"
     }
   ]
