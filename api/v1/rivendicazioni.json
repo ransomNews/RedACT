@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-30T12:03:21.609758+00:00",
-  "total": 904,
+  "generated": "2026-10-31T06:25:04.293762+00:00",
+  "total": 905,
   "records": [
     {
       "id": "00001",
@@ -10848,6 +10848,18 @@
       "link": "laprofumeriasrl.com",
       "provincia": "Napoli",
       "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00584",
+      "data": "31/10/2026",
+      "anno": 2026,
+      "vittima": "Studio Stelitano & Associati",
+      "gruppo": "emperador",
+      "link": "studiostelitano.it",
+      "provincia": "Bologna",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }
