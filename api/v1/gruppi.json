@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-10-31T06:25:04.293762+00:00",
-  "total": 134,
+  "generated": "2026-11-03T14:55:54.697932+00:00",
+  "total": 135,
   "gruppi": [
     {
       "nome": "8base",
@@ -806,6 +806,14 @@
       "dati_gb": 6114.0,
       "anni_attivi": [
         2025,
+        2026
+      ]
+    },
+    {
+      "nome": "pixeleaks",
+      "rivendicazioni": 1,
+      "dati_gb": 0.0,
+      "anni_attivi": [
         2026
       ]
     },
