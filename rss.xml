@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 05 Nov 2026 10:26:26 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 10:45:56 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -14,9 +14,9 @@
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
     <item>
-      <title>Multimedia Informatica di R. Davini &amp; C. S.A.S.</title>
+      <title>PC Express (Multimedia Informatica)</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00585 | Gruppo: pixeleaks | Data: 05/11/2026 | Provincia: Lucca | Regione: Toscana | Zona: Centro | Dati pubblicati: GB 0 | Nota: Completa di Unnamed (Target senza nome) | del 03/11/2026</description>
+      <description>ID: 00585 | Gruppo: pixeleaks | Data: 05/11/2026 | Provincia: Sconosciuta | Regione: Sconosciuta | Zona: --- | Dati pubblicati: GB 0 | Nota: Completa di Unnamed (Target senza nome) | del 03/11/2026</description>
       <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00585</guid>
       <category>pixeleaks</category>

@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-05T10:26:26.021598+00:00",
+  "generated": "2026-11-05T10:45:56.218163+00:00",
   "anno": 2026,
   "total": 265,
   "records": [
@@ -2911,11 +2911,11 @@
     {
       "id": "00585",
       "data": "05/11/2026",
-      "vittima": "Multimedia Informatica di R. Davini & C. S.A.S.",
+      "vittima": "PC Express (Multimedia Informatica)",
       "gruppo": "pixeleaks",
-      "link": "pc-express.it/chisiamo.htm",
-      "provincia": "Lucca",
-      "regione": "Toscana",
+      "link": "",
+      "provincia": "Sconosciuta",
+      "regione": "Sconosciuta",
       "dati_gb": 0.0,
       "note": "Completa di Unnamed (Target senza nome) | del 03/11/2026"
     }
