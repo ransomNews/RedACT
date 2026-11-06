@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-05T10:45:56.218163+00:00",
-  "total": 906,
+  "generated": "2026-11-06T11:15:28.400928+00:00",
+  "total": 907,
   "records": [
     {
       "id": "00001",
@@ -10874,6 +10874,18 @@
       "regione": "Sconosciuta",
       "dati_gb": 0.0,
       "note": "Completa di Unnamed (Target senza nome) | del 03/11/2026"
+    },
+    {
+      "id": "00586",
+      "data": "06/11/2026",
+      "anno": 2026,
+      "vittima": "Dompé Farmaceutici S.P.A.",
+      "gruppo": "n0n",
+      "link": "dompe.com",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
     }
   ]
 }
