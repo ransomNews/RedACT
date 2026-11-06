@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-06T11:15:28.400928+00:00",
-  "total": 907,
+  "generated": "2026-11-06T12:09:08.535703+00:00",
+  "total": 908,
   "records": [
     {
       "id": "00001",
@@ -10884,6 +10884,18 @@
       "link": "dompe.com",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00587",
+      "data": "06/11/2026",
+      "anno": 2026,
+      "vittima": "Istituto Comprensivo di Borgo San Giuseppe",
+      "gruppo": "shiba",
+      "link": "icborgosangiuseppe.edu.it",
+      "provincia": "Cuneo",
+      "regione": "Piemonte",
       "dati_gb": 0.0,
       "note": ""
     }

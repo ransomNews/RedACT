@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-06T11:15:28.400928+00:00",
-  "total": 136,
+  "generated": "2026-11-06T12:09:08.535703+00:00",
+  "total": 137,
   "gruppi": [
     {
       "nome": "8base",
@@ -989,6 +989,14 @@
     },
     {
       "nome": "settra",
+      "rivendicazioni": 1,
+      "dati_gb": 0.0,
+      "anni_attivi": [
+        2026
+      ]
+    },
+    {
+      "nome": "shiba",
       "rivendicazioni": 1,
       "dati_gb": 0.0,
       "anni_attivi": [
