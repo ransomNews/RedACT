@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-06T12:09:08.535703+00:00",
-  "total": 908,
+  "generated": "2026-11-07T05:21:33.522308+00:00",
+  "total": 909,
   "records": [
     {
       "id": "00001",
@@ -10896,6 +10896,18 @@
       "link": "icborgosangiuseppe.edu.it",
       "provincia": "Cuneo",
       "regione": "Piemonte",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00588",
+      "data": "07/11/2026",
+      "anno": 2026,
+      "vittima": "I.M.D. International Medical Devices S.p.A.",
+      "gruppo": "nightspire",
+      "link": "imdgroup.it",
+      "provincia": "Bergamo",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
