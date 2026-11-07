@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sat, 07 Nov 2026 05:29:14 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 05:53:05 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -48,7 +48,7 @@
     <item>
       <title>Studio Stelitano &amp; Associati</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00584 | Gruppo: emperador | Data: 31/10/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 0</description>
+      <description>ID: 00584 | Gruppo: emperador | Data: 31/10/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 3,60</description>
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00584</guid>
       <category>emperador</category>
