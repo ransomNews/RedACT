@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sat, 07 Nov 2026 05:21:33 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 05:29:14 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -14,7 +14,7 @@
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
     <item>
-      <title>I.M.D. International Medical Devices S.p.A.</title>
+      <title>I.M.D. International Medical Devices S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
       <description>ID: 00588 | Gruppo: nightspire | Data: 07/11/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
       <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
