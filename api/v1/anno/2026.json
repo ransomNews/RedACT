@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-09T19:02:32.519207+00:00",
+  "generated": "2026-11-11T08:14:48.661587+00:00",
   "anno": 2026,
-  "total": 269,
+  "total": 268,
   "records": [
     {
       "id": "00317",
@@ -2949,17 +2949,6 @@
       "link": "imdgroup.it",
       "provincia": "Bergamo",
       "regione": "Lombardia",
-      "dati_gb": 0.0,
-      "note": ""
-    },
-    {
-      "id": "00589",
-      "data": "09/11/2026",
-      "vittima": "Santex S.A.S. di Sangiorgio Gianluca & C.",
-      "gruppo": "majinahanashi",
-      "link": "",
-      "provincia": "Catanzaro",
-      "regione": "Calabria",
       "dati_gb": 0.0,
       "note": ""
     }
