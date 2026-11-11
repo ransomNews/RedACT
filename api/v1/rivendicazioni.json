@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-11T08:14:48.661587+00:00",
-  "total": 909,
+  "generated": "2026-11-11T18:55:56.431681+00:00",
+  "total": 910,
   "records": [
     {
       "id": "00001",
@@ -10908,6 +10908,18 @@
       "link": "imdgroup.it",
       "provincia": "Bergamo",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00589",
+      "data": "11/11/2026",
+      "anno": 2026,
+      "vittima": "Energreen S.P.A.",
+      "gruppo": "settra",
+      "link": "energreen.it",
+      "provincia": "Vicenza",
+      "regione": "Veneto",
       "dati_gb": 0.0,
       "note": ""
     }

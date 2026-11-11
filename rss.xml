@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 11 Nov 2026 08:14:48 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 18:55:56 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Energreen S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00589 | Gruppo: settra | Data: 11/11/2026 | Provincia: Vicenza | Regione: Veneto | Zona: Nord-Est | Dati pubblicati: GB 0</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00589</guid>
+      <category>settra</category>
+    </item>
     <item>
       <title>I.M.D. International Medical Devices S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00571 | Gruppo: majinahanashi | Data: 12/10/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 3,88</description>
       <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00571</guid>
-      <category>majinahanashi</category>
-    </item>
-    <item>
-      <title>HYSYTECH S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00568 | Gruppo: majinahanashi | Data: 11/10/2026 | Provincia: Torino | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 1,00</description>
-      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00568</guid>
       <category>majinahanashi</category>
     </item>
   </channel>
