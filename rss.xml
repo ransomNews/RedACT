@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 12 Nov 2026 05:09:23 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 09:06:35 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -40,7 +40,7 @@
     <item>
       <title>Istituto Comprensivo di Borgo San Giuseppe</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00587 | Gruppo: shiba | Data: 06/11/2026 | Provincia: Cuneo | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <description>ID: 00587 | Gruppo: shiba | Data: 06/11/2026 | Provincia: Cuneo | Regione: Piemonte | Zona: Nord-Ovest | Dati pubblicati: GB 309,00</description>
       <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00587</guid>
       <category>shiba</category>
