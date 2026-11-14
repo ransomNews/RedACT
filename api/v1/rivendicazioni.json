@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-14T09:06:35.711326+00:00",
-  "total": 910,
+  "generated": "2026-11-14T14:23:51.942388+00:00",
+  "total": 911,
   "records": [
     {
       "id": "00001",
@@ -10921,6 +10921,18 @@
       "provincia": "Vicenza",
       "regione": "Veneto",
       "dati_gb": 73.3,
+      "note": ""
+    },
+    {
+      "id": "00590",
+      "data": "14/11/2026",
+      "anno": 2026,
+      "vittima": "Company #201",
+      "gruppo": "n0n",
+      "link": "",
+      "provincia": "Sconosciuta",
+      "regione": "Sconosciuta",
+      "dati_gb": 0.0,
       "note": ""
     }
   ]

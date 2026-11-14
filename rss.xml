@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Sat, 14 Nov 2026 09:06:35 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 14:23:51 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Company #201</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00590 | Gruppo: n0n | Data: 14/11/2026 | Provincia: Sconosciuta | Regione: Sconosciuta | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00590</guid>
+      <category>n0n</category>
+    </item>
     <item>
       <title>Energreen S.P.A.</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -164,14 +172,6 @@
       <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00573</guid>
       <category>spacebears</category>
-    </item>
-    <item>
-      <title>CFG Serramenti S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00571 | Gruppo: majinahanashi | Data: 12/10/2026 | Provincia: Bergamo | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 3,88</description>
-      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00571</guid>
-      <category>majinahanashi</category>
     </item>
   </channel>
 </rss>
