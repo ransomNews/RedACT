@@ -1,20 +1,10 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-15T07:03:41.007018+00:00",
+  "generated": "2026-11-15T16:35:15.401145+00:00",
   "total": 37,
   "records": [
     {
       "id": "#00001",
-      "data": "09/2023",
-      "vittima": "CEI — Comitato Elettrotecnico Italiano",
-      "link": "ceinorme.it",
-      "provincia": "Milano",
-      "regione": "Lombardia",
-      "fonte": "https://www.redhotcyber.com/post/attacco-informatico-al-comitato-elettronico-italiano-una-intrusione-abusiva-mette-fuori-uso-i-sistemi/",
-      "note": "Confermato: NO | Attribuito a: —"
-    },
-    {
-      "id": "#00002",
       "data": "30/03/2021",
       "vittima": "Comune di Brescia",
       "link": "comune.brescia.it",
@@ -24,7 +14,7 @@
       "note": "Confermato: SI | Attribuito a: DoppelPaymer"
     },
     {
-      "id": "#00003",
+      "id": "#00002",
       "data": "01/08/2021",
       "vittima": "Regione Lazio / LazioCrea",
       "link": "regione.lazio.it",
@@ -34,7 +24,7 @@
       "note": "Confermato: SI | Attribuito a: RansomEXX"
     },
     {
-      "id": "#00004",
+      "id": "#00003",
       "data": "12/09/2021",
       "vittima": "AO San Giovanni Addolorata",
       "link": "hsangiovanni.roma.it",
@@ -44,7 +34,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00005",
+      "id": "#00004",
       "data": "30/10/2021",
       "vittima": "ASL Roma 3",
       "link": "aslroma3.it",
@@ -54,7 +44,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00006",
+      "id": "#00005",
       "data": "23/02/2022",
       "vittima": "EAV S.r.l. (Ente Autonomo Volturno)",
       "link": "eavsrl.it",
@@ -64,7 +54,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00007",
+      "id": "#00006",
       "data": "19/08/2022",
       "vittima": "ASL Città di Torino",
       "link": "aslcittaditorino.it",
@@ -74,7 +64,7 @@
       "note": "Confermato: SI | Attribuito a: HIVE"
     },
     {
-      "id": "#00008",
+      "id": "#00007",
       "data": "26/06/2023",
       "vittima": "Runner S.P.A.",
       "link": "runner.it",
@@ -84,7 +74,7 @@
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
-      "id": "#00009",
+      "id": "#00008",
       "data": "05/07/2023",
       "vittima": "AO Universitaria Luigi Vanvitelli",
       "link": "policliniconapoli.it",
@@ -92,6 +82,16 @@
       "regione": "Campania",
       "fonte": "https://www.ansa.it/campania/notizie/2023/07/05/attacco-hacker-a-un-ospedale-di-napoli-chiesto-un-riscatto_7b967a76-723e-4488-a410-c04313dc4e3b.html",
       "note": "Confermato: SI | Attribuito a: —"
+    },
+    {
+      "id": "#00009",
+      "data": "09/2023",
+      "vittima": "CEI — Comitato Elettrotecnico Italiano",
+      "link": "ceinorme.it",
+      "provincia": "Milano",
+      "regione": "Lombardia",
+      "fonte": "https://www.redhotcyber.com/post/attacco-informatico-al-comitato-elettronico-italiano-una-intrusione-abusiva-mette-fuori-uso-i-sistemi/",
+      "note": "Confermato: NO | Attribuito a: —"
     },
     {
       "id": "#00010",
@@ -340,7 +340,7 @@
       "link": "teamsystem.com",
       "provincia": "Pesaro-Urbino",
       "regione": "Marche",
-      "fonte": "https://www.teamsystem.com/",
+      "fonte": "https://www.teamsystem.com/ext-statements/",
       "note": "Confermato: SI | Attribuito a: —"
     },
     {
