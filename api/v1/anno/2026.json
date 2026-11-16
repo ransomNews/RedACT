@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-15T16:35:15.401145+00:00",
+  "generated": "2026-11-16T10:57:27.307045+00:00",
   "anno": 2026,
   "total": 270,
   "records": [
@@ -2965,14 +2965,14 @@
     },
     {
       "id": "00590",
-      "data": "14/11/2026",
-      "vittima": "Company #201",
+      "data": "16/11/2026",
+      "vittima": "Chiesi Farmaceutici S.P.A.",
       "gruppo": "n0n",
-      "link": "",
-      "provincia": "Sconosciuta",
-      "regione": "Sconosciuta",
+      "link": "chiesi.com",
+      "provincia": "Parma",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
-      "note": ""
+      "note": "Completa di Company #201 | del 14/11/2026"
     }
   ]
 }
