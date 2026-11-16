@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-16T10:57:27.307045+00:00",
-  "total": 911,
+  "generated": "2026-11-16T19:50:16.711383+00:00",
+  "total": 912,
   "records": [
     {
       "id": "00001",
@@ -10934,6 +10934,18 @@
       "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": "Completa di Company #201 | del 14/11/2026"
+    },
+    {
+      "id": "00591",
+      "data": "16/11/2026",
+      "anno": 2026,
+      "vittima": "Arrigoni S.P.A.",
+      "gruppo": "qilin",
+      "link": "arrigoni.it",
+      "provincia": "Como",
+      "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
     }
   ]
 }

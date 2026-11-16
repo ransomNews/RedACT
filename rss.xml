@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Mon, 16 Nov 2026 10:57:27 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 19:50:16 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -20,6 +20,14 @@
       <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00590</guid>
       <category>n0n</category>
+    </item>
+    <item>
+      <title>Arrigoni S.P.A.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00591 | Gruppo: qilin | Data: 16/11/2026 | Provincia: Como | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00591</guid>
+      <category>qilin</category>
     </item>
     <item>
       <title>Energreen S.P.A.</title>
@@ -164,14 +172,6 @@
       <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00574</guid>
       <category>everest</category>
-    </item>
-    <item>
-      <title>Alma Center Servizi Medicali S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00573 | Gruppo: spacebears | Data: 15/10/2026 | Provincia: Napoli | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00573</guid>
-      <category>spacebears</category>
     </item>
   </channel>
 </rss>
