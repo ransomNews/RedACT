@@ -45,7 +45,9 @@ jobs:
                   return []
 
           all_records = []
-          for year in [2020, 2021, 2022, 2023, 2024, 2025, 2026]:
+          # anni ricavati da index.html (DATA_2020, DATA_2021, ... DATA_2027, ...): niente da modificare al cambio d'anno
+          anni = sorted(set(int(a) for a in re.findall(r'const DATA_(\d{4}) = ', html)))
+          for year in anni:
               recs = extract_dataset(html, year)
               for r in recs:
                   r['_YEAR'] = year
