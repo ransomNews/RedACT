@@ -3502,6 +3502,15 @@ html.light .heatmap-table tbody tr:not(.hm-totals-row):hover td { background-col
 .lv-nav { margin:0 8px; } .lv-nav a { padding:7px 8px; } .nav-right { gap:10px !important; }
 .nav-press-btn, .nav-api-btn, .nav-rss-btn { padding:6px 8px !important; }
 @media (max-width:480px) { .nav-press-mobile { margin-left:8px; } }
+/* TEST_GRAFICA_59: PRESS, API e RSS dentro un bordo come i menu a tendina (trend, heatmap, semestrali) */
+.nav-press-btn, .nav-api-btn, .nav-rss-btn { background:var(--surface2) !important; border:1px solid var(--border2) !important; border-radius:8px !important; }
+.nav-press-btn:hover { background:rgba(230,57,70,0.1) !important; border-color:rgba(230,57,70,0.35) !important; }
+.nav-api-btn:hover { background:rgba(0,200,150,0.1) !important; border-color:rgba(0,200,150,0.35) !important; }
+.nav-rss-btn:hover { background:rgba(240,180,41,0.1) !important; border-color:rgba(240,180,41,0.35) !important; }
+/* TEST_GRAFICA_60: icone di casa e social dentro un bordo come PRESS, API e RSS */
+@media (min-width:481px) {
+  .nav-social a { background:var(--surface2) !important; border:1px solid var(--border2) !important; border-radius:8px !important; }
+}
 /* TEST_GRAFICA_55 · TELEFONO (≤600 px): pulsante Guida, riepilogo sopra l'archivio, filtri leggibili */
 .nav-guida-mobile, #lvMobSum { display:none !important; }
 @media (max-width:600px) { #lvMobSum { display:block !important; } }
