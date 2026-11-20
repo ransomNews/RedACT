@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-20T06:31:57.245504+00:00",
-  "total": 914,
+  "generated": "2026-11-20T15:00:41.759167+00:00",
+  "total": 915,
   "records": [
     {
       "id": "00001",
@@ -10968,6 +10968,18 @@
       "link": "eni.it",
       "provincia": "Roma",
       "regione": "Lazio",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00594",
+      "data": "20/11/2026",
+      "anno": 2026,
+      "vittima": "Trawell Co S.P.A.",
+      "gruppo": "aur0ra",
+      "link": "trawellco.com",
+      "provincia": "Varese",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
