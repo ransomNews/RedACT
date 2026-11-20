@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-18T18:35:16.976959+00:00",
-  "total": 913,
+  "generated": "2026-11-20T06:31:57.245504+00:00",
+  "total": 914,
   "records": [
     {
       "id": "00001",
@@ -10956,6 +10956,18 @@
       "link": "siceprevit.com",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00593",
+      "data": "20/11/2026",
+      "anno": 2026,
+      "vittima": "Eni S.P.A.",
+      "gruppo": "incransom",
+      "link": "eni.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
       "dati_gb": 0.0,
       "note": ""
     }
