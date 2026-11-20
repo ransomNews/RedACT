@@ -1,6 +1,6 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-20T15:52:14.784618+00:00",
+  "generated": "2026-11-20T16:11:35.002736+00:00",
   "total": 915,
   "records": [
     {
@@ -10963,11 +10963,11 @@
       "id": "00593",
       "data": "20/11/2026",
       "anno": 2026,
-      "vittima": "Eni S.P.A.",
+      "vittima": "Tirion Servizi S.R.L.",
       "gruppo": "incransom",
-      "link": "eni.it",
-      "provincia": "Roma",
-      "regione": "Lazio",
+      "link": "tirionservizi.it",
+      "provincia": "Catania",
+      "regione": "Sicilia",
       "dati_gb": 0.0,
       "note": ""
     },
