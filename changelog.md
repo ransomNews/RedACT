@@ -5,6 +5,41 @@ Il formato è ispirato allo standard "Keep a Changelog" e mantiene un tracciamen
 
 ---
 
+
+## [2.0.0] - 2026-11-21
+
+### Aggiunto
+- Trend mensile in apertura della dashboard
+- Mini-grafici degli ultimi 12 mesi nei contatori principali
+- Contatore dei dati pubblicati totali, espresso in TB
+- Contatori dell'attività recente a 7, 30 e 90 giorni
+- Sagoma della regione colpita nelle ultime rivendicazioni
+- Mappa interattiva dell'Italia con filtro dell'archivio per regione
+- Pulsante "Mostra tutte" nelle classifiche complete
+- Statistiche individuali nelle schede dei gruppi e nel Catalogo Gruppi
+- Schede dedicate a regioni, aree NUTS 1 e settori, con pulsante "Apri nell'archivio"
+- Link diretto e pulsante "Copia link" per ogni rivendicazione
+- Suggerimenti di ricerca e funzione "Forse cercavi"
+- Guida accessibile dal menu principale
+
+### Modificato
+- Rinnovata completamente la grafica della dashboard, mantenendo invariati dati, numerazione delle card e funzionalità esistenti
+- Introdotta una barra di navigazione superiore fissa, con menu compatto sugli schermi più stretti
+- Rinnovata la visualizzazione delle ultime rivendicazioni
+- Ampliate le classifiche con percentuali a due decimali
+- Inserita la voce "Sconosciuta" nelle classifiche delle aree NUTS 1, anche per l'anno in corso
+- Potenziato il motore di ricerca con supporto a più parole, ricerca su più campi e gestione degli accenti
+- Evidenziate le parole cercate nei risultati
+- Rinnovata la pagina PRESS, ora coerente con lo stile della dashboard
+- Migliorati il contrasto dei colori, l'accessibilità e la navigazione da tastiera
+
+### Corretto
+- Automatizzato il passaggio d'anno, senza necessità di aggiornamenti manuali
+
+
+---
+
+
 ## [1.0.5] - 2026-03-22
 
 ### Aggiunto
