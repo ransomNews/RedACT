@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-23T17:57:03.670475+00:00",
-  "total": 917,
+  "generated": "2026-11-23T20:40:45.325879+00:00",
+  "total": 918,
   "records": [
     {
       "id": "00001",
@@ -11004,6 +11004,18 @@
       "link": "kopron.com",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00597",
+      "data": "23/11/2026",
+      "anno": 2026,
+      "vittima": "Manifattura Foderami Cimmino S.R.L.",
+      "gruppo": "thegentlemen",
+      "link": "cimmino.com",
+      "provincia": "Napoli",
+      "regione": "Campania",
       "dati_gb": 0.0,
       "note": ""
     }
