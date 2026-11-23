@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-22T06:38:53.337916+00:00",
+  "generated": "2026-11-23T06:58:48.254567+00:00",
   "anno": 2026,
-  "total": 274,
+  "total": 275,
   "records": [
     {
       "id": "00317",
@@ -3015,6 +3015,17 @@
       "link": "trawellco.com",
       "provincia": "Varese",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00595",
+      "data": "23/11/2026",
+      "vittima": "Agenzia Agorà Società Cooperativa Sociale",
+      "gruppo": "panzer",
+      "link": "agenziaagora.org",
+      "provincia": "Avellino",
+      "regione": "Campania",
       "dati_gb": 0.0,
       "note": ""
     }
