@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-23T06:58:48.254567+00:00",
-  "total": 916,
+  "generated": "2026-11-23T17:57:03.670475+00:00",
+  "total": 917,
   "records": [
     {
       "id": "00001",
@@ -10992,6 +10992,18 @@
       "link": "agenziaagora.org",
       "provincia": "Avellino",
       "regione": "Campania",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00596",
+      "data": "23/11/2026",
+      "anno": 2026,
+      "vittima": "Kopron S.P.A.",
+      "gruppo": "aur0ra",
+      "link": "kopron.com",
+      "provincia": "Milano",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
