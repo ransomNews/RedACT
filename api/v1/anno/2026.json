@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-24T04:32:00.311392+00:00",
+  "generated": "2026-11-24T15:26:57.152449+00:00",
   "anno": 2026,
-  "total": 278,
+  "total": 279,
   "records": [
     {
       "id": "00317",
@@ -3059,6 +3059,17 @@
       "link": "nuovapsc.it",
       "provincia": "Milano",
       "regione": "Lombardia",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00599",
+      "data": "24/11/2026",
+      "vittima": "Rilievi Group",
+      "gruppo": "eclipse",
+      "link": "rilievi.com",
+      "provincia": "Bologna",
+      "regione": "Emilia Romagna",
       "dati_gb": 0.0,
       "note": ""
     }
