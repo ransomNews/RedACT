@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Mon, 23 Nov 2026 20:58:24 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 04:13:44 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -35,6 +35,14 @@
       <description>ID: 00597 | Gruppo: thegentlemen | Data: 23/11/2026 | Provincia: Napoli | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
       <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00597</guid>
+      <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>Nuova PSC S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00598 | Gruppo: thegentlemen | Data: 23/11/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00598</guid>
       <category>thegentlemen</category>
     </item>
     <item>
@@ -164,14 +172,6 @@
       <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00578</guid>
       <category>aur0ra</category>
-    </item>
-    <item>
-      <title>Spontini Holding S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00579 | Gruppo: thegentlemen | Data: 26/10/2026 | Provincia: Milano | Regione: Lombardia | Zona: Nord-Ovest | Dati pubblicati: GB 0</description>
-      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00579</guid>
-      <category>thegentlemen</category>
     </item>
   </channel>
 </rss>
