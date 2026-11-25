@@ -1,8 +1,8 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-24T15:41:31.449643+00:00",
+  "generated": "2026-11-25T06:03:59.988554+00:00",
   "anno": 2026,
-  "total": 279,
+  "total": 280,
   "records": [
     {
       "id": "00317",
@@ -3070,6 +3070,17 @@
       "link": "rilievi.com",
       "provincia": "Bologna",
       "regione": "Emilia Romagna",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00600",
+      "data": "25/11/2026",
+      "vittima": "Soluzione Tasse Consulting Company (Allcore S.P.A.)",
+      "gruppo": "thegentlemen",
+      "link": "soluzionetasse.com",
+      "provincia": "Milano",
+      "regione": "Lombardia",
       "dati_gb": 0.0,
       "note": ""
     }
