@@ -6,7 +6,7 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Wed, 25 Nov 2026 06:04:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 15:19:13 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
@@ -20,6 +20,14 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00600</guid>
       <category>thegentlemen</category>
+    </item>
+    <item>
+      <title>Company #282</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00601 | Gruppo: n0n | Data: 25/11/2026 | Provincia: Sconosciuta | Regione: Sconosciuta | Zona: --- | Dati pubblicati: GB 0</description>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00601</guid>
+      <category>n0n</category>
     </item>
     <item>
       <title>Rilievi Group S.R.L.</title>
@@ -164,14 +172,6 @@
       <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/press.html##00037</guid>
       <category>press</category>
-    </item>
-    <item>
-      <title>Pharma Quality Europe S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00582 | Gruppo: panzer | Data: 28/10/2026 | Provincia: Firenze | Regione: Toscana | Zona: Centro | Dati pubblicati: GB 200,00</description>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00582</guid>
-      <category>panzer</category>
     </item>
   </channel>
 </rss>
