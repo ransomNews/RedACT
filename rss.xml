@@ -6,13 +6,21 @@
     <description>Monitoraggio e verifica degli attacchi ransomware contro organizzazioni italiane. Ogni evento è verificato manualmente e contestualizzato.</description>
     <language>it</language>
     <copyright>ransomNews · ransomnews.online</copyright>
-    <lastBuildDate>Thu, 26 Nov 2026 05:21:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 21:15:36 +0000</lastBuildDate>
     <atom:link href="https://ransomnews.github.io/RedACT/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://ransomnews.github.io/RedACT/logo.png</url>
       <title>ransomNews</title>
       <link>https://ransomnews.github.io/RedACT/</link>
     </image>
+    <item>
+      <title>Cineland S.R.L.</title>
+      <link>https://ransomnews.github.io/RedACT#rss</link>
+      <description>ID: 00603 | Gruppo: incransom | Data: 27/11/2026 | Provincia: Roma | Regione: Lazio | Zona: Centro | Dati pubblicati: GB 0</description>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00603</guid>
+      <category>incransom</category>
+    </item>
     <item>
       <title>Soluzione Tasse Consulting Company (Allcore S.P.A.)</title>
       <link>https://ransomnews.github.io/RedACT#rss</link>
@@ -163,14 +171,6 @@
       <description>ID: 00584 | Gruppo: emperador | Data: 31/10/2026 | Provincia: Bologna | Regione: Emilia Romagna | Zona: --- | Dati pubblicati: GB 3,60</description>
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00584</guid>
-      <category>emperador</category>
-    </item>
-    <item>
-      <title>La Profumeria S.R.L.</title>
-      <link>https://ransomnews.github.io/RedACT#rss</link>
-      <description>ID: 00583 | Gruppo: emperador | Data: 29/10/2026 | Provincia: Napoli | Regione: Campania | Zona: Sud | Dati pubblicati: GB 0</description>
-      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://ransomnews.github.io/RedACT/#00583</guid>
       <category>emperador</category>
     </item>
   </channel>

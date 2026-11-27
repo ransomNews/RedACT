@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-26T05:21:18.300347+00:00",
-  "total": 923,
+  "generated": "2026-11-27T21:15:36.670453+00:00",
+  "total": 924,
   "records": [
     {
       "id": "00001",
@@ -11076,6 +11076,18 @@
       "link": "tessilopera.com",
       "provincia": "Firenze",
       "regione": "Toscana",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00603",
+      "data": "27/11/2026",
+      "anno": 2026,
+      "vittima": "Cineland S.R.L.",
+      "gruppo": "incransom",
+      "link": "cineland.it",
+      "provincia": "Roma",
+      "regione": "Lazio",
       "dati_gb": 0.0,
       "note": ""
     }
