@@ -1,7 +1,7 @@
 {
   "source": "ransomnews.online",
-  "generated": "2026-11-28T05:06:47.238173+00:00",
-  "total": 924,
+  "generated": "2026-11-28T12:57:09.654385+00:00",
+  "total": 925,
   "records": [
     {
       "id": "00001",
@@ -11088,6 +11088,18 @@
       "link": "cineland.it",
       "provincia": "Roma",
       "regione": "Lazio",
+      "dati_gb": 0.0,
+      "note": ""
+    },
+    {
+      "id": "00604",
+      "data": "28/11/2026",
+      "anno": 2026,
+      "vittima": "Gaia Group S.R.L.",
+      "gruppo": "payload",
+      "link": "gaiagroup.it",
+      "provincia": "Firenze",
+      "regione": "Toscana",
       "dati_gb": 0.0,
       "note": ""
     }
