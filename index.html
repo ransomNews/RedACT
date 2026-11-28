@@ -2577,6 +2577,7 @@ html.light .rcard-new { animation: none; }
 .rcard-row .v { color:var(--text-dim); font-size:12px; }
 .rcard-sym { opacity:.65; margin-right:2px; }
 .rcard-note { font-size:11px; color:#4d9fff; font-family:var(--mono); }
+.rcard-notes { display:flex; flex-direction:column; gap:4px; margin-top:-6px; } /* DS_STABILE_628: note a tutta larghezza sotto Provincia/Dati */
 .rcard-dati { display:flex; flex-direction:column; align-items:flex-end; gap:2px; flex-shrink:0; }
 .rcard-dati .dl { font-size:10px; color:var(--text-muted); font-family:var(--mono); white-space:nowrap; }
 .rcard-dati .dv { font-family:var(--mono); font-size:15px; font-weight:700; }
@@ -4729,9 +4730,12 @@ function cardRow(r) {
     +'<span class="rcard-row"><span class="rcard-sym">◎</span><span style="color:var(--text-muted)"> Provincia:</span> <span class="v">'+(r.PROVINCIA||'—')+'</span></span>'
     +'<span class="rcard-row"><span class="rcard-sym">◈</span><span style="color:var(--text-muted)"> Regione:</span> <span class="v">'+(r.REGIONE||'—')+'</span></span>'
     +'<span class="rcard-row"><span class="rcard-sym">⬡</span><span style="color:var(--text-muted)"> Area NUTS 1:</span> <span class="v">'+nuts+'</span></span>'
-    +(note?'<span class="rcard-note">◦ Nota: '+note+'</span>':'')
-    +(notaRossa(r)?'<span class="rcard-note nota-rossa">◦ Nota: '+notaRossa(r)+'</span>':'')
-    +'</div>'+fmtDC(r.DATI)+'</div></div>';
+    +'</div>'+fmtDC(r.DATI)+'</div>'
+    +((note||notaRossa(r))?'<div class="rcard-notes">'
+      +(note?'<span class="rcard-note">◦ Nota: '+note+'</span>':'')
+      +(notaRossa(r)?'<span class="rcard-note nota-rossa">◦ Nota: '+notaRossa(r)+'</span>':'')
+      +'</div>':'')
+    +'</div>';
 }
 
 function renderCards() {
